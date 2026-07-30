@@ -1,0 +1,30 @@
+name: Deploy to Netlify
+
+# Auto-deploys the site to Netlify on every push to main.
+# Secrets NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID are stored in the repo settings.
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v4
+
+      - name: Zip the site (source files only)
+        run: |
+          zip -rq /tmp/site.zip . \
+            -x ".git/*" ".github/*" "*.md" "*.zip" "*.DS_Store" "*-OLD.jpg"
+
+      - name: Deploy to Netlify
+        run: |
+          curl -sf \
+            -H "Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}" \
+            -H "Content-Type: application/zip" \
+            --data-binary @/tmp/site.zip \
+            "https://api.netlify.com/api/v1/sites/${{ secrets.NETLIFY_SITE_ID }}/deploys" \
+            | python3 -c "import sys,json;d=json.load(sys.stdin);print('deployed →',d.get('state'),'| id',d.get('id'))"

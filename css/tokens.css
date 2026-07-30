@@ -1,0 +1,68 @@
+/* ============================================================
+   AncestralWatch.com — Design Tokens
+   Source of truth: CLAUDE.md §7 (Design System)
+   The thesis is "ancient + modern": old-world serif display
+   over a clean modern body face; a palette drawn from the
+   series' actual world (night sky, forest, amber/tufa stone,
+   red-earth, silver).
+   ============================================================ */
+
+:root {
+  /* --- Palette (§7) ------------------------------------- */
+  --night:  #101B2D;   /* night-sky indigo — the night-race / Milky Way. Primary dark. */
+  --amber:  #D69A3C;   /* the stone, the amber, the gold cover lettering. Primary accent. */
+  --forest: #33422F;   /* running-in-forest imagery. Secondary. */
+  --earth:  #7E3B26;   /* Big Mountain red-earth; oxblood, used sparingly. */
+  --bone:   #EDE6D5;   /* parchment / old-book light background. */
+  --silver: #A9AEB2;   /* silversmith nod; fine rules, captions, detail. */
+
+  /* --- Derived / tints (kept close to the six named hexes) --- */
+  --night-2:   #16233b;   /* slightly lifted night — panels on dark */
+  --night-3:   #1d2e4a;   /* card surfaces on dark */
+  --amber-soft:#e6b969;   /* amber for text/links on dark (a touch brighter) */
+  --bone-2:    #f4efe3;   /* lighter parchment for large light fields */
+  --ink:       #1a2233;   /* body text on light backgrounds */
+  --ink-soft:  #46505f;   /* secondary text on light */
+
+  /* --- Semantic roles --------------------------------------- */
+  --bg:          var(--night);
+  --bg-panel:    var(--night-2);
+  --surface:     var(--night-3);
+  --text:        var(--bone);
+  --text-muted:  var(--silver);
+  --accent:      var(--amber);
+  --accent-ink:  var(--night);      /* text sitting on an amber button */
+  --rule:        rgba(169,174,178,.22); /* silver hairline */
+
+  /* --- Type (§7) -------------------------------------------- */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body:    "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Fluid type scale — clamp(min, preferred, max) */
+  --step--1: clamp(.83rem, .8rem + .15vw, .92rem);
+  --step-0:  clamp(1rem, .96rem + .2vw, 1.13rem);
+  --step-1:  clamp(1.2rem, 1.1rem + .5vw, 1.45rem);
+  --step-2:  clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --step-3:  clamp(1.9rem, 1.5rem + 2vw, 2.9rem);
+  --step-4:  clamp(2.4rem, 1.8rem + 3.2vw, 4.2rem);
+  --step-5:  clamp(3rem, 2rem + 5vw, 6rem);
+
+  /* --- Spacing / layout ------------------------------------- */
+  --space-1: .5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6rem;
+  --space-7: 9rem;
+
+  --content: 68rem;     /* standard content max-width */
+  --content-wide: 82rem;
+  --content-narrow: 40rem; /* prose measure */
+  --radius: 4px;        /* restrained; this is a literary site, not a SaaS app */
+  --radius-lg: 8px;
+
+  /* --- Motion ----------------------------------------------- */
+  --ease: cubic-bezier(.22, .61, .36, 1);
+  --dur: .5s;
+}
