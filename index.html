@@ -194,8 +194,8 @@
             woman who is already whole. A love story about roots, and about success that doesn't cost
             you your soul.</p>
             <a class="btn btn--primary" href="https://payhip.com/b/AhH6r" target="_blank" rel="noopener">Buy direct on Payhip →</a>
-            <!-- TODO(Tony): paste Amazon/Kindle URL -->
-            <a class="book-hook__detail" href="#" data-todo="amazon-stone-breath">Read on Kindle →</a>
+            <!-- TODO(Tony): swap in the Amazon/Kindle URL when the listing is live -->
+            <span class="book-hook__detail book-hook__detail--soon">Kindle — coming soon</span>
             <a class="book-hook__detail" href="/series/stone-breath/">Excerpt &amp; details →</a>
           </article>
 
@@ -206,8 +206,8 @@
             <p>When the systems that run the world reach their limits, the keepers of many nations sit
             down at one fire to remember what lasts.</p>
             <a class="btn btn--primary" href="https://payhip.com/b/GB2eg" target="_blank" rel="noopener">Buy direct on Payhip →</a>
-            <!-- TODO(Tony): paste Amazon/Kindle URL -->
-            <a class="book-hook__detail" href="#" data-todo="amazon-council-fire">Read on Kindle →</a>
+            <!-- TODO(Tony): swap in the Amazon/Kindle URL when the listing is live -->
+            <span class="book-hook__detail book-hook__detail--soon">Kindle — coming soon</span>
             <a class="book-hook__detail" href="/series/the-council-fire/">Excerpt &amp; details →</a>
           </article>
         </div>
@@ -326,6 +326,14 @@
       </div>
     </div>
   </footer>
+
+  <!-- Netlify Forms detection stub. Netlify parses this at deploy and registers the "watch-signup"
+       form; the visible sign-up boxes submit to it via fetch (see js/main.js). Zero third-party account. -->
+  <form name="watch-signup" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="email" name="email" />
+    <input type="text" name="bot-field" />
+    <input type="text" name="source" />
+  </form>
 
   <script src="/js/main.js" defer></script>
 </body>

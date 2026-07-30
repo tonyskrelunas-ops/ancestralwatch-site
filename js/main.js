@@ -41,16 +41,49 @@
     });
   });
 
-  // Email capture is not wired to a provider yet (TODO(Tony): form endpoint).
+  // Email capture → Netlify Forms (AJAX). Submissions land in the Netlify dashboard under
+  // Forms → "watch-signup". A hidden detection form lives in index.html.
+  function encode(data) {
+    return Object.keys(data)
+      .map(function (k) { return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]); })
+      .join("&");
+  }
   document.querySelectorAll("form[data-capture]").forEach(function (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var note = form.parentElement.querySelector(".capture__note");
-      if (note) {
-        note.textContent =
-          "Thanks! Sign-up is opening shortly — meanwhile, email wisdom@ancestralwatch.com and we'll send the free tool.";
-        note.style.color = "var(--amber)";
-      }
+      var input = form.querySelector('input[type="email"]');
+      var email = input ? input.value.trim() : "";
+      var btn = form.querySelector('button[type="submit"], button');
+      if (!email) { return; }
+      if (btn) { btn.disabled = true; }
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": "watch-signup",
+          "email": email,
+          "source": window.location.pathname,
+          "bot-field": ""
+        })
+      })
+        .then(function (res) {
+          if (!res.ok) { throw new Error("bad status"); }
+          form.reset();
+          if (note) {
+            note.textContent = "You're on the watch. Check your inbox for the free tool shortly.";
+            note.style.color = "var(--amber)";
+          }
+        })
+        .catch(function () {
+          if (note) {
+            note.textContent =
+              "Something went wrong — email wisdom@ancestralwatch.com and we'll add you and send the free tool.";
+            note.style.color = "var(--amber)";
+          }
+        })
+        .then(function () { if (btn) { btn.disabled = false; } });
     });
   });
 })();

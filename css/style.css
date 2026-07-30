@@ -769,6 +769,19 @@ a:hover { color: var(--amber); }
 .sound-toggle__label { white-space: nowrap; }
 @media (max-width: 560px) { .sound-toggle__label { display: none; } .sound-toggle { padding: .6rem; } }
 
+/* --- "Coming soon" disabled affordances -------------------- */
+.btn--soon {
+  opacity: .5;
+  cursor: default;
+  pointer-events: none;
+  border-style: dashed;
+}
+.book-hook__detail--soon {
+  opacity: .55;
+  cursor: default;
+  font-style: italic;
+}
+
 /* --- Reduced motion (§7 quality floor) --------------------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
