@@ -205,8 +205,8 @@ a:hover { color: var(--amber); }
   /* The Stone Breath night-race scene as an atmospheric hero, with a
      dark overlay (heavier on the left/bottom) so the headline stays legible. */
   background:
-    linear-gradient(90deg, rgba(11,20,34,.90) 0%, rgba(11,20,34,.6) 48%, rgba(11,20,34,.25) 100%),
-    linear-gradient(180deg, rgba(11,20,34,.35) 0%, rgba(11,20,34,.55) 55%, rgba(11,20,34,.93) 100%),
+    linear-gradient(90deg, rgba(11,20,34,.72) 0%, rgba(11,20,34,.36) 48%, rgba(11,20,34,.10) 100%),
+    linear-gradient(180deg, rgba(11,20,34,.20) 0%, rgba(11,20,34,.36) 55%, rgba(11,20,34,.82) 100%),
     url('/assets/img/hero-bg.jpg') center 26% / cover no-repeat,
     var(--night);
 }
