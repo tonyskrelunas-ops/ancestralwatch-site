@@ -787,3 +787,9 @@ a:hover { color: var(--amber); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
 }
+
+/* --- Brand logo lockup (author mark) --- */
+.brand{display:inline-flex !important;align-items:center;gap:.6rem;}
+.brand__logo{height:72px;width:auto;display:block;flex:none;}
+.brand__wm{font-family:var(--font-display,Georgia,serif);font-weight:600;line-height:1;}
+@media (max-width:600px){ .brand__logo{height:58px;width:auto;} }
