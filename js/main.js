@@ -43,47 +43,23 @@
 
   // Email capture → Netlify Forms (AJAX). Submissions land in the Netlify dashboard under
   // Forms → "watch-signup". A hidden detection form lives in index.html.
-  function encode(data) {
-    return Object.keys(data)
-      .map(function (k) { return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]); })
-      .join("&");
-  }
+  // Email capture → opens a pre-addressed email to wisdom@ancestralwatch.com (works on static hosting).
   document.querySelectorAll("form[data-capture]").forEach(function (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var note = form.parentElement.querySelector(".capture__note");
       var input = form.querySelector('input[type="email"]');
       var email = input ? input.value.trim() : "";
-      var btn = form.querySelector('button[type="submit"], button');
       if (!email) { return; }
-      if (btn) { btn.disabled = true; }
-
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": "watch-signup",
-          "email": email,
-          "source": window.location.pathname,
-          "bot-field": ""
-        })
-      })
-        .then(function (res) {
-          if (!res.ok) { throw new Error("bad status"); }
-          form.reset();
-          if (note) {
-            note.textContent = "You're on the watch. Check your inbox for the free tool shortly.";
-            note.style.color = "var(--amber)";
-          }
-        })
-        .catch(function () {
-          if (note) {
-            note.textContent =
-              "Something went wrong — email wisdom@ancestralwatch.com and we'll add you and send the free tool.";
-            note.style.color = "var(--amber)";
-          }
-        })
-        .then(function () { if (btn) { btn.disabled = false; } });
+      var label = form.getAttribute("aria-label") || "Website signup";
+      var subject = "Website: " + label;
+      var body = "Please add me to the list.\n\nEmail: " + email + "\nPage: " + window.location.href;
+      window.location.href = "mailto:wisdom@ancestralwatch.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      form.reset();
+      if (note) {
+        note.textContent = "Thanks! Your email app will open — just hit send and you're on the list.";
+        note.style.color = "var(--amber)";
+      }
     });
   });
 })();
