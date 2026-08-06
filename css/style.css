@@ -200,25 +200,15 @@ a:hover { color: var(--amber); }
 /* --- Hero -------------------------------------------------- */
 .hero {
   position: relative; overflow: hidden;
-  background: linear-gradient(180deg, var(--night) 0%, var(--night-2) 100%);
-  border-bottom: 1px solid var(--rule);
-}
-.hero__grid {
-  position: relative; z-index: 1;
-  display: grid; grid-template-columns: 1.05fr .95fr;
-  gap: var(--space-5); align-items: center;
-  padding-block: clamp(2.5rem, 7vh, 5rem);
-}
-.hero__media { margin: 0; }
-.hero__media img {
-  width: 100%; max-height: 560px; object-fit: cover;
-  border-radius: var(--radius-lg); border: 1px solid var(--rule);
-  box-shadow: 0 24px 60px rgba(0,0,0,.45);
-}
-@media (max-width: 820px) {
-  .hero__grid { grid-template-columns: 1fr; gap: var(--space-4); }
-  .hero__media { order: -1; }
-  .hero__media img { max-height: 320px; }
+  min-height: min(92vh, 820px);
+  display: grid; align-items: center;
+  /* The Stone Breath night-race scene as an atmospheric hero, with a
+     dark overlay (heavier on the left/bottom) so the headline stays legible. */
+  background:
+    linear-gradient(90deg, rgba(11,20,34,.72) 0%, rgba(11,20,34,.36) 48%, rgba(11,20,34,.10) 100%),
+    linear-gradient(180deg, rgba(11,20,34,.20) 0%, rgba(11,20,34,.36) 55%, rgba(11,20,34,.82) 100%),
+    url('/assets/img/hero-bg.jpg?v=7') center 26% / cover no-repeat,
+    var(--night);
 }
 /* faint star field */
 .hero::before {
@@ -238,11 +228,11 @@ a:hover { color: var(--amber); }
 .hero__quotes span { position: relative; padding-left: 1rem; }
 .hero__quotes span::before { content: ""; position: absolute; left: 0; top: .55em; width: 5px; height: 5px;
   background: var(--amber); border-radius: 50%; }
-.hero h1 { font-size: var(--step-4); max-width: 20ch; line-height: 1.06; margin-bottom: var(--space-3); text-shadow: 0 2px 24px rgba(11,20,34,.55); }
+.hero h1 { font-size: var(--step-5); max-width: 18ch; margin-bottom: var(--space-3); }
 .hero h1 em { font-style: italic; color: var(--amber); }
 .hero__tag { font-family: var(--font-display); font-style: italic; font-size: var(--step-2);
   color: var(--amber); margin-bottom: var(--space-3); }
-.hero__sub { font-size: var(--step-1); color: var(--bone); max-width: 46ch; margin-bottom: var(--space-4); text-shadow: 0 1px 14px rgba(11,20,34,.55); }
+.hero__sub { font-size: var(--step-1); color: var(--bone); max-width: 46ch; margin-bottom: var(--space-4); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
 .hero__scroll { position: absolute; bottom: 1.4rem; left: 50%; transform: translateX(-50%);
   color: var(--silver); font-size: var(--step--1); letter-spacing: .2em; text-transform: uppercase;
