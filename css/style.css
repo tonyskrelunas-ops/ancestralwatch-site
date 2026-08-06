@@ -205,8 +205,8 @@ a:hover { color: var(--amber); }
   /* The Stone Breath night-race scene as an atmospheric hero, with a
      dark overlay (heavier on the left/bottom) so the headline stays legible. */
   background:
-    linear-gradient(90deg, rgba(11,20,34,.58) 0%, rgba(11,20,34,.20) 40%, rgba(11,20,34,.04) 100%),
-    linear-gradient(180deg, rgba(11,20,34,.05) 0%, rgba(11,20,34,.18) 55%, rgba(11,20,34,.70) 100%),
+    linear-gradient(90deg, rgba(11,20,34,.62) 0%, rgba(11,20,34,.34) 45%, rgba(11,20,34,.18) 100%),
+    linear-gradient(180deg, rgba(11,20,34,.28) 0%, rgba(11,20,34,.46) 55%, rgba(11,20,34,.92) 100%),
     url('/assets/img/hero-bg.jpg?v=2') center 22% / cover no-repeat,
     var(--night);
 }
@@ -228,11 +228,11 @@ a:hover { color: var(--amber); }
 .hero__quotes span { position: relative; padding-left: 1rem; }
 .hero__quotes span::before { content: ""; position: absolute; left: 0; top: .55em; width: 5px; height: 5px;
   background: var(--amber); border-radius: 50%; }
-.hero h1 { font-size: var(--step-5); max-width: 18ch; margin-bottom: var(--space-3); }
+.hero h1 { font-size: var(--step-4); max-width: 20ch; line-height: 1.06; margin-bottom: var(--space-3); text-shadow: 0 2px 24px rgba(11,20,34,.55); }
 .hero h1 em { font-style: italic; color: var(--amber); }
 .hero__tag { font-family: var(--font-display); font-style: italic; font-size: var(--step-2);
   color: var(--amber); margin-bottom: var(--space-3); }
-.hero__sub { font-size: var(--step-1); color: var(--bone); max-width: 46ch; margin-bottom: var(--space-4); }
+.hero__sub { font-size: var(--step-1); color: var(--bone); max-width: 46ch; margin-bottom: var(--space-4); text-shadow: 0 1px 14px rgba(11,20,34,.55); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
 .hero__scroll { position: absolute; bottom: 1.4rem; left: 50%; transform: translateX(-50%);
   color: var(--silver); font-size: var(--step--1); letter-spacing: .2em; text-transform: uppercase;
