@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/tokens.css" />
-  <link rel="stylesheet" href="/css/style.css?v=30" />
+  <link rel="stylesheet" href="/css/style.css?v=31" />
   <style>
     .excerpt { border-left:3px solid var(--amber); padding:var(--space-3) var(--space-4); margin:var(--space-4) 0; font-family:var(--font-display,'Fraunces'),serif; font-size:var(--step-1); line-height:1.7; font-style:italic; opacity:.92; }
     .fade { position:relative; }
@@ -76,6 +76,8 @@
   .chapter-cta .eyebrow{ display:inline-block; }
   .eyebrow + h1, .eyebrow + h2, .eyebrow + h3{ margin-block-start:0 !important; }
   main h1, main h2{ font-weight:400; letter-spacing:-.022em; line-height:1.06; }
+  main h1, main h2, main h3, .plate h2{ text-wrap:balance; }
+  .lead, .hero__sub, .article-meta, .free-tool__body, .capture p, .work-band p{ text-wrap:pretty; }
   main h3{ font-weight:500; letter-spacing:-.012em; }
   main p{ max-width:66ch; }
   .lead, .hero__sub, .article-meta{
@@ -205,7 +207,7 @@
   .books__head h2{ font-size:clamp(2rem,1.5rem + 2.2vw,3.1rem); margin:0 0 1.2rem !important; }
   .shelf{ list-style:none; margin:0; padding:0; display:block; }
   .shelf__item{
-    display:grid; grid-template-columns:clamp(140px,16vw,214px) minmax(0,1fr);
+    display:grid; grid-template-columns:clamp(160px,18vw,248px) minmax(0,1fr);
     gap:clamp(1.75rem,4.5vw,4rem); align-items:center;
     padding-block:clamp(2.5rem,4.5vw,3.75rem); border-top:1px solid var(--hair);
   }
@@ -255,6 +257,7 @@
   .endorse cite{ margin-top:.65rem; color:rgba(237,230,213,.42); font-size:.74rem; letter-spacing:.05em; }
 
   /* ══ Statement bands ═══════════════════════════════════════════ */
+  .work-band h2{ max-width:18ch; }
   .work-band h2, .capture h2, .beyond h2{
     font-size:clamp(1.9rem,1.4rem + 2vw,2.9rem); margin:0 auto 1.25rem !important; }
   .work-band p{ margin:0 auto 2.4rem; }

@@ -803,20 +803,3 @@ a:hover { color: var(--amber); }
 .brand__logo{height:72px;width:auto;display:block;flex:none;}
 .brand__wm{font-family:var(--font-display,Georgia,serif);font-weight:600;line-height:1;}
 @media (max-width:600px){ .brand__logo{height:58px;width:auto;} }
-/* ============================================================
-   CANYON PALETTE — warm earth + terracotta (replaces teal)
-   ============================================================ */
-:root{
-  --night:#1C1310; --night-2:#241813; --night-3:#2C1E17; --bg:#1C1310; --surface:#251912;
-  --bone:#F6EDE2; --bone-2:#FFF7EC; --text:#F6EDE2; --text-muted:#C3B0A1; --silver:#B09A8A;
-  --amber:#C96A3E; --amber-soft:#E08A5C; --accent-ink:#1B120D; --turq:#D2996A;
-  --rule:#43302A; --ink-soft:#E4D5C7;
-}
-body{background:#1C1310;}
-.hero{background:linear-gradient(160deg,#241813 0%,#1C1310 55%,#160F0C 100%) !important;}
-section[style*="linear-gradient"],.section[style*="linear-gradient"]{background:linear-gradient(180deg,#241813,#1C1310) !important;}
-.site-header{background:rgba(28,19,16,.92) !important;border-bottom:1px solid #43302A;}
-.site-footer{background:#241813;}
-.global-bar{background:rgba(44,30,23,.85) !important;}
-.rt__hero-scrim{background:linear-gradient(180deg,rgba(28,19,16,.34),rgba(28,19,16,.72)) !important;}
-[style*="var(--turq"],.eyebrow{color:#D2996A !important;}
