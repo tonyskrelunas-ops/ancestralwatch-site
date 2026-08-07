@@ -944,3 +944,14 @@ figure.teams-fig img { border-radius: 18px; box-shadow: 0 30px 70px rgba(0,0,0,.
     width: 100%; margin-inline: 0;
   }
 }
+
+/* ---- 17 · Nav breathing room + no awkward wraps ---- */
+.site-header .brand { margin-inline-end: var(--space-3); }
+.site-header .nav__links { gap: 1.15rem; }
+.site-header .nav__links > li { white-space: nowrap; }
+.site-header .has-menu > button { white-space: nowrap; }
+@media (min-width: 901px) and (max-width: 1200px) {
+  .site-header .nav__links a, .site-header .has-menu > button { font-size: .82rem; }
+  .site-header .nav__links { gap: .9rem; }
+}
+.hero .eyebrow { max-width: none; }
