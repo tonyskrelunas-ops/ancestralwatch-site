@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stories &amp; Essays — The Ancestral Watch | Tony Skrelūnas</title>
+<meta name="description" content="Essays by Tony Skrelūnas: how to carry a tradition without stealing it, Blood and Amber — a letter to the Lithuanian diaspora, and five essays on a Japanese garden built in the high desert. Free to read.">
+<link rel="icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/v2/assets/aw2.css">
+<style>
+/* ============================================================
+   STORIES & ESSAYS — page-local layer.
+   Everything here is prefixed es- so it can never collide with
+   the shared system in aw2.css.
+   ============================================================ */
+
+/* the masthead meta rail */
+.es-meta{display:flex;flex-wrap:wrap;gap:.7rem 2.2rem;max-width:none;
+  margin-top:clamp(2.2rem, 1.6rem + 1.6vw, 3.2rem);padding-top:1.7rem;
+  border-top:1px solid var(--rule-2);
+  font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--sand)}
+.es-meta span{display:inline-flex;align-items:center;gap:.75rem}
+.es-meta span::before{content:"";width:.42rem;height:.42rem;border-radius:50%;
+  background:var(--clay);flex:none}
+
+/* ---------- the Baltic plate: a designed panel where a photo would go ---------- */
+.es-plate{display:grid;place-items:center;text-align:center;
+  padding:clamp(2.2rem, 1.4rem + 3vw, 4.5rem);
+  background:linear-gradient(168deg,#2A1A12 0%,#1A100C 58%,#150D0A 100%);
+  border-right:1px solid var(--rule-2)}
+@media(max-width:900px){.es-plate{border-right:0;border-bottom:1px solid var(--rule-2)}}
+.es-plate__glyph{position:absolute;top:50%;left:50%;translate:-50% -50%;
+  width:min(78%,420px);height:auto;overflow:visible;
+  color:rgba(233,176,110,.16);stroke-width:2.1;pointer-events:none}
+.es-plate__in{position:relative;max-width:30ch}
+.es-plate__k{font-size:.74rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--clay-lt);max-width:none}
+.es-plate__yr{font-family:var(--display);font-weight:900;
+  font-size:clamp(4.4rem, 2.4rem + 8vw, 9rem);line-height:.84;letter-spacing:-.05em;
+  color:var(--gold-lt);margin-top:1.1rem;max-width:none;
+  text-shadow:0 14px 52px rgba(0,0,0,.65)}
+.es-plate__cap{margin-top:1.6rem;color:var(--sand);font-size:var(--t-small);
+  line-height:1.62;max-width:30ch;margin-inline:auto}
+.es-plate__rule{width:min(100%,15rem);height:1px;background:rgba(217,162,95,.28);
+  margin:clamp(1.8rem, 1.3rem + 1.4vw, 2.6rem) auto}
+.es-plate__names{font-family:var(--display);font-style:italic;font-weight:600;
+  font-size:clamp(1rem, .92rem + .4vw, 1.24rem);line-height:1.8;
+  color:var(--cream);max-width:26ch;margin-inline:auto}
+.es-plate__names em{font-style:italic;color:var(--gold)}
+
+/* the pantheon / fact lead-in line */
+.es-lede{color:var(--sand);max-width:60ch}
+
+/* ---------- editorial row used as a link ---------- */
+.es-rowlink{text-decoration:none}
+.es-rowlink .row__media img{transition:transform .8s cubic-bezier(.2,.7,.3,1)}
+.es-rowlink:hover .row__media img{transform:scale(1.045)}
+.es-rowlink:hover h3{color:var(--gold-lt)}
+.es-rowlink .es-go{display:inline-flex;align-items:center;gap:.6em;
+  margin-top:clamp(2rem, 1.5rem + 1.4vw, 2.8rem);max-width:none;
+  font-size:.85rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--clay-lt);transition:gap .22s ease,color .22s ease}
+.es-rowlink:hover .es-go{gap:1em;color:var(--gold)}
+.es-rowlink:focus-visible{outline:3px solid var(--gold);outline-offset:-6px}
+
+/* ---------- author strip ---------- */
+.es-bio{display:grid;grid-template-columns:auto 1fr;align-items:center;
+  gap:clamp(1.8rem, 1.2rem + 2.6vw, 3.6rem)}
+@media(max-width:700px){.es-bio{grid-template-columns:1fr;gap:1.8rem}}
+.es-bio--noph{grid-template-columns:1fr}
+.es-bio__ph{width:clamp(132px, 15vw, 200px);aspect-ratio:1;border-radius:50%;
+  overflow:hidden;background:var(--bg-3);border:1px solid var(--rule);flex:none}
+.es-bio__ph img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.es-bio h3{font-size:clamp(1.5rem, 1.2rem + 1.1vw, 2.2rem);margin-bottom:.9rem}
+.es-bio p{color:var(--sand);max-width:58ch}
+.es-bio .arrow{margin-top:1.7rem}
+
+/* card focus rings */
+.jc:focus-visible,.feat:focus-visible{outline:3px solid var(--gold);outline-offset:6px;border-radius:10px}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- shared defs: the Diné weaving band used by every .weave divider -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="wv" width="48" height="26" patternUnits="userSpaceOnUse">
+      <path d="M0 4H48M0 22H48" stroke="currentColor" stroke-width="1.1" opacity=".5"/>
+      <path d="M0 13 12 6 24 13 12 20Z" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <path d="M24 13 36 6 48 13 36 20Z" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <circle cx="12" cy="13" r="2" fill="currentColor"/>
+      <circle cx="36" cy="13" r="2" fill="currentColor" opacity=".45"/>
+    </pattern>
+  </defs>
+</svg>
+
+<!-- ================= LANGUAGES ================= -->
+<div class="globebar">
+  <div class="wrap globebar__in">
+    <p class="globebar__lbl">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15 0 18M12 3c-2.6 2.6-2.6 15 0 18"/>
+      </svg>
+      <span>Read in</span>
+    </p>
+    <ul class="globebar__ls">
+      <li><a class="is-on" href="/" hreflang="en">English</a></li>
+      <li><a href="/ja/" hreflang="ja">日本語</a></li>
+      <li><a href="/lt/" hreflang="lt">Lietuvių</a></li>
+    </ul>
+    <a class="globebar__mail" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="/v2/">
+      <img src="/assets/img/author-logo.png" alt="" aria-hidden="true">
+      <span class="brand__txt">The Ancestral Watch<span class="brand__sub">Tony Skrelūnas</span></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a href="/v2/">Home</a></li>
+        <li><a href="/v2/series/">The Series</a></li>
+        <li><a href="/v2/read/">Read Free</a></li>
+        <li><a href="/v2/tools/">The Tools</a></li>
+        <li><a class="is-on" aria-current="page" href="/v2/stories/">Stories</a></li>
+        <li><a href="/v2/author/">The Author</a></li>
+        <li><a href="https://tribeawaken.com">TribeAwaken&nbsp;↗</a></li>
+      </ul>
+    </nav>
+    <div class="hdr__end">
+      <a class="btn btn--primary hdr__cta" href="https://payhip.com/b/AhH6r">Get Stone Breath</a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <i></i><i></i><i></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= FULL-SCREEN MENU ================= -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Site menu">
+  <div class="wrap">
+    <div class="menu__top">
+      <a class="brand" href="/v2/">
+        <img src="/assets/img/author-logo.png" alt="" aria-hidden="true">
+        <span class="brand__txt">The Ancestral Watch<span class="brand__sub">Tony Skrelūnas</span></span>
+      </a>
+      <button class="menu__close" id="menuClose" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="menu__ls">
+      <li><a href="/v2/"><em>01</em> Home</a></li>
+      <li><a href="/v2/series/"><em>02</em> The Series</a></li>
+      <li><a href="/v2/read/"><em>03</em> Read Chapter One</a></li>
+      <li><a href="/v2/tools/"><em>04</em> The Tools</a></li>
+      <li><a href="/v2/stories/"><em>05</em> Stories</a></li>
+      <li><a href="/v2/author/"><em>06</em> The Author</a></li>
+      <li><a href="https://tribeawaken.com"><em>07</em> TribeAwaken ↗</a></li>
+    </ul>
+    <div class="menu__foot">
+      <a href="/ja/">日本語</a>
+      <a href="/lt/">Lietuvių</a>
+      <a href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ================= MASTHEAD ================= -->
+<section class="phero hasglyph">
+  <svg class="glyph glyph--tr glyph--xl glyph--soft" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"> <line x1="96" y1="172" x2="96" y2="58"/> <line x1="104" y1="172" x2="104" y2="58"/> <line x1="26" y1="172" x2="174" y2="172" opacity="0.5"/> <path d="M 97,172 L 70,183 L 54,180"/> <path d="M 103,172 L 130,183 L 146,180"/> <path d="M 98,173 L 82,188 L 70,190" opacity="0.8"/> <path d="M 102,173 L 118,188 L 130,190" opacity="0.8"/> <path d="M 100,174 L 100,192" opacity="0.7"/> <path d="M 97,148 L 62,130 L 56,114"/> <path d="M 103,148 L 138,130 L 144,114"/> <circle cx="56" cy="108" r="5"/> <circle cx="144" cy="108" r="5"/> <path d="M 79,139 L 74,150" opacity="0.75"/> <path d="M 121,139 L 126,150" opacity="0.75"/> <path d="M 97,120 L 68,104 L 64,88"/> <path d="M 103,120 L 132,104 L 136,88"/> <circle cx="64" cy="82" r="4.4"/> <circle cx="136" cy="82" r="4.4"/> <path d="M 82,112 L 78,123" opacity="0.75"/> <path d="M 118,112 L 122,123" opacity="0.75"/> <path d="M 97,94 L 74,80 L 72,64"/> <path d="M 103,94 L 126,80 L 128,64"/> <circle cx="72" cy="58" r="3.8"/> <circle cx="128" cy="58" r="3.8"/> <path d="M 96,58 L 86,40 L 100,28 L 114,40 L 104,58"/> <path d="M 93,46 L 107,46" opacity="0.7"/> <line x1="100" y1="28" x2="100" y2="20"/> <circle cx="100" cy="14" r="6.5"/> <line x1="100" y1="4" x2="100" y2="7.5"/> <line x1="90" y1="14" x2="93.5" y2="14"/> <line x1="110" y1="14" x2="106.5" y2="14"/> <line x1="93" y1="7" x2="95.4" y2="9.4"/> <line x1="107" y1="7" x2="104.6" y2="9.4"/> <line x1="93" y1="21" x2="95.4" y2="18.6"/> <line x1="107" y1="21" x2="104.6" y2="18.6"/> </svg>
+  <div class="wrap">
+    <p class="eyebrow">Stories &amp; essays</p>
+    <h1>What the messengers left out in the open.</h1>
+    <p class="lead muted">Writing between two inheritances — a method for carrying a tradition without stealing it, a letter to the Lithuanian diaspora, and five essays on a Japanese garden built in the high desert.</p>
+    <p class="es-meta"><span>Nine essays</span><span>Free to read</span><span>No signup</span></p>
+  </div>
+</section>
+
+<!-- ================= FEATURED — BLOOD AND AMBER ================= -->
+<a class="feat" href="/lt/blood-and-amber/">
+  <div class="feat__ph es-plate">
+    <svg class="es-plate__glyph" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"> <path d="M 100,24 C 88,58 60,92 60,116 A 40,40 0 0 0 140,116 C 140,92 112,58 100,24 Z"/> <path d="M 100,54 C 92,78 76,98 76,116 A 24,24 0 0 0 124,116 C 124,98 108,78 100,54" opacity="0.8"/> <path d="M 72.2,127.2 A 30,30 0 1 0 127.8,127.2" opacity="0.55"/> <path d="M 66.4,125.6 A 35,35 0 1 0 133.6,125.6" opacity="0.4"/> <path d="M 89,84 C 84,96 82,106 82,114" opacity="0.5"/> <path d="M 111,84 C 116,96 118,106 118,114" opacity="0.4"/> <path d="M 86,96 C 89,84 93,72 97,60" opacity="0.55"/> <circle cx="112" cy="106" r="2.1" fill="currentColor" stroke="none"/> <circle cx="92" cy="128" r="1.5" fill="currentColor" stroke="none"/> </svg>
+    <div class="es-plate__in">
+      <p class="es-plate__k">Baptised in</p>
+      <p class="es-plate__yr">1387</p>
+      <p class="es-plate__cap">The last pagans in Europe. Samogitia held out to 1413 — a thousand years after Rome, still keeping the old fire.</p>
+      <div class="es-plate__rule"></div>
+      <p class="es-plate__names"><em>Žemyna</em>, the earth mother &middot; <em>Perkūnas</em>, the thunder &middot; the sacred <em>ąžuolas</em> &middot; <em>Gabija</em>, the household fire &middot; <em>Laima</em>, who weaves fate</p>
+    </div>
+  </div>
+  <div class="feat__in">
+    <p class="feat__kick">Featured &middot; The Baltic</p>
+    <h2>Blood and Amber: what the Baltic kept — and why it&rsquo;s yours again</h2>
+    <p class="feat__d">A letter to the Lithuanian diaspora: to the drawer with the amber gone cloudy, and the language fading one generation at a time.</p>
+    <p class="muted" style="margin-top:1.3rem">It survived the Crusades. It survived the Tsars, who banned the alphabet itself. It survived Siberia, and it survived an ocean crossing. Nobody handed it to you with instructions — but nobody took it away, either.</p>
+    <span class="feat__go">Read the essay <span aria-hidden="true">→</span></span>
+  </div>
+</a>
+
+<!-- ================= WHAT THE BALTIC KEPT ================= -->
+<section class="sec sec--deep">
+  <div class="wrap">
+    <div class="sec__intro rv">
+      <h2 class="head">What was actually kept.</h2>
+      <p class="es-lede">Not a costume and not a theme park. A living language, a body of song large enough to be a library, and a smuggling network that treated the alphabet as contraband worth prison.</p>
+    </div>
+    <div class="facts rv">
+      <div>
+        <b>Oldest</b>
+        <span>The most archaic living Indo-European tongue still spoken</span>
+      </div>
+      <div>
+        <b>100,000s</b>
+        <span>Dainos collected village by village &middot; the polyphonic sutartinės are UNESCO-listed</span>
+      </div>
+      <div>
+        <b>Knygnešiai</b>
+        <span>Book smugglers who carried a banned alphabet across the border under their coats</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PULL ================= -->
+<section class="sec sec--alt">
+  <div class="wrap wrap--mid center">
+    <p class="pull pull--center rv">You are richer than you think.</p>
+    <p class="attrib rv">From Blood and Amber</p>
+  </div>
+</section>
+
+<div class="weave" aria-hidden="true"><svg><rect width="100%" height="26" fill="url(#wv)"/></svg></div>
+
+<!-- ================= IDEAS & FRAMEWORK ================= -->
+<section class="sec hasglyph" id="ideas">
+  <svg class="glyph glyph--bl glyph--soft" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"> <line x1="131.4" y1="135" x2="138.4" y2="131"/> <line x1="126" y1="128" x2="137.4" y2="116.6"/> <line x1="119" y1="122.6" x2="123" y2="115.6"/> <line x1="110.8" y1="119.2" x2="114.9" y2="103.7"/> <line x1="102" y1="118" x2="102" y2="110"/> <line x1="93.2" y1="119.2" x2="89.1" y2="103.7"/> <line x1="85" y1="122.6" x2="81" y2="115.6"/> <line x1="78" y1="128" x2="66.6" y2="116.6"/> <line x1="72.6" y1="135" x2="65.6" y2="131"/> <path d="M 76,152 A 26,26 0 0 1 128,152"/> <polyline points="9,152 14,118 23,105 43,103 50,117 56,152"/> <line x1="15" y1="117" x2="50" y2="116" opacity="0.6"/> <line x1="12" y1="134" x2="54" y2="133" opacity="0.45"/> <polyline points="150,152 155,130 162,121 177,120 183,131 188,152"/> <line x1="156" y1="131" x2="183" y2="130" opacity="0.6"/> <line x1="6" y1="152" x2="194" y2="152"/> </svg>
+  <div class="wrap">
+    <div class="sec__intro rv">
+      <h2 class="head">Ideas &amp; framework</h2>
+      <p class="es-lede">Three essays on the working question behind the whole series: how do you pick a tool back up without pretending it is yours, and what did the messengers actually know?</p>
+    </div>
+
+    <div class="grid3 rv">
+
+      <a class="jc jc--glyph" href="/stories/carry-without-stealing/">
+        <div class="jc__img">
+          <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"> <circle cx="70" cy="70" r="46"/> <circle cx="130" cy="70" r="46"/> <circle cx="130" cy="130" r="46"/> <circle cx="70" cy="130" r="46"/> <circle cx="100" cy="100" r="7"/> <circle cx="100" cy="100" r="2.2" fill="currentColor" stroke="none"/> </svg>
+        </div>
+        <p class="jc__kick">The method</p>
+        <h3>How to carry a tradition without stealing it</h3>
+        <p>The wellness economy sells the messengers&rsquo; tools with the messengers&rsquo; world deleted. The alternative is a method: take the timeless principle out of the time-bound practice, name the hand it came from, and leave what was never yours.</p>
+        <p style="margin-top:1.1rem;font-family:var(--display);font-style:italic;color:var(--gold-lt);max-width:36ch">&ldquo;A birthright cannot be appropriated, because every people on earth was once indigenous somewhere.&rdquo;</p>
+        <p class="jc__go">Read the essay →</p>
+      </a>
+
+      <a class="jc jc--glyph" href="/stories/never-only-men/">
+        <div class="jc__img">
+          <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"> <line x1="20" y1="46" x2="180" y2="46"/> <line x1="20" y1="54" x2="180" y2="54"/> <line x1="20" y1="146" x2="180" y2="146"/> <line x1="20" y1="154" x2="180" y2="154"/> <polyline points="20,60 40,74 60,60 80,74 100,60 120,74 140,60 160,74 180,60"/> <polyline points="20,140 40,126 60,140 80,126 100,140 120,126 140,140 160,126 180,140"/> <polyline points="20,100 40,82 60,100 40,118 20,100"/> <polyline points="60,100 80,82 100,100 80,118 60,100"/> <polyline points="100,100 120,82 140,100 120,118 100,100"/> <polyline points="140,100 160,82 180,100 160,118 140,100"/> </svg>
+        </div>
+        <p class="jc__kick">Who carried</p>
+        <h3>Never only men</h3>
+        <p>The memory-keepers. The singers who held a people&rsquo;s law in melody. The midwives who walked out at night. The divers who went down on one breath and came back up with the food.</p>
+        <p style="margin-top:1.1rem">The far messengers were never only men — and the record says so plainly, once you stop looking only at the runners.</p>
+        <p class="jc__go">Read the essay →</p>
+      </a>
+
+      <a class="jc jc--glyph" href="/stories/the-calm-you-already-stored/">
+        <div class="jc__img">
+          <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"> <ellipse cx="100" cy="116" rx="36" ry="12" opacity="0.95"/> <ellipse cx="100" cy="116" rx="56" ry="21" opacity="0.75"/> <ellipse cx="100" cy="116" rx="76" ry="30" opacity="0.55"/> <ellipse cx="100" cy="116" rx="94" ry="38" opacity="0.35"/> <path d="M 78,89 C 78,79 88,73 101,73 C 113,73 121,79 121,88 C 121,96 111,101 100,101 C 87,101 78,97 78,89 Z"/> <path d="M 85,84 C 89,78 95,75 103,76" opacity="0.55"/> </svg>
+        </div>
+        <p class="jc__kick">The practice</p>
+        <h3>The calm you already stored</h3>
+        <p>Steadiness is not something you summon in the emergency. It is something you put away beforehand, in ordinary hours, and draw on when the ground moves.</p>
+        <p style="margin-top:1.1rem">The messengers knew exactly where they kept theirs — and so, it turns out, do you.</p>
+        <p class="jc__go">Read the essay →</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= BAND — THE JAPANESE GARDEN ================= -->
+<section class="state">
+  <div class="state__bg"><img src="/assets/img/garden/family-garden.jpg" alt="The garden in high summer — lawn, aspens and stone under an open sky" loading="lazy"></div>
+  <div class="wrap state__in">
+    <p class="eyebrow">The Japanese garden &middot; Five essays</p>
+    <p class="pull">Japan reached a Navajo boy <em>by kerosene light</em>.</p>
+    <p class="lead" style="margin-top:2.2rem;max-width:44ch">Forty years later his family built the garden it had promised him — and tended it twelve years before letting it go.</p>
+  </div>
+</section>
+
+<!-- ================= GARDEN LEAD ESSAY ================= -->
+<a class="row es-rowlink" href="/ja/torii-in-the-desert/">
+  <div class="row__media">
+    <img src="/assets/img/garden/torii-buddha.jpg" alt="A wooden torii gate with a stone Buddha seated beneath it" loading="lazy">
+  </div>
+  <div class="row__body">
+    <p class="row__meta"><b>Essay one</b> &middot; The garden</p>
+    <h3>A Torii in the High Desert</h3>
+    <p>How Japan reached a Navajo boy by kerosene light, and the garden his family built from it — a koi pond, a waterfall, a torii with a Buddha beneath it, an arched stone bridge, and a meditation room framing a sacred mountain.</p>
+    <p style="margin-top:1.3rem">Tended twelve years. Then released.</p>
+    <span class="es-go">Read the essay <span aria-hidden="true">→</span></span>
+  </div>
+</a>
+
+<!-- ================= THE OTHER FOUR ================= -->
+<section class="sec sec--alt" id="garden">
+  <div class="wrap">
+    <div class="sec__intro rv">
+      <h2 class="head">Four more from the same water.</h2>
+      <p class="es-lede">Each one takes a single feature of the garden — the fish, the ground, the sound, the crossing — and follows it back to what it was built to teach.</p>
+    </div>
+
+    <div class="grid2 rv">
+
+      <a class="jc jc--plain" href="/ja/koi-and-the-dragon-gate/">
+        <p class="jc__kick">Essay two</p>
+        <h3>The Koi and the Dragon Gate</h3>
+        <p>The <em>tōryūmon</em> legend: a fish climbs the falls and becomes a dragon. The same hard water that could sweep you away is exactly what makes you greater. It is also why <em>koinobori</em> are flown for children.</p>
+        <p class="jc__go">Read the essay →</p>
+      </a>
+
+      <a class="jc jc--plain" href="/ja/garden-as-practice/">
+        <p class="jc__kick">Essay three</p>
+        <h3>Why a Garden Is a Spiritual Practice</h3>
+        <p><em>Wabi-sabi</em>, and attention as a form of devotion. Plus <em>shakkei</em> — borrowed scenery — the discipline of composing with a mountain you do not own and cannot move.</p>
+        <p class="jc__go">Read the essay →</p>
+      </a>
+
+      <a class="jc jc--plain" href="/ja/the-sound-of-water/">
+        <p class="jc__kick">Essay four</p>
+        <h3>The Sound of Water</h3>
+        <p><em>Misogi</em>, the buried chime of the <em>suikinkutsu</em>, and flow — with the plain physiology of why moving water settles a nervous system that will not settle on command.</p>
+        <p class="jc__go">Read the essay →</p>
+      </a>
+
+      <a class="jc jc--plain" href="/ja/the-arched-bridge/">
+        <p class="jc__kick">Essay five</p>
+        <h3>The Arched Bridge</h3>
+        <p>The <em>taikobashi</em> as threshold, and <em>higan</em> — the other shore. On being a person who belongs to two places and fully to neither.</p>
+        <p class="jc__go">Read the essay →</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PULL ================= -->
+<section class="sec sec--deep">
+  <div class="wrap wrap--mid center">
+    <p class="pull pull--center rv">Some people are not meant to stand on one shore. Some people are <em>the bridge</em>.</p>
+    <p class="attrib rv">From The Arched Bridge</p>
+  </div>
+</section>
+
+<!-- ================= WRITTEN BY ================= -->
+<section class="sec">
+  <div class="wrap wrap--mid">
+    <div class="es-bio es-bio--noph rv">
+      <div>
+        <p class="eyebrow">Written by</p>
+        <h3>Tony Skrelūnas</h3>
+        <p>Lithuanian and Diné. Raised in a hogan on Big Mountain by his great-grandmother; learned to read by kerosene lamp. These essays are the working notes behind The Ancestral Watch — the reading, the arguing, and the years of practice that would not fit inside the novels.</p>
+        <a class="arrow" href="/v2/author/">More about Tony <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WRITE TO ME ================= -->
+<section class="sec sec--deep" id="contact">
+  <div class="wrap wrap--mid center contact--center">
+    <p class="eyebrow eyebrow--center">Write to me</p>
+    <h2 style="max-width:16ch;margin-inline:auto">Tell me what you carry.</h2>
+    <p class="lead lead--wide muted" style="margin-top:1.6rem">If one of these essays named something you had no name for — the drawer, the language, the garden you let go — I would like to hear it. The address goes straight to me.</p>
+    <a class="mailto rv" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    <p class="mailto__note">I read everything. I answer what I can.</p>
+    <div class="actions" style="justify-content:center">
+      <a class="arrow" href="/v2/read/">Read chapter one free <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="weave" aria-hidden="true"><svg><rect width="100%" height="26" fill="url(#wv)"/></svg></div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div>
+        <p class="ftr__brand">The Ancestral Watch</p>
+        <p class="ftr__tag">Ancient technology for a modern life.</p>
+        <div class="ftr__langs">
+          <a href="/">English</a><span>·</span>
+          <a href="/ja/">日本語</a><span>·</span>
+          <a href="/lt/">Lietuvių</a>
+        </div>
+      </div>
+      <div>
+        <h4>The Books</h4>
+        <ul>
+          <li><a href="https://payhip.com/b/AhH6r">Stone Breath</a></li>
+          <li><a href="/v2/series/#by-lamplight">By Lamplight</a></li>
+          <li><a href="https://payhip.com/b/GB2eg">The Council Fire</a></li>
+          <li><a href="/v2/series/#far-messengers">The Far Messengers</a></li>
+          <li><a href="/v2/series/">All four books</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Free</h4>
+        <ul>
+          <li><a href="/v2/read/">Chapter one of Stone Breath</a></li>
+          <li><a href="/v2/tools/">The Stone Breath tool</a></li>
+          <li><a href="/downloads/ancestral-watch__dawn-vow.pdf">The Dawn Vow</a></li>
+          <li><a href="/downloads/ancestral-watch__envy-protocol.pdf">The Envy Protocol</a></li>
+          <li><a href="/v2/stories/">Stories &amp; essays</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="/v2/author/">Tony Skrelūnas</a></li>
+          <li><a href="https://tribeawaken.com">TribeAwaken — retreats &amp; coaching</a></li>
+          <li><a href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__legal">
+      <span>© 2026 Tony Skrelūnas · The Ancestral Watch</span>
+      <span>The tools were never lost. Only set down.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------- reveal ---------- */
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+    els.forEach(function(e){e.classList.add('in')});return;
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{rootMargin:'0px 0px -6% 0px',threshold:.05});
+  els.forEach(function(e){io.observe(e)});
+  function sweep(){
+    els.forEach(function(e){
+      if(e.classList.contains('in'))return;
+      var r=e.getBoundingClientRect();
+      if(r.top<(window.innerHeight||0)*1.02){e.classList.add('in');io.unobserve(e)}
+    });
+  }
+  window.addEventListener('load',function(){sweep();setTimeout(sweep,260)});
+  setTimeout(sweep,1200);
+})();
+/* ---------- menu ---------- */
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu'),c=document.getElementById('menuClose');
+  if(!b||!m)return;
+  function open(){m.classList.add('open');b.setAttribute('aria-expanded','true');document.body.classList.add('locked')}
+  function shut(){m.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.classList.remove('locked')}
+  b.addEventListener('click',function(){m.classList.contains('open')?shut():open()});
+  if(c)c.addEventListener('click',shut);
+  m.addEventListener('click',function(e){if(e.target.tagName==='A')shut()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')shut()});
+})();
+</script>
+</body>
+</html>
