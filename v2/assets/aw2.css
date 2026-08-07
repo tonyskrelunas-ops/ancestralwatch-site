@@ -413,7 +413,7 @@ html{scroll-padding-top:6.5rem}
 .bleed{width:100%}
 
 /* ---------- languages / global bar ---------- */
-.globebar{background:var(--ink);border-bottom:1px solid var(--rule-2);font-size:.82rem}
+.globebar{background:var(--ink);border-top:1px solid var(--rule-2);font-size:.82rem}
 .globebar__in{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap;
   padding-block:.62rem;min-height:2.9rem}
 .globebar__lbl{display:flex;align-items:center;gap:.55rem;font-weight:800;
