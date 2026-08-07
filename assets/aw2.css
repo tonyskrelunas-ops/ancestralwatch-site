@@ -150,7 +150,7 @@ em{font-style:italic}
   font-family:var(--display);font-weight:800;font-size:1.28rem;
   letter-spacing:-.022em;line-height:1.05;white-space:nowrap;
 }
-.brand img{width:42px;height:42px;object-fit:contain;flex:none}
+.brand img{width:clamp(76px, 6.2vw, 104px);height:auto;object-fit:contain;flex:none}
 .brand__txt{display:flex;flex-direction:column;gap:.15rem}
 .brand__sub{
   font-family:var(--body);font-size:.62rem;font-weight:800;
@@ -163,7 +163,7 @@ em{font-style:italic}
 @media(max-width:1000px){.nav li:not(.nav__cta){display:none}}
 @media(max-width:480px){
   .brand{font-size:1.05rem}
-  .brand img{width:34px;height:34px}
+  .brand img{width:62px;height:auto}
   .nav .arrow{font-size:.72rem;letter-spacing:.08em}
 }
 
