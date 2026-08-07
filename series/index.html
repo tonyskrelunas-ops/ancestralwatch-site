@@ -1,192 +1,600 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <title>The Ancestral Watch Series — Four Books, One Journey | Tony Skrelūnas</title>
-  <meta name="description" content="The Ancestral Watch Series by Tony Skrelūnas: four books moving from the intimate to the planetary — Stone Breath, By Lamplight, The Council Fire, The Far Messengers. Start with Stone Breath." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Series — Four Books, One Long Road | The Ancestral Watch</title>
+<meta name="description" content="The four books of The Ancestral Watch by Tony Skrelūnas — Stone Breath, By Lamplight, The Council Fire, and The Far Messengers. One arc, from the intimate to the planetary.">
+<link rel="icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/aw2.css">
+<style>
+.scale{display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  margin-top:clamp(2.6rem,2rem + 2vw,4rem);border-top:1px solid var(--rule-2)}
+.scale div{padding:clamp(1.5rem,1.1rem + 1.2vw,2.2rem) clamp(1rem,.6rem + 1.2vw,1.8rem);
+  border-left:1px solid var(--rule-2)}
+.scale div:first-child{border-left:0;padding-left:0}
+.scale b{display:block;font-family:var(--display);font-weight:900;font-size:1rem;
+  color:var(--clay-lt);letter-spacing:.04em;margin-bottom:.7rem}
+.scale span{display:block;font-size:.98rem;color:var(--sand);line-height:1.5}
+@media(max-width:820px){.scale{grid-template-columns:1fr 1fr}
+  .scale div{border-left:0;border-top:1px solid var(--rule-2);padding-left:0}}
+.bkhead{display:flex;align-items:baseline;gap:1.4rem;flex-wrap:wrap;
+  padding-bottom:clamp(1.6rem,1.2rem + 1.4vw,2.4rem);margin-bottom:clamp(2.6rem,2rem + 2.4vw,4.4rem);
+  border-bottom:1px solid var(--rule-2)}
+.bkhead__n{font-family:var(--display);font-weight:900;font-size:clamp(2.6rem,2rem + 2.6vw,4.6rem);
+  color:rgba(230,180,140,.26);line-height:.85;letter-spacing:-.04em}
+.bkhead__l{font-size:.8rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);max-width:none}
+.movements{list-style:none;padding:0;margin:2.4rem 0 0;display:grid;gap:0}
+.movements li{display:grid;grid-template-columns:auto 1fr;gap:1.4rem;align-items:baseline;
+  padding-block:1.15rem;border-top:1px solid var(--rule-2)}
+.movements li:last-child{border-bottom:1px solid var(--rule-2)}
+.movements b{font-family:var(--display);font-weight:900;color:var(--clay);font-size:1rem}
+.movements span{color:var(--sand);font-size:var(--t-small);line-height:1.55}
+.movements strong{color:var(--cream-2)}
+.chars{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,1.2rem + 3.4vw,4.5rem);
+  align-items:center;margin-top:clamp(3rem,2rem + 3vw,5rem);
+  padding-top:clamp(3rem,2rem + 3vw,5rem);border-top:1px solid var(--rule-2)}
+@media(max-width:900px){.chars{grid-template-columns:1fr}}
 
-  <meta property="og:type" content="book.series" />
-  <meta property="og:title" content="The Ancestral Watch Series — Tony Skrelūnas" />
-  <meta property="og:description" content="Four books, one journey — from the intimate to the planetary. Start with Stone Breath." />
-  <meta property="og:url" content="https://ancestralwatch.com/series/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="https://ancestralwatch.com/series/" />
+.premise{margin-top:clamp(2.2rem,1.6rem + 1.6vw,3.2rem);
+  padding-top:clamp(1.8rem,1.4rem + 1.2vw,2.6rem);border-top:1px solid var(--rule-2);
+  max-width:52ch;color:var(--sand);font-size:var(--t-small);line-height:1.7}
+.premise em{font-family:var(--display);font-style:italic;font-weight:600;color:var(--gold-lt)}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="/css/tokens.css" />
-  <link rel="stylesheet" href="/css/style.css" />
+/* ============ THE SHELF — four equal-height book cards ============
+   Every cover has a different aspect ratio (0.75 / 0.89 / 0.67), and
+   Book IV has no cover at all. A FIXED plate with object-fit:contain
+   keeps every cover, badge, title and button on the same line across
+   all four cards. Subgrid does the row matching; the flex fallback
+   below keeps the buttons aligned in older engines.
+   ================================================================ */
+.shelf{display:grid;grid-template-columns:repeat(4,1fr);
+  gap:clamp(1.4rem,.8rem + 2vw,2.8rem);
+  margin-top:clamp(2.4rem,1.8rem + 2vw,3.6rem)}
+.shelf__c{display:grid;grid-template-rows:subgrid;grid-row:span 5;
+  background:var(--bg-3);border:1px solid var(--rule-2);border-radius:14px;
+  padding:clamp(1rem,.7rem + 1.2vw,1.7rem);
+  transition:border-color .3s ease,transform .3s ease}
+.shelf__c:hover{border-color:rgba(201,106,62,.5);transform:translateY(-4px)}
+@supports not (grid-template-rows:subgrid){
+  .shelf__c{display:flex;flex-direction:column}
+  .shelf__a{margin-top:auto}
+}
+.shelf__p{position:relative;display:grid;grid-template:1fr / 1fr;
+  height:clamp(230px,13rem + 12vw,330px);
+  padding:clamp(10px,.4rem + .5vw,16px);border-radius:8px;overflow:hidden;
+  background:radial-gradient(ellipse at 50% 40%,rgba(217,162,95,.15),rgba(201,106,62,.05) 48%,transparent 74%),
+    linear-gradient(180deg,#2B1C17,#1D1310);
+  box-shadow:inset 0 1px 0 rgba(250,243,233,.05)}
+.shelf__p img{min-height:0;width:100%;height:100%;object-fit:contain;object-position:center;
+  filter:drop-shadow(10px 14px 26px rgba(0,0,0,.6));transition:transform .45s cubic-bezier(.2,.7,.3,1)}
+a.shelf__l{display:block;min-height:0;width:100%;height:100%;text-decoration:none}
+a.shelf__l:hover img{transform:translateY(-5px) scale(1.02)}
+a.shelf__l:focus-visible{outline:3px solid var(--gold);outline-offset:4px;border-radius:5px}
+/* Book IV: no cover art — a typographic plate, set like a title page */
+.shelf__t4{position:relative;min-height:0;display:grid;align-content:center;justify-items:center;
+  text-align:center;padding:clamp(.7rem,.45rem + .7vw,1.1rem);overflow:hidden;
+  border:1px solid rgba(217,162,95,.3);border-radius:4px;
+  background:linear-gradient(168deg,rgba(250,243,233,.05),rgba(250,243,233,.008) 58%);
+  box-shadow:10px 14px 26px rgba(0,0,0,.5)}
+.shelf__t4 svg{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);
+  width:118%;height:auto;color:rgba(230,180,140,.13);stroke-width:2;overflow:visible;z-index:0}
+.shelf__t4 > span{position:relative;z-index:1;max-width:none}
+.t4n{font-family:var(--display);font-weight:900;font-size:1.15rem;color:var(--clay-lt);letter-spacing:.08em;line-height:1}
+.t4r{width:2rem;height:2px;background:rgba(217,162,95,.55);margin-block:.85rem}
+.t4t{font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--cream);
+  font-size:clamp(.78rem,.46rem + .7vw,1.02rem);line-height:1.15;letter-spacing:-.015em;
+  overflow-wrap:normal;word-break:keep-all;hyphens:none}
+.t4s{margin-top:.85rem;font-size:.58rem;font-weight:800;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--sand)}
+.shelf__m{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;
+  margin-top:clamp(1.1rem,.9rem + .6vw,1.5rem)}
+.shelf__n{font-family:var(--body);font-size:.68rem;font-weight:800;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--clay-lt)}
+.shelf__c h3{margin-top:.75rem;font-size:clamp(1.3rem,1.05rem + .95vw,1.85rem);
+  line-height:1.03;letter-spacing:-.03em}
+.shelf__s{margin-top:.6rem;font-family:var(--display);font-style:italic;font-weight:500;
+  color:var(--gold-lt);font-size:clamp(.98rem,.93rem + .25vw,1.12rem);line-height:1.38}
+.shelf__a{display:flex;align-items:center;margin-top:clamp(1.1rem,.9rem + .7vw,1.6rem);
+  padding-top:clamp(.9rem,.7rem + .6vw,1.3rem);border-top:1px solid var(--rule-2)}
+.shelf__a .arrow{font-size:.76rem;letter-spacing:.1em}
+@media(max-width:1080px){.shelf{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){
+  .shelf{grid-template-columns:1fr;gap:1.4rem}
+  .shelf__c{display:flex;flex-direction:column}
+  .shelf__a{margin-top:auto}
+  .shelf__p{height:clamp(240px,58vw,300px)}
+}
+</style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ============ HEADER / NAV (shared) ============ -->
-  <header class="site-header">
-    <nav class="nav wrap wrap--wide" aria-label="Primary">
-      <a class="brand" href="/"><img class="brand__logo" src="/assets/img/author-logo.png" alt="AncestralWatch logo" width="72" height="71"><span class="brand__wm">Ancestral<span class="brand__mark">Watch</span></span></a>
-      <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">☰</button>
-      <ul class="nav__links" id="primary-nav" data-open="false">
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="wv" width="48" height="26" patternUnits="userSpaceOnUse">
+      <path d="M0 4H48M0 22H48" stroke="currentColor" stroke-width="1.1" opacity=".5"/>
+      <path d="M0 13 12 6 24 13 12 20Z" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <path d="M24 13 36 6 48 13 36 20Z" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <circle cx="12" cy="13" r="2" fill="currentColor"/>
+      <circle cx="36" cy="13" r="2" fill="currentColor" opacity=".45"/>
+    </pattern>
+  </defs>
+</svg>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="/">
+      <img src="/assets/img/author-logo.png" alt="" aria-hidden="true">
+      <span class="brand__txt">The Ancestral Watch<span class="brand__sub">Tony Skrelūnas</span></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav">
         <li><a href="/">Home</a></li>
-        <li class="has-menu">
-          <button aria-expanded="false" aria-haspopup="true">The Series</button>
-          <ul class="menu">
-            <li><a href="/series/" aria-current="page"><span class="menu__num">All</span> The Series</a></li>
-            <li><a href="/series/stone-breath/"><span class="menu__num">I</span> Stone Breath</a></li>
-            <li><a href="/series/by-lamplight/"><span class="menu__num">II</span> By Lamplight</a></li>
-            <li><a href="/series/the-council-fire/"><span class="menu__num">III</span> The Council Fire</a></li>
-            <li><a href="/series/the-far-messengers/"><span class="menu__num">IV</span> The Far Messengers</a></li>
-          <li><a href="/start-here/">Start Here</a></li><li><a href="/read/stone-breath/">Read Free</a></li></ul>
-        </li>
-        <li><a href="/tools/">The Tools</a></li><li><a href="https://tribeawaken.com/" target="_blank" rel="noopener">TribeAwaken ↗</a></li>
-        <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+        <li><a class="is-on" aria-current="page" href="/series/">The Series</a></li>
+        <li><a href="/read/">Read Free</a></li>
+        <li><a href="/tools/">The Tools</a></li>
+        <li><a href="/stories/">Stories</a></li>
         <li><a href="/author/">The Author</a></li>
-        <li><a class="lang-toggle" href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a class="lang-toggle" href="/lt/" hreflang="lt" lang="lt" style="border-left:0;padding-left:0;">Lietuvių</a></li>
-        <li class="nav__cta"><a class="btn btn--primary" href="/series/stone-breath/">Get the Books</a></li>
+        <li><a href="https://tribeawaken.com">TribeAwaken&nbsp;↗</a></li>
       </ul>
     </nav>
-  </header>
+    <div class="hdr__end">
+      <a class="btn btn--primary hdr__cta" href="https://payhip.com/b/AhH6r">Get Stone Breath</a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <i></i><i></i><i></i>
+      </button>
+    </div>
+  </div>
+  <div class="globebar">
+    <div class="wrap globebar__in">
+      <p class="globebar__lbl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15 0 18M12 3c-2.6 2.6-2.6 15 0 18"/>
+        </svg>
+        <span>Read in</span>
+      </p>
+      <ul class="globebar__ls">
+        <li><a class="is-on" href="/" hreflang="en">English</a></li>
+        <li><a href="/ja/" hreflang="ja">日本語</a></li>
+        <li><a href="/lt/" hreflang="lt">Lietuvių</a></li>
+      </ul>
+      <a class="globebar__mail" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+</header>
 
-  <main id="main">
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Site menu">
+  <div class="wrap">
+    <div class="menu__top">
+      <a class="brand" href="/">
+        <img src="/assets/img/author-logo.png" alt="" aria-hidden="true">
+        <span class="brand__txt">The Ancestral Watch<span class="brand__sub">Tony Skrelūnas</span></span>
+      </a>
+      <button class="menu__close" id="menuClose" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="menu__ls">
+      <li><a href="/"><em>01</em> Home</a></li>
+      <li><a href="/series/"><em>02</em> The Series</a></li>
+      <li><a href="/read/"><em>03</em> Read Chapter One</a></li>
+      <li><a href="/tools/"><em>04</em> The Tools</a></li>
+      <li><a href="/stories/"><em>05</em> Stories</a></li>
+      <li><a href="/author/"><em>06</em> The Author</a></li>
+      <li><a href="https://tribeawaken.com"><em>07</em> TribeAwaken ↗</a></li>
+    </ul>
+    <div class="menu__foot">
+      <a href="/ja/">日本語</a>
+      <a href="/lt/">Lietuvių</a>
+      <a href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+</div>
 
-    <!-- ============ PAGE HERO / PREMISE ============ -->
-    <section class="page-hero">
-      <div class="wrap page-hero__inner">
-        <p class="eyebrow">The Ancestral Watch Series</p>
-        <h1>Ancient human operating systems, for a world that forgot it had them.</h1>
-        <p class="lead">
-          Four books, one arc — moving in scale from the <em>intimate</em> to the <em>planetary</em>.
-          One relationship. Then one life's formation. Then a civilization at its limits. Then the
-          whole world stage. Read together they form a single journey back to what lasts.
-        </p>
+<main id="main">
+
+<!-- ================= PAGE HERO ================= -->
+<section class="hasglyph phero">
+  <svg class="glyph glyph--tr glyph--xl glyph--soft" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"> <circle cx="70" cy="70" r="46"/> <circle cx="130" cy="70" r="46"/> <circle cx="130" cy="130" r="46"/> <circle cx="70" cy="130" r="46"/> <circle cx="100" cy="100" r="7"/> <circle cx="100" cy="100" r="2.2" fill="currentColor" stroke="none"/> <circle cx="54" cy="54" r="8"/> <line x1="54" y1="48" x2="54" y2="60"/> <line x1="50" y1="52" x2="58" y2="52" opacity="0.8"/> <circle cx="141" cy="51" r="6"/> <circle cx="151" cy="57" r="6"/> <polyline points="146,138 154,146 146,154 138,146 146,138"/> <polyline points="146,142 150,146 146,150 142,146 146,142" opacity="0.7"/> <path d="M 46,154 C 46,144 52,138 62,138 C 62,148 56,154 46,154 Z"/> <line x1="48" y1="152" x2="60" y2="140" opacity="0.7"/> </svg>
+  <div class="wrap">
+    <p class="eyebrow">The Ancestral Watch</p>
+    <h1>Four books. One long road.</h1>
+    <p class="lead">Ancient human operating systems, for a world that forgot it had them. One arc, moving in scale from the intimate to the planetary — and every book stands on its own.</p>
+    <p class="premise">Every people on earth once raised <em>far messengers</em> — trained carriers who crossed deadly ground with what their people needed, and arrived whole. The tools were never lost. They were only set down.</p>
+  </div>
+</section>
+
+<!-- ================= THE SHELF ================= -->
+<section class="sec sec--deep" id="books">
+  <div class="wrap">
+    <p class="eyebrow">The four books</p>
+    <h2 style="max-width:17ch">Two are on the shelf. Two are on the way.</h2>
+
+    <div class="shelf">
+
+      <article class="shelf__c rv">
+        <div class="shelf__p">
+          <a class="shelf__l" href="#stone-breath">
+            <img src="/assets/img/stone-breath-cover.jpg" alt="Cover of Stone Breath, Book One of The Ancestral Watch">
+          </a>
+        </div>
+        <p class="shelf__m"><span class="shelf__n">Book I</span> <span class="pill pill--now">Out now</span></p>
+        <h3>Stone Breath</h3>
+        <p class="shelf__s">The personal — one relationship, and what it costs to arrive whole.</p>
+        <p class="shelf__a"><a class="arrow" href="#stone-breath">About this book <span aria-hidden="true">→</span></a></p>
+      </article>
+
+      <article class="shelf__c rv">
+        <div class="shelf__p">
+          <a class="shelf__l" href="#by-lamplight">
+            <img src="/assets/img/by-lamplight-cover.jpg" alt="Cover of By Lamplight, Book Two of The Ancestral Watch" loading="lazy">
+          </a>
+        </div>
+        <p class="shelf__m"><span class="shelf__n">Book II</span> <span class="pill pill--soon">In progress</span></p>
+        <h3>By Lamplight</h3>
+        <p class="shelf__s">One life’s making — the five voices that raise a carrier.</p>
+        <p class="shelf__a"><a class="arrow" href="#by-lamplight">About this book <span aria-hidden="true">→</span></a></p>
+      </article>
+
+      <article class="shelf__c rv">
+        <div class="shelf__p">
+          <a class="shelf__l" href="#council-fire">
+            <img src="/assets/img/council-fire-cover.jpg" alt="Cover of The Council Fire, Book Three of The Ancestral Watch" loading="lazy">
+          </a>
+        </div>
+        <p class="shelf__m"><span class="shelf__n">Book III</span> <span class="pill pill--now">Out now</span></p>
+        <h3>The Council Fire</h3>
+        <p class="shelf__s">The civilizational — a circle of keepers at the limits of the systems.</p>
+        <p class="shelf__a"><a class="arrow" href="#council-fire">About this book <span aria-hidden="true">→</span></a></p>
+      </article>
+
+      <article class="shelf__c rv">
+        <div class="shelf__p">
+          <div class="shelf__t4">
+            <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"> <line x1="22" y1="176" x2="178" y2="176" opacity="0.35"/> <circle cx="131" cy="44" r="10.5"/> <path d="M 138,54 C 132,70 120,88 107,101 L 94,95 C 104,82 113,68 118,53 Z"/> <polyline points="101,99 138,94 130,129"/> <path d="M 130,129 C 136,133 143,134 149,132"/> <polyline points="100,100 69,122 44,141"/> <path d="M 44,141 C 38,145 34,150 32,157"/> <polyline points="128,57 152,74 143,51"/> <polyline points="119,58 92,76 76,58"/> <line x1="26" y1="92" x2="56" y2="78" opacity="0.3"/> <line x1="18" y1="108" x2="44" y2="96" opacity="0.24"/> </svg>
+            <span class="t4n">IV</span>
+            <span class="t4r" aria-hidden="true"></span>
+            <span class="t4t">The Far<br>Messengers</span>
+            <span class="t4s">Cover coming</span>
+          </div>
+        </div>
+        <p class="shelf__m"><span class="shelf__n">Book IV</span> <span class="pill pill--soon">Finished draft</span></p>
+        <h3>The Far Messengers</h3>
+        <p class="shelf__s">The planetary — the oldest knowledge on the highest stage.</p>
+        <p class="shelf__a"><a class="arrow" href="#far-messengers">About this book <span aria-hidden="true">→</span></a></p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= BOOK ONE ================= -->
+<section class="hasglyph sec" id="stone-breath">
+  <svg class="glyph glyph--br glyph--xl glyph--soft" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"> <path d="M 102,192 C 99,168 101,144 100,120 C 99,96 100,76 100,58"/> <path d="M 100,170 L 80,160 L 60,144"/> <path d="M 100,170 L 120,160 L 140,144"/> <ellipse cx="52" cy="134" rx="7" ry="11.5" transform="rotate(-42 52 134)"/> <ellipse cx="70" cy="140" rx="7" ry="11.5" transform="rotate(-16 70 140)"/> <ellipse cx="68" cy="164" rx="7" ry="11.5" transform="rotate(34 68 164)"/> <ellipse cx="148" cy="134" rx="7" ry="11.5" transform="rotate(42 148 134)"/> <ellipse cx="130" cy="140" rx="7" ry="11.5" transform="rotate(16 130 140)"/> <ellipse cx="132" cy="164" rx="7" ry="11.5" transform="rotate(-34 132 164)"/> <path d="M 100,132 L 84,122 L 66,106"/> <path d="M 100,132 L 116,122 L 134,106"/> <ellipse cx="58" cy="97" rx="6.4" ry="10.5" transform="rotate(-42 58 97)"/> <ellipse cx="76" cy="103" rx="6.4" ry="10.5" transform="rotate(-16 76 103)"/> <ellipse cx="74" cy="126" rx="6.4" ry="10.5" transform="rotate(34 74 126)"/> <ellipse cx="142" cy="97" rx="6.4" ry="10.5" transform="rotate(42 142 97)"/> <ellipse cx="124" cy="103" rx="6.4" ry="10.5" transform="rotate(16 124 103)"/> <ellipse cx="126" cy="126" rx="6.4" ry="10.5" transform="rotate(-34 126 126)"/> <path d="M 100,98 L 88,90 L 76,78"/> <path d="M 100,98 L 112,90 L 124,78"/> <ellipse cx="69" cy="70" rx="5.6" ry="9" transform="rotate(-42 69 70)"/> <ellipse cx="84" cy="74" rx="5.6" ry="9" transform="rotate(-14 84 74)"/> <ellipse cx="131" cy="70" rx="5.6" ry="9" transform="rotate(42 131 70)"/> <ellipse cx="116" cy="74" rx="5.6" ry="9" transform="rotate(-14 116 74)"/> <path d="M 100,60 C 94,56 88,53 84,50"/> <path d="M 100,60 C 106,56 112,53 116,50"/> <line x1="100" y1="58" x2="100" y2="44"/> <ellipse cx="100" cy="28" rx="4.6" ry="7"/> <ellipse cx="100" cy="42" rx="4.6" ry="7"/> <ellipse cx="91" cy="35" rx="7" ry="4.6"/> <ellipse cx="109" cy="35" rx="7" ry="4.6"/> <circle cx="100" cy="35" r="1.8" fill="currentColor" stroke="none"/> <ellipse cx="80" cy="41" rx="3.8" ry="5.8"/> <ellipse cx="80" cy="53" rx="3.8" ry="5.8"/> <ellipse cx="72" cy="47" rx="5.8" ry="3.8"/> <ellipse cx="88" cy="47" rx="5.8" ry="3.8"/> <circle cx="80" cy="47" r="1.5" fill="currentColor" stroke="none"/> <ellipse cx="120" cy="41" rx="3.8" ry="5.8"/> <ellipse cx="120" cy="53" rx="3.8" ry="5.8"/> <ellipse cx="112" cy="47" rx="5.8" ry="3.8"/> <ellipse cx="128" cy="47" rx="5.8" ry="3.8"/> <circle cx="120" cy="47" r="1.5" fill="currentColor" stroke="none"/> <line x1="52.0" y1="126.2" x2="52.0" y2="141.8" transform="rotate(-42 52 134)" opacity="0.5"/> <line x1="70.0" y1="132.2" x2="70.0" y2="147.8" transform="rotate(-16 70 140)" opacity="0.5"/> <line x1="68.0" y1="156.2" x2="68.0" y2="171.8" transform="rotate(34 68 164)" opacity="0.5"/> <line x1="148.0" y1="126.2" x2="148.0" y2="141.8" transform="rotate(42 148 134)" opacity="0.5"/> <line x1="130.0" y1="132.2" x2="130.0" y2="147.8" transform="rotate(16 130 140)" opacity="0.5"/> <line x1="132.0" y1="156.2" x2="132.0" y2="171.8" transform="rotate(-34 132 164)" opacity="0.5"/> <line x1="58.0" y1="89.9" x2="58.0" y2="104.1" transform="rotate(-42 58 97)" opacity="0.5"/> <line x1="76.0" y1="95.9" x2="76.0" y2="110.1" transform="rotate(-16 76 103)" opacity="0.5"/> <line x1="74.0" y1="118.9" x2="74.0" y2="133.1" transform="rotate(34 74 126)" opacity="0.5"/> <line x1="142.0" y1="89.9" x2="142.0" y2="104.1" transform="rotate(42 142 97)" opacity="0.5"/> <line x1="124.0" y1="95.9" x2="124.0" y2="110.1" transform="rotate(16 124 103)" opacity="0.5"/> <line x1="126.0" y1="118.9" x2="126.0" y2="133.1" transform="rotate(-34 126 126)" opacity="0.5"/> <line x1="69.0" y1="63.9" x2="69.0" y2="76.1" transform="rotate(-42 69 70)" opacity="0.5"/> <line x1="84.0" y1="67.9" x2="84.0" y2="80.1" transform="rotate(-14 84 74)" opacity="0.5"/> <line x1="131.0" y1="63.9" x2="131.0" y2="76.1" transform="rotate(42 131 70)" opacity="0.5"/> <line x1="116.0" y1="67.9" x2="116.0" y2="80.1" transform="rotate(-14 116 74)" opacity="0.5"/> </svg>
+  <div class="wrap">
+    <div class="bkhead rv">
+      <span class="bkhead__n">I</span>
+      <span class="bkhead__l">Book One · The personal <span class="pill pill--now" style="margin-left:.7rem">Out now</span></span>
+    </div>
+
+    <div class="bookstage rv">
+      <div class="bookstage__art">
+        <a class="cover-link" href="https://payhip.com/b/AhH6r">
+          <img class="cover cover--lg" src="/assets/img/stone-breath-cover.jpg" alt="Cover of Stone Breath by Tony Skrelūnas">
+        </a>
       </div>
-    </section>
+      <div class="bookstage__body">
+        <h2>Stone Breath</h2>
+        <p class="bookstage__sub">A love story about roots, wholeness, and a success that doesn’t cost your soul.</p>
+        <p>A Diné man arrives in a Lithuanian village carrying his grandfather’s book wrapped in a storm-pattern blanket — and a life that looks like success and feels like nothing. There he meets Austėja, a mountain runner who hands him back exactly what his own great-grandmother taught him, in another language, on the other side of the world.</p>
+        <p>It is carried to a hundred-mile night race across a high Alpine pass — and the sentences are shaped like breathing, with a real tool sitting inside every turn of the story.</p>
+        <div class="facts">
+          <div><b>~76,500</b><span>words</span></div>
+          <div><b>Three parts</b><span>Arrival · Unfolding · Building</span></div>
+          <div><b>22 tools</b><span>woven in, plus a toolkit at the back</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn btn--primary" href="https://payhip.com/b/AhH6r">Get the book — $16.99 <span aria-hidden="true">→</span></a>
+          <a class="arrow" href="/read/">Read chapter one free <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="note">
+          <p><strong>Buying direct costs more and gives more.</strong> Amazon keeps thirty percent. Both doors are open — direct on Payhip today, Kindle to come.</p>
+        </div>
+      </div>
+    </div>
 
-    <!-- ============ THE READING JOURNEY — signature star-path ============ -->
-    <section class="starmap">
-      <div class="wrap wrap--wide">
-        <p class="starmap__scale" aria-hidden="true"><span>The personal</span><span>The planetary</span></p>
+    <div class="chars rv">
+      <figure class="frame frame--portrait">
+        <img src="/assets/img/austeja.jpg" alt="Austėja, the mountain runner at the centre of Stone Breath" loading="lazy">
+      </figure>
+      <div>
+        <p class="eyebrow">The two at the centre</p>
+        <h3 style="font-size:clamp(1.6rem,1.3rem + 1.4vw,2.3rem);margin-bottom:.6rem">Austėja</h3>
+        <p class="muted">A mountain runner with top-ten finishes and rough amber at her throat. She does not need fixing or finishing. She is already whole — and she hands Tonas back what his own great-grandmother taught him. With her daughter, Ugnė.</p>
+        <h3 style="font-size:clamp(1.6rem,1.3rem + 1.4vw,2.3rem);margin:2.4rem 0 .6rem">Tonas Yazzie</h3>
+        <p class="muted">A Navajo-Lithuanian man who leaves the red-earth country carrying his grandfather’s songs to the old world — and learns what wholeness, and success, actually cost.</p>
+      </div>
+    </div>
 
-        <div class="starmap__track">
-          <!-- decorative milky-way curve (desktop) -->
-          <svg class="starmap__line" viewBox="0 0 1200 320" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-            <defs>
-              <linearGradient id="mw" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0" stop-color="#D69A3C" stop-opacity="0" />
-                <stop offset="0.15" stop-color="#D69A3C" stop-opacity="0.7" />
-                <stop offset="0.85" stop-color="#D69A3C" stop-opacity="0.7" />
-                <stop offset="1" stop-color="#D69A3C" stop-opacity="0" />
-              </linearGradient>
-            </defs>
-            <path d="M0,90 C90,70 110,70 150,70 S380,190 450,190 S680,70 750,70 S980,190 1050,190 L1200,170" />
-          </svg>
+    <div class="praise rv" style="margin-top:clamp(3rem,2rem + 3vw,5rem);padding-top:clamp(3rem,2rem + 3vw,5rem);border-top:1px solid var(--rule-2)">
+      <blockquote>
+        <p>Guides readers toward a deeper sense of belonging, purpose-driven action, and the courage to live from inner knowing rather than fear.</p>
+        <cite>Emily Alicia Affolter, PhD — Associate Dean of Doctoral Studies, Prescott College</cite>
+      </blockquote>
+      <blockquote>
+        <p>Each chapter reminds us that the tools for endurance, belonging, and purpose are not lost, they are dormant. This book awakens them.</p>
+        <cite>Carmella Kahn, DrPH, MPH — College of Population Health, University of New Mexico</cite>
+      </blockquote>
+      <blockquote>
+        <p>Honors the Lithuanian thread — the forest, the songs, the endurance — with the precision of a native, not a tourist.</p>
+        <cite>Dainius Macikenas, PhD — pharmaceutical executive, native Lithuanian</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
 
-          <div class="starmap__books">
-            <a class="starcard" href="/series/stone-breath/">
-              <span class="starcard__node"><span class="starcard__num">I</span></span>
-              <span class="starcard__scale">The personal</span>
-              <h2><em>Stone Breath</em></h2>
-              <p class="starcard__teach">A Navajo-Lithuanian man carries his grandfather's songs to the old country — and meets a woman already whole.</p>
-              <span class="starcard__status">Published</span>
-              <span class="starcard__enter">Enter the book →</span>
-            </a>
+<!-- ================= STATEMENT BAND ================= -->
+<section class="state">
+  <div class="state__bg"><img src="/assets/img/garden/family-pond.jpg" alt="" aria-hidden="true" loading="lazy"></div>
+  <div class="wrap state__in rv">
+    <p class="pull">An ending is not the same as <em>the end</em>.</p>
+    <cite>The Council Fire · Part Two</cite>
+  </div>
+</section>
 
-            <a class="starcard" href="/series/by-lamplight/">
-              <span class="starcard__node"><span class="starcard__num">II</span></span>
-              <span class="starcard__scale">One life's making</span>
-              <h2><em>By Lamplight</em></h2>
-              <p class="starcard__teach">Masan's lessons — a boy raised on Big Mountain carries five ancestral voices from a hogan to the world stage.</p>
-              <span class="starcard__status">In progress</span>
-              <span class="starcard__enter">Enter the book →</span>
-            </a>
+<!-- ================= BOOK TWO ================= -->
+<section class="hasglyph sec sec--alt" id="by-lamplight">
+  <svg class="glyph glyph--tl glyph--xl glyph--soft" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"> <line x1="12" y1="168" x2="188" y2="168"/> <path d="M 22,168 C 22,134 46,114 74,110 L 126,110 C 154,114 178,134 178,168"/> <path d="M 74,110 C 80,94 88,86 100,86 C 112,86 120,94 126,110"/> <path d="M 30,168 C 30,140 52,122 78,119 L 122,119 C 148,122 170,140 170,168" opacity="0.45"/> <path d="M 78,119 C 84,104 90,97 100,97 C 110,97 116,104 122,119" opacity="0.45"/> <path d="M 92,86 A 8,3 0 0 0 108,86"/> <path d="M 94,80 C 87,68 100,60 93,46" opacity="0.6"/> <path d="M 106,79 C 100,69 111,62 106,50" opacity="0.45"/> <path d="M 106,168 L 106,136 A 14,14 0 0 1 134,136 L 134,168"/> <line x1="112" y1="152" x2="112" y2="158" opacity="0.6"/> <circle cx="168" cy="44" r="7" opacity="0.9"/> <line x1="178.5" y1="44" x2="183.5" y2="44" opacity="0.7"/> <line x1="175.4" y1="36.6" x2="179" y2="33" opacity="0.7"/> <line x1="168" y1="33.5" x2="168" y2="28.5" opacity="0.7"/> <line x1="160.6" y1="36.6" x2="157" y2="33" opacity="0.7"/> <line x1="157.5" y1="44" x2="152.5" y2="44" opacity="0.7"/> <line x1="160.6" y1="51.4" x2="157" y2="55" opacity="0.7"/> <line x1="168" y1="54.5" x2="168" y2="59.5" opacity="0.7"/> <line x1="175.4" y1="51.4" x2="179" y2="55" opacity="0.7"/> </svg>
+  <div class="wrap">
+    <div class="bkhead rv">
+      <span class="bkhead__n">II</span>
+      <span class="bkhead__l">Book Two · One life’s making <span class="pill pill--soon" style="margin-left:.7rem">In progress</span></span>
+    </div>
 
-            <a class="starcard" href="/series/the-council-fire/">
-              <span class="starcard__node"><span class="starcard__num">III</span></span>
-              <span class="starcard__scale">The civilizational</span>
-              <h2><em>The Council Fire</em></h2>
-              <p class="starcard__teach">When the systems that run the world reach their limits, a circle of keepers sits at one fire to remember what lasts.</p>
-              <span class="starcard__status">Published</span>
-              <span class="starcard__enter">Enter the book →</span>
-            </a>
+    <div class="bookstage bookstage--flip rv">
+      <div class="bookstage__art">
+        <div class="cover cover--contain">
+          <img src="/assets/img/by-lamplight-cover.jpg" alt="Cover of By Lamplight, Book Two of The Ancestral Watch" loading="lazy">
+        </div>
+      </div>
+      <div class="bookstage__body">
+        <h2>By Lamplight</h2>
+        <p class="bookstage__sub">Masan’s lessons, from an ancient homestead to the world stage.</p>
+        <p>The formation story: how a boy raised on Big Mountain by his great-grandmother carried five ancestral voices out of a hogan and onto the global stage. Two strands run side by side — the camp then, and the world now; the raising, and what it produced.</p>
+        <p>The key book of the sage, and likely the widest-reaching book in the series.</p>
+        <ul class="voices">
+          <li><strong>Masan</strong><span>The Matriarch. The great-grandmother — the lamp the book is named for.</span></li>
+          <li><strong>Vytautas</strong><span>The Iron Wolf. The Lithuanian grandfather, keeper of the code of who they are.</span></li>
+          <li><strong>Hastiin</strong><span>The Singer. Herded into his nineties, lived past a hundred.</span></li>
+          <li><strong>Ona</strong><span>The Song Keeper. Keeper of the old songs of the forest.</span></li>
+          <li><strong>The Warrior-Samurai</strong><span>The Sword &amp; Brush. Disciplined strength in service of the fragile.</span></li>
+        </ul>
+        <div class="note">
+          <p><strong>Not yet for sale.</strong> It is nearly finished. When it is ready it will be announced here and on the series pages — and you can always write to <a href="mailto:wisdom@ancestralwatch.com" style="color:var(--gold-lt)">wisdom@ancestralwatch.com</a> and ask.</p>
+        </div>
+      </div>
+    </div>
 
-            <a class="starcard" href="/series/the-far-messengers/">
-              <span class="starcard__node"><span class="starcard__num">IV</span></span>
-              <span class="starcard__scale">The planetary</span>
-              <h2><em>The Far Messengers</em></h2>
-              <p class="starcard__teach">A near future where the ice is gone — two keepers carry the oldest human knowledge onto the highest stage.</p>
-              <span class="starcard__status">Draft</span>
-              <span class="starcard__enter">Enter the book →</span>
-            </a>
+    <div class="wrap--tight rv" style="margin:clamp(3rem,2rem + 3vw,5rem) auto 0;padding-inline:0">
+      <p class="eyebrow">From the book’s opening voices</p>
+      <div class="excerpt">
+        <p>“The dog hears what we miss. And you listened to the dog. That is how we survive. That is how we keep what is ours.” <em>— Masan, the Matriarch</em></p>
+        <p>“My father wasn’t saving paper. He was saving code. The code of who we are… The book hasn’t been burned. It’s just waiting for you to open it again.” <em>— Vytautas, the Iron Wolf</em></p>
+        <p>“A people can lose everything — the land, the language, even the names — and still find their way home, so long as someone keeps the songs.” <em>— Ona, the Song Keeper</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="weave" aria-hidden="true"><svg><rect width="100%" height="26" fill="url(#wv)"/></svg></div>
+
+<!-- ================= BOOK THREE ================= -->
+<section class="hasglyph sec" id="council-fire">
+  <svg class="glyph glyph--br glyph--xl glyph--soft" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"> <circle cx="71.7" cy="62.1" r="4.1"/> <path d="M 64.9,78.7 L 66.2,70 Q 71.7,64.5 77.2,70 L 78.4,78.7"/> <circle cx="128.3" cy="62.1" r="4.1"/> <path d="M 121.6,78.7 L 122.8,70 Q 128.3,64.5 133.8,70 L 135.1,78.7"/> <circle cx="31.6" cy="79.6" r="4.6"/> <path d="M 24.1,98.2 L 25.5,88.5 Q 31.6,82.3 37.8,88.5 L 39.2,98.2"/> <circle cx="168.4" cy="79.6" r="4.6"/> <path d="M 160.8,98.2 L 162.2,88.5 Q 168.4,82.3 174.5,88.5 L 175.9,98.2"/> <circle cx="168.4" cy="104.5" r="5.3"/> <path d="M 159.7,125.8 L 161.3,114.6 Q 168.4,107.5 175.4,114.6 L 177,125.8"/> <circle cx="31.6" cy="104.5" r="5.3"/> <path d="M 23,125.8 L 24.6,114.6 Q 31.6,107.5 38.7,114.6 L 40.3,125.8"/> <circle cx="128.3" cy="122" r="5.8"/> <path d="M 118.9,145.3 L 120.6,133.1 Q 128.3,125.3 136,133.1 L 137.7,145.3"/> <circle cx="71.7" cy="122" r="5.8"/> <path d="M 62.3,145.3 L 64,133.1 Q 71.7,125.3 79.4,133.1 L 81.1,145.3"/> <path d="M 97,40 C 93,62 79,72 79,90 C 79,106 89,118 101,118 C 114,118 123,107 123,92 C 123,79 113,71 107,56 C 106,68 109,77 106,85 C 100,74 97,57 97,40 Z"/> <path d="M 100,74 C 96,86 92,90 92,99 C 92,107 96,111 101,111 C 106,111 110,107 110,99 C 110,90 104,86 100,74 Z" opacity="0.7"/> <line x1="84" y1="130" x2="116" y2="120"/> <line x1="84" y1="120" x2="116" y2="130"/> <line x1="80" y1="126" x2="120" y2="126" opacity="0.6"/> </svg>
+  <div class="wrap">
+    <div class="bkhead rv">
+      <span class="bkhead__n">III</span>
+      <span class="bkhead__l">Book Three · The civilizational <span class="pill pill--now" style="margin-left:.7rem">Out now</span></span>
+    </div>
+
+    <div class="bookstage rv">
+      <div class="bookstage__art">
+        <a class="cover-link" href="https://payhip.com/b/GB2eg">
+          <img class="cover cover--lg" src="/assets/img/council-fire-cover.jpg" alt="Cover of The Council Fire by Tony Skrelūnas" loading="lazy">
+        </a>
+      </div>
+      <div class="bookstage__body">
+        <h2>The Council Fire</h2>
+        <p class="bookstage__sub">The original instructions for a breaking world.</p>
+        <p>The world it opens in is the one outside your window. The fires that come earlier every year. The storms we run out of letters to name. And underneath the weather, a quieter worry — the sense that the systems built to hold us have stopped being able to think past the next quarter.</p>
+        <p>It begins there. Not in despair, but in a circle of people who have watched worlds end before, and remember what a person keeps when the lights go out.</p>
+        <ul class="movements">
+          <li><b>I</b><span><strong>What Broke</strong> — an honest reckoning with the systems reaching their limits.</span></li>
+          <li><b>II</b><span><strong>The Keepers</strong> — the circle gathers; many nations, one fire.</span></li>
+          <li><b>III</b><span><strong>What They Built</strong> — the older operating systems, brought back to the table.</span></li>
+          <li><b>IV</b><span><strong>What Comes After</strong> — what a world remembers, and what it chooses next.</span></li>
+        </ul>
+        <div class="facts">
+          <div><b>223</b><span>pages</span></div>
+          <div><b>41</b><span>glossary entries &amp; appendices</span></div>
+          <div><b>$20</b><span>direct on Payhip</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn btn--primary" href="https://payhip.com/b/GB2eg">Get the book <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap--tight rv" style="margin:clamp(3rem,2rem + 3vw,5rem) auto 0;padding-inline:0">
+      <p class="eyebrow">From Part Three — What They Built</p>
+      <div class="excerpt">
+        <p>“They offered us a royalty,” Nizhoní told the council, and her voice went cold and clear the way it did. “The same shape as the coal deal. Let an outside company own the sun off our land, take the wealth down the wire, leave us a check and a hole. I told them no. I told them: the sun is not a thing under the ground that runs out. It comes back every morning, free, forever, on our land. We will not rent it. We will own it.”</p>
+      </div>
+      <p class="attrib">Three tools carried inside: the four-capital ledger · the governance architecture · the hundred-year healing path</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= IMAGE BAND ================= -->
+<figure class="slab">
+  <img src="/assets/img/garden/garden-flowers.jpg" alt="Flowers and stone in a high-desert garden" loading="lazy">
+</figure>
+
+<!-- ================= BOOK FOUR ================= -->
+<section class="hasglyph sec sec--alt" id="far-messengers">
+  <svg class="glyph glyph--tr glyph--xl glyph--soft" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"> <path d="M 12,150 C 46,148 68,134 88,112 C 110,88 126,56 156,52 C 180,49 193,72 184,93 C 176,111 154,119 138,110"/> <path d="M 36,152 C 62,148 80,134 96,114 C 114,92 130,68 154,66 C 172,64 181,80 175,95" opacity="0.85"/> <path d="M 60,154 C 80,150 92,138 104,122 C 118,102 132,80 152,80 C 164,80 170,88 167,97" opacity="0.7"/> <path d="M 138,110 C 133,121 122,126 111,121"/> <path d="M 152,113 C 151,124 142,131 131,128" opacity="0.8"/> <circle cx="172" cy="40" r="2.6"/> <circle cx="184" cy="56" r="1.8"/> <circle cx="158" cy="32" r="1.6"/> <line x1="10" y1="162" x2="190" y2="162" opacity="0.6"/> <path d="M 30,176 A 8,8 0 0 1 46,176" opacity="0.5"/> <path d="M 24,176 A 14,14 0 0 1 52,176" opacity="0.5"/> <path d="M 18,176 A 20,20 0 0 1 58,176" opacity="0.5"/> <path d="M 66,176 A 8,8 0 0 1 82,176" opacity="0.5"/> <path d="M 60,176 A 14,14 0 0 1 88,176" opacity="0.5"/> <path d="M 54,176 A 20,20 0 0 1 94,176" opacity="0.5"/> <path d="M 102,176 A 8,8 0 0 1 118,176" opacity="0.5"/> <path d="M 96,176 A 14,14 0 0 1 124,176" opacity="0.5"/> <path d="M 90,176 A 20,20 0 0 1 130,176" opacity="0.5"/> <path d="M 138,176 A 8,8 0 0 1 154,176" opacity="0.5"/> <path d="M 132,176 A 14,14 0 0 1 160,176" opacity="0.5"/> <path d="M 126,176 A 20,20 0 0 1 166,176" opacity="0.5"/> </svg>
+  <div class="wrap">
+    <div class="bkhead rv">
+      <span class="bkhead__n">IV</span>
+      <span class="bkhead__l">Book Four · The planetary <span class="pill pill--soon" style="margin-left:.7rem">Finished draft</span></span>
+    </div>
+
+    <div class="bookstage bookstage--flip rv">
+      <div class="bookstage__art">
+        <div class="noplate">
+          <svg class="noplate__g" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"> <path d="M 90,100 C 96,74 112,46 140,28"/> <path d="M 140,28 C 149,23 158,25 160,31"/> <path d="M 160,31 C 154,58 140,84 124,100"/> <path d="M 145,27 L 148,9"/> <path d="M 154,28 L 163,12"/> <path d="M 159,36 L 175,29"/> <path d="M 152,45 L 141,41" opacity="0.6"/> <path d="M 145,59 L 133,54" opacity="0.6"/> <path d="M 138,73 L 126,67" opacity="0.6"/> <path d="M 131,87 L 119,80" opacity="0.6"/> <path d="M 62,110 C 76,99 104,95 128,100 C 138,102 139,111 130,116 C 110,123 78,121 62,110 Z"/> <path d="M 65,105 C 54,97 44,89 35,81"/> <path d="M 71,113 C 60,105 49,97 40,89"/> <path d="M 35,81 C 28,77 22,79 22,85 C 23,91 31,91 38,89"/> <path d="M 22,82 L 4,74"/> <path d="M 23,89 L 4,74"/> <circle cx="30" cy="83" r="1.9" fill="currentColor" stroke="none"/> <path d="M 134,103 C 146,99 156,94 163,87"/> <path d="M 136,109 C 148,108 158,104 165,99" opacity="0.8"/> <path d="M 129,114 C 146,120 164,128 182,138"/> <path d="M 125,119 C 142,126 157,135 171,146"/> <path d="M 182,138 L 189,137" opacity="0.85"/> <path d="M 171,146 L 178,146" opacity="0.85"/> </svg>
+          <div class="noplate__t">
+            <b>The Far Messengers</b>
+            <span>Cover coming</span>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- ============ WHERE TO START ============ -->
-    <section class="section where-start">
-      <div class="wrap wrap--narrow">
-        <p class="eyebrow">Where to start</p>
-        <h2>Begin with Book One.</h2>
-        <p>
-          The series is built to be read in order — but every book stands on its own. If you're new,
-          start with <em>Stone Breath</em>: the most intimate door, and the one that opens all the others.
-        </p>
-        <div class="where-start__row">
-          <a class="btn btn--primary btn--lg" href="/series/stone-breath/">Start with Stone Breath</a>
-          <a class="btn btn--ghost" href="/tools/">Or try a free Tool first</a>
+      <div class="bookstage__body">
+        <h2>The Far Messengers</h2>
+        <p class="bookstage__sub">A record of seven days at the World Congress on Human Continuity.</p>
+        <p>A near future where the ice is gone. Two featured speakers — a song keeper from the Baltic and a navigator from the Pacific — carry the oldest human knowledge onto the highest stage there is: a body chartered to think past the term of any government.</p>
+        <p>Told through narration, three podcast broadcasts, the official sessions, and the private rooms between them.</p>
+        <ul class="voices">
+          <li><strong>Rasa Vaitkutė</strong><span>A Lithuanian song keeper of Gabija’s line; keeps the sutartinės; eleven desert crossings as her training ground.</span></li>
+          <li><strong>Hanohano Kealoha-Nakamura</strong><span>Native Hawaiian and Japanese; a channel-swimming champion taught the star compass and swell-reading the old way.</span></li>
+        </ul>
+        <div class="facts">
+          <div><b>~45,000</b><span>words · ~212 pages</span></div>
+          <div><b>Two addresses</b><span>“The Canoe” and “What We Carry”</span></div>
+          <div><b>Interlaken</b><span>the year the glacier is gone</span></div>
         </div>
-      </div>
-    </section>
-
-    <!-- ============ EMAIL CAPTURE (shared) ============ -->
-    <section class="section capture">
-      <div class="wrap">
-        <p class="eyebrow">Join the watch</p>
-        <h2>Follow the series as it grows.</h2>
-        <p>Word of each new book, plus the free Tools. One list, no noise.</p>
-        <div class="ml-embedded" data-form="dAD9gF"></div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ============ FOOTER (shared) ============ -->
-  <footer class="site-footer">
-    <div class="wrap wrap--wide">
-      <div class="footer__grid">
-        <div>
-          <p class="footer__brand">AncestralWatch</p>
-          <p class="footer__tag">Ancient technology for a modern life.</p>
-          <p style="margin-top: var(--space-2); max-width: 34ch;">The home of The Ancestral Watch Series by Tony Skrelūnas.</p>
+        <div class="note">
+          <p><strong>The draft is finished.</strong> This is the book that names the role at the heart of everything here — the far messenger, who carries what lasts to people they will never meet.</p>
         </div>
-        <div>
-          <h4>The Series</h4>
-          <ul>
-            <li><a href="/series/stone-breath/">Stone Breath</a></li>
-            <li><a href="/series/by-lamplight/">By Lamplight</a></li>
-            <li><a href="/series/the-council-fire/">The Council Fire</a></li>
-            <li><a href="/series/the-far-messengers/">The Far Messengers</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="/tools/">The Tools</a></li><li><a href="https://tribeawaken.com/" target="_blank" rel="noopener">TribeAwaken ↗</a></li>
-            <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
-            <li><a href="/author/">The Author</a></li>
-            <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/lt/" hreflang="lt" lang="lt">Lietuvių</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__legal">
-        <span>© 2026 Tony Skrelūnas. All rights reserved.</span>
-        <span>Ancient technology for a modern life.</span>
       </div>
     </div>
-  </footer>
 
-  <script src="/js/main.js?v=11" defer></script>
+    <div class="wrap--tight rv" style="margin:clamp(3rem,2rem + 3vw,5rem) auto 0;padding-inline:0">
+      <p class="eyebrow">From “What the Sand Taught the Songs”</p>
+      <div class="excerpt">
+        <p>On the fourth day, the well was dry. He came down off the last dune to the place the water should have been, and the seep was cracked mud, pale, and there was nothing.</p>
+        <p>A frightened man does one thing here, and it is always the same thing. His heart bolts. And they find him the next morning a few hours’ walk away with the panic still on his face, and the well he needed sitting half a day north of where he died.</p>
+        <p>This man did not do that. He sat down. He let the fear stand there beside him and gave it no chair to sit in. And then his heart came down. And when it did, his quiet mind did the thing his racing mind could never have done. It remembered.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHERE TO START ================= -->
+<section class="hasglyph sec">
+  <svg class="glyph glyph--mid" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"> <line x1="22" y1="176" x2="178" y2="176" opacity="0.35"/> <circle cx="131" cy="44" r="10.5"/> <path d="M 138,54 C 132,70 120,88 107,101 L 94,95 C 104,82 113,68 118,53 Z"/> <polyline points="101,99 138,94 130,129"/> <path d="M 130,129 C 136,133 143,134 149,132"/> <polyline points="100,100 69,122 44,141"/> <path d="M 44,141 C 38,145 34,150 32,157"/> <polyline points="128,57 152,74 143,51"/> <polyline points="119,58 92,76 76,58"/> <line x1="26" y1="92" x2="56" y2="78" opacity="0.3"/> <line x1="18" y1="108" x2="44" y2="96" opacity="0.24"/> </svg>
+  <div class="wrap wrap--mid center">
+    <p class="eyebrow eyebrow--center">Where to start</p>
+    <h2 style="max-width:14ch;margin-inline:auto">Begin with Book One.</h2>
+    <p class="lead lead--wide muted" style="margin-top:1.7rem">The series is built to be read in order, but every book stands on its own. If you are new, start with <em>Stone Breath</em> — the most intimate door, and the one that opens all the others.</p>
+    <div class="actions" style="justify-content:center">
+      <a class="btn btn--primary" href="https://payhip.com/b/AhH6r">Start with Stone Breath <span aria-hidden="true">→</span></a>
+      <a class="arrow" href="/read/">Or read chapter one free <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WRITE TO ME ================= -->
+<section class="sec sec--deep" id="contact">
+  <div class="wrap wrap--mid center contact--center">
+    <p class="eyebrow eyebrow--center">Stay in touch</p>
+    <h2 style="max-width:15ch;margin-inline:auto">Ask me when the next one lands.</h2>
+    <p class="lead lead--wide muted" style="margin-top:1.6rem">Two books are out and two are coming. Write and I will tell you where they are.</p>
+    <a class="mailto rv" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    <p class="mailto__note">I read everything. I answer what I can.</p>
+  </div>
+</section>
+
+</main>
+
+<div class="weave" aria-hidden="true"><svg><rect width="100%" height="26" fill="url(#wv)"/></svg></div>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div>
+        <p class="ftr__brand">The Ancestral Watch</p>
+        <p class="ftr__tag">Ancient technology for a modern life.</p>
+        <div class="ftr__langs">
+          <a href="/">English</a><span>·</span>
+          <a href="/ja/">日本語</a><span>·</span>
+          <a href="/lt/">Lietuvių</a>
+        </div>
+      </div>
+      <div>
+        <h4>The Books</h4>
+        <ul>
+          <li><a href="https://payhip.com/b/AhH6r">Stone Breath</a></li>
+          <li><a href="/series/#by-lamplight">By Lamplight</a></li>
+          <li><a href="https://payhip.com/b/GB2eg">The Council Fire</a></li>
+          <li><a href="/series/#far-messengers">The Far Messengers</a></li>
+          <li><a href="/series/">All four books</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Free</h4>
+        <ul>
+          <li><a href="/read/">Chapter one of Stone Breath</a></li>
+          <li><a href="/tools/">The Stone Breath tool</a></li>
+          <li><a href="/downloads/ancestral-watch__dawn-vow.pdf">The Dawn Vow</a></li>
+          <li><a href="/downloads/ancestral-watch__envy-protocol.pdf">The Envy Protocol</a></li>
+          <li><a href="/stories/">Stories &amp; essays</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="/author/">Tony Skrelūnas</a></li>
+          <li><a href="https://tribeawaken.com">TribeAwaken — retreats &amp; coaching</a></li>
+          <li><a href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__legal">
+      <span>© 2026 Tony Skrelūnas · The Ancestral Watch</span>
+      <span>The tools were never lost. Only set down.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+    els.forEach(function(e){e.classList.add('in')});return;
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{rootMargin:'0px 0px -6% 0px',threshold:.05});
+  els.forEach(function(e){io.observe(e)});
+  function sweep(){els.forEach(function(e){if(e.classList.contains('in'))return;
+    var r=e.getBoundingClientRect();if(r.top<(window.innerHeight||0)*1.02){e.classList.add('in');io.unobserve(e)}})}
+  window.addEventListener('load',function(){sweep();setTimeout(sweep,260)});
+  setTimeout(sweep,1200);
+})();
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu'),c=document.getElementById('menuClose');
+  if(!b||!m)return;
+  function open(){m.classList.add('open');b.setAttribute('aria-expanded','true');document.body.classList.add('locked')}
+  function shut(){m.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.classList.remove('locked')}
+  b.addEventListener('click',function(){m.classList.contains('open')?shut():open()});
+  if(c)c.addEventListener('click',shut);
+  m.addEventListener('click',function(e){if(e.target.tagName==='A')shut()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')shut()});
+})();
+</script>
 </body>
 </html>

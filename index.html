@@ -1,342 +1,537 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <title>The Ancestral Watch — Ancient technology for a modern life | Tony Skrelūnas</title>
-  <meta name="description" content="A wealth of resilience, calm in chaos, belonging in an age of isolation — an inheritance that's already yours. Start claiming it in three minutes, free, with The Stone Breath. From The Ancestral Watch series by Tony Skrelūnas." />
-
-  <!-- Open Graph / social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="The Ancestral Watch — Ancient technology for a modern life" />
-  <meta property="og:description" content="An inheritance that survived everything the world threw at it — and it's already yours. Start with a free 3-minute tool." />
-  <meta property="og:url" content="https://ancestralwatch.com/" />
-  <meta property="og:image" content="https://ancestralwatch.com/assets/img/stone-breath-cover.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="https://ancestralwatch.com/" />
-  <link rel="alternate" hreflang="en" href="https://ancestralwatch.com/" />
-  <link rel="alternate" hreflang="ja" href="https://ancestralwatch.com/ja/" />
-  <link rel="alternate" hreflang="lt" href="https://ancestralwatch.com/lt/" />
-  <link rel="alternate" hreflang="x-default" href="https://ancestralwatch.com/" />
-
-  <!-- Fonts: Fraunces (display) + Inter (body) — §7 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="/css/tokens.css" />
-  <link rel="stylesheet" href="/css/style.css?v=9" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Ancestral Watch — Novels by Tony Skrelūnas</title>
+<meta name="description" content="Ancient technology for a modern life. The Ancestral Watch is a four-book novel series by Tony Skrelūnas about the far messengers — the trained carriers every people on earth once raised. Stone Breath and The Council Fire out now. Read chapter one free.">
+<link rel="icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/aw2.css">
+<style>
+.hero__note{margin-top:2.4rem;font-size:var(--t-small);color:var(--sand);letter-spacing:.02em;max-width:52ch}
+.hero__note a{color:var(--cream);text-decoration:none;border-bottom:1px solid var(--rule)}
+.hero__note a:hover{border-bottom-color:var(--clay)}
+.bookstage__praise{margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--rule-2);
+  font-family:var(--display);font-style:italic;font-weight:500;font-size:1.08rem;
+  color:var(--cream);max-width:40ch}
+.bookstage__praise cite{display:block;margin-top:.9rem;font-family:var(--body);font-style:normal;
+  font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--sand)}
+</style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ============ HEADER / NAV (shared) ============ -->
-  <header class="site-header">
-    <nav class="nav wrap wrap--wide" aria-label="Primary">
-      <a class="brand" href="/"><img class="brand__logo" src="/assets/img/author-logo.png" alt="AncestralWatch logo" width="72" height="71"><span class="brand__wm">Ancestral<span class="brand__mark">Watch</span></span></a>
-      <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">☰</button>
-      <ul class="nav__links" id="primary-nav" data-open="false">
-        <li><a href="/">Home</a></li>
-        <li class="has-menu">
-          <button aria-expanded="false" aria-haspopup="true">The Series</button>
-          <ul class="menu">
-            <li><a href="/series/"><span class="menu__num">All</span> The Series</a></li>
-            <li><a href="/series/stone-breath/"><span class="menu__num">I</span> Stone Breath</a></li>
-            <li><a href="/series/by-lamplight/"><span class="menu__num">II</span> By Lamplight</a></li>
-            <li><a href="/series/the-council-fire/"><span class="menu__num">III</span> The Council Fire</a></li>
-            <li><a href="/series/the-far-messengers/"><span class="menu__num">IV</span> The Far Messengers</a></li>
-          <li><a href="/start-here/">Start Here</a></li><li><a href="/read/stone-breath/">Read Free</a></li></ul>
-        </li>
-        <li><a href="/tools/">The Tools</a></li><li><a href="https://tribeawaken.com/" target="_blank" rel="noopener">TribeAwaken ↗</a></li>
-        <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- shared defs: the Diné weaving band used by every .weave divider -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="wv" width="48" height="26" patternUnits="userSpaceOnUse">
+      <path d="M0 4H48M0 22H48" stroke="currentColor" stroke-width="1.1" opacity=".5"/>
+      <path d="M0 13 12 6 24 13 12 20Z" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <path d="M24 13 36 6 48 13 36 20Z" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <circle cx="12" cy="13" r="2" fill="currentColor"/>
+      <circle cx="36" cy="13" r="2" fill="currentColor" opacity=".45"/>
+    </pattern>
+  </defs>
+</svg>
+
+<!-- ================= LANGUAGES ================= -->
+
+<!-- ================= HEADER ================= -->
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="/">
+      <img src="/assets/img/author-logo.png" alt="" aria-hidden="true">
+      <span class="brand__txt">The Ancestral Watch<span class="brand__sub">Tony Skrelūnas</span></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a class="is-on" aria-current="page" href="/">Home</a></li>
+        <li><a href="/series/">The Series</a></li>
+        <li><a href="/read/">Read Free</a></li>
+        <li><a href="/tools/">The Tools</a></li>
+        <li><a href="/stories/">Stories</a></li>
         <li><a href="/author/">The Author</a></li>
-        <li><a class="lang-toggle" href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a class="lang-toggle" href="/lt/" hreflang="lt" lang="lt" style="border-left:0;padding-left:0;">Lietuvių</a></li>
-        <li class="nav__cta"><a class="btn btn--primary" href="#get-the-tool">Get the free tool</a></li>
+        <li><a href="https://tribeawaken.com">TribeAwaken&nbsp;↗</a></li>
       </ul>
     </nav>
-  </header>
+    <div class="hdr__end">
+      <a class="btn btn--primary hdr__cta" href="https://payhip.com/b/AhH6r">Get Stone Breath</a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <i></i><i></i><i></i>
+      </button>
+    </div>
+  </div>
+  <div class="globebar">
+    <div class="wrap globebar__in">
+      <p class="globebar__lbl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15 0 18M12 3c-2.6 2.6-2.6 15 0 18"/>
+        </svg>
+        <span>Read in</span>
+      </p>
+      <ul class="globebar__ls">
+        <li><a class="is-on" href="/" hreflang="en">English</a></li>
+        <li><a href="/ja/" hreflang="ja">日本語</a></li>
+        <li><a href="/lt/" hreflang="lt">Lietuvių</a></li>
+      </ul>
+      <a class="globebar__mail" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+</header>
 
-  <main id="main">
+<!-- ================= FULL-SCREEN MENU ================= -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Site menu">
+  <div class="wrap">
+    <div class="menu__top">
+      <a class="brand" href="/">
+        <img src="/assets/img/author-logo.png" alt="" aria-hidden="true">
+        <span class="brand__txt">The Ancestral Watch<span class="brand__sub">Tony Skrelūnas</span></span>
+      </a>
+      <button class="menu__close" id="menuClose" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="menu__ls">
+      <li><a href="/"><em>01</em> Home</a></li>
+      <li><a href="/series/"><em>02</em> The Series</a></li>
+      <li><a href="/read/"><em>03</em> Read Chapter One</a></li>
+      <li><a href="/tools/"><em>04</em> The Tools</a></li>
+      <li><a href="/stories/"><em>05</em> Stories</a></li>
+      <li><a href="/author/"><em>06</em> The Author</a></li>
+      <li><a href="https://tribeawaken.com"><em>07</em> TribeAwaken ↗</a></li>
+    </ul>
+    <div class="menu__foot">
+      <a href="/ja/">日本語</a>
+      <a href="/lt/">Lietuvių</a>
+      <a href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+</div>
 
-    <!-- ============ S1 — HERO (the Far Messenger) ============ -->
-    <section class="hero">
-      <div class="hero__grid wrap wrap--wide">
-        <div class="hero__text">
-          <p class="eyebrow">The Ancestral Watch · Ancient technology for a modern life</p>
-          <h1>Every people on earth once raised the <em>far messengers.</em></h1>
-          <p class="hero__sub">
-            The trained carriers who crossed deadly ground with what their people needed — and arrived with
-            it whole. It was the most honored role our kind ever raised. This is the return of that training.
-          </p>
-          <div class="hero__actions">
-            <a class="btn btn--primary btn--lg" href="#get-the-tool">Get the free tool →</a>
-            <a class="btn btn--ghost btn--lg" href="#the-story">Hear the story →</a>
-          </div>
-        </div>
-        <figure class="hero__media">
-          <img src="/assets/img/stone-breath-cover.jpg" alt="Stone Breath — Book One of the Ancestral Watch series, by Tony Skrelūnas — a family running a mountain trail at night by headlamp" loading="eager" width="820" height="1099" />
-        </figure>
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero__bg"><img src="/assets/img/hero-bg.jpg" alt="Runners crossing high ground by headlamp before dawn" fetchpriority="high"></div>
+  <div class="hero__scrim"></div>
+  <div class="wrap hero__in">
+    <p class="hero__kicker">Ancient technology for a modern life.</p>
+    <h1>They ran so their people would <em>live</em>.</h1>
+    <p class="lead">A four-book novel series about the far messengers — the trained carriers every people on earth once raised — and the tools they left behind for the rest of us.</p>
+    <div class="actions">
+      <a class="btn btn--primary" href="https://payhip.com/b/AhH6r">Get Stone Breath <span aria-hidden="true">→</span></a>
+      <a class="btn btn--ghost" href="/read/">Read chapter one free</a>
+    </div>
+    <p class="hero__note">Books One and Three are out now · the first chapter is a <a href="/read/">free PDF, no signup</a> · or start with the <a href="/tools/">three-minute Stone Breath</a>.</p>
+  </div>
+</section>
+
+<!-- ================= PROOF ================= -->
+<section class="proof">
+  <div class="wrap proof__in">
+    <p class="proof__i"><b>4</b> Books in the arc</p>
+    <p class="proof__i"><b>2</b> Out now</p>
+    <p class="proof__i"><b>3</b> Traditions braided</p>
+    <p class="proof__i"><b>22</b> Tools woven in</p>
+    <p class="proof__i"><b>1</b> Chapter free</p>
+  </div>
+</section>
+<div class="weave" aria-hidden="true"><svg><rect width="100%" height="26" fill="url(#wv)"/></svg></div>
+
+<!-- ================= THE BOOK IS THE HERO ================= -->
+<section class="hasglyph sec" id="stone-breath">
+  <svg class="glyph glyph--tr glyph--xl glyph--soft" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><line x1="22" y1="176" x2="178" y2="176" opacity="0.35"/> <circle cx="131" cy="44" r="10.5"/> <path d="M 138,54 C 132,70 120,88 107,101 L 94,95 C 104,82 113,68 118,53 Z"/> <polyline points="101,99 138,94 130,129"/> <path d="M 130,129 C 136,133 143,134 149,132"/> <polyline points="100,100 69,122 44,141"/> <path d="M 44,141 C 38,145 34,150 32,157"/> <polyline points="128,57 152,74 143,51"/> <polyline points="119,58 92,76 76,58"/> <line x1="26" y1="92" x2="56" y2="78" opacity="0.3"/> <line x1="18" y1="108" x2="44" y2="96" opacity="0.24"/></svg>
+  <div class="wrap">
+    <div class="bookstage rv">
+      <div class="bookstage__art">
+        <a class="cover-link" href="https://payhip.com/b/AhH6r">
+          <img class="cover cover--lg" src="/assets/img/stone-breath-cover.jpg" alt="Cover of Stone Breath, Book One of The Ancestral Watch by Tony Skrelūnas">
+        </a>
       </div>
-    </section>
-
-    <!-- ============ S0 — THE STORY (four beats) ============ -->
-    <section class="section" id="the-story">
-      <div class="wrap">
-        <p class="eyebrow" style="color: var(--amber);">The forgotten fact</p>
-        <div class="beats">
-          <div class="beat">
-            <div class="beat__n">1</div>
-            <div>
-              <h3>There was a body that could cross a desert with a library inside it.</h3>
-              <p>Before the internet, everything that mattered moved one way — inside a trained human being.
-              Runners of the long roads. Wayfinders who held a thousand miles of ocean in their bodies.
-              Keepers of song, seed, and law.</p>
-            </div>
-          </div>
-          <div class="beat">
-            <div class="beat__n">2</div>
-            <div>
-              <h3>Not couriers — the most honored role their peoples ever raised.</h3>
-              <p>They regulated their own heartbeat the way we charge a phone, and read country the way we
-              read screens. Their training was breath, state, endurance, memory, and service. When worlds
-              broke — and worlds always break — they were the reason anything survived.</p>
-            </div>
-          </div>
-          <div class="beat">
-            <div class="beat__n">3</div>
-            <div>
-              <h3>Then we fired them all.</h3>
-              <p>We replaced the carry with the cargo — the trained mind with the server — and built the
-              first civilization in history with no messengers, no memory in its bodies, and most of its
-              people living in fight-or-flight before the crisis has even arrived.</p>
-            </div>
-          </div>
-          <div class="beat beat--turn">
-            <div class="beat__n">4</div>
-            <div>
-              <h3>The tools were never lost. <em>They can be returned.</em></h3>
-              <p>They were only clenched, or sold off in pieces without their world. And the crossing ahead
-              will be carried by people trained the old way. It is you. It was always going to be you.</p>
-            </div>
-          </div>
-        </div>
-        <div class="beats__cta">
-          <a class="btn btn--primary btn--lg" href="#get-the-tool">Start the training — free →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ S2 — THE PAIN ============ -->
-    <section class="section pain">
-      <div class="wrap">
-        <h2>If you've ever felt…</h2>
-        <ul class="pain__list">
-          <li><strong>Unseen</strong> — shy, inferior, or like you don't belong in the room</li>
-          <li><strong>Uncertain</strong> — caught between identities, cultures, or expectations</li>
-          <li><strong>Unrooted</strong> — longing for a foundation that feels both ancient and true</li>
-          <li><strong>Unfulfilled</strong> — achieving success but lacking meaning or honorable purpose</li>
-          <li><strong>Unsure</strong> — how to lead, inspire, or build something that lasts beyond you</li>
+      <div class="bookstage__body">
+        <p class="bookstage__meta">Book One <span class="pill pill--now">Out now</span></p>
+        <h2>Stone Breath</h2>
+        <p class="bookstage__sub">A love story about roots, wholeness, and a success that doesn’t cost your soul.</p>
+        <p>A Diné man arrives in a Lithuanian village carrying his grandfather’s book wrapped in a storm-pattern blanket — and a life that looks like success and feels like nothing.</p>
+        <p>There he meets Austėja, a mountain runner who hands him back exactly what his own great-grandmother taught him — in another language, on the other side of the world. It ends on a hundred-mile night race across a high Alpine pass.</p>
+        <ul class="chips chips--gold">
+          <li>~76,500 words</li><li>Three parts</li><li>22 tools inside</li><li>$16.99 direct</li>
         </ul>
-        <p class="pain__kicker">…then what you're missing isn't effort. It's an <em>inheritance you were never handed.</em></p>
-      </div>
-    </section>
-
-    <!-- ============ S3 — THE INHERITANCE ============ -->
-    <section class="section thesis">
-      <div class="wrap wrap--narrow">
-        <p class="eyebrow">The inheritance</p>
-        <h2>What if you're <em>richer</em> than you know?</h2>
-        <p>
-          Not in money. In something older. It's carried in stories, songs, and simple tools that
-          survived everything the world threw at them. You will not be asked to mimic traditions that
-          aren't yours. You will learn to extract the timeless principle from the time-bound practice
-          — and adapt it to your own life. This is where you claim it.
-        </p>
-      </div>
-    </section>
-
-    <!-- ============ S4 — THE FREE TOOL ★ PRIMARY CONVERSION ★ ============ -->
-    <section class="section free-tool" id="get-the-tool">
-      <div class="wrap">
-        <div class="free-tool__panel">
-          <p class="eyebrow">Free · no membership</p>
-          <h2>Start with one tool. Use it tomorrow.</h2>
-          <p class="free-tool__body">
-            <strong>The Stone Breath</strong> — an ancient running technique that resets your nervous
-            system in three minutes. No theory. No membership. Try it right now, free. Then unlock the
-            rest of the toolbox — six protocols drawn from the books, engineered for Monday morning,
-            not a seminar.
-          </p>
-          <div class="ml-embedded" data-form="dAD9gF"></div>
-          <p style="margin-top: var(--space-2);"><a href="/downloads/ancestral-watch__stone-breath.pdf" download style="color: var(--amber-soft); font-size: var(--step--1);">Or download the printable Stone Breath card now →</a></p>
-          <!-- TODO(Tony): email/form provider + endpoint -->
+        <div class="actions">
+          <a class="btn btn--primary" href="https://payhip.com/b/AhH6r">Get the book <span aria-hidden="true">→</span></a>
+          <a class="arrow" href="/read/">Read chapter one free <span aria-hidden="true">→</span></a>
         </div>
-      </div>
-    </section>
-
-    <!-- ============ S5 — THE BOOKS (hook → buy) ============ -->
-    <section class="section">
-      <div class="wrap">
-        <div class="books-hook__head">
-          <p class="eyebrow">The Ancestral Watch Series</p>
-          <h2>The tools come from a story.</h2>
-          <p class="muted">The Ancestral Watch is a series about remembering what lasts — told through
-          people, not lectures. Read where it began.</p>
-        </div>
-
-        <div class="books-hook__grid">
-          <article class="book-hook">
-            <span class="book-hook__status">Available now</span>
-            <img class="book-hook__cover" src="/assets/img/stone-breath-cover.jpg" width="820" height="1099" alt="Stone Breath cover" loading="lazy" />
-            <h3><em>Stone Breath</em></h3>
-            <p>A Navajo-Lithuanian man carries his grandfather's songs to the old country and meets a
-            woman who is already whole. A love story about roots, and about success that doesn't cost
-            you your soul.</p>
-            <a class="btn btn--primary" href="https://payhip.com/b/AhH6r" target="_blank" rel="noopener">Buy direct on Payhip →</a>
-            <!-- TODO(Tony): swap in the Amazon/Kindle URL when the listing is live -->
-            <span class="book-hook__detail book-hook__detail--soon">Kindle — coming soon</span>
-            <a class="book-hook__detail" href="/series/stone-breath/">Excerpt &amp; details →</a>
-          </article>
-
-          <article class="book-hook">
-            <span class="book-hook__status">Available now</span>
-            <img class="book-hook__cover" src="/assets/img/council-fire-cover.jpg" width="760" height="1133" alt="The Council Fire cover" loading="lazy" />
-            <h3><em>The Council Fire</em></h3>
-            <p>When the systems that run the world reach their limits, the keepers of many nations sit
-            down at one fire to remember what lasts.</p>
-            <a class="btn btn--primary" href="https://payhip.com/b/GB2eg" target="_blank" rel="noopener">Buy direct on Payhip →</a>
-            <!-- TODO(Tony): swap in the Amazon/Kindle URL when the listing is live -->
-            <span class="book-hook__detail book-hook__detail--soon">Kindle — coming soon</span>
-            <a class="book-hook__detail" href="/series/the-council-fire/">Excerpt &amp; details →</a>
-          </article>
-        </div>
-
-        <p class="muted" style="margin-top: var(--space-3); max-width: 62ch;">
-          <strong>Buying direct costs more and gives more</strong> — Amazon keeps thirty percent. Both doors
-          are open; choose the one that fits.
-        </p>
-        <p class="books-hook__more">More books coming — <em>By Lamplight</em> and <em>The Far Messengers</em>.
-        <a href="/series/">See the whole series →</a></p>
-      </div>
-    </section>
-
-    <!-- ============ S6 — WHY TONY ============ -->
-    <section class="section">
-      <div class="wrap author-teaser">
-        <div>
-          <div class="author-teaser__portrait author-teaser__portrait--img">
-            <img src="/assets/img/tony-author.jpg" width="640" height="787" loading="lazy"
-                 alt="Tony Skrelūnas with his grandfather, who lived to 103" />
-          </div>
-          <p class="author-portrait-cap">With my grandfather, who lived to 103.</p>
-        </div>
-        <div>
-          <p class="eyebrow">The author</p>
-          <h2>Who's carrying these songs?</h2>
-          <p class="lineage">Keh Yazh → Masan → Ada → Tony → You</p>
-          <p>
-            "I teach the far messenger principles — and I write the stories that carry them." A Lithuanian
-            and Diné author, economic futurist, and PhD candidate, Tony draws on Diné, Lithuanian, and
-            Japanese wisdom not as heritage behind glass, but as technology to use. Lived, proven, studied.
-          </p>
-
-          <div class="endorse" style="gap: var(--space-3);">
-            <blockquote>
-              …guides readers toward a deeper sense of belonging, purpose-driven action, and the courage to live from inner knowing rather than fear.
-              <cite>— Emily Alicia Affolter, Ph.D., Assoc. Dean of Doctoral Studies, Prescott College</cite>
-            </blockquote>
-            <blockquote>
-              The tools for endurance, belonging, and purpose are not lost, they are dormant. This book awakens them.
-              <cite>— Carmella Kahn, DrPH, MPH, College of Population Health, University of New Mexico</cite>
-            </blockquote>
-            <blockquote>
-              Honors the Lithuanian thread — the forest, the songs, the endurance — with the precision of a native, not a tourist.
-              <cite>— Dainius Macikenas, PhD, pharmaceutical executive and native Lithuanian</cite>
-            </blockquote>
-          </div>
-
-          <p style="margin-top: var(--space-3);"><a class="btn btn--ghost" href="/author/">More about Tony →</a></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ S7 — WORK WITH TONY ============ -->
-    <section class="section work-band">
-      <div class="wrap wrap--narrow">
-        <p class="eyebrow">Go deeper</p>
-        <h2>Ready to go deeper than a book?</h2>
-        <p>
-          For leaders and organizations building something meant to outlast them: coaching, gatherings,
-          and keynote work grounded in the same ancestral operating system.
-        </p>
-        <a class="btn btn--primary btn--lg" href="/author/#work">Explore working together →</a>
-      </div>
-    </section>
-
-    <!-- ============ S8 — FINAL CTA ============ -->
-    <section class="section capture">
-      <div class="wrap">
-        <p class="eyebrow">Begin</p>
-        <h2>The remembering begins now.</h2>
-        <p>Get the free tool. See in three minutes why the rest is worth your time.</p>
-        <div class="ml-embedded" data-form="dAD9gF"></div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ============ FOOTER (shared) ============ -->
-  <section class="section" style="background:linear-gradient(180deg,var(--night-2),var(--night));text-align:center;">
-    <div class="wrap wrap--narrow">
-      <p class="eyebrow" style="color:var(--amber);">Beyond the books</p>
-      <h2 style="font-family:var(--font-display,Georgia,serif);">The practices, the retreat, the work.</h2>
-      <p>The Ancestral Watch is the story. <strong>TribeAwaken</strong> is where it becomes practice — coaching, the <em>Canyon Within</em> retreat, keynotes, and nation-building.</p>
-      <p style="margin-top:1.5rem;"><a class="btn btn--primary btn--lg" href="https://tribeawaken.com/" target="_blank" rel="noopener">Visit TribeAwaken →</a> &nbsp; <a class="btn btn--ghost" href="https://tribeawaken.com/workshop/" target="_blank" rel="noopener">The Canyon Within retreat →</a></p>
-    </div>
-  </section>
-  <footer class="site-footer">
-    <div class="wrap wrap--wide">
-      <div class="footer__grid">
-        <div>
-          <p class="footer__brand">AncestralWatch</p>
-          <p class="footer__tag">Ancient technology for a modern life.</p>
-          <p style="margin-top: var(--space-2); max-width: 34ch;">The home of The Ancestral Watch Series by Tony Skrelūnas.</p>
-        </div>
-        <div>
-          <h4>The Series</h4>
-          <ul>
-            <li><a href="/series/stone-breath/">Stone Breath</a></li>
-            <li><a href="/series/the-council-fire/">The Council Fire</a></li>
-            <li><a href="/series/">All four books</a></li>
-            <li><a href="/tools/">The free Tools</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="/author/">The Author</a></li>
-            <li><a href="/author/#work">Work with Tony</a></li><li><a href="https://tribeawaken.com/workshop/" target="_blank" rel="noopener">The Retreat ↗</a></li><li><a href="https://tribeawaken.com/" target="_blank" rel="noopener">Coaching &amp; Retreats ↗</a></li>
-            <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
-            <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/lt/" hreflang="lt" lang="lt">Lietuvių</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__legal">
-        <span>© 2026 Ancestral Watch · Tony Skrelūnas. All rights reserved.</span>
-        <span>Ancient technology for a modern life.</span>
-        <!-- TODO(Tony): social, contact, privacy links -->
+        <p class="bookstage__praise">“Guides readers toward a deeper sense of belonging, purpose-driven action, and the courage to live from inner knowing rather than fear.”
+          <cite>Emily Alicia Affolter, PhD · Prescott College</cite></p>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- Netlify Forms detection stub. Netlify parses this at deploy and registers the "watch-signup"
-       form; the visible sign-up boxes submit to it via fetch (see js/main.js?v=11). Zero third-party account. -->
-  <form name="watch-signup" data-netlify="true" netlify-honeypot="bot-field" hidden>
-    <input type="email" name="email" />
-    <input type="text" name="bot-field" />
-    <input type="text" name="source" />
-  </form>
+<!-- ================= THE OPENING ================= -->
+<section class="hasglyph sec sec--deep">
+  <svg class="glyph glyph--bl glyph--soft" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><line x1="50" y1="176" x2="150" y2="176"/> <path d="M 87,176 C 89,152 92,134 94,116"/> <path d="M 113,176 C 111,152 108,134 106,116"/> <path d="M 87,176 C 82,170 74,167 64,166" opacity="0.55"/> <path d="M 113,176 C 118,170 126,167 136,166" opacity="0.55"/> <path d="M 97,118 C 90,104 76,96 62,90"/> <path d="M 79,98 C 75,86 72,76 71,64"/> <path d="M 62,90 C 52,88 44,84 38,78"/> <path d="M 103,118 C 110,102 124,94 138,88"/> <path d="M 122,96 C 126,84 129,74 130,62"/> <path d="M 138,88 C 148,86 156,82 162,76"/> <path d="M 100,116 C 100,96 99,74 98,52"/> <path d="M 99,76 C 92,68 86,62 82,54"/> <path d="M 98,54 C 105,48 111,44 116,38"/> <path d="M 23.1,95.4 Q 9.6,88.7 20,79.7 Q 9.7,70.6 23.3,64 Q 16.7,53.1 32.8,49.6 Q 30.1,37.3 47.8,37.6 Q 49.2,24.5 66.9,29 Q 73.1,15.7 88.7,24.6 Q 100,12.6 111.3,24.6 Q 126.9,15.7 133.1,29 Q 150.8,24.5 152.2,37.6 Q 169.9,37.3 167.2,49.6 Q 183.3,53.1 176.7,64 Q 190.3,70.6 180,79.7 Q 190.4,88.7 176.9,95.4"/> <line x1="56" y1="105" x2="56" y2="110" opacity="0.6"/> <path d="M 51,112 A 5,7 0 0 0 61,112"/> <path d="M 50.5,112 A 5.5,3.4 0 0 1 61.5,112"/> <line x1="146" y1="101" x2="146" y2="106" opacity="0.6"/> <path d="M 141,108 A 5,7 0 0 0 151,108"/> <path d="M 140.5,108 A 5.5,3.4 0 0 1 151.5,108"/></svg>
+  <div class="wrap wrap--tight">
+    <p class="eyebrow">From the opening pages</p>
+    <div class="excerpt rv">
+      <p>He came off the small plane into a green he had no word for. His country was red — red rock, red dust, a sky so wide it made a person quiet. This place folded close and dripped: pine and black earth and a river somewhere, always a river.</p>
+      <p>She was waiting by an old car, and the first thing he noticed was that she was not waiting the way people wait. She simply stood, whole, a rough piece of amber at her throat catching what light there was. When she looked at him she did not look him over. She looked at him the way his great-grandmother used to, from ten thousand miles and a whole life away, and something in his chest that had been clenched for twenty years let go a quarter of an inch.</p>
+      <p>“You’ve come a long way,” she said. “You look like a man who has been running.” It was not a question, and it was not about the trail.</p>
+    </div>
+    <div class="actions">
+      <a class="arrow arrow--lg" href="/read/">Keep reading — the whole chapter, free <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
 
-  <script src="/js/main.js?v=11" defer></script>
+<!-- ================= STATEMENT BAND ================= -->
+<section class="state">
+  <div class="state__bg"><img src="/assets/img/garden/waterfall.jpg" alt="" aria-hidden="true" loading="lazy"></div>
+  <div class="wrap state__in rv">
+    <p class="pull">You can win the whole race and still arrive with <em>nothing</em>.</p>
+    <cite>The question underneath all four books</cite>
+  </div>
+</section>
+
+<!-- ================= THE PREMISE ================= -->
+<section class="hasglyph sec sec--alt" id="premise">
+  <svg class="glyph glyph--mid" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><circle cx="70" cy="70" r="46"/> <circle cx="130" cy="70" r="46"/> <circle cx="130" cy="130" r="46"/> <circle cx="70" cy="130" r="46"/> <circle cx="100" cy="100" r="7"/> <circle cx="100" cy="100" r="2.2" fill="currentColor" stroke="none"/> <circle cx="54" cy="54" r="8"/> <line x1="54" y1="48" x2="54" y2="60"/> <line x1="50" y1="52" x2="58" y2="52" opacity="0.8"/> <circle cx="141" cy="51" r="6"/> <circle cx="151" cy="57" r="6"/> <polyline points="146,138 154,146 146,154 138,146 146,138"/> <polyline points="146,142 150,146 146,150 142,146 146,142" opacity="0.7"/> <path d="M 46,154 C 46,144 52,138 62,138 C 62,148 56,154 46,154 Z"/> <line x1="48" y1="152" x2="60" y2="140" opacity="0.7"/></svg>
+  <div class="wrap wrap--mid center">
+    <p class="eyebrow eyebrow--center">The premise</p>
+    <p class="statement statement--center rv">Every people on earth once raised <em>far messengers</em>.</p>
+    <p class="lead lead--wide muted rv">Trained carriers who crossed deadly ground with what their people needed — and arrived whole. Not broken by the distance. Not emptied by the errand. The runners of the long roads, the wayfinders who held a thousand miles of ocean in their bodies, the keepers of songs and seed and law.</p>
+    <p class="punch rv" style="margin-top:2rem;margin-inline:auto">The tools were never lost. They were only set down. They can be picked back up.</p>
+  </div>
+</section>
+
+<!-- ================= BOOK THREE ================= -->
+<section class="hasglyph sec" id="council-fire">
+  <svg class="glyph glyph--tl glyph--xl glyph--soft" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><circle cx="71.7" cy="62.1" r="4.1"/> <path d="M 64.9,78.7 L 66.2,70 Q 71.7,64.5 77.2,70 L 78.4,78.7"/> <circle cx="128.3" cy="62.1" r="4.1"/> <path d="M 121.6,78.7 L 122.8,70 Q 128.3,64.5 133.8,70 L 135.1,78.7"/> <circle cx="31.6" cy="79.6" r="4.6"/> <path d="M 24.1,98.2 L 25.5,88.5 Q 31.6,82.3 37.8,88.5 L 39.2,98.2"/> <circle cx="168.4" cy="79.6" r="4.6"/> <path d="M 160.8,98.2 L 162.2,88.5 Q 168.4,82.3 174.5,88.5 L 175.9,98.2"/> <circle cx="168.4" cy="104.5" r="5.3"/> <path d="M 159.7,125.8 L 161.3,114.6 Q 168.4,107.5 175.4,114.6 L 177,125.8"/> <circle cx="31.6" cy="104.5" r="5.3"/> <path d="M 23,125.8 L 24.6,114.6 Q 31.6,107.5 38.7,114.6 L 40.3,125.8"/> <circle cx="128.3" cy="122" r="5.8"/> <path d="M 118.9,145.3 L 120.6,133.1 Q 128.3,125.3 136,133.1 L 137.7,145.3"/> <circle cx="71.7" cy="122" r="5.8"/> <path d="M 62.3,145.3 L 64,133.1 Q 71.7,125.3 79.4,133.1 L 81.1,145.3"/> <path d="M 97,40 C 93,62 79,72 79,90 C 79,106 89,118 101,118 C 114,118 123,107 123,92 C 123,79 113,71 107,56 C 106,68 109,77 106,85 C 100,74 97,57 97,40 Z"/> <path d="M 100,74 C 96,86 92,90 92,99 C 92,107 96,111 101,111 C 106,111 110,107 110,99 C 110,90 104,86 100,74 Z" opacity="0.7"/> <line x1="84" y1="130" x2="116" y2="120"/> <line x1="84" y1="120" x2="116" y2="130"/> <line x1="80" y1="126" x2="120" y2="126" opacity="0.6"/></svg>
+  <div class="wrap">
+    <div class="bookstage bookstage--flip rv">
+      <div class="bookstage__art">
+        <a class="cover-link" href="https://payhip.com/b/GB2eg">
+          <img class="cover" src="/assets/img/council-fire-cover.jpg" alt="Cover of The Council Fire, Book Three of The Ancestral Watch by Tony Skrelūnas" loading="lazy">
+        </a>
+      </div>
+      <div class="bookstage__body">
+        <p class="bookstage__meta">Book Three <span class="pill pill--now">Out now</span></p>
+        <h2>The Council Fire</h2>
+        <p class="bookstage__sub">The original instructions for a breaking world.</p>
+        <p>Twelve keepers from twelve peoples — each raised by a nation that has already lived through the end of a world — sit down around one small fire they made on purpose. They carry their traditions’ tested tools through a global unraveling, and set a pact so their descendants can find each other again.</p>
+        <p>Part story, part working manual: a four-capital ledger, a governance architecture, and a hundred-year healing path.</p>
+        <ul class="chips chips--gold">
+          <li>223 pages</li><li>Four parts</li><li>41-entry glossary</li><li>$20 direct</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn--primary" href="https://payhip.com/b/GB2eg">Get the book <span aria-hidden="true">→</span></a>
+          <a class="arrow" href="/series/#council-fire">What’s inside <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="weave" aria-hidden="true"><svg><rect width="100%" height="26" fill="url(#wv)"/></svg></div>
+
+<!-- ================= THE SERIES ================= -->
+<section class="sec sec--alt">
+  <div class="wrap">
+    <div class="sec__intro rv">
+      <div>
+        <p class="eyebrow">The series</p>
+        <h2 class="head">Four books. One long road.</h2>
+      </div>
+      <p>One arc, moving in scale from the intimate to the planetary. One relationship. Then one life’s formation. Then a civilization at its limits. Then the whole world stage. Every book stands on its own.</p>
+    </div>
+    <ul class="series rv">
+      <li>
+        <a class="series__row" href="/series/#stone-breath">
+          <span class="series__n">Book I<br>The personal</span>
+          <span>
+            <span class="series__t">Stone Breath</span>
+            <span class="series__d">A Navajo-Lithuanian man carries his grandfather’s songs back to the old country and meets a woman who is already whole.</span>
+          </span>
+          <span class="pill pill--now">Out now</span>
+        </a>
+      </li>
+      <li>
+        <a class="series__row" href="/series/#by-lamplight">
+          <span class="series__n">Book II<br>One life’s making</span>
+          <span>
+            <span class="series__t">By Lamplight</span>
+            <span class="series__d">Five voices raised the boy who became the man — from a hogan on Big Mountain to the world stage. The key book of the sage.</span>
+          </span>
+          <span class="pill pill--soon">Coming</span>
+        </a>
+      </li>
+      <li>
+        <a class="series__row" href="/series/#council-fire">
+          <span class="series__n">Book III<br>The civilizational</span>
+          <span>
+            <span class="series__t">The Council Fire</span>
+            <span class="series__d">Twelve keepers preserve what works through a global unraveling, and set a pact for those who come after.</span>
+          </span>
+          <span class="pill pill--now">Out now</span>
+        </a>
+      </li>
+      <li>
+        <a class="series__row" href="/series/#far-messengers">
+          <span class="series__n">Book IV<br>The planetary</span>
+          <span>
+            <span class="series__t">The Far Messengers</span>
+            <span class="series__d">Seven days, one stage, and the oldest human knowledge spoken to a body built to think in centuries.</span>
+          </span>
+          <span class="pill pill--soon">Coming</span>
+        </a>
+      </li>
+    </ul>
+    <div class="actions">
+      <a class="arrow arrow--lg" href="/series/">See the whole series <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE FREE TOOL ================= -->
+<section class="hasglyph sec sec--deep" id="tool">
+  <svg class="glyph glyph--br glyph--xl" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><ellipse cx="100" cy="116" rx="36" ry="12" opacity="0.95"/> <ellipse cx="100" cy="116" rx="56" ry="21" opacity="0.75"/> <ellipse cx="100" cy="116" rx="76" ry="30" opacity="0.55"/> <ellipse cx="100" cy="116" rx="94" ry="38" opacity="0.35"/> <path d="M 78,89 C 78,79 88,73 101,73 C 113,73 121,79 121,88 C 121,96 111,101 100,101 C 87,101 78,97 78,89 Z"/> <path d="M 85,84 C 89,78 95,75 103,76" opacity="0.55"/></svg>
+  <div class="wrap">
+    <div class="split">
+      <div class="rv">
+        <p class="eyebrow">Free · no registration</p>
+        <h2 style="max-width:11ch">The Stone Breath</h2>
+        <p class="lead" style="margin-top:1.8rem">An ancient running technique that resets the nervous system in three minutes.</p>
+        <p class="muted" style="margin-top:1.6rem">The messengers did not have sports science. They had a way of breathing that let a body cross a hundred miles and still be good for something at the other end. It costs nothing, it works standing still, and the laboratory has since named the mechanism.</p>
+        <div class="count">
+          <div><b>4</b><span>In</span></div>
+          <div><b>4</b><span>Hold</span></div>
+          <div><b>6</b><span>Out</span></div>
+          <div><b>4</b><span>Hold</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn btn--primary" href="/tools/">Learn the practice <span aria-hidden="true">→</span></a>
+          <a class="arrow" href="/downloads/ancestral-watch__stone-breath.pdf">Printable card (PDF) <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <figure class="frame frame--tall rv">
+        <img src="/assets/img/garden/meditation-mountain.jpg" alt="A quiet room of warm wood opening onto pines and a distant mountain" loading="lazy">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THREE TRADITIONS ================= -->
+<section class="hasglyph sec">
+  <svg class="glyph glyph--tr glyph--soft" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M 30,78 C 22,76 17,80 10,79" opacity="0.6"/> <path d="M 170,78 C 178,76 183,80 190,79" opacity="0.6"/> <path d="M 30,89 C 22,87 17,91 10,90" opacity="0.6"/> <path d="M 170,89 C 178,87 183,91 190,90" opacity="0.6"/> <path d="M 30,100 C 22,98 17,102 10,101" opacity="0.6"/> <path d="M 170,100 C 178,98 183,102 190,101" opacity="0.6"/> <path d="M 30,111 C 22,109 17,113 10,112" opacity="0.6"/> <path d="M 170,111 C 178,109 183,113 190,112" opacity="0.6"/> <path d="M 30,122 C 22,120 17,124 10,123" opacity="0.6"/> <path d="M 170,122 C 178,120 183,124 190,123" opacity="0.6"/> <line x1="30" y1="66" x2="170" y2="66"/> <line x1="30" y1="72" x2="170" y2="72"/> <line x1="30" y1="128" x2="170" y2="128"/> <line x1="30" y1="134" x2="170" y2="134"/> <polyline points="30,86 40,74 50,86"/> <polyline points="30,114 40,126 50,114"/> <polyline points="50,86 60,74 70,86"/> <polyline points="50,114 60,126 70,114"/> <polyline points="70,86 80,74 90,86"/> <polyline points="70,114 80,126 90,114"/> <polyline points="90,86 100,74 110,86"/> <polyline points="90,114 100,126 110,114"/> <polyline points="110,86 120,74 130,86"/> <polyline points="110,114 120,126 130,114"/> <polyline points="130,86 140,74 150,86"/> <polyline points="130,114 140,126 150,114"/> <polyline points="150,86 160,74 170,86"/> <polyline points="150,114 160,126 170,114"/> <line x1="30" y1="86" x2="170" y2="86"/> <line x1="30" y1="114" x2="170" y2="114"/> <polyline points="30,100 44,86 58,100 44,114 30,100"/> <line x1="39" y1="100" x2="49" y2="100" opacity="0.7"/> <line x1="44" y1="95" x2="44" y2="105" opacity="0.7"/> <polyline points="58,100 72,86 86,100 72,114 58,100"/> <line x1="67" y1="100" x2="77" y2="100" opacity="0.7"/> <line x1="72" y1="95" x2="72" y2="105" opacity="0.7"/> <polyline points="86,100 100,86 114,100 100,114 86,100"/> <line x1="95" y1="100" x2="105" y2="100" opacity="0.7"/> <line x1="100" y1="95" x2="100" y2="105" opacity="0.7"/> <polyline points="114,100 128,86 142,100 128,114 114,100"/> <line x1="123" y1="100" x2="133" y2="100" opacity="0.7"/> <line x1="128" y1="95" x2="128" y2="105" opacity="0.7"/> <polyline points="142,100 156,86 170,100 156,114 142,100"/> <line x1="151" y1="100" x2="161" y2="100" opacity="0.7"/> <line x1="156" y1="95" x2="156" y2="105" opacity="0.7"/></svg>
+  <div class="wrap">
+    <div class="sec__intro rv">
+      <div>
+        <p class="eyebrow">The braid</p>
+        <h2 class="head">Three traditions run through every book.</h2>
+      </div>
+      <p>Two came to the author by blood and one by choice. Kept separate, kept whole, and put to work together. You are never asked to mimic a tradition that isn’t yours — you take the timeless principle and adapt it to your own line.</p>
+    </div>
+    <div class="trad rv">
+      <article class="trad__c">
+        <svg class="sym sym--lg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="168" x2="188" y2="168"/> <path d="M 22,168 C 22,134 46,114 74,110 L 126,110 C 154,114 178,134 178,168"/> <path d="M 74,110 C 80,94 88,86 100,86 C 112,86 120,94 126,110"/> <path d="M 30,168 C 30,140 52,122 78,119 L 122,119 C 148,122 170,140 170,168" opacity="0.45"/> <path d="M 78,119 C 84,104 90,97 100,97 C 110,97 116,104 122,119" opacity="0.45"/> <path d="M 92,86 A 8,3 0 0 0 108,86"/> <path d="M 94,80 C 87,68 100,60 93,46" opacity="0.6"/> <path d="M 106,79 C 100,69 111,62 106,50" opacity="0.45"/> <path d="M 106,168 L 106,136 A 14,14 0 0 1 134,136 L 134,168"/> <line x1="112" y1="152" x2="112" y2="158" opacity="0.6"/> <circle cx="168" cy="44" r="7" opacity="0.9"/> <line x1="178.5" y1="44" x2="183.5" y2="44" opacity="0.7"/> <line x1="175.4" y1="36.6" x2="179" y2="33" opacity="0.7"/> <line x1="168" y1="33.5" x2="168" y2="28.5" opacity="0.7"/> <line x1="160.6" y1="36.6" x2="157" y2="33" opacity="0.7"/> <line x1="157.5" y1="44" x2="152.5" y2="44" opacity="0.7"/> <line x1="160.6" y1="51.4" x2="157" y2="55" opacity="0.7"/> <line x1="168" y1="54.5" x2="168" y2="59.5" opacity="0.7"/> <line x1="175.4" y1="51.4" x2="179" y2="55" opacity="0.7"/></svg>
+        <span class="trad__n">By blood</span>
+        <h3>Diné</h3>
+        <p>Dawn practice, corn pollen, the four sacred mountains, and a way of counting wealth that has never once been in dollars. Raised in it, in a hogan on Big Mountain.</p>
+      </article>
+      <article class="trad__c">
+        <svg class="sym sym--lg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><!-- trunk --> <line x1="96" y1="172" x2="96" y2="58"/> <line x1="104" y1="172" x2="104" y2="58"/> <!-- ground --> <line x1="26" y1="172" x2="174" y2="172" opacity="0.5"/> <!-- roots --> <path d="M 97,172 L 70,183 L 54,180"/> <path d="M 103,172 L 130,183 L 146,180"/> <path d="M 98,173 L 82,188 L 70,190" opacity="0.8"/> <path d="M 102,173 L 118,188 L 130,190" opacity="0.8"/> <path d="M 100,174 L 100,192" opacity="0.7"/> <!-- tier 1 --> <path d="M 97,148 L 62,130 L 56,114"/> <path d="M 103,148 L 138,130 L 144,114"/> <circle cx="56" cy="108" r="5"/> <circle cx="144" cy="108" r="5"/> <path d="M 79,139 L 74,150" opacity="0.75"/> <path d="M 121,139 L 126,150" opacity="0.75"/> <!-- tier 2 --> <path d="M 97,120 L 68,104 L 64,88"/> <path d="M 103,120 L 132,104 L 136,88"/> <circle cx="64" cy="82" r="4.4"/> <circle cx="136" cy="82" r="4.4"/> <path d="M 82,112 L 78,123" opacity="0.75"/> <path d="M 118,112 L 122,123" opacity="0.75"/> <!-- tier 3 --> <path d="M 97,94 L 74,80 L 72,64"/> <path d="M 103,94 L 126,80 L 128,64"/> <circle cx="72" cy="58" r="3.8"/> <circle cx="128" cy="58" r="3.8"/> <!-- crown --> <path d="M 96,58 L 86,40 L 100,28 L 114,40 L 104,58"/> <path d="M 93,46 L 107,46" opacity="0.7"/> <line x1="100" y1="28" x2="100" y2="20"/> <circle cx="100" cy="14" r="6.5"/> <line x1="100" y1="4" x2="100" y2="7.5"/> <line x1="90" y1="14" x2="93.5" y2="14"/> <line x1="110" y1="14" x2="106.5" y2="14"/> <line x1="93" y1="7" x2="95.4" y2="9.4"/> <line x1="107" y1="7" x2="104.6" y2="9.4"/> <line x1="93" y1="21" x2="95.4" y2="18.6"/> <line x1="107" y1="21" x2="104.6" y2="18.6"/></svg>
+        <span class="trad__n">By blood</span>
+        <h3>Lithuanian</h3>
+        <p>The forest, the song, and the stubbornness of a people who were supposed to disappear four times and did not. Endurance as an inherited technology.</p>
+      </article>
+      <article class="trad__c">
+        <svg class="sym sym--lg" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="172" x2="182" y2="172" opacity="0.55"/> <line x1="47" y1="66" x2="39" y2="172"/> <line x1="61" y1="66" x2="57" y2="172"/> <line x1="153" y1="66" x2="161" y2="172"/> <line x1="139" y1="66" x2="143" y2="172"/> <line x1="39" y1="172" x2="57" y2="172"/> <line x1="143" y1="172" x2="161" y2="172"/> <path d="M 33,98 L 167,98 L 167,110 L 33,110 Z"/> <path d="M 94,80 L 106,80 L 106,98 L 94,98 Z"/> <path d="M 12,60 C 48,34 152,34 188,60 L 179,74 C 147,52 53,52 21,74 Z"/></svg>
+        <span class="trad__n">By choice</span>
+        <h3>Japanese</h3>
+        <p>Read by kerosene lamp as a boy and apprenticed to ever since. Restraint, repair, and the discipline of doing one thing completely before starting the next.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE AUTHOR ================= -->
+<section class="sec sec--alt" id="author">
+  <div class="wrap">
+    <div class="split">
+      <figure class="frame frame--portrait rv">
+        <img src="/assets/img/tony-author.jpg" alt="Tony Skrelūnas with his grandfather, seated outside on a bench" loading="lazy">
+      </figure>
+      <div class="author__body rv">
+        <p class="eyebrow">The author</p>
+        <h2 class="author__name">Tony Skrelūnas</h2>
+        <p class="author__role">Lithuanian &amp; Diné</p>
+        <p class="author__hook">Raised by his great-grandmother in a hogan on Big Mountain — no electricity, four hundred sheep, a ceremony every dawn. He learned to read by kerosene lamp.</p>
+        <p class="muted">At college he walked into a world that quietly asked him to be someone generic, and for a while he tried. He lost the thread and stopped going. Then came the realization that turned it: <strong>he could be who he was.</strong> He came back and finished at the top of his class — and his power came back with him.</p>
+        <p class="muted">That is the argument underneath every book in this series. The tools were never lost. They were only set down.</p>
+        <ul class="creds">
+          <li><span>PhD candidate, Sustainable Development Education, Prescott College</span></li>
+          <li><span>Dissertation on human &amp; organizational performance through three lenses: Diné, Lithuanian, Japanese</span></li>
+          <li><span>Faculty at 1440 Multiversity</span></li>
+          <li><span>First person of Lithuanian and Diné descent in NAU’s College of Business Hall of Fame</span></li>
+        </ul>
+        <div class="actions">
+          <a class="arrow arrow--lg" href="/author/">Read his story <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STORIES ================= -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec__intro rv" style="margin-bottom:clamp(2.4rem,1.6rem + 2.4vw,3.8rem)">
+      <div>
+        <p class="eyebrow">Stories</p>
+        <h2 class="head">The thinking behind the series.</h2>
+      </div>
+      <p>Short essays, passages from the books, and the framework that ties it together. Free to read. Each one points you toward a practice or a book.</p>
+    </div>
+    <div class="grid3 rv">
+      <a class="jc jc--plain" href="/stories/the-calm-you-already-stored/">
+        <p class="jc__kick">Essay</p>
+        <h3>You do not make the calm out there</h3>
+        <p>At the dry well, at the sixtieth kilometer, at the phone call in the night — there is no calm to make. You can only spend what you already stored.</p>
+        <span class="jc__go">Read →</span>
+      </a>
+      <a class="jc jc--plain" href="/stories/never-only-men/">
+        <p class="jc__kick">Idea &amp; framework</p>
+        <h3>The far messengers were never only men</h3>
+        <p>Past the point where strength surrenders to durability, the deep carries belonged to women — the memory-keepers, song-navigators, and breath-divers history forgot.</p>
+        <span class="jc__go">Read →</span>
+      </a>
+      <a class="jc jc--plain" href="/stories/carry-without-stealing/">
+        <p class="jc__kick">The method</p>
+        <h3>How to carry a tradition without stealing it</h3>
+        <p>The wellness world sells the tools with their world deleted. The alternative isn’t purity or plunder — it’s a method.</p>
+        <span class="jc__go">Read →</span>
+      </a>
+    </div>
+    <div class="actions">
+      <a class="arrow arrow--lg" href="/stories/">All the stories <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FREE CHAPTER BAND ================= -->
+<section class="bookband">
+  <div class="bookband__bg"><img src="/assets/img/garden/stone-bridge.jpg" alt="" aria-hidden="true" loading="lazy"></div>
+  <div class="wrap bookband__in rv">
+    <p class="eyebrow">Free · no signup</p>
+    <h2>Start with chapter one.</h2>
+    <p>The full opening chapter of <em>Stone Breath</em>, beautifully set, cover and all. No email, no gate — just the door into the book.</p>
+    <div class="actions">
+      <a class="btn btn--primary" href="/read/">Read chapter one <span aria-hidden="true">→</span></a>
+      <a class="arrow" href="/downloads/Stone-Breath-Chapter-One.pdf">Download the PDF <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WRITE TO ME ================= -->
+<section class="sec sec--deep" id="contact">
+  <div class="wrap wrap--mid center contact--center">
+    <p class="eyebrow eyebrow--center">Stay in touch</p>
+    <h2 style="max-width:14ch;margin-inline:auto">Write to me.</h2>
+    <p class="lead lead--wide muted" style="margin-top:1.6rem">Readers, booksellers, translators, and anyone who wants to pick the tools back up. The address goes straight to me.</p>
+    <a class="mailto rv" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    <p class="mailto__note">I read everything. I answer what I can.</p>
+    <div class="actions" style="justify-content:center">
+      <a class="arrow" href="https://tribeawaken.com">Coaching, retreats &amp; consulting at TribeAwaken <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="weave" aria-hidden="true"><svg><rect width="100%" height="26" fill="url(#wv)"/></svg></div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div>
+        <p class="ftr__brand">The Ancestral Watch</p>
+        <p class="ftr__tag">Ancient technology for a modern life.</p>
+        <div class="ftr__langs">
+          <a href="/">English</a><span>·</span>
+          <a href="/ja/">日本語</a><span>·</span>
+          <a href="/lt/">Lietuvių</a>
+        </div>
+      </div>
+      <div>
+        <h4>The Books</h4>
+        <ul>
+          <li><a href="https://payhip.com/b/AhH6r">Stone Breath</a></li>
+          <li><a href="/series/#by-lamplight">By Lamplight</a></li>
+          <li><a href="https://payhip.com/b/GB2eg">The Council Fire</a></li>
+          <li><a href="/series/#far-messengers">The Far Messengers</a></li>
+          <li><a href="/series/">All four books</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Free</h4>
+        <ul>
+          <li><a href="/read/">Chapter one of Stone Breath</a></li>
+          <li><a href="/tools/">The Stone Breath tool</a></li>
+          <li><a href="/downloads/ancestral-watch__dawn-vow.pdf">The Dawn Vow</a></li>
+          <li><a href="/downloads/ancestral-watch__envy-protocol.pdf">The Envy Protocol</a></li>
+          <li><a href="/stories/">Stories &amp; essays</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="/author/">Tony Skrelūnas</a></li>
+          <li><a href="https://tribeawaken.com">TribeAwaken — retreats &amp; coaching</a></li>
+          <li><a href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__legal">
+      <span>© 2026 Tony Skrelūnas · The Ancestral Watch</span>
+      <span>The tools were never lost. Only set down.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------- reveal ---------- */
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+    els.forEach(function(e){e.classList.add('in')});return;
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{rootMargin:'0px 0px -6% 0px',threshold:.05});
+  els.forEach(function(e){io.observe(e)});
+  function sweep(){
+    els.forEach(function(e){
+      if(e.classList.contains('in'))return;
+      var r=e.getBoundingClientRect();
+      if(r.top<(window.innerHeight||0)*1.02){e.classList.add('in');io.unobserve(e)}
+    });
+  }
+  window.addEventListener('load',function(){sweep();setTimeout(sweep,260)});
+  setTimeout(sweep,1200);
+})();
+/* ---------- menu ---------- */
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu'),c=document.getElementById('menuClose');
+  if(!b||!m)return;
+  function open(){m.classList.add('open');b.setAttribute('aria-expanded','true');document.body.classList.add('locked')}
+  function shut(){m.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.classList.remove('locked')}
+  b.addEventListener('click',function(){m.classList.contains('open')?shut():open()});
+  if(c)c.addEventListener('click',shut);
+  m.addEventListener('click',function(e){if(e.target.tagName==='A')shut()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')shut()});
+})();
+</script>
 </body>
 </html>

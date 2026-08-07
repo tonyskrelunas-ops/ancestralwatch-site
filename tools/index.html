@@ -1,246 +1,441 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <title>The Tools — Ancient protocols for a modern week | The Ancestral Watch</title>
-  <meta name="description" content="Practical tools drawn from The Ancestral Watch series. Start free with The Stone Breath — a 3-minute nervous-system reset — then unlock the full toolbox: the Daily Reckoning, the Envy Protocol, the Dawn Vow, the Great-Grandchildren Filter and more." />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="The Tools — The Ancestral Watch" />
-  <meta property="og:description" content="Ancient practices, engineered for Monday morning, not a seminar. Start with a free 3-minute tool." />
-  <meta property="og:url" content="https://ancestralwatch.com/tools/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="https://ancestralwatch.com/tools/" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="/css/tokens.css" />
-  <link rel="stylesheet" href="/css/style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Tools — The Stone Breath &amp; the toolkit | The Ancestral Watch</title>
+<meta name="description" content="The Stone Breath: an ancient running technique that resets the nervous system in three minutes. Free, no registration. Plus the rest of the toolkit from The Ancestral Watch by Tony Skrelūnas.">
+<link rel="icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/aw2.css">
+<style>
+.tool{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(1.2rem,.9rem + 1.6vw,2.6rem);
+  align-items:start;padding-block:clamp(1.9rem,1.4rem + 1.6vw,3rem);
+  border-top:1px solid var(--rule-2)}
+.tool:last-of-type{border-bottom:1px solid var(--rule-2)}
+.tool__n{font-family:var(--display);font-weight:900;font-size:clamp(1.5rem,1.2rem + 1.2vw,2.2rem);
+  color:rgba(230,180,140,.3);line-height:1;letter-spacing:-.03em;white-space:nowrap}
+.tool h3{font-size:clamp(1.45rem,1.2rem + 1.1vw,2.1rem);font-weight:800;margin-bottom:.7rem}
+.tool p{color:var(--sand);max-width:56ch;font-size:1.02rem;line-height:1.6}
+.tool__act{align-self:center;white-space:nowrap}
+@media(max-width:820px){
+  .tool{grid-template-columns:auto 1fr;row-gap:1.2rem}
+  .tool__act{grid-column:2;justify-self:start}
+}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,1.2rem + 3.4vw,5rem);align-items:start}
+@media(max-width:900px){.why{grid-template-columns:1fr}}
+.warn{border-left:3px solid var(--gold);padding-left:clamp(1.2rem,1rem + 1vw,2rem);
+  margin-top:clamp(2rem,1.5rem + 1.4vw,3rem)}
+.warn p{font-family:var(--display);font-style:italic;font-weight:500;
+  font-size:clamp(1.15rem,1.05rem + .6vw,1.5rem);line-height:1.5;color:var(--cream);max-width:44ch}
+</style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ============ HEADER / NAV (shared) ============ -->
-  <header class="site-header">
-    <nav class="nav wrap wrap--wide" aria-label="Primary">
-      <a class="brand" href="/"><img class="brand__logo" src="/assets/img/author-logo.png" alt="AncestralWatch logo" width="72" height="71"><span class="brand__wm">Ancestral<span class="brand__mark">Watch</span></span></a>
-      <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">☰</button>
-      <ul class="nav__links" id="primary-nav" data-open="false">
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="wv" width="48" height="26" patternUnits="userSpaceOnUse">
+      <path d="M0 4H48M0 22H48" stroke="currentColor" stroke-width="1.1" opacity=".5"/>
+      <path d="M0 13 12 6 24 13 12 20Z" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <path d="M24 13 36 6 48 13 36 20Z" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <circle cx="12" cy="13" r="2" fill="currentColor"/>
+      <circle cx="36" cy="13" r="2" fill="currentColor" opacity=".45"/>
+    </pattern>
+  </defs>
+</svg>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="/">
+      <img src="/assets/img/author-logo.png" alt="" aria-hidden="true">
+      <span class="brand__txt">The Ancestral Watch<span class="brand__sub">Tony Skrelūnas</span></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav">
         <li><a href="/">Home</a></li>
-        <li class="has-menu">
-          <button aria-expanded="false" aria-haspopup="true">The Series</button>
-          <ul class="menu">
-            <li><a href="/series/"><span class="menu__num">All</span> The Series</a></li>
-            <li><a href="/series/stone-breath/"><span class="menu__num">I</span> Stone Breath</a></li>
-            <li><a href="/series/by-lamplight/"><span class="menu__num">II</span> By Lamplight</a></li>
-            <li><a href="/series/the-council-fire/"><span class="menu__num">III</span> The Council Fire</a></li>
-            <li><a href="/series/the-far-messengers/"><span class="menu__num">IV</span> The Far Messengers</a></li>
-          <li><a href="/start-here/">Start Here</a></li><li><a href="/read/stone-breath/">Read Free</a></li></ul>
-        </li>
-        <li><a href="/tools/" aria-current="page">The Tools</a></li>
-        <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+        <li><a href="/series/">The Series</a></li>
+        <li><a href="/read/">Read Free</a></li>
+        <li><a class="is-on" aria-current="page" href="/tools/">The Tools</a></li>
+        <li><a href="/stories/">Stories</a></li>
         <li><a href="/author/">The Author</a></li>
-        <li><a class="lang-toggle" href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a class="lang-toggle" href="/lt/" hreflang="lt" lang="lt" style="border-left:0;padding-left:0;">Lietuvių</a></li>
-        <li class="nav__cta"><a class="btn btn--primary" href="#unlock">Get the free tool</a></li>
+        <li><a href="https://tribeawaken.com">TribeAwaken&nbsp;↗</a></li>
       </ul>
     </nav>
-  </header>
+    <div class="hdr__end">
+      <a class="btn btn--primary hdr__cta" href="https://payhip.com/b/AhH6r">Get Stone Breath</a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <i></i><i></i><i></i>
+      </button>
+    </div>
+  </div>
+  <div class="globebar">
+    <div class="wrap globebar__in">
+      <p class="globebar__lbl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15 0 18M12 3c-2.6 2.6-2.6 15 0 18"/>
+        </svg>
+        <span>Read in</span>
+      </p>
+      <ul class="globebar__ls">
+        <li><a class="is-on" href="/" hreflang="en">English</a></li>
+        <li><a href="/ja/" hreflang="ja">日本語</a></li>
+        <li><a href="/lt/" hreflang="lt">Lietuvių</a></li>
+      </ul>
+      <a class="globebar__mail" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+</header>
 
-  <main id="main">
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Site menu">
+  <div class="wrap">
+    <div class="menu__top">
+      <a class="brand" href="/">
+        <img src="/assets/img/author-logo.png" alt="" aria-hidden="true">
+        <span class="brand__txt">The Ancestral Watch<span class="brand__sub">Tony Skrelūnas</span></span>
+      </a>
+      <button class="menu__close" id="menuClose" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="menu__ls">
+      <li><a href="/"><em>01</em> Home</a></li>
+      <li><a href="/series/"><em>02</em> The Series</a></li>
+      <li><a href="/read/"><em>03</em> Read Chapter One</a></li>
+      <li><a href="/tools/"><em>04</em> The Tools</a></li>
+      <li><a href="/stories/"><em>05</em> Stories</a></li>
+      <li><a href="/author/"><em>06</em> The Author</a></li>
+      <li><a href="https://tribeawaken.com"><em>07</em> TribeAwaken ↗</a></li>
+    </ul>
+    <div class="menu__foot">
+      <a href="/ja/">日本語</a>
+      <a href="/lt/">Lietuvių</a>
+      <a href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+</div>
 
-    <!-- ============ PAGE HERO / THE TOOL BOX ============ -->
-    <section class="page-hero">
-      <div class="wrap page-hero__inner">
-        <p class="eyebrow">The Tool Box</p>
-        <h1>Ancient practices, engineered for a modern week.</h1>
-        <div class="toolbox-intro">
-          <p class="lead">Every tool here is drawn from the series and built for real life — short, repeatable,
-          and made for Monday morning, not a seminar. You won't be asked to mimic traditions that aren't
-          yours; you'll learn the timeless principle and adapt it to your own life.</p>
-          <p class="muted">Start with the first one free. No membership.</p>
+<main id="main">
+
+<!-- ================= PAGE HERO ================= -->
+<section class="hasglyph phero">
+  <svg class="glyph glyph--tr glyph--xl" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><ellipse cx="100" cy="116" rx="36" ry="12" opacity="0.95"/> <ellipse cx="100" cy="116" rx="56" ry="21" opacity="0.75"/> <ellipse cx="100" cy="116" rx="76" ry="30" opacity="0.55"/> <ellipse cx="100" cy="116" rx="94" ry="38" opacity="0.35"/> <path d="M 78,89 C 78,79 88,73 101,73 C 113,73 121,79 121,88 C 121,96 111,101 100,101 C 87,101 78,97 78,89 Z"/> <path d="M 85,84 C 89,78 95,75 103,76" opacity="0.55"/></svg>
+  <div class="wrap">
+    <p class="eyebrow">Free · no registration</p>
+    <h1>Ancient practices, built for a modern week.</h1>
+    <p class="lead">Short, repeatable, and made for Monday morning rather than a seminar. You will never be asked to mimic a tradition that isn’t yours — you take the timeless principle and adapt it to your own life.</p>
+    <p class="phero__meta"><span>No email required</span><span>Printable cards</span><span>Drawn from the books</span></p>
+  </div>
+</section>
+
+<!-- ================= THE STONE BREATH ================= -->
+<section class="hasglyph sec" id="stone-breath">
+  <svg class="glyph glyph--br glyph--xl glyph--soft" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M -11.0,40 A 11.0,11.0 0 0 1 11.0,40" opacity="0.62"/> <path d="M -19.0,40 A 19.0,19.0 0 0 1 19.0,40" opacity="0.72"/> <path d="M -26.5,40 A 26.5,26.5 0 0 1 26.5,40" opacity="0.82"/> <path d="M -34.0,40 A 34.0,34.0 0 0 1 34.0,40"/> <path d="M 29.0,40 A 11.0,11.0 0 0 1 51.0,40" opacity="0.62"/> <path d="M 21.0,40 A 19.0,19.0 0 0 1 59.0,40" opacity="0.72"/> <path d="M 13.5,40 A 26.5,26.5 0 0 1 66.5,40" opacity="0.82"/> <path d="M 6.0,40 A 34.0,34.0 0 0 1 74.0,40"/> <path d="M 69.0,40 A 11.0,11.0 0 0 1 91.0,40" opacity="0.62"/> <path d="M 61.0,40 A 19.0,19.0 0 0 1 99.0,40" opacity="0.72"/> <path d="M 53.5,40 A 26.5,26.5 0 0 1 106.5,40" opacity="0.82"/> <path d="M 46.0,40 A 34.0,34.0 0 0 1 114.0,40"/> <path d="M 109.0,40 A 11.0,11.0 0 0 1 131.0,40" opacity="0.62"/> <path d="M 101.0,40 A 19.0,19.0 0 0 1 139.0,40" opacity="0.72"/> <path d="M 93.5,40 A 26.5,26.5 0 0 1 146.5,40" opacity="0.82"/> <path d="M 86.0,40 A 34.0,34.0 0 0 1 154.0,40"/> <path d="M 149.0,40 A 11.0,11.0 0 0 1 171.0,40" opacity="0.62"/> <path d="M 141.0,40 A 19.0,19.0 0 0 1 179.0,40" opacity="0.72"/> <path d="M 133.5,40 A 26.5,26.5 0 0 1 186.5,40" opacity="0.82"/> <path d="M 126.0,40 A 34.0,34.0 0 0 1 194.0,40"/> <path d="M 189.0,40 A 11.0,11.0 0 0 1 211.0,40" opacity="0.62"/> <path d="M 181.0,40 A 19.0,19.0 0 0 1 219.0,40" opacity="0.72"/> <path d="M 173.5,40 A 26.5,26.5 0 0 1 226.5,40" opacity="0.82"/> <path d="M 166.0,40 A 34.0,34.0 0 0 1 234.0,40"/> <path d="M -31.0,76 A 11.0,11.0 0 0 1 -9.0,76" opacity="0.62"/> <path d="M -39.0,76 A 19.0,19.0 0 0 1 -1.0,76" opacity="0.72"/> <path d="M -46.5,76 A 26.5,26.5 0 0 1 6.5,76" opacity="0.82"/> <path d="M -54.0,76 A 34.0,34.0 0 0 1 14.0,76"/> <path d="M 9.0,76 A 11.0,11.0 0 0 1 31.0,76" opacity="0.62"/> <path d="M 1.0,76 A 19.0,19.0 0 0 1 39.0,76" opacity="0.72"/> <path d="M -6.5,76 A 26.5,26.5 0 0 1 46.5,76" opacity="0.82"/> <path d="M -14.0,76 A 34.0,34.0 0 0 1 54.0,76"/> <path d="M 49.0,76 A 11.0,11.0 0 0 1 71.0,76" opacity="0.62"/> <path d="M 41.0,76 A 19.0,19.0 0 0 1 79.0,76" opacity="0.72"/> <path d="M 33.5,76 A 26.5,26.5 0 0 1 86.5,76" opacity="0.82"/> <path d="M 26.0,76 A 34.0,34.0 0 0 1 94.0,76"/> <path d="M 89.0,76 A 11.0,11.0 0 0 1 111.0,76" opacity="0.62"/> <path d="M 81.0,76 A 19.0,19.0 0 0 1 119.0,76" opacity="0.72"/> <path d="M 73.5,76 A 26.5,26.5 0 0 1 126.5,76" opacity="0.82"/> <path d="M 66.0,76 A 34.0,34.0 0 0 1 134.0,76"/> <path d="M 129.0,76 A 11.0,11.0 0 0 1 151.0,76" opacity="0.62"/> <path d="M 121.0,76 A 19.0,19.0 0 0 1 159.0,76" opacity="0.72"/> <path d="M 113.5,76 A 26.5,26.5 0 0 1 166.5,76" opacity="0.82"/> <path d="M 106.0,76 A 34.0,34.0 0 0 1 174.0,76"/> <path d="M 169.0,76 A 11.0,11.0 0 0 1 191.0,76" opacity="0.62"/> <path d="M 161.0,76 A 19.0,19.0 0 0 1 199.0,76" opacity="0.72"/> <path d="M 153.5,76 A 26.5,26.5 0 0 1 206.5,76" opacity="0.82"/> <path d="M 146.0,76 A 34.0,34.0 0 0 1 214.0,76"/> <path d="M 209.0,76 A 11.0,11.0 0 0 1 231.0,76" opacity="0.62"/> <path d="M 201.0,76 A 19.0,19.0 0 0 1 239.0,76" opacity="0.72"/> <path d="M 193.5,76 A 26.5,26.5 0 0 1 246.5,76" opacity="0.82"/> <path d="M 186.0,76 A 34.0,34.0 0 0 1 254.0,76"/> <path d="M -11.0,112 A 11.0,11.0 0 0 1 11.0,112" opacity="0.62"/> <path d="M -19.0,112 A 19.0,19.0 0 0 1 19.0,112" opacity="0.72"/> <path d="M -26.5,112 A 26.5,26.5 0 0 1 26.5,112" opacity="0.82"/> <path d="M -34.0,112 A 34.0,34.0 0 0 1 34.0,112"/> <path d="M 29.0,112 A 11.0,11.0 0 0 1 51.0,112" opacity="0.62"/> <path d="M 21.0,112 A 19.0,19.0 0 0 1 59.0,112" opacity="0.72"/> <path d="M 13.5,112 A 26.5,26.5 0 0 1 66.5,112" opacity="0.82"/> <path d="M 6.0,112 A 34.0,34.0 0 0 1 74.0,112"/> <path d="M 69.0,112 A 11.0,11.0 0 0 1 91.0,112" opacity="0.62"/> <path d="M 61.0,112 A 19.0,19.0 0 0 1 99.0,112" opacity="0.72"/> <path d="M 53.5,112 A 26.5,26.5 0 0 1 106.5,112" opacity="0.82"/> <path d="M 46.0,112 A 34.0,34.0 0 0 1 114.0,112"/> <path d="M 109.0,112 A 11.0,11.0 0 0 1 131.0,112" opacity="0.62"/> <path d="M 101.0,112 A 19.0,19.0 0 0 1 139.0,112" opacity="0.72"/> <path d="M 93.5,112 A 26.5,26.5 0 0 1 146.5,112" opacity="0.82"/> <path d="M 86.0,112 A 34.0,34.0 0 0 1 154.0,112"/> <path d="M 149.0,112 A 11.0,11.0 0 0 1 171.0,112" opacity="0.62"/> <path d="M 141.0,112 A 19.0,19.0 0 0 1 179.0,112" opacity="0.72"/> <path d="M 133.5,112 A 26.5,26.5 0 0 1 186.5,112" opacity="0.82"/> <path d="M 126.0,112 A 34.0,34.0 0 0 1 194.0,112"/> <path d="M 189.0,112 A 11.0,11.0 0 0 1 211.0,112" opacity="0.62"/> <path d="M 181.0,112 A 19.0,19.0 0 0 1 219.0,112" opacity="0.72"/> <path d="M 173.5,112 A 26.5,26.5 0 0 1 226.5,112" opacity="0.82"/> <path d="M 166.0,112 A 34.0,34.0 0 0 1 234.0,112"/> <path d="M -31.0,148 A 11.0,11.0 0 0 1 -9.0,148" opacity="0.62"/> <path d="M -39.0,148 A 19.0,19.0 0 0 1 -1.0,148" opacity="0.72"/> <path d="M -46.5,148 A 26.5,26.5 0 0 1 6.5,148" opacity="0.82"/> <path d="M -54.0,148 A 34.0,34.0 0 0 1 14.0,148"/> <path d="M 9.0,148 A 11.0,11.0 0 0 1 31.0,148" opacity="0.62"/> <path d="M 1.0,148 A 19.0,19.0 0 0 1 39.0,148" opacity="0.72"/> <path d="M -6.5,148 A 26.5,26.5 0 0 1 46.5,148" opacity="0.82"/> <path d="M -14.0,148 A 34.0,34.0 0 0 1 54.0,148"/> <path d="M 49.0,148 A 11.0,11.0 0 0 1 71.0,148" opacity="0.62"/> <path d="M 41.0,148 A 19.0,19.0 0 0 1 79.0,148" opacity="0.72"/> <path d="M 33.5,148 A 26.5,26.5 0 0 1 86.5,148" opacity="0.82"/> <path d="M 26.0,148 A 34.0,34.0 0 0 1 94.0,148"/> <path d="M 89.0,148 A 11.0,11.0 0 0 1 111.0,148" opacity="0.62"/> <path d="M 81.0,148 A 19.0,19.0 0 0 1 119.0,148" opacity="0.72"/> <path d="M 73.5,148 A 26.5,26.5 0 0 1 126.5,148" opacity="0.82"/> <path d="M 66.0,148 A 34.0,34.0 0 0 1 134.0,148"/> <path d="M 129.0,148 A 11.0,11.0 0 0 1 151.0,148" opacity="0.62"/> <path d="M 121.0,148 A 19.0,19.0 0 0 1 159.0,148" opacity="0.72"/> <path d="M 113.5,148 A 26.5,26.5 0 0 1 166.5,148" opacity="0.82"/> <path d="M 106.0,148 A 34.0,34.0 0 0 1 174.0,148"/> <path d="M 169.0,148 A 11.0,11.0 0 0 1 191.0,148" opacity="0.62"/> <path d="M 161.0,148 A 19.0,19.0 0 0 1 199.0,148" opacity="0.72"/> <path d="M 153.5,148 A 26.5,26.5 0 0 1 206.5,148" opacity="0.82"/> <path d="M 146.0,148 A 34.0,34.0 0 0 1 214.0,148"/> <path d="M 209.0,148 A 11.0,11.0 0 0 1 231.0,148" opacity="0.62"/> <path d="M 201.0,148 A 19.0,19.0 0 0 1 239.0,148" opacity="0.72"/> <path d="M 193.5,148 A 26.5,26.5 0 0 1 246.5,148" opacity="0.82"/> <path d="M 186.0,148 A 34.0,34.0 0 0 1 254.0,148"/> <path d="M -11.0,184 A 11.0,11.0 0 0 1 11.0,184" opacity="0.62"/> <path d="M -19.0,184 A 19.0,19.0 0 0 1 19.0,184" opacity="0.72"/> <path d="M -26.5,184 A 26.5,26.5 0 0 1 26.5,184" opacity="0.82"/> <path d="M -34.0,184 A 34.0,34.0 0 0 1 34.0,184"/> <path d="M 29.0,184 A 11.0,11.0 0 0 1 51.0,184" opacity="0.62"/> <path d="M 21.0,184 A 19.0,19.0 0 0 1 59.0,184" opacity="0.72"/> <path d="M 13.5,184 A 26.5,26.5 0 0 1 66.5,184" opacity="0.82"/> <path d="M 6.0,184 A 34.0,34.0 0 0 1 74.0,184"/> <path d="M 69.0,184 A 11.0,11.0 0 0 1 91.0,184" opacity="0.62"/> <path d="M 61.0,184 A 19.0,19.0 0 0 1 99.0,184" opacity="0.72"/> <path d="M 53.5,184 A 26.5,26.5 0 0 1 106.5,184" opacity="0.82"/> <path d="M 46.0,184 A 34.0,34.0 0 0 1 114.0,184"/> <path d="M 109.0,184 A 11.0,11.0 0 0 1 131.0,184" opacity="0.62"/> <path d="M 101.0,184 A 19.0,19.0 0 0 1 139.0,184" opacity="0.72"/> <path d="M 93.5,184 A 26.5,26.5 0 0 1 146.5,184" opacity="0.82"/> <path d="M 86.0,184 A 34.0,34.0 0 0 1 154.0,184"/> <path d="M 149.0,184 A 11.0,11.0 0 0 1 171.0,184" opacity="0.62"/> <path d="M 141.0,184 A 19.0,19.0 0 0 1 179.0,184" opacity="0.72"/> <path d="M 133.5,184 A 26.5,26.5 0 0 1 186.5,184" opacity="0.82"/> <path d="M 126.0,184 A 34.0,34.0 0 0 1 194.0,184"/> <path d="M 189.0,184 A 11.0,11.0 0 0 1 211.0,184" opacity="0.62"/> <path d="M 181.0,184 A 19.0,19.0 0 0 1 219.0,184" opacity="0.72"/> <path d="M 173.5,184 A 26.5,26.5 0 0 1 226.5,184" opacity="0.82"/> <path d="M 166.0,184 A 34.0,34.0 0 0 1 234.0,184"/></svg>
+  <div class="wrap">
+    <div class="sec__intro rv">
+      <div>
+        <p class="eyebrow">Tool 01 · the free one</p>
+        <h2 class="head">The Stone Breath</h2>
+      </div>
+      <p>A three-minute nervous-system reset built on an ancient running-and-breath technique. Use it before a hard conversation, after bad news, or any time the day gets loud. No theory — just do it.</p>
+    </div>
+
+    <div class="split rv">
+      <div>
+        <p class="lead">The messengers did not have sports science. They had a way of breathing that let a body cross a hundred miles and still be good for something at the other end.</p>
+        <div class="count">
+          <div><b>4</b><span>In</span></div>
+          <div><b>4</b><span>Hold</span></div>
+          <div><b>6</b><span>Out</span></div>
+          <div><b>4</b><span>Hold</span></div>
+        </div>
+        <p class="muted" style="margin-top:1.8rem">Five unhurried rounds. The long exhale is the body’s off-switch for alarm — one of the most replicated findings in stress physiology, and a count the old runners had ten thousand years before anyone named the vagus nerve.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="/downloads/ancestral-watch__stone-breath.pdf">Printable card — free PDF <span aria-hidden="true">→</span></a>
         </div>
       </div>
-    </section>
+      <figure class="frame frame--tall">
+        <img src="/assets/img/garden/koi-pond-author.jpg" alt="A koi pond in a high-desert garden" loading="lazy">
+      </figure>
+    </div>
 
-    <!-- ============ THE FREE TOOL — Stone Breath ============ -->
-    <section class="section section--tight">
-      <div class="wrap">
-        <div class="tool-feature">
-          <span class="tool-feature__badge">Free · no registration</span>
-          <h2>The <em>Stone Breath</em></h2>
-          <p class="tool-feature__lead">
-            A 3-minute nervous-system reset built on an ancient running-and-breath technique. Use it before
-            a hard conversation, after bad news, or any time the day gets loud. No theory — just do it.
-          </p>
-
-          <!-- Protocol drawn from the master strategic report's Stone Breath practice.
-               TODO(Tony): confirm final wording before it goes in the downloadable card. -->
-          <ol class="tool-steps">
-            <li><strong>Choose your stone.</strong> In your mind, walk to a mountain stream and choose one pebble from the water. Feel its deep-time journey — the ages it took to come smooth. (Or hold a real stone in your hand.)</li>
-            <li><strong>Give thanks to the water.</strong> A moment of gratitude for the stream and all it has carried. Let your jaw and your shoulders drop.</li>
-            <li><strong>Breathe — five rounds.</strong> Unhurried: <strong>in for 4 · hold 4 · out for 6 · hold 4.</strong> The long exhale is the body's off-switch for alarm.</li>
-            <li><strong>Receive, then return.</strong> Hold the stone in your hand and imagine it on your tongue — never actually placed there. Receive the regard of those who came before. Then return the stone to the water, with thanks.</li>
-          </ol>
-
-          <p class="muted" style="font-size: var(--step--1);">About three unhurried minutes — that's the whole practice. The stone goes in the hand and is imagined on the tongue, never actually placed there.</p>
-          <p style="margin-top: var(--space-3);">
-            <!-- TODO(Tony): create a $0 Payhip product (guided audio + printable card) and paste its URL here. -->
-            <a class="btn btn--ghost" href="/downloads/ancestral-watch__stone-breath.pdf" download>Download the printable card (free) →</a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ NEW TOOLS (described + individually gated) ============ -->
-    <section class="section section--tight">
-      <div class="wrap">
-        <div class="toolbox__head">
-          <h2>New tools</h2>
-          <p>Read what each one is — then download the full practice, free.</p>
-        </div>
-        <div class="offerings-grid">
-
-          <article class="book-hook toolcard--new">
-            <span class="book-hook__status">New · Tool 07</span>
-            <h3>The Envy Protocol</h3>
-            <p>Comparison is the modern wound — the scroll that leaves you smaller than it found you. The Envy
-            Protocol turns that sting into a compass: a short practice to name the exact thing you actually
-            want underneath the envy, separate it from the person you resent, and take the one small step
-            that converts the ache into direction. The full card and walk-through are yours free.</p>
-            <!-- TODO(Tony): create a $0 Payhip product for this tool and paste its URL here. -->
-            <a class="btn btn--primary" href="/downloads/ancestral-watch__envy-protocol.pdf" download>Get the Envy Protocol (free PDF) →</a>
-          </article>
-
-          <article class="book-hook toolcard--new">
-            <span class="book-hook__status">New · Tool 08</span>
-            <h3>The Dawn Vow</h3>
-            <p>Most days grab you before you've chosen anything. The Dawn Vow is a sixty-second first-light
-            practice: before the phone, before the noise, you name one thing you'll protect today and one
-            you'll build — and let that set your frequency for the whole day. Get the guided card and the
-            morning script, free.</p>
-            <!-- TODO(Tony): create a $0 Payhip product for this tool and paste its URL here. -->
-            <a class="btn btn--primary" href="/downloads/ancestral-watch__dawn-vow.pdf" download>Get the Dawn Vow (free PDF) →</a>
-          </article>
-
-          <article class="book-hook toolcard--new">
-            <span class="book-hook__status">New · Tool 09</span>
-            <h3>The Messenger's Story <span class="muted" style="font-weight:400;">(working title)</span></h3>
-            <p>Every messenger carried a story in both directions — one to hand <em>down</em> to the young,
-            and one to carry <em>up</em> to the elders. Drawn from the close of <em>The Far Messengers</em>,
-            this is a short story to read to your children and a second to share with those who came before
-            you: a practice of passing what lasts, down the line and up it.</p>
-            <!-- TODO(Tony): confirm the name; supply the two short passages from the end of The Far Messengers;
-                 then create a $0 Payhip product and paste its URL here. -->
-            <a class="btn btn--ghost" href="/series/the-far-messengers/" aria-disabled="true">Coming soon →</a>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ THE REST OF THE TOOLBOX (email-gated) ============ -->
-    <section class="section section--tight">
-      <div class="wrap">
-        <div class="toolbox__head">
-          <h2>The rest of the toolbox</h2>
-          <p>Five more protocols — unlock them all with one email, below.</p>
-        </div>
-
-        <div class="toolbox-grid">
-          <!-- Original six (minus Stone Breath, featured above) -->
-          <article class="toolcard">
-            <p class="toolcard__num">Tool 02</p>
-            <h3>The Daily Reckoning</h3>
-            <p>Three questions that clear your emotional ledger each day.</p>
-            <span class="toolcard__tag toolcard__tag--locked">🔒 Unlock with email</span>
-          </article>
-
-          <article class="toolcard">
-            <p class="toolcard__num">Tool 03</p>
-            <h3>The Clan Protocol</h3>
-            <p>Kinship principles for building circles of true alliance that outlast any org chart.</p>
-            <span class="toolcard__tag toolcard__tag--locked">🔒 Unlock with email</span>
-          </article>
-
-          <article class="toolcard">
-            <p class="toolcard__num">Tool 04</p>
-            <h3>The Great-Grandchildren Filter</h3>
-            <p>A decision lens that judges choices by their echo in your great-grandchildren.</p>
-            <span class="toolcard__tag toolcard__tag--locked">🔒 Unlock with email</span>
-          </article>
-
-          <article class="toolcard">
-            <p class="toolcard__num">Tool 05</p>
-            <h3>The Warrior's Code</h3>
-            <!-- TODO(Tony): §4 flags a specific tribal/cultural attribution on the old site for this
-                 tool. Kept universal here; confirm final framing before publish. -->
-            <p>Disciplined strength in service of what is fragile — protect what matters while nurturing what grows.</p>
-            <span class="toolcard__tag toolcard__tag--locked">🔒 Unlock with email</span>
-          </article>
-
-          <article class="toolcard">
-            <p class="toolcard__num">Tool 06</p>
-            <h3>The Harvest Map</h3>
-            <p>Seeing your life as a living ecosystem of contribution — not a resume.</p>
-            <span class="toolcard__tag toolcard__tag--locked">🔒 Unlock with email</span>
-          </article>
-
-          <!-- (The three new tools are featured with full descriptions in the "New tools" section above.) -->
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ UNLOCK (email capture) ============ -->
-    <section class="section capture" id="unlock">
-      <div class="wrap">
-        <p class="eyebrow">One email, whole toolbox</p>
-        <h2>Get access to the rest of the Tools.</h2>
-        <p>The Stone Breath is yours free above. Drop your email and the other eight open up — plus word of each new book.</p>
-        <div class="ml-embedded" data-form="dAD9gF"></div>
-        <!-- TODO(Tony): email/form provider + endpoint -->
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ============ FOOTER (shared) ============ -->
-  <footer class="site-footer">
-    <div class="wrap wrap--wide">
-      <div class="footer__grid">
+    <ol class="prac rv">
+      <li>
         <div>
-          <p class="footer__brand">AncestralWatch</p>
-          <p class="footer__tag">Ancient technology for a modern life.</p>
-          <p style="margin-top: var(--space-2); max-width: 34ch;">The home of The Ancestral Watch Series by Tony Skrelūnas.</p>
+          <h3>Choose your stone.</h3>
+          <p>In your mind, walk to a mountain stream and choose one pebble from the water. Feel its deep-time journey — the ages it took to come smooth. Or hold a real stone in your hand; the body believes a vivid picture either way.</p>
         </div>
+      </li>
+      <li>
         <div>
-          <h4>The Series</h4>
-          <ul>
-            <li><a href="/series/stone-breath/">Stone Breath</a></li>
-            <li><a href="/series/the-council-fire/">The Council Fire</a></li>
-            <li><a href="/series/">All four books</a></li>
-            <li><a href="/tools/">The free Tools</a></li>
-          </ul>
+          <h3>Give thanks to the water.</h3>
+          <p>A moment of gratitude for the stream and everything it has carried. Let your jaw drop. Let your shoulders drop. That release is the first medicine.</p>
         </div>
+      </li>
+      <li>
         <div>
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="/author/">The Author</a></li>
-            <li><a href="/author/#work">Work with Tony</a></li><li><a href="https://tribeawaken.com/workshop/" target="_blank" rel="noopener">The Retreat ↗</a></li><li><a href="https://tribeawaken.com/" target="_blank" rel="noopener">Coaching &amp; Retreats ↗</a></li>
-            <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
-            <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/lt/" hreflang="lt" lang="lt">Lietuvių</a></li>
-          </ul>
+          <h3>Breathe — five rounds.</h3>
+          <p>Unhurried: <b>in for four · hold four · out for six · hold four.</b> The stone is an anchor, not a rule. Your heart rate settles. The noise in your head drops a notch.</p>
         </div>
+      </li>
+      <li>
+        <div>
+          <h3>Receive, then return.</h3>
+          <p>Hold the stone in your hand and imagine it resting on your tongue — never actually placed there. Receive the regard of those who came before. Then return the stone to the water, with thanks.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="note rv">
+      <p><strong>About three unhurried minutes — that is the whole practice.</strong> The stone goes in the hand and is imagined on the tongue, never actually placed there.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY IT WORKS ================= -->
+<section class="hasglyph sec sec--deep">
+  <svg class="glyph glyph--tl glyph--xl glyph--soft" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M 136.2,42.1 L 138.1,42.4 L 139.7,43.2 L 141.3,44.1 L 142.8,45 L 144.3,46 L 145.8,47.1 L 147.2,48.2 L 148.5,49.4 L 149.9,50.7 L 151.1,51.9 L 152.4,53.3 L 153.6,54.6 L 154.7,56 L 155.8,57.4 L 156.9,58.9 L 157.9,60.4 L 158.9,61.9 L 159.8,63.5 L 160.7,65.1 L 161.5,66.7 L 162.3,68.3 L 163.1,69.9 L 163.8,71.6 L 164.5,73.2 L 165.1,74.9 L 165.7,76.6 L 166.3,78.3 L 166.8,80 L 167.3,81.8 L 167.7,83.5 L 168.1,85.3 L 168.5,87 L 168.8,88.8 L 169.1,90.6 L 169.3,92.4 L 169.5,94.1 L 169.7,95.9 L 169.8,97.7 L 169.9,99.5 L 169.9,101.3 L 169.9,103.1 L 169.9,104.9 L 169.8,106.7 L 169.6,108.5 L 169.4,110.3 L 169.1,112.1 L 168.8,113.9 L 168.5,115.7 L 168.1,117.5 L 167.6,119.2 L 167.1,121 L 166.6,122.7 L 165.9,124.4 L 165.3,126.1 L 164.5,127.7 L 163.8,129.4 L 162.9,131 L 162.1,132.6 L 161.2,134.1 L 160.2,135.6 L 159.2,137.1 L 158.1,138.6 L 157,140 L 155.9,141.4 L 154.7,142.8 L 153.5,144.1 L 152.3,145.4 L 151,146.7 L 149.7,147.9 L 148.4,149.1 L 147,150.2 L 145.6,151.3 L 144.2,152.4 L 142.8,153.5 L 141.4,154.5 L 139.9,155.5 L 138.5,156.5 L 137,157.4 L 135.5,158.3 L 133.9,159.2 L 132.4,160.1 L 130.9,160.9 L 129.3,161.7 L 127.7,162.5 L 126.1,163.3 L 124.5,164 L 122.9,164.7 L 121.3,165.4 L 119.6,166.1 L 117.9,166.7 L 116.2,167.3 L 114.5,167.8 L 112.8,168.4 L 111.1,168.8 L 109.3,169.3 L 107.5,169.7 L 105.8,170 L 104,170.4 L 102.2,170.6 L 100.3,170.8 L 98.5,171 L 96.7,171.1 L 94.8,171.2 L 93,171.2 L 91.1,171.1 L 89.3,171 L 87.4,170.8 L 85.6,170.5 L 83.8,170.2 L 82,169.8 L 80.1,169.3 L 78.4,168.8 L 76.6,168.2 L 74.8,167.6 L 73.1,166.9 L 71.4,166.1 L 69.8,165.3 L 68.1,164.4 L 66.5,163.5 L 65,162.5 L 63.4,161.5 L 61.9,160.4 L 60.5,159.3 L 59,158.1 L 57.7,156.9 L 56.3,155.6 L 55,154.3 L 53.8,153 L 52.5,151.7 L 51.4,150.3 L 50.2,148.9 L 49.1,147.4 L 48.1,146 L 47,144.5 L 46,143 L 45.1,141.5 L 44.2,140 L 43.3,138.4 L 42.5,136.9 L 41.7,135.3 L 40.9,133.7 L 40.1,132.1 L 39.4,130.5 L 38.8,128.9 L 38.2,127.3 L 37.6,125.6 L 37,124 L 36.5,122.3 L 36,120.7 L 35.6,119 L 35.2,117.3 L 34.8,115.6 L 34.5,113.9 L 34.2,112.2 L 34,110.5 L 33.8,108.8 L 33.7,107.1 L 33.6,105.3 L 33.5,103.6 L 33.6,101.9 L 33.6,100.2 L 33.8,98.5 L 34.3,96.8 L 34.4,95.1 L 34.6,93.4 L 34.8,91.7 L 35,90 L 35.3,88.4 L 35.6,86.7 L 35.9,85.1 L 36.4,83.4 L 36.8,81.8 L 37.3,80.2 L 37.9,78.5 L 38.4,77 L 39.1,75.4 L 39.7,73.8 L 40.5,72.3 L 41.2,70.8 L 42,69.3 L 42.8,67.8 L 43.7,66.3 L 44.6,64.9 L 45.5,63.5 L 46.5,62.1 L 47.5,60.7 L 48.5,59.4 L 49.6,58.1 L 50.6,56.8 L 51.8,55.5 L 52.9,54.3 L 54.1,53.1 L 55.3,51.9 L 56.5,50.7 L 57.8,49.6 L 59.1,48.5 L 60.4,47.4 L 61.7,46.3 L 63.1,45.3 L 64.5,44.3 L 65.9,43.4 L 67.3,42.4 L 68.8,41.5 L 70.2,40.7 L 71.7,39.8 L 73.3,39 L 74.8,38.3 L 76.4,37.6 L 78,36.9 L 79.6,36.2 L 81.2,35.6 L 82.8,35 L 84.5,34.5 L 86.1,34 L 87.8,33.6 L 89.5,33.2 L 91.2,32.8 L 93,32.5 L 94.7,32.3 L 96.4,32.1 L 96.5,32.8 L 94.8,33.1 L 93.1,33.4 L 91.4,33.7 L 89.7,34.1 L 88,34.6 L 86.4,35.1 L 84.7,35.6 L 83.1,36.2 L 81.5,36.8 L 80,37.4 L 78.4,38.1 L 76.9,38.8 L 75.3,39.6 L 73.8,40.3 L 72.4,41.1 L 70.9,42 L 69.5,42.8 L 68,43.7 L 66.6,44.6 L 65.2,45.5 L 63.9,46.5 L 62.5,47.4 L 61.2,48.4 L 59.9,49.5 L 58.6,50.5 L 57.3,51.6 L 56,52.7 L 54.8,53.8 L 53.6,55 L 52.4,56.1 L 51.3,57.4 L 50.2,58.6 L 49.1,59.9 L 48,61.2 L 47,62.5 L 46,63.8 L 45.1,65.2 L 44.2,66.6 L 43.3,68.1 L 42.5,69.5 L 41.7,71 L 41,72.5 L 40.3,74.1 L 39.6,75.6 L 39,77.2 L 38.5,78.8 L 38,80.4 L 37.5,82 L 37.1,83.6 L 36.8,85.2 L 36.5,86.9 L 36.2,88.5 L 36,90.2 L 35.8,91.9 L 35.7,93.5 L 35.6,95.2 L 35.6,96.9 L 36.1,98.5 L 36.3,100.2 L 36.5,101.8 L 36.7,103.4 L 37,105.1 L 37.3,106.7 L 37.6,108.3 L 37.9,109.9 L 38.3,111.4 L 38.6,113 L 39,114.6 L 39.5,116.1 L 39.9,117.7 L 40.4,119.2 L 40.9,120.8 L 41.5,122.3 L 42,123.8 L 42.6,125.3 L 43.2,126.8 L 43.9,128.3 L 44.6,129.8 L 45.3,131.2 L 46,132.7 L 46.8,134.1 L 47.6,135.5 L 48.4,136.9 L 49.3,138.3 L 50.2,139.7 L 51.2,141 L 52.2,142.3 L 53.2,143.6 L 54.3,144.9 L 55.4,146.2 L 56.5,147.4 L 57.7,148.5 L 58.9,149.7 L 60.1,150.8 L 61.4,151.8 L 62.7,152.9 L 64.1,153.8 L 65.5,154.8 L 66.9,155.7 L 68.3,156.5 L 69.8,157.3 L 71.3,158 L 72.8,158.7 L 74.4,159.3 L 75.9,159.9 L 77.5,160.5 L 79.1,160.9 L 80.7,161.4 L 82.3,161.7 L 83.9,162.1 L 85.6,162.3 L 87.2,162.6 L 88.9,162.7 L 90.5,162.8 L 92.1,162.9 L 93.8,162.9 L 95.4,162.9 L 97.1,162.8 L 98.7,162.7 L 100.3,162.5 L 101.9,162.3 L 103.5,162.1 L 105.1,161.8 L 106.7,161.5 L 108.2,161.1 L 109.8,160.7 L 111.3,160.3 L 112.8,159.9 L 114.3,159.4 L 115.8,158.8 L 117.3,158.3 L 118.7,157.7 L 120.2,157.1 L 121.6,156.4 L 123,155.8 L 124.4,155.1 L 125.8,154.4 L 127.2,153.6 L 128.5,152.8 L 129.8,152.1 L 131.1,151.2 L 132.4,150.4 L 133.7,149.5 L 135,148.6 L 136.2,147.7 L 137.4,146.8 L 138.6,145.8 L 139.8,144.8 L 141,143.8 L 142.1,142.8 L 143.3,141.7 L 144.4,140.6 L 145.5,139.5 L 146.5,138.3 L 147.5,137.2 L 148.6,136 L 149.5,134.8 L 150.5,133.5 L 151.4,132.3 L 152.3,131 L 153.2,129.7 L 154,128.3 L 154.8,127 L 155.6,125.6 L 156.3,124.2 L 157,122.8 L 157.6,121.3 L 158.3,119.9 L 158.8,118.4 L 159.4,116.9 L 159.9,115.4 L 160.3,113.8 L 160.7,112.3 L 161.1,110.7 L 161.4,109.1 L 161.6,107.6 L 161.9,106 L 162,104.4 L 162.2,102.8 L 162.3,101.2 L 162.3,99.6 L 162.3,98 L 162.3,96.4 L 162.2,94.8 L 162.1,93.2 L 161.9,91.6 L 161.7,90 L 161.4,88.4 L 161.1,86.8 L 160.8,85.2 L 160.5,83.6 L 160.1,82.1 L 159.6,80.5 L 159.2,78.9 L 158.7,77.4 L 158.1,75.9 L 157.5,74.4 L 156.9,72.8 L 156.3,71.3 L 155.6,69.8 L 154.9,68.4 L 154.2,66.9 L 153.4,65.4 L 152.6,64 L 151.8,62.6 L 150.9,61.2 L 150,59.8 L 149.1,58.4 L 148.1,57 L 147.1,55.7 L 146.1,54.4 L 145,53.1 L 143.9,51.8 L 142.8,50.6 L 141.6,49.3 L 140.4,48.1 L 139.2,46.9 L 137.9,45.7 L 136.7,44.5 L 135.6,43 Z" fill="currentColor" stroke="none"/></svg>
+  <div class="wrap">
+    <div class="why rv">
+      <div>
+        <p class="eyebrow">Why the old training was daily and dull</p>
+        <h2 style="max-width:14ch">You do not make the calm out there.</h2>
       </div>
-      <div class="footer__legal">
-        <span>© 2026 Ancestral Watch · Tony Skrelūnas. All rights reserved.</span>
-        <span>Ancient technology for a modern life.</span>
+      <div>
+        <p class="muted">There is no calm available at the dry well, at the sixtieth kilometre, at the phone call in the night. You can only spend, in the emergency, what you already stored — on ordinary days when nothing was wrong, in a practice that felt pointless at the time.</p>
+        <p class="muted">The messenger trained the calm when he did not need it, precisely so it would be there on the day he could not manufacture it.</p>
+        <div class="warn">
+          <p>And there is a law inside it the wellness industry keeps breaking: the state cannot be chased. The moment you want calm the way you want money, you have already left it.</p>
+        </div>
+        <div class="actions">
+          <a class="arrow" href="/stories/the-calm-you-already-stored/">Read the full essay <span aria-hidden="true">→</span></a>
+        </div>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="/js/main.js?v=11" defer></script>
+<div class="weave" aria-hidden="true"><svg><rect width="100%" height="26" fill="url(#wv)"/></svg></div>
+
+<!-- ================= THE OTHER FREE CARDS ================= -->
+<section class="sec sec--alt">
+  <div class="wrap">
+    <div class="sec__intro rv">
+      <div>
+        <p class="eyebrow">Also free</p>
+        <h2 class="head">Two more cards, and one on the way.</h2>
+      </div>
+      <p>Read what each one is, then take the full practice as a printable PDF. No email, no membership, no gate.</p>
+    </div>
+
+    <div class="rv">
+      <article class="tool">
+        <span class="tool__n">07</span>
+        <div>
+          <h3>The Envy Protocol</h3>
+          <p>Comparison is the modern wound — the scroll that leaves you smaller than it found you. This turns the sting into a compass: name the exact thing you actually want underneath the envy, separate it from the person you resent, and take the one small step that converts the ache into direction.</p>
+        </div>
+        <a class="btn btn--ghost tool__act" href="/downloads/ancestral-watch__envy-protocol.pdf">Get the PDF</a>
+      </article>
+
+      <article class="tool">
+        <span class="tool__n">08</span>
+        <div>
+          <h3>The Dawn Vow</h3>
+          <p>Most days grab you before you have chosen anything. A sixty-second first-light practice: before the phone, before the noise, you name one thing you will protect today and one you will build — and let that set the frequency for the whole day.</p>
+        </div>
+        <a class="btn btn--ghost tool__act" href="/downloads/ancestral-watch__dawn-vow.pdf">Get the PDF</a>
+      </article>
+
+      <article class="tool">
+        <span class="tool__n">09</span>
+        <div>
+          <h3>The Messenger’s Story <em style="color:var(--sand);font-weight:500">(working title)</em></h3>
+          <p>Every messenger carried a story in both directions — one to hand <em>down</em> to the young, and one to carry <em>up</em> to the elders. Drawn from the close of <em>The Far Messengers</em>: a short story to read to your children, and a second to share with those who came before you.</p>
+        </div>
+        <span class="tool__act pill pill--soon">Coming</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE REST OF THE TOOLBOX ================= -->
+<section class="hasglyph sec">
+  <svg class="glyph glyph--br glyph--xl glyph--soft" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><circle cx="70" cy="70" r="46"/> <circle cx="130" cy="70" r="46"/> <circle cx="130" cy="130" r="46"/> <circle cx="70" cy="130" r="46"/> <circle cx="100" cy="100" r="7"/> <circle cx="100" cy="100" r="2.2" fill="currentColor" stroke="none"/> <circle cx="54" cy="54" r="8"/> <line x1="54" y1="48" x2="54" y2="60"/> <line x1="50" y1="52" x2="58" y2="52" opacity="0.8"/> <circle cx="141" cy="51" r="6"/> <circle cx="151" cy="57" r="6"/> <polyline points="146,138 154,146 146,154 138,146 146,138"/> <polyline points="146,142 150,146 146,150 142,146 146,142" opacity="0.7"/> <path d="M 46,154 C 46,144 52,138 62,138 C 62,148 56,154 46,154 Z"/> <line x1="48" y1="152" x2="60" y2="140" opacity="0.7"/></svg>
+  <div class="wrap">
+    <div class="sec__intro rv">
+      <div>
+        <p class="eyebrow">The rest of the toolbox</p>
+        <h2 class="head">Five more protocols. They live inside the books.</h2>
+      </div>
+      <p>These are not locked behind an email — they are carried the oldest way there is, inside a story about someone it happened to. <em>Stone Breath</em> holds twenty-two of them, one tucked into every turn, plus a complete toolkit gathered at the back.</p>
+    </div>
+
+    <div class="grid2 rv">
+      <div>
+        <article class="tool" style="grid-template-columns:auto 1fr">
+          <span class="tool__n">02</span>
+          <div>
+            <h3>The Daily Reckoning</h3>
+            <p>Three questions that clear your emotional ledger each day.</p>
+          </div>
+        </article>
+        <article class="tool" style="grid-template-columns:auto 1fr">
+          <span class="tool__n">03</span>
+          <div>
+            <h3>The Clan Protocol</h3>
+            <p>Kinship principles for building circles of true alliance that outlast any org chart.</p>
+          </div>
+        </article>
+        <article class="tool" style="grid-template-columns:auto 1fr">
+          <span class="tool__n">04</span>
+          <div>
+            <h3>The Great-Grandchildren Filter</h3>
+            <p>A decision lens that judges a choice by its echo four generations out.</p>
+          </div>
+        </article>
+      </div>
+      <div>
+        <article class="tool" style="grid-template-columns:auto 1fr">
+          <span class="tool__n">05</span>
+          <div>
+            <h3>The Warrior’s Code</h3>
+            <p>Disciplined strength in service of what is fragile — protect what matters while nurturing what grows.</p>
+          </div>
+        </article>
+        <article class="tool" style="grid-template-columns:auto 1fr">
+          <span class="tool__n">06</span>
+          <div>
+            <h3>The Harvest Map</h3>
+            <p>Seeing your life as a living ecosystem of contribution — not a résumé.</p>
+          </div>
+        </article>
+        <article class="tool" style="grid-template-columns:auto 1fr;border-bottom:1px solid var(--rule-2)">
+          <span class="tool__n">+16</span>
+          <div>
+            <h3>Sixteen more</h3>
+            <p>One in every chapter of <em>Stone Breath</em>, and a working manual at the heart of <em>The Council Fire</em>.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE BOOK BAND ================= -->
+<section class="bookband">
+  <div class="bookband__bg"><img src="/assets/img/garden/meditation-room.jpg" alt="" aria-hidden="true" loading="lazy"></div>
+  <div class="wrap bookband__in rv">
+    <p class="eyebrow">The whole toolkit</p>
+    <h2>Twenty-two tools, carried inside a story.</h2>
+    <p>A practice tucked into every chapter of <em>Stone Breath</em>, plus a complete toolkit gathered at the back — and a closing section on carrying the practices to a team, a family, or a circle.</p>
+    <div class="actions">
+      <a class="btn btn--primary" href="https://payhip.com/b/AhH6r">Get Stone Breath — $16.99 <span aria-hidden="true">→</span></a>
+      <a class="arrow" href="/read/">Read chapter one free <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE METHOD ================= -->
+<section class="sec sec--alt">
+  <div class="wrap wrap--mid center">
+    <p class="eyebrow eyebrow--center">The method</p>
+    <p class="statement statement--center rv">Take the timeless principle from the <em>time-bound practice</em>.</p>
+    <p class="lead lead--wide muted rv">What is sacred and closed stays closed — described by its effect, never its content. Where a tool traces to a particular people, the hand it came from is named. And a birthright cannot be appropriated, because every people on earth was once indigenous somewhere.</p>
+    <div class="actions" style="justify-content:center">
+      <a class="arrow" href="/stories/carry-without-stealing/">How to carry a tradition without stealing it <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WRITE TO ME ================= -->
+<section class="sec sec--deep" id="contact">
+  <div class="wrap wrap--mid center contact--center">
+    <p class="eyebrow eyebrow--center">Tell me how it went</p>
+    <h2 style="max-width:15ch;margin-inline:auto">Write to me.</h2>
+    <p class="lead lead--wide muted" style="margin-top:1.6rem">If a tool worked, or didn’t, I want to know. The address goes straight to me.</p>
+    <a class="mailto rv" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    <p class="mailto__note">I read everything. I answer what I can.</p>
+  </div>
+</section>
+
+</main>
+
+<div class="weave" aria-hidden="true"><svg><rect width="100%" height="26" fill="url(#wv)"/></svg></div>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div>
+        <p class="ftr__brand">The Ancestral Watch</p>
+        <p class="ftr__tag">Ancient technology for a modern life.</p>
+        <div class="ftr__langs">
+          <a href="/">English</a><span>·</span>
+          <a href="/ja/">日本語</a><span>·</span>
+          <a href="/lt/">Lietuvių</a>
+        </div>
+      </div>
+      <div>
+        <h4>The Books</h4>
+        <ul>
+          <li><a href="https://payhip.com/b/AhH6r">Stone Breath</a></li>
+          <li><a href="/series/#by-lamplight">By Lamplight</a></li>
+          <li><a href="https://payhip.com/b/GB2eg">The Council Fire</a></li>
+          <li><a href="/series/#far-messengers">The Far Messengers</a></li>
+          <li><a href="/series/">All four books</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Free</h4>
+        <ul>
+          <li><a href="/read/">Chapter one of Stone Breath</a></li>
+          <li><a href="/tools/">The Stone Breath tool</a></li>
+          <li><a href="/downloads/ancestral-watch__dawn-vow.pdf">The Dawn Vow</a></li>
+          <li><a href="/downloads/ancestral-watch__envy-protocol.pdf">The Envy Protocol</a></li>
+          <li><a href="/stories/">Stories &amp; essays</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="/author/">Tony Skrelūnas</a></li>
+          <li><a href="https://tribeawaken.com">TribeAwaken — retreats &amp; coaching</a></li>
+          <li><a href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__legal">
+      <span>© 2026 Tony Skrelūnas · The Ancestral Watch</span>
+      <span>The tools were never lost. Only set down.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+    els.forEach(function(e){e.classList.add('in')});return;
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{rootMargin:'0px 0px -6% 0px',threshold:.05});
+  els.forEach(function(e){io.observe(e)});
+  function sweep(){els.forEach(function(e){if(e.classList.contains('in'))return;
+    var r=e.getBoundingClientRect();if(r.top<(window.innerHeight||0)*1.02){e.classList.add('in');io.unobserve(e)}})}
+  window.addEventListener('load',function(){sweep();setTimeout(sweep,260)});
+  setTimeout(sweep,1200);
+})();
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu'),c=document.getElementById('menuClose');
+  if(!b||!m)return;
+  function open(){m.classList.add('open');b.setAttribute('aria-expanded','true');document.body.classList.add('locked')}
+  function shut(){m.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.classList.remove('locked')}
+  b.addEventListener('click',function(){m.classList.contains('open')?shut():open()});
+  if(c)c.addEventListener('click',shut);
+  m.addEventListener('click',function(e){if(e.target.tagName==='A')shut()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')shut()});
+})();
+</script>
 </body>
 </html>
