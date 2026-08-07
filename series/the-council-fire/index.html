@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="/css/tokens.css" />
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/style.css?v=3" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -62,6 +62,20 @@
         <li class="nav__cta"><a class="btn btn--primary" href="https://payhip.com/b/GB2eg" target="_blank" rel="noopener">Get the Book</a></li>
       </ul>
     </nav>
+  
+  <div class="aw-langbar" aria-label="Languages">
+    <div class="wrap wrap--wide aw-langbar__in">
+      <p class="aw-langbar__lbl">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15 0 18M12 3c-2.6 2.6-2.6 15 0 18"/>
+        </svg><span>Read in</span>
+      </p>
+      <a href="/" data-lang="en" hreflang="en">English</a>
+      <a href="/ja/" data-lang="/ja/" hreflang="ja" lang="ja">日本語</a>
+      <a href="/lt/" data-lang="/lt/" hreflang="lt" lang="lt">Lietuvių</a>
+      <a class="aw-langbar__mail" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
   </header>
 
   <main id="main">
@@ -233,5 +247,15 @@
   </footer>
 
   <script src="/js/main.js?v=11" defer></script>
+<script>
+(function(){
+  var p=location.pathname.replace(/index\.html$/,'');
+  if(p.charAt(p.length-1)!=='/')p+='/';
+  var k=/^\/(ja|lt)\//.exec(p); k=k?'/'+k[1]+'/':'en';
+  document.querySelectorAll('.aw-langbar a[data-lang]').forEach(function(a){
+    if(a.getAttribute('data-lang')===k)a.setAttribute('aria-current','true');
+  });
+})();
+</script>
 </body>
 </html>

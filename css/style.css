@@ -803,3 +803,26 @@ a:hover { color: var(--amber); }
 .brand__logo{height:72px;width:auto;display:block;flex:none;}
 .brand__wm{font-family:var(--font-display,Georgia,serif);font-weight:600;line-height:1;}
 @media (max-width:600px){ .brand__logo{height:58px;width:auto;} }
+
+/* ============================================================
+   THE LANGUAGE STRIP — sits directly under the main menu, on
+   every page, including the pages still in the earlier design.
+   ============================================================ */
+.aw-langbar{background:#140D0A;border-top:1px solid rgba(250,243,233,.10);
+  border-bottom:1px solid rgba(250,243,233,.10);font-size:.82rem}
+.aw-langbar__in{display:flex;align-items:center;gap:1.3rem;flex-wrap:wrap;
+  padding:.5rem var(--space-3);min-height:2.5rem}
+.aw-langbar__lbl{display:flex;align-items:center;gap:.5rem;margin:0;flex:none;
+  font-weight:800;letter-spacing:.15em;text-transform:uppercase;
+  font-size:.68rem;color:#D9A25F;white-space:nowrap}
+.aw-langbar a{text-decoration:none;font-weight:700;color:#D9C6B4;
+  letter-spacing:.04em;white-space:nowrap;border-bottom:2px solid transparent;padding-bottom:1px}
+.aw-langbar a:hover{color:#FAF3E9;border-bottom-color:#C96A3E}
+.aw-langbar a[aria-current="true"]{color:#FAF3E9;border-bottom-color:#C96A3E}
+.aw-langbar__mail{margin-left:auto}
+@media(max-width:860px){ .aw-langbar__mail{display:none} }
+@media(max-width:560px){
+  .aw-langbar__lbl span{display:none}
+  .aw-langbar__in{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:1.1rem}
+  .aw-langbar__in::-webkit-scrollbar{display:none}
+}
