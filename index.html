@@ -19,6 +19,14 @@
 .bookstage__praise cite{display:block;margin-top:.9rem;font-family:var(--body);font-style:normal;
   font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--sand)}
 </style>
+<style>
+.reader{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);
+  gap:clamp(1.6rem,1.2rem + 2.4vw,3.6rem);align-items:center}
+.reader__cov img{width:100%;height:auto;display:block;border-radius:3px;
+  box-shadow:0 26px 60px rgba(0,0,0,.55);transition:transform .3s ease}
+.reader__cov:hover img{transform:translateY(-5px)}
+@media(max-width:760px){.reader{grid-template-columns:1fr}.reader__cov{max-width:220px}}
+</style>
 </head>
 <body>
 
@@ -49,7 +57,8 @@
     <nav aria-label="Primary">
       <ul class="nav">
         <li><a class="is-on" aria-current="page" href="/">Home</a></li>
-        <li><a href="/series/">The Series</a></li>
+        <li><a href="/series/">The Series</a>
+        <a href="/reader/">The Reader</a></li>
         <li><a href="/read/">Read Free</a></li>
         <li><a href="/tools/">The Tools</a></li>
         <li><a href="/stories/">Stories</a></li>
@@ -292,6 +301,29 @@
     </div>
   </div>
 </section>
+
+<!-- ================= THE READER ================= -->
+<section class="sec" id="the-reader">
+  <div class="wrap">
+    <div class="reader">
+      <a class="reader__cov" href="/reader/">
+        <img src="/assets/img/living-as-a-far-messenger-cover.jpg" alt="Cover of Living as a Far Messenger, the Ancestral Watch Executive Reader" loading="lazy">
+      </a>
+      <div>
+        <p class="eyebrow">The Executive Reader &middot; out now</p>
+        <h2 class="head">Living as a Far Messenger</h2>
+        <p class="lead" style="margin-top:1.1rem">The novels are the story. This one is the hand &mdash; the discipline distilled to what a person can begin tonight.</p>
+        <p>Seventy illustrated pages, two books bound as one. <strong>The Telling</strong> is the teaching, readable in a sitting: the messenger at the dry well, the navigator who carried no map because he <em>was</em> the map, the Stone Breath in full, the seven disciplines. <strong>The Crossing</strong> is where you write &mdash; eleven worksheets meant to be dated and returned to at solstices and birthdays. It opens by asking you to name the far messenger in your own family line, and most people find one within three generations.</p>
+        <p style="margin-top:1rem"><em>Read it in a sitting. Write in it for a year.</em></p>
+        <div class="actions" style="margin-top:1.6rem">
+          <a class="btn btn--primary" href="https://payhip.com/b/7slqZ">Read it &mdash; $35 <span aria-hidden="true">&rarr;</span></a>
+          <a class="arrow" href="/reader/">About the reader <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- ================= THE FREE TOOL ================= -->
 <section class="hasglyph sec sec--deep" id="tool">
