@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thank you — your name is with me | The Ancestral Watch</title>
+<meta name="description" content="Confirmation, and the free things worth having right now: chapter one of Stone Breath, the Stone Breath practice, and the printable card.">
+<link rel="icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/aw2.css?v=5">
+<style>
+/* ============================================================
+   STORIES & ESSAYS — page-local layer.
+   Everything here is prefixed es- so it can never collide with
+   the shared system in aw2.css.
+   ============================================================ */
+
+/* the masthead meta rail */
+.es-meta{display:flex;flex-wrap:wrap;gap:.7rem 2.2rem;max-width:none;
+  margin-top:clamp(2.2rem, 1.6rem + 1.6vw, 3.2rem);padding-top:1.7rem;
+  border-top:1px solid var(--rule-2);
+  font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--sand)}
+.es-meta span{display:inline-flex;align-items:center;gap:.75rem}
+.es-meta span::before{content:"";width:.42rem;height:.42rem;border-radius:50%;
+  background:var(--clay);flex:none}
+
+/* ---------- the Baltic plate: a designed panel where a photo would go ---------- */
+.es-plate{display:grid;place-items:center;text-align:center;
+  padding:clamp(2.2rem, 1.4rem + 3vw, 4.5rem);
+  background:linear-gradient(168deg,#2A1A12 0%,#1A100C 58%,#150D0A 100%);
+  border-right:1px solid var(--rule-2)}
+@media(max-width:900px){.es-plate{border-right:0;border-bottom:1px solid var(--rule-2)}}
+.es-plate__glyph{position:absolute;top:50%;left:50%;translate:-50% -50%;
+  width:min(78%,420px);height:auto;overflow:visible;
+  color:rgba(233,176,110,.16);stroke-width:2.1;pointer-events:none}
+.es-plate__in{position:relative;max-width:30ch}
+.es-plate__k{font-size:.74rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--clay-lt);max-width:none}
+.es-plate__yr{font-family:var(--display);font-weight:900;
+  font-size:clamp(4.4rem, 2.4rem + 8vw, 9rem);line-height:.84;letter-spacing:-.05em;
+  color:var(--gold-lt);margin-top:1.1rem;max-width:none;
+  text-shadow:0 14px 52px rgba(0,0,0,.65)}
+.es-plate__cap{margin-top:1.6rem;color:var(--sand);font-size:var(--t-small);
+  line-height:1.62;max-width:30ch;margin-inline:auto}
+.es-plate__rule{width:min(100%,15rem);height:1px;background:rgba(217,162,95,.28);
+  margin:clamp(1.8rem, 1.3rem + 1.4vw, 2.6rem) auto}
+.es-plate__names{font-family:var(--display);font-style:italic;font-weight:600;
+  font-size:clamp(1rem, .92rem + .4vw, 1.24rem);line-height:1.8;
+  color:var(--cream);max-width:26ch;margin-inline:auto}
+.es-plate__names em{font-style:italic;color:var(--gold)}
+
+/* the pantheon / fact lead-in line */
+.es-lede{color:var(--sand);max-width:60ch}
+
+/* ---------- editorial row used as a link ---------- */
+.es-rowlink{text-decoration:none}
+.es-rowlink .row__media img{transition:transform .8s cubic-bezier(.2,.7,.3,1)}
+.es-rowlink:hover .row__media img{transform:scale(1.045)}
+.es-rowlink:hover h3{color:var(--gold-lt)}
+.es-rowlink .es-go{display:inline-flex;align-items:center;gap:.6em;
+  margin-top:clamp(2rem, 1.5rem + 1.4vw, 2.8rem);max-width:none;
+  font-size:.85rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--clay-lt);transition:gap .22s ease,color .22s ease}
+.es-rowlink:hover .es-go{gap:1em;color:var(--gold)}
+.es-rowlink:focus-visible{outline:3px solid var(--gold);outline-offset:-6px}
+
+/* ---------- author strip ---------- */
+.es-bio{display:grid;grid-template-columns:auto 1fr;align-items:center;
+  gap:clamp(1.8rem, 1.2rem + 2.6vw, 3.6rem)}
+@media(max-width:700px){.es-bio{grid-template-columns:1fr;gap:1.8rem}}
+.es-bio--noph{grid-template-columns:1fr}
+.es-bio__ph{width:clamp(132px, 15vw, 200px);aspect-ratio:1;border-radius:50%;
+  overflow:hidden;background:var(--bg-3);border:1px solid var(--rule);flex:none}
+.es-bio__ph img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.es-bio h3{font-size:clamp(1.5rem, 1.2rem + 1.1vw, 2.2rem);margin-bottom:.9rem}
+.es-bio p{color:var(--sand);max-width:58ch}
+.es-bio .arrow{margin-top:1.7rem}
+
+/* card focus rings */
+.jc:focus-visible,.feat:focus-visible{outline:3px solid var(--gold);outline-offset:6px;border-radius:10px}
+</style>
+<link rel="canonical" href="https://ancestralwatch.com/thanks/">
+<meta name="robots" content="noindex, follow">
+<style>
+.ty2{padding-block:clamp(2.6rem,2rem + 3vw,5rem)}
+.ty2 .wrap{max-width:50rem}
+.ty2 h1{font-size:clamp(1.9rem,1.5rem + 2.2vw,3rem);line-height:1.12;color:var(--cream-2)}
+.ty2 .lead{color:var(--sand);font-size:clamp(1.06rem,1rem + .45vw,1.28rem);line-height:1.65;margin-top:1.1rem;max-width:56ch}
+.give{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:clamp(.9rem,.7rem + 1vw,1.4rem);margin-top:clamp(2rem,1.6rem + 2vw,3rem)}
+.give a{display:block;text-decoration:none;border:1px solid var(--rule);border-radius:3px;
+  padding:1.3rem;background:rgba(0,0,0,.22);transition:border-color .2s ease}
+.give a:hover{border-color:var(--gold)}
+.give b{display:block;color:var(--cream-2);font-size:1.08rem;margin-bottom:.4rem}
+.give span{display:block;color:var(--sand);font-size:.95rem;line-height:1.65}
+.give em{display:block;margin-top:.7rem;color:var(--gold-lt);font-style:normal;font-size:.9rem}
+.ty2__fine{margin-top:clamp(2rem,1.6rem + 1.6vw,2.8rem);padding-top:1.3rem;
+  border-top:1px solid var(--rule);color:var(--sand);font-size:.97rem;line-height:1.7;max-width:58ch}
+.ty2__fine a{color:var(--gold-lt)}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- shared defs: the Diné weaving band used by every .weave divider -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="wv" width="48" height="26" patternUnits="userSpaceOnUse">
+      <path d="M0 4H48M0 22H48" stroke="currentColor" stroke-width="1.1" opacity=".5"/>
+      <path d="M0 13 12 6 24 13 12 20Z" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <path d="M24 13 36 6 48 13 36 20Z" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <circle cx="12" cy="13" r="2" fill="currentColor"/>
+      <circle cx="36" cy="13" r="2" fill="currentColor" opacity=".45"/>
+    </pattern>
+  </defs>
+</svg>
+
+<!-- ================= LANGUAGES ================= -->
+
+<!-- ================= HEADER ================= -->
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="/">
+      <img src="/assets/img/author-logo.png?v=2" alt="" aria-hidden="true">
+      <span class="brand__txt">The Ancestral Watch<span class="brand__sub">Tony Skrelūnas</span></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/series/">The Series</a>
+        <a href="/reader/">The Reader</a></li>
+        <li><a href="/read/">Read Free</a></li>
+        <li><a href="/tools/">The Tools</a></li>
+        <li><a class="is-on" aria-current="page" href="/stories/">Stories</a></li>
+        <li><a href="/author/">The Author</a></li>
+        <li><a href="https://tribeawaken.com">TribeAwaken&nbsp;↗</a></li>
+      </ul>
+    </nav>
+    <div class="hdr__end">
+      <a class="btn btn--primary hdr__cta" href="https://payhip.com/b/AhH6r">Get Stone Breath</a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <i></i><i></i><i></i>
+      </button>
+    </div>
+  </div>
+  <div class="globebar">
+    <div class="wrap globebar__in">
+      <p class="globebar__lbl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15 0 18M12 3c-2.6 2.6-2.6 15 0 18"/>
+        </svg>
+        <span>Read in</span>
+      </p>
+      <ul class="globebar__ls">
+        <li><a class="is-on" href="/" hreflang="en">English</a></li>
+        <li><a href="/ja/" hreflang="ja">日本語</a></li>
+        <li><a href="/lt/" hreflang="lt">Lietuvių</a></li>
+      </ul>
+      <a class="globebar__mail" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= FULL-SCREEN MENU ================= -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Site menu">
+  <div class="wrap">
+    <div class="menu__top">
+      <a class="brand" href="/">
+        <img src="/assets/img/author-logo.png?v=2" alt="" aria-hidden="true">
+        <span class="brand__txt">The Ancestral Watch<span class="brand__sub">Tony Skrelūnas</span></span>
+      </a>
+      <button class="menu__close" id="menuClose" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="menu__ls">
+      <li><a href="/"><em>01</em> Home</a></li>
+      <li><a href="/series/"><em>02</em> The Series</a></li>
+      <li><a href="/read/"><em>03</em> Read Chapter One</a></li>
+      <li><a href="/tools/"><em>04</em> The Tools</a></li>
+      <li><a href="/stories/"><em>05</em> Stories</a></li>
+      <li><a href="/author/"><em>06</em> The Author</a></li>
+      <li><a href="https://tribeawaken.com"><em>07</em> TribeAwaken ↗</a></li>
+    </ul>
+    <div class="menu__foot">
+      <a href="/ja/">日本語</a>
+      <a href="/lt/">Lietuvių</a>
+      <a href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+<section class="section ty2">
+  <div class="wrap">
+    <p class="eyebrow">Thank you</p>
+    <h1>Your name is with me.</h1>
+    <p class="lead">I will write when the next book is ready, and not otherwise. In the meantime here are the three things worth having, all free, all right now &mdash; nothing to wait for in an inbox.</p>
+
+    <div class="give">
+      <a href="/read/">
+        <b>Chapter one, free</b>
+        <span>The opening of <em style="font-style:italic;display:inline">Stone Breath</em> &mdash; the whole first chapter, read it here.</span>
+        <em>Start reading &rarr;</em>
+      </a>
+      <a href="/tools/">
+        <b>The Stone Breath</b>
+        <span>A three-minute nervous-system reset from the far messengers. No theory &mdash; just do it.</span>
+        <em>Do the practice &rarr;</em>
+      </a>
+      <a href="/downloads/ancestral-watch__stone-breath.pdf" target="_blank" rel="noopener">
+        <b>The printable card</b>
+        <span>The four steps and the count on one page. Keep it where you will see it on a bad morning.</span>
+        <em>Free PDF &rarr;</em>
+      </a>
+    </div>
+
+    <p class="ty2__fine">Nothing else will come unless you ask for it. Anything at all &mdash; <a href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>.</p>
+  </div>
+</section>
+</main>
+
+<div class="weave" aria-hidden="true"><svg><rect width="100%" height="26" fill="url(#wv)"/></svg></div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div>
+        <p class="ftr__brand">The Ancestral Watch</p>
+        <p class="ftr__tag">Ancient technology for a modern life.</p>
+        <div class="ftr__langs">
+          <a href="/">English</a><span>·</span>
+          <a href="/ja/">日本語</a><span>·</span>
+          <a href="/lt/">Lietuvių</a>
+        </div>
+      </div>
+      <div>
+        <h4>The Books</h4>
+        <ul>
+          <li><a href="https://payhip.com/b/AhH6r">Stone Breath</a></li>
+          <li><a href="/series/#by-lamplight">By Lamplight</a></li>
+          <li><a href="https://payhip.com/b/GB2eg">The Council Fire</a></li>
+          <li><a href="/series/#far-messengers">The Far Messengers</a></li>
+          <li><a href="/series/">All four books</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Free</h4>
+        <ul>
+          <li><a href="/read/">Chapter one of Stone Breath</a></li>
+          <li><a href="/tools/">The Stone Breath tool</a></li>
+          <li><a href="/downloads/ancestral-watch__dawn-vow.pdf">The Dawn Vow</a></li>
+          <li><a href="/downloads/ancestral-watch__envy-protocol.pdf">The Envy Protocol</a></li>
+          <li><a href="/stories/">Stories &amp; essays</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="/author/">Tony Skrelūnas</a></li>
+          <li><a href="https://tribeawaken.com">TribeAwaken — retreats &amp; coaching</a></li>
+          <li><a href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr__legal">
+      <span>© 2026 Tony Skrelūnas · The Ancestral Watch</span>
+      <span>The tools were never lost. Only set down.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------- reveal ---------- */
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+    els.forEach(function(e){e.classList.add('in')});return;
+  }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{rootMargin:'0px 0px -6% 0px',threshold:.05});
+  els.forEach(function(e){io.observe(e)});
+  function sweep(){
+    els.forEach(function(e){
+      if(e.classList.contains('in'))return;
+      var r=e.getBoundingClientRect();
+      if(r.top<(window.innerHeight||0)*1.02){e.classList.add('in');io.unobserve(e)}
+    });
+  }
+  window.addEventListener('load',function(){sweep();setTimeout(sweep,260)});
+  setTimeout(sweep,1200);
+})();
+/* ---------- menu ---------- */
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu'),c=document.getElementById('menuClose');
+  if(!b||!m)return;
+  function open(){m.classList.add('open');b.setAttribute('aria-expanded','true');document.body.classList.add('locked')}
+  function shut(){m.classList.remove('open');b.setAttribute('aria-expanded','false');document.body.classList.remove('locked')}
+  b.addEventListener('click',function(){m.classList.contains('open')?shut():open()});
+  if(c)c.addEventListener('click',shut);
+  m.addEventListener('click',function(e){if(e.target.tagName==='A')shut()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')shut()});
+})();
+</script>
+</body>
+</html>
