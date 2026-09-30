@@ -82,7 +82,7 @@ A Navajo-Lithuanian man carries his grandfather's songs to the old country and m
 When the systems that run the world reach their limits, the keepers of many nations sit
             down at one fire to remember what lasts.
 → **Get The Council Fire →**  ·  `https://payhip.com/b/GB2eg`
-More books coming — By Lamplight and The Far Messengers . See the whole series →
+More books coming — The Amber and the Stone and The Far Messengers . See the whole series →
 The author
 
 ### Who's carrying these songs?
@@ -163,7 +163,7 @@ The watch is the company of people choosing to carry what lasts. Join it: start 
 # The Series — hub
 `/series/`  
 **Title tag:** The Ancestral Watch Series — Four Books, One Journey | Tony Skrelūnas  
-**Meta description:** The Ancestral Watch Series by Tony Skrelūnas: four books moving from the intimate to the planetary — Stone Breath, By Lamplight, The Council Fire, The Far Messengers. Start with Stone Breath.
+**Meta description:** The Ancestral Watch Series by Tony Skrelūnas: four books moving from the intimate to the planetary — Stone Breath, The Amber and the Stone, The Council Fire, The Far Messengers. Start with Stone Breath.
 
 The Ancestral Watch Series
 
@@ -176,7 +176,7 @@ The personal The planetary
 ### Stone Breath
 A Navajo-Lithuanian man carries his grandfather's songs to the old country — and meets a woman already whole.
 
-### By Lamplight
+### The Amber and the Stone
 Masan's lessons — a boy raised on Big Mountain carries five ancestral voices from a hogan to the world stage.
 
 ### The Council Fire
@@ -248,14 +248,14 @@ A Navajo-Lithuanian man who leaves the red-earth country carrying his grandfathe
 ---
 
 
-# Book II · By Lamplight
+# Book II · The Amber and the Stone
 `/series/by-lamplight/`  
-**Title tag:** By Lamplight — Book Two of The Ancestral Watch | Tony Skrelūnas  
-**Meta description:** By Lamplight by Tony Skrelūnas — Book Two of The Ancestral Watch. Masan's lessons, from an ancient homestead to the world stage: how a boy raised on Big Mountain carried five ancestral voices from a hogan to the global stage. Coming soon.
+**Title tag:** The Amber and the Stone — Book Two of The Ancestral Watch | Tony Skrelūnas  
+**Meta description:** The Amber and the Stone by Tony Skrelūnas — Book Two of The Ancestral Watch. Masan's lessons, from an ancient homestead to the world stage: how a boy raised on Big Mountain carried five ancestral voices from a hogan to the global stage. Coming soon.
 
 Book Two · The Ancestral Watch
 
-## By Lamplight
+## The Amber and the Stone
 Masan's lessons, from an ancient homestead to the world stage.
 The formation story: how a boy raised on Big Mountain by his great-grandmother Masan carried
             five ancestral voices — from a hogan to the global stage. The key book of the sage.
@@ -276,7 +276,7 @@ The idea
 Concept shared with permission of the work in progress. Full excerpts will follow closer to release.
 
 **⚠️ TODOs on this page (not visible to visitors):**
-- TODO(Tony): replace with the real By Lamplight cover image when ready.
+- TODO(Tony): replace with the real The Amber and the Stone cover image when ready.
 - TODO(Tony): confirm the one-line descriptor for each voice; kept minimal to avoid mis-attributing cultural detail.
 
 ---
@@ -598,7 +598,7 @@ _[email capture form]_
 #### ザ・カウンシル・ファイア
 世界を動かす仕組みが限界に達したとき、多くの民の守り手たちが一つの火を囲み、「何が残るか」を思い出す。
 → **購入する（$20.00）→**  ·  `https://payhip.com/b/GB2eg`
-近日公開——『By Lamplight』『The Far Messengers』。 シリーズ全体を見る（英語）→
+近日公開——『The Amber and the Stone』『The Far Messengers』。 シリーズ全体を見る（英語）→
 ※購入ページ（Payhip）は英語・米ドルでの表示となります。
 著者
 
@@ -667,7 +667,7 @@ Navahų ir lietuvių kilmės vyras nusineša senelio dainas į senąją tėvynę
 #### The Council Fire
 Kai pasaulį valdančios sistemos pasiekia savo ribas, daugelio tautų sergėtojai susėda prie vieno laužo prisiminti, kas išlieka.
 → **Įsigyk ($20.00) →**  ·  `https://payhip.com/b/GB2eg`
-Netrukus — „By Lamplight“ ir „The Far Messengers“. Žiūrėti visą seriją (anglų k.) →
+Netrukus — „The Amber and the Stone“ ir „The Far Messengers“. Žiūrėti visą seriją (anglų k.) →
 Pastaba: pirkimo puslapis („Payhip“) pateikiamas anglų kalba ir JAV doleriais.
 Autorius
 
