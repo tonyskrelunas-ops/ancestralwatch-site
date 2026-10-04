@@ -1,0 +1,209 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   ANCESTRAL WATCH — DAYLIGHT
+   Tony, 10/4: "just lighten ancestralwatch.com .. its too dark and masculine"
+   The brand stays his own, per the 10/3 addendum: cream #FAF6EC,
+   gold #B98D3E, ink #3B3020, Pagella/Palatino, ◆ ◆ ◆ ornaments.
+   The TribeAwaken palette does NOT transfer.
+   Loaded LAST on every page, so nothing above needs editing.
+   ═══════════════════════════════════════════════════════════════════════ */
+:root{
+  --paper:#FAF6EC; --paper-2:#FFFCF4; --paper-3:#F3ECDC;
+  --ink:#3B3020; --ink-soft:#574936; --ink-faint:#6E5E48;
+  --gold:#B98D3E; --gold-deep:#91691F; --gold-light:#D7B071;
+  --rule-ink:rgba(59,48,32,.16);
+}
+/* aw2.css family (home, author, series, stories, tools, read, thanks, ja, lt) */
+html, body{background:var(--paper) !important;color:var(--ink) !important}
+:root{
+  --bg:var(--paper); --bg-2:var(--paper-2); --bg-3:var(--paper-3);
+  --cream:var(--ink); --cream-2:#241C12; --sand:var(--ink-faint);
+  --clay:var(--gold); --clay-lt:var(--gold-deep);
+  --gold-lt:var(--gold-light);
+  --rule:var(--rule-ink); --rule-2:rgba(59,48,32,.08);
+  --on-clay:#FFFCF4;
+  /* tokens.css family (book pages, stories, research, reader) */
+  --night:var(--paper); --night-2:var(--paper-2); --night-3:var(--paper-3);
+  --bone:var(--ink); --bone-2:#241C12; --silver:var(--ink-faint);
+  --amber:var(--gold); --amber-soft:var(--gold-deep);
+  --text:var(--ink); --text-muted:var(--ink-faint);
+  --accent:var(--gold); --accent-ink:#FFFCF4;
+  --surface:var(--paper-3); --bg-panel:var(--paper-2);
+}
+h1,h2,h3,h4{color:var(--ink)}
+a{color:var(--gold-deep)}
+.eyebrow,.kicker{color:var(--gold-deep)}
+.sec--alt,.sec--deep{background:var(--paper-3)}
+.hdr,header{background:color-mix(in srgb,var(--paper) 93%,transparent);
+  border-bottom:1px solid var(--rule-ink)}
+.ftr,footer{background:var(--ink);border-top:3px solid var(--gold)}
+.ftr,.ftr *,footer,footer *{color:#FAF6EC}
+.ftr a,footer a{color:#E6D4B4}
+.btn--primary{background:var(--gold);color:#2A2114;border-color:var(--gold)}
+.btn--primary:hover{background:var(--gold-deep);color:#FFFCF4}
+.btn--ghost{color:var(--ink);border-color:var(--rule-ink);background:transparent}
+input,textarea{background:#fff;color:var(--ink);border:1px solid rgba(59,48,32,.3)}
+input::placeholder,textarea::placeholder{color:#8A7A62}
+
+/* ── the hero reads on a light wash, not a night scrim ── */
+.hero__scrim{background:linear-gradient(100deg,
+  rgba(250,246,236,.90) 0%, rgba(250,246,236,.72) 40%,
+  rgba(250,246,236,.34) 70%, rgba(250,246,236,.12) 100%) !important}
+.hero, .hero .wrap{color:var(--ink)}
+.hero h1{color:var(--ink) !important;text-shadow:none}
+.hero h1 em{color:var(--gold-deep) !important;font-style:italic}
+.hero__kicker{color:var(--gold-deep) !important}
+.hero .lead, .hero__note, .hero__note a{color:#4A3E2C !important}
+.hero__note a{text-decoration:underline;text-underline-offset:3px}
+.hero__bg img{filter:saturate(1.06) brightness(1.06)}
+/* the figures band sits on cream, not brown */
+.proof{background:var(--paper-3) !important;border-block:1px solid var(--rule-ink)}
+.proof__i{color:var(--ink-soft) !important}
+.proof__i b{color:var(--gold-deep) !important}
+@media(max-width:820px){
+  .hero__scrim{background:linear-gradient(180deg,rgba(250,246,236,.92),rgba(250,246,236,.76) 60%,rgba(250,246,236,.5)) !important}
+}
+
+/* ── the language bar was ink text on an ink background ── */
+.globebar{background:var(--paper-3) !important;border-bottom:1px solid var(--rule-ink)}
+.globebar, .globebar *{color:var(--ink-faint) !important}
+.globebar a{color:var(--ink-soft) !important}
+.globebar a:hover{color:var(--gold-deep) !important}
+.globebar .is-on, .globebar a[aria-current]{color:var(--ink) !important;border-bottom-color:var(--gold) !important}
+.globebar b,.globebar strong{color:var(--gold-deep) !important}
+/* the header sits on cream */
+.hdr{background:color-mix(in srgb,var(--paper) 94%,transparent) !important}
+.hdr, .hdr a, .brand__txt{color:var(--ink)}
+.brand__sub{color:var(--ink-faint)}
+.nav a{color:var(--ink)}
+.nav a:hover, .nav a.is-on{color:var(--gold-deep)}
+
+/* ── components still wearing dark-era colours on the cream ground ──── */
+/* caption blocks: were cream/white text, now invisible on cream */
+.cap__head{color:var(--ink) !important}
+.cap__say,.cap__fine{color:var(--ink-soft) !important}
+.cap__eyebrow{color:var(--gold-deep) !important}
+/* gold at text size needs the deeper gold to stay legible on cream */
+em,b,strong,.eyebrow,.step-num,.bkhead__l,.author__role,
+.book-hook__status,.shelf__s,.creed{color:var(--gold-deep) !important}
+h1 em,h2 em,h3 em,.hero h1 em{color:var(--gold-deep) !important}
+/* the book pages kept a dark navy masthead under the cream header */
+.brand__wm,.nav__cta,.has-menu,.brand,.brand__txt{color:var(--ink) !important}
+header,.hdr,.site-head,.masthead{background:color-mix(in srgb,var(--paper) 94%,transparent) !important}
+header a,.hdr a,.site-head a{color:var(--ink)}
+/* anything genuinely on the ink footer stays cream */
+.ftr p,.ftr li,.ftr a,.ftr span,.ftr .feat__d,
+footer p,footer li,footer a,footer span{color:#E6D9C2 !important}
+.ftr h4,footer h4{color:#FAF6EC !important}
+/* the skip link only appears on focus — give it real contrast when it does */
+.skip,.skip-link{background:var(--ink) !important;color:#FAF6EC !important}
+
+/* ── gold at reading size needs to be the deep gold on cream ─────────
+   #B98D3E measured 2.80:1 and #D7B071 1.64:1 against the cream ground.
+   The brand gold stays for large display type and for rules and fills;
+   anything at text size uses the deep gold, which clears 4.5:1.
+   ─────────────────────────────────────────────────────────────────── */
+:root{
+  --gold-text:#7A5516;
+  --gold-lt:var(--gold-text); --amber-soft:var(--gold-text);
+  --clay-lt:var(--gold-text);
+}
+li,cite,.attrib,.book-status,.book-hook__status,.shelf__s,.creed,
+.cap__say,.cap__fine,.feat__k,.trk__note,.say,.note,.fine,
+em,b,strong,small,figcaption,.byline,.dateline{color:var(--ink-soft)}
+.eyebrow,.kicker,.cap__eyebrow,.step-num,.bkhead__l,.author__role,
+.book-status,.attrib,.shelf__s,.creed,.book-hook__status{color:var(--gold-text) !important}
+em,h1 em,h2 em,h3 em,.hero h1 em{color:var(--gold-text) !important}
+a{color:var(--gold-text)}
+a:hover{color:var(--ink)}
+/* large display gold keeps the brand gold — it clears at size */
+h1,h2,.proof__i b,.stat b{}
+.proof__i b{color:var(--gold-text) !important}
+
+/* ── the footer family (footer__*) was missed by the .ftr rules ────── */
+.footer,.footer__in,[class^="footer__"],[class*=" footer__"]{color:#E6D9C2}
+.footer__brand,.footer__tag,.footer__h{color:#FAF6EC !important}
+.footer a,[class^="footer__"] a{color:#E6D9C2 !important}
+.footer a:hover{color:#FFFCF4 !important}
+
+/* ── the book pages' footer is .site-footer, which my .ftr/.footer rules
+      never touched: its ground went cream while its text stayed light
+      (measured 1.05:1). Give it back its ink ground. ── */
+.site-footer{background:var(--ink) !important;border-top:3px solid var(--gold)}
+.site-footer, .site-footer p, .site-footer li, .site-footer span{color:#E6D9C2 !important}
+.site-footer a{color:#E6D9C2 !important}
+.site-footer a:hover{color:#FFFCF4 !important}
+.site-footer .footer__brand, .site-footer .footer__tag,
+.site-footer h3, .site-footer h4{color:#FAF6EC !important}
+
+/* ── list items and citations were still the brand gold at text size ── */
+li, cite, .attrib{color:var(--ink-soft) !important}
+li strong, li b{color:var(--ink) !important}
+li a, cite a{color:var(--gold-text) !important}
+
+/* ── gold-filled buttons need their label dark enough to read ── */
+.btn em, .btn--primary em, .btn strong{color:#2A2114 !important;font-style:italic}
+.btn--primary, .btn--primary *{color:#2A2114 !important}
+
+/* ── feature cards and plates that sit on photographs ────────────────
+   Measured 1.00–2.06:1. Same resolution as the rest of the site: the
+   reading happens on cream, the photograph keeps its strength around it.
+   ─────────────────────────────────────────────────────────────────── */
+.feat, .es-plate, .es-plate__in, .read-hero__in, .plate__in{
+  position:relative;z-index:2;
+  background:rgba(250,246,236,.94);
+  padding:clamp(1.1rem,2.2vw,2rem);
+  border-radius:3px;
+  box-shadow:0 22px 50px -28px rgba(59,48,32,.45);
+}
+.feat, .feat *, .es-plate, .es-plate *,
+.read-hero__in, .read-hero__in *, .plate__in, .plate__in *{
+  color:var(--ink) !important; text-shadow:none !important}
+.feat .feat__d, .es-plate__k, .feat__k{color:var(--ink-soft) !important}
+.feat h2, .feat h3, .es-plate h2, .es-plate h3,
+.read-hero__in h1, .read-hero__in h2{color:var(--ink) !important}
+.feat em, .es-plate em{color:var(--gold-text) !important}
+.feat a, .es-plate a{color:var(--gold-text) !important}
+/* any remaining pull-quote or caption over an image */
+blockquote span, .pull span, figure span{color:var(--ink) !important}
+
+/* ── bands that are MEANT to be dark keep light text ─────────────────
+   .gets, .chapterband, .excerpt and the ink footer are deliberate dark
+   plates. My ink rules above reached into them and darkened their text
+   (measured 1.00–2.60:1). Put it back.
+   ─────────────────────────────────────────────────────────────────── */
+.gets, .chapterband, .excerpt, .sec--deep.tex, .plate--ink,
+.gets *, .chapterband *, .excerpt *{color:#EFE6D4 !important}
+.gets b, .gets strong, .chapterband b, .excerpt b,
+.chapterpage__more, .chapterpage__note{color:#F3DCAE !important}
+.gets em, .chapterband em, .excerpt em,
+.excerpt .eyebrow, .chapterband .eyebrow{color:#D7B071 !important}
+.gets h2, .gets h3, .chapterband h2, .excerpt h2{color:#FFFCF4 !important}
+.gets a, .chapterband a, .excerpt a{color:#E8D4A8 !important}
+.gets a:hover, .chapterband a:hover{color:#FFFCF4 !important}
+
+/* a gold-filled pill needs ink on it, not cream */
+.pill, .pill--now, .pill span, .pill--now span{color:#2A2114 !important}
+.pill--soon{background:transparent;color:var(--ink-soft) !important;border:1px solid var(--rule-ink)}
+
+/* a mailto on the deep cream band */
+.mailto, .mailto a{color:var(--gold-text) !important}
+
+/* ── FINAL: which excerpt is on cream and which is on ink ────────────
+   .excerpt on / and /series/ is transparent over a cream band  -> ink
+   .excerpt.fade on /read/stone-breath/ carries its OWN ink ground -> cream
+   .chapterpage is a CREAM plate sitting inside the dark .chapterband,
+   so its children are ink even though the band around them is ink.
+   ─────────────────────────────────────────────────────────────────── */
+.excerpt, .excerpt p, .excerpt li, .excerpt span{color:var(--ink) !important}
+.excerpt em, .excerpt cite{color:var(--gold-text) !important}
+.excerpt b, .excerpt strong{color:var(--ink) !important}
+
+.excerpt.fade, .excerpt.fade *{color:#EFE6D4 !important}
+.excerpt.fade em, .excerpt.fade cite{color:#D7B071 !important}
+
+.chapterpage, .chapterpage *{color:var(--ink) !important}
+.chapterpage__series, .chapterpage__num{color:var(--gold-text) !important}
+.chapterpage__title, .chapterpage h1, .chapterpage h2{color:var(--ink) !important}
+.chapterpage__more, .chapterpage__note{color:var(--ink-soft) !important}
+/* the band around that plate keeps its light text */
+.chapterband > .wrap > p, .chapterband > p{color:#EFE6D4 !important}
