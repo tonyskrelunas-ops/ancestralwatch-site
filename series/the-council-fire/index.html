@@ -36,6 +36,14 @@
   }
   </script>
 <link rel="stylesheet" href="/assets/daylight.css?v=8">
+<style>
+/* the twelve keepers: one clean row each */
+.keepers{list-style:none;margin:var(--space-3) 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:0 var(--space-4);max-width:900px}
+.keepers li{display:grid;grid-template-columns:auto 1fr;column-gap:.6rem;align-items:baseline;padding:.7rem 0;border-bottom:1px solid rgba(59,48,32,.14)}
+.keepers b{font-family:var(--font-display);font-size:1.12rem;font-weight:600}
+.keepers span{color:var(--text-muted,#6E5E48);font-size:.86rem}
+.keepers em{grid-column:1 / -1;color:var(--amber);font-family:var(--font-display);font-size:.98rem}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -106,6 +114,19 @@
             Instant EPUB, yours on every device. <a href="#the-book">About the book ↓</a> · <a href="#excerpt">Read an excerpt ↓</a>
           </p>
         </div>
+      </div>
+    </section>
+
+    
+    <!-- ============ THE FILM ============ -->
+    <section class="section section--tight" id="the-film">
+      <div class="wrap">
+        <p class="eyebrow" style="color: var(--amber);">Watch · 76 seconds</p>
+        <h2 style="font-size: var(--step-3); max-width: 24ch;">Every people on earth raised them.</h2>
+        <video controls playsinline preload="none" poster="/assets/img/council-fire-film-poster.jpg"
+               style="display:block;width:100%;max-width:420px;margin:var(--space-3) 0 0;border-radius:12px;background:#000">
+          <source src="/assets/video/council-fire-film.mp4" type="video/mp4">
+        </video>
       </div>
     </section>
 
@@ -197,6 +218,28 @@
           <li><b>Hamish</b><span>Scottish Highlands</span><em>The Clan Is Scattered</em></li>
           <li><b>Chariya</b><span>Thailand</span><em>The Order of the Fields</em></li>
         </ul>
+        <figure class="tokens-anim" style="margin:var(--space-4) auto 0;max-width:640px">
+          <div id="tokens-host" style="border-radius:14px;overflow:hidden;box-shadow:0 1px 0 rgba(59,48,32,.08)"></div>
+          <figcaption class="muted" style="font-size:var(--step--1);text-align:center;margin-top:var(--space-2)">
+            The twelve tokens, in the order the book gives them. <button type="button" id="tokens-replay"
+            style="font:inherit;background:none;border:0;color:var(--amber);cursor:pointer;text-decoration:underline">Play again</button>
+          </figcaption>
+        </figure>
+        <script src="/js/council-tokens.js?v=20261102"></script>
+        <script>
+(function(){
+  var host=document.getElementById('tokens-host'); if(!host||!window.CouncilTokens) return;
+  var A=CouncilTokens(host), t0=null, raf=null;
+  var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function frame(ts){ if(t0===null) t0=ts; var t=(ts-t0)/1000; A.seek(Math.min(t,A.DUR)); if(t<A.DUR) raf=requestAnimationFrame(frame); }
+  function play(){ if(still){ A.seek(A.DUR); return; } cancelAnimationFrame(raf); t0=null; raf=requestAnimationFrame(frame); }
+  if(still) A.seek(A.DUR);
+  else if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(e){ if(e[0].isIntersecting){ play(); io.disconnect(); } },{threshold:.45}); io.observe(host); }
+  else play();
+  document.getElementById('tokens-replay').addEventListener('click',play);
+})();
+        </script>
+
       </div>
     </section>
 
