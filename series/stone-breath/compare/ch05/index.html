@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Stone Breath — Five · The Oak — side by side</title>
+<meta name="description" content="Chapter 5 of Stone Breath, the edited version beside the published one.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/style.css?v=5">
+<link rel="stylesheet" href="/assets/daylight.css?v=8">
+<link rel="stylesheet" href="/css/aw-world.css?v=20261105">
+<style>
+.cmp{--in:color-mix(in srgb,var(--amber) 15%,transparent);
+     --out:color-mix(in srgb,var(--ink) 6%,transparent)}
+.cmp-bar{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);
+ backdrop-filter:blur(9px);border-bottom:1px solid var(--rule);padding:.6rem 0;margin-bottom:var(--space-2)}
+.cmp-bar__in{display:flex;gap:.45rem;flex-wrap:wrap;align-items:center}
+.cmp-btn{font:500 .8rem/1 Inter,system-ui,sans-serif;letter-spacing:.03em;padding:.52rem .9rem;
+ border:1px solid var(--rule);border-radius:999px;background:var(--bg-panel);color:var(--ink);
+ cursor:pointer;text-decoration:none;display:inline-block;transition:.18s}
+.cmp-btn:hover{border-color:var(--amber)}
+.cmp-btn.on{background:var(--amber);border-color:var(--amber);color:#fff}
+.cmp-sp{flex:1 1 auto}
+.cmp-heads{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);margin:var(--space-3) 0 .2rem}
+.cmp-hd{font:500 .68rem/1.3 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+ color:var(--ink-soft);padding-bottom:.45rem;border-bottom:1px solid var(--rule)}
+.cmp-hd b{color:var(--amber);font-weight:500}
+.cmp-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);align-items:start;margin-bottom:.15rem}
+.cmp-cell{padding:.55rem .85rem;border-radius:var(--radius)}
+.cmp-row.chg .cmp-cell.l{background:var(--in);box-shadow:inset 3px 0 0 var(--amber)}
+.cmp-row.chg .cmp-cell.r{background:var(--out);box-shadow:inset 3px 0 0 var(--rule)}
+.cmp-cell p{margin:0;font-size:var(--step-0);line-height:1.68}
+.cmp-cell.gone{opacity:.42;font-style:italic;color:var(--ink-soft)}
+.cmp-cell.gone:after{content:"— not in this version";font-size:var(--step--1)}
+.cmp-hh{font:500 .72rem/1.4 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+ color:var(--amber);text-align:center;margin:1.2em 0 .5em}
+.cmp-orn{text-align:center;color:var(--amber);letter-spacing:.55em;margin:1em 0}
+mark{background:none;color:inherit;padding:0}
+.cmp-row.chg mark.in{background:color-mix(in srgb,var(--amber) 34%,transparent);border-radius:3px;padding:0 .14em}
+.cmp-row.chg mark.out{background:color-mix(in srgb,var(--ink) 11%,transparent);border-radius:3px;padding:0 .14em}
+body.only-l .cmp-cell.r,body.only-l .cmp-hd.r{display:none}
+body.only-l .cmp-row,body.only-l .cmp-heads{grid-template-columns:1fr}
+body.only-r .cmp-cell.l,body.only-r .cmp-hd.l{display:none}
+body.only-r .cmp-row,body.only-r .cmp-heads{grid-template-columns:1fr}
+body.diffs .cmp-row.same{display:none}
+.cmp-hero{position:relative;min-height:clamp(240px,42vh,440px);display:flex;align-items:flex-end;
+ overflow:hidden}
+.cmp-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cmp-hero__scrim{position:absolute;inset:0;background:linear-gradient(to top,
+ rgba(18,14,10,.84) 0%,rgba(18,14,10,.42) 42%,rgba(18,14,10,.12) 78%)}
+.cmp-hero__in{position:relative;padding:var(--space-5) 0 var(--space-3);color:#fff}
+.cmp-hero__in .eyebrow{color:var(--amber-soft)}
+.cmp-hero h1{color:#fff;margin:.1em 0 .18em;font-size:var(--step-4)}
+.cmp-hero__meta{font:400 .85rem/1.5 Inter,system-ui,sans-serif;color:rgba(255,255,255,.76)}
+.cmp-hero__cap{position:absolute;right:var(--space-3);bottom:.6rem;font:400 .68rem/1.3 Inter,sans-serif;
+ letter-spacing:.06em;color:rgba(255,255,255,.58);text-align:right}
+.cmp-list{list-style:none;margin:var(--space-3) 0 0;padding:0;display:grid;gap:.6rem}
+.cmp-list a{display:grid;grid-template-columns:84px 1fr;gap:var(--space-2);align-items:center;
+ text-decoration:none;background:var(--bg-panel);border:1px solid var(--rule);
+ border-radius:var(--radius-lg);padding:.6rem;transition:.18s}
+.cmp-list a:hover{border-color:var(--amber);transform:translateY(-1px)}
+.cmp-list img{width:84px;height:62px;object-fit:cover;border-radius:calc(var(--radius) - 2px)}
+.cmp-list b{font-family:var(--font-display);font-weight:500;font-size:var(--step-1);color:var(--ink)}
+.cmp-list span{display:block;font:400 .78rem/1.45 Inter,sans-serif;color:var(--ink-soft);margin-top:.12rem}
+.vrow{background:var(--bg-panel);border:1px solid var(--rule);border-radius:var(--radius-lg);
+ padding:.8rem 1rem;margin-bottom:.55rem}
+.vrow b{font-family:var(--font-display);font-weight:500;font-size:var(--step-1)}
+.vrow i{display:block;font-style:normal;font:400 .8rem/1.4 Inter,sans-serif;color:var(--ink-soft);margin:.1rem 0 .5rem}
+.vrow audio{width:100%;height:36px}
+@media (max-width:860px){
+ .cmp-row,.cmp-heads{gap:.55rem}
+ .cmp-cell{padding:.45rem .55rem}
+ .cmp-cell p{font-size:.86rem;line-height:1.56}
+ .cmp-list a{grid-template-columns:62px 1fr}
+ .cmp-list img{width:62px;height:50px}}
+</style></head>
+<body class="cmp" data-sound-src="/assets/audio/wc/bed-stone-breath-creek.mp3" data-sound-name="the creek">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <nav class="nav wrap wrap--wide" aria-label="Primary">
+      <a class="brand" href="/"><img class="brand__logo" src="/assets/img/author-logo.png?v=2" alt="AncestralWatch logo" width="716" height="676"><span class="brand__wm">Ancestral<span class="brand__mark">Watch</span></span></a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">☰</button>
+      <ul class="nav__links" id="primary-nav" data-open="false">
+        <li><a href="/">Home</a></li>
+        <li class="has-menu">
+          <button aria-expanded="false" aria-haspopup="true">The Series</button>
+          <ul class="menu">
+            <li><a href="/series/"><span class="menu__num">All</span> The Series</a></li>
+            <li><a href="/series/stone-breath/" aria-current="page"><span class="menu__num">I</span> Stone Breath</a></li>
+            <li><a href="/series/by-lamplight/"><span class="menu__num">II</span> The Amber and the Stone</a></li>
+            <li><a href="/series/the-council-fire/"><span class="menu__num">III</span> The Council Fire</a></li>
+            <li><a href="/series/the-far-messengers/"><span class="menu__num">IV</span> The Far Messengers</a></li>
+            <li><a href="/reader/"><span class="menu__num">&mdash;</span> The Reader</a></li>
+          <li><a href="/start-here/">Start Here</a></li><li><a href="/read/stone-breath/">Read Free</a></li></ul>
+        </li>
+        <li><a href="/tools/">The Tools</a></li><li><a href="https://tribeawaken.com/" target="_blank" rel="noopener">TribeAwaken ↗</a></li>
+        <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+        <li><a href="/author/">The Author</a></li>
+        <li><a class="lang-toggle" href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a class="lang-toggle" href="/lt/" hreflang="lt" lang="lt" style="border-left:0;padding-left:0;">Lietuvių</a></li>
+        <li class="nav__cta"><a class="btn btn--primary" href="https://payhip.com/b/AhH6r" target="_blank" rel="noopener">Get the Book</a></li>
+      </ul>
+    </nav>
+
+  <div class="aw-langbar" aria-label="Languages">
+    <div class="wrap wrap--wide aw-langbar__in">
+      <p class="aw-langbar__lbl">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15 0 18M12 3c-2.6 2.6-2.6 15 0 18"/>
+        </svg><span>Read in</span>
+      </p>
+      <a href="/" data-lang="en" hreflang="en">English</a>
+      <a href="/ja/" data-lang="/ja/" hreflang="ja" lang="ja">日本語</a>
+      <a href="/lt/" data-lang="/lt/" hreflang="lt" lang="lt">Lietuvių</a>
+      <a class="aw-langbar__mail" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+  </header>
+<main id="main">
+
+<section class="cmp-hero">
+  <img src="/assets/img/wc/juniper-ancient.jpg" alt="A tree that stayed" fetchpriority="high">
+  <div class="cmp-hero__scrim"></div>
+  <div class="wrap wrap--wide cmp-hero__in">
+    <p class="eyebrow">Stone Breath · side by side · chapter 5</p>
+    <h1><em>The Oak</em></h1>
+    <p class="cmp-hero__meta">19 paragraphs differ · 90 identical</p>
+  </div>
+  <p class="cmp-hero__cap">photograph by Tony Skrelūnas</p>
+</section>
+
+<div class="cmp-bar"><div class="wrap wrap--wide cmp-bar__in">
+  <button class="cmp-btn" data-m="b">Both</button>
+  <button class="cmp-btn" data-m="l">Edited</button>
+  <button class="cmp-btn" data-m="r">Current</button>
+  <button class="cmp-btn" id="dbtn">Changes only</button>
+  <span class="cmp-sp"></span>
+  <a class="cmp-btn" href="../">All chapters</a><a class="cmp-btn" href="../ch04/">← Four</a><a class="cmp-btn" href="../ch06/">Six →</a>
+</div></div>
+
+<section class="section section--tight"><div class="wrap wrap--wide">
+  <div class="cmp-heads"><div class="cmp-hd l"><b>Edited</b> — the new one</div>
+  <div class="cmp-hd r">Current — published today</div></div>
+  <div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">CHAPTER 5</div></div><div class="cmp-cell r"><div class="cmp-hh">CHAPTER 5</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">THE OAK</div></div><div class="cmp-cell r"><div class="cmp-hh">THE OAK</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">✵   ✵   ✵</div></div><div class="cmp-cell r"><div class="cmp-hh">✵   ✵   ✵</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Ąžuolas miršta stovėdamas.&quot; – An oak dies standing. Lithuanian saying</p></div><div class="cmp-cell r"><p>&quot;Ąžuolas miršta stovėdamas.&quot; – An oak dies standing. Lithuanian saying</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Ishi no ue ni mo san nen.&quot; – Three years upon a rock. What outlasts, wins. Japanese proverb</p></div><div class="cmp-cell r"><p>&quot;Ishi no ue ni mo san nen.&quot; – Three years upon a rock. What outlasts, wins. Japanese proverb</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;The oak had been waiting a hundred years. I have waited less time for coffee. I was less patient.&quot; — Tonas Yazzie</p></div><div class="cmp-cell r"><p>&quot;The oak had been waiting a hundred years. I have waited less time for coffee. I was less patient.&quot; — Tonas Yazzie</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>They walked into the village together the next morning <mark class="in">—</mark> the mill first, its stones still solid after nearly two centuries, then the church, white against the sky, <mark class="in">then</mark> the river, the Šventoji — Holy River — moving toward the sea the way it had for thousands of years.</p></div><div class="cmp-cell r"><p>They walked into the village together the next morning. The mill first, its stones still solid after nearly two centuries. Then the church, white against the sky. The river, the Šventoji — Holy River — moving toward the sea the way it had for thousands of years.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>They passed a shuttered building on the main square — a faded sign that once read 
+Kavinė
+, dusty windows, a door that hadn&#x27;t opened in years.</p></div><div class="cmp-cell r"><p>They passed a shuttered building on the main square — a faded sign that once read 
+Kavinė
+, dusty windows, a door that hadn&#x27;t opened in years.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;The old café,&quot; Austėja said. &quot;Closed when I was a girl. Everyone says they miss it. No one&#x27;s done anything about it.&quot;</p></div><div class="cmp-cell r"><p>&quot;The old café,&quot; Austėja said. &quot;Closed when I was a girl. Everyone says they miss it. No one&#x27;s done anything about it.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas looked at the building, then at her. &quot;Maybe someone will,&quot; he said.</p></div><div class="cmp-cell r"><p>Tonas looked at the building, then at her. &quot;Maybe someone will,&quot; he said.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She didn&#x27;t answer. But she walked a little slower past the windows.</p></div><div class="cmp-cell r"><p>She didn&#x27;t answer. But she walked a little slower past the windows.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>At the bend where the river turned west, she stopped. &quot;This is where the old ones say the soul leaves. When you die, your soul follows the river to the sea, then crosses to the other side. My grandmother says that&#x27;s why Vytautas never came home — his soul was already here, following the river, waiting for his body to catch up.&quot;</p></div><div class="cmp-cell r"><p>At the bend where the river turned west, she stopped. &quot;This is where the old ones say the soul leaves. When you die, your soul follows the river to the sea, then crosses to the other side. My grandmother says that&#x27;s why Vytautas never came home — his soul was already here, following the river, waiting for his body to catch up.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas looked at the water. Brown and green and silver. Full of light. Full of time.</p></div><div class="cmp-cell r"><p>Tonas looked at the water. Brown and green and silver. Full of light. Full of time.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;His book,&quot; he said. &quot;I need to put it somewhere. He asked me to bring it home, but he didn&#x27;t say where.&quot;</p></div><div class="cmp-cell r"><p>&quot;His book,&quot; he said. &quot;I need to put it somewhere. He asked me to bring it home, but he didn&#x27;t say where.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja was quiet for a moment. Then: &quot;The oak.&quot;</p></div><div class="cmp-cell r"><p>Austėja was quiet for a moment. Then: &quot;The oak.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;What oak?&quot;</p></div><div class="cmp-cell r"><p>&quot;What oak?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Your great-grandfather planted an oak when Vytautas was born. My grandmother took me to see it once, when I was a child. I think I can find it again.&quot;</p></div><div class="cmp-cell r"><p>&quot;Your great-grandfather planted an oak when Vytautas was born. My grandmother took me to see it once, when I was a child. I think I can find it again.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas looked at her. &quot;You&#x27;d really do that? Take a whole day? Leave the heritage center, your grandmother, everything?&quot;</p></div><div class="cmp-cell r"><p>Tonas looked at her. &quot;You&#x27;d really do that? Take a whole day? Leave the heritage center, your grandmother, everything?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She looked out at the river. &quot;My grandmother asked me to help you. That&#x27;s enough. But it&#x27;s more than that.&quot; She turned to him. &quot;Our ancestors were friends. Yours and mine. They wrote letters for fifty years. They never forgot each other. I&#x27;m not doing this for you. I&#x27;m doing it for them. For Ona. For the family.&quot; A pause. &quot;And I think they&#x27;ll be friends in the future, too.&quot;</p></div><div class="cmp-cell r"><p>She looked out at the river. &quot;My grandmother asked me to help you. That&#x27;s enough. But it&#x27;s more than that.&quot; She turned to him. &quot;Our ancestors were friends. Yours and mine. They wrote letters for fifty years. They never forgot each other. I&#x27;m not doing this for you. I&#x27;m doing it for them. For Ona. For the family.&quot; A pause. &quot;And I think they&#x27;ll be friends in the future, too.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas didn&#x27;t know what to say. He just nodded.</p></div><div class="cmp-cell r"><p>Tonas didn&#x27;t know what to say. He just nodded.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Come on,&quot; she said. &quot;We&#x27;ll need to walk. The farmstead was torn down years ago. The forest grows fast.&quot;</p></div><div class="cmp-cell r"><p>&quot;Come on,&quot; she said. &quot;We&#x27;ll need to walk. The farmstead was torn down years ago. The forest grows fast.&quot;</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>They drove to a dirt track that ended at an overgrown field, <mark class="in">and</mark> Austėja parked the car and stepped out. The afternoon sun was already beginning its long slide toward the trees.</p></div><div class="cmp-cell r"><p>They drove to a dirt track that ended at an overgrown field. Austėja parked the car and stepped out. The afternoon sun was already beginning its long slide toward the trees.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;This way,&quot; she said, and walked into the woods.</p></div><div class="cmp-cell r"><p>&quot;This way,&quot; she said, and walked into the woods.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>The forest was thick — pine and spruce and birch, the ground soft with moss and fallen needles <mark class="in">— and</mark> there was no path. Austėja moved slowly, her eyes scanning the trees, her memory pulling at threads from twenty years ago.</p></div><div class="cmp-cell r"><p>The forest was thick — pine and spruce and birch, the ground soft with moss and fallen needles. There was no path. Austėja moved slowly, her eyes scanning the trees, her memory pulling at threads from twenty years ago.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I remember a stream,&quot; she said. &quot;And a birch that had been split by lightning.&quot;</p></div><div class="cmp-cell r"><p>&quot;I remember a stream,&quot; she said. &quot;And a birch that had been split by lightning.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>They walked for an hour. Then another. The sun dropped lower. The light turned gold. Tonas began to doubt.</p></div><div class="cmp-cell r"><p>They walked for an hour. Then another. The sun dropped lower. The light turned gold. Tonas began to doubt.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Are you sure we&#x27;re going the right way?&quot;</p></div><div class="cmp-cell r"><p>&quot;Are you sure we&#x27;re going the right way?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;No,&quot; she said. &quot;But my grandmother said the oak would find us if we were supposed to find it.&quot;</p></div><div class="cmp-cell r"><p>&quot;No,&quot; she said. &quot;But my grandmother said the oak would find us if we were supposed to find it.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He almost laughed. Instead, he kept walking.</p></div><div class="cmp-cell r"><p>He almost laughed. Instead, he kept walking.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>Then they heard water <mark class="in">—</mark> a narrow stream cutting through moss and stone <mark class="in">— and</mark> they followed it, <mark class="in">and</mark> around a bend <mark class="in">there was</mark> a fallen birch, its trunk split by lightning decades ago, now carpeted in green.</p></div><div class="cmp-cell r"><p>Then they heard water. A narrow stream, cutting through moss and stone. They followed it. Around a bend, a fallen birch <mark class="out">—</mark> its trunk split by lightning decades ago, now carpeted in green.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;There,&quot; Austėja said quietly.</p></div><div class="cmp-cell r"><p>&quot;There,&quot; Austėja said quietly.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Beyond the birch, the trees opened into a clearing. And there, at the center, stood the oak.</p></div><div class="cmp-cell r"><p>Beyond the birch, the trees opened into a clearing. And there, at the center, stood the oak.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>It was immense <mark class="in">—</mark> three meters around at the base, its branches spread like the ribs of an enormous umbrella. The trunk was scarred by lightning and weather but the tree was alive, moss <mark class="in">hanging</mark> from its lower branches, <mark class="in">and</mark> a single strip of faded cloth — red, once a ribbon — was tied to a low limb, frayed by years of wind.</p></div><div class="cmp-cell r"><p>It was immense. Three meters around at the base. Its branches spread like the ribs of an enormous umbrella. The trunk was scarred by lightning and weather, but the tree was alive. Moss <mark class="out">hung</mark> from its lower branches. A single strip of faded cloth — red, once a ribbon — was tied to a low limb, frayed by years of wind.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The setting sun caught the leaves, turning them to fire.</p></div><div class="cmp-cell r"><p>The setting sun caught the leaves, turning them to fire.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas stopped at the edge of the clearing. His legs gave way. He dropped to his knees.</p></div><div class="cmp-cell r"><p>Tonas stopped at the edge of the clearing. His legs gave way. He dropped to his knees.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja stood behind him, not speaking.</p></div><div class="cmp-cell r"><p>Austėja stood behind him, not speaking.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;It&#x27;s him,&quot; Tonas whispered. &quot;It&#x27;s Vytautas. You can feel it.&quot;</p></div><div class="cmp-cell r"><p>&quot;It&#x27;s him,&quot; Tonas whispered. &quot;It&#x27;s Vytautas. You can feel it.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She nodded. &quot;Trees remember. My grandmother says they hold everything — the births, the deaths, the prayers. This one has been waiting.&quot;</p></div><div class="cmp-cell r"><p>She nodded. &quot;Trees remember. My grandmother says they hold everything — the births, the deaths, the prayers. This one has been waiting.&quot;</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>Tonas walked forward slowly. The grass was wet with dew <mark class="in">and</mark> his shoes soaked through. He placed his hand on the trunk, <mark class="in">and</mark> the bark was rough, deeply furrowed, warm from the afternoon sun.</p></div><div class="cmp-cell r"><p>Tonas walked forward slowly. The grass was wet with dew. His shoes soaked through. He placed his hand on the trunk. The bark was rough, deeply furrowed, warm from the afternoon sun.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p><mark class="in">&quot;Somebody tied that,&quot; he said.</mark></p></div><div class="cmp-cell r"><p><mark class="out">The trunk was scarred by lightning — old wounds healed over, the bark grown thick around them. Masan would not let him near a tree the lightning had taken. She never explained why. She never needed to. But the lightning had passed decades ago. The tree had healed. Wounds become strength.</mark></p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>&quot;Somebody always has.&quot; Austėja did not look up at the ribbon. &quot;There were groves like this one all over the country. Alkai. Alkas, if it is only the one. No axe was ever lifted in them.&quot;</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>&quot;Protected land.&quot;</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>&quot;Not protected. Sacred. It is a different word.&quot; She put her hand flat on the bark beside his. &quot;A park is a place somebody decided to keep. An alkas outlives everybody who ever decided anything. This tree can live a thousand years. You do not own it. You are one leaf on it, and your work is to the tree.&quot;</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>He stood with that for a moment.</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>&quot;And when the gatherings were forbidden,&quot; she said — &quot;and they were forbidden more than once — people came out here. Into the groves. And sang.&quot;</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>The trunk was scarred by lightning — old wounds healed over, the bark grown thick around them. Masan would not let him near a tree the lightning had taken, and she never explained why and never needed to. But the lightning had passed decades ago and the tree had healed. Wounds become strength.</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He left his hand where it was.</p></div><div class="cmp-cell r"><p>He left his hand where it was.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>And then he felt it. Not a voice. Not a vision. Just presence. The same presence he felt when he sat in the hogan after Masan died, when he held her weaving, when he ran the mesas at dawn and felt her watching. The presence of someone who had been here, who had loved this place, who continued to watch over him.</p></div><div class="cmp-cell r"><p>And then he felt it. Not a voice. Not a vision. Just presence. The same presence he felt when he sat in the hogan after Masan died, when he held her weaving, when he ran the mesas at dawn and felt her watching. The presence of someone who had been here, who had loved this place, who continued to watch over him.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>I brought it home
+, he thought. 
+The book. The words. I brought them home.</p></div><div class="cmp-cell r"><p>I brought it home
+, he thought. 
+The book. The words. I brought them home.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>His throat tightened. He hadn&#x27;t expected that.</p></div><div class="cmp-cell r"><p>His throat tightened. He hadn&#x27;t expected that.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>He thought of his father — a Lithuanian man who died when Tonas was four. He had no memory of him, just a photograph on Ada&#x27;s dresser. But standing here, under this oak, he felt closer to his father than he ever had in any cemetery he&#x27;d never visited.</p></div><div class="cmp-cell r"><p>He thought of his father — a Lithuanian man who died when Tonas was four. He had no memory of him. Just a photograph on Ada&#x27;s dresser. But standing here, under this oak, he felt closer to his father than he ever had in any cemetery he&#x27;d never visited.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He was standing on his father&#x27;s land.</p></div><div class="cmp-cell r"><p>He was standing on his father&#x27;s land.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He hadn&#x27;t known that until now. The knowledge didn&#x27;t arrive like a thought. It arrived like a hand squeezing his chest.</p></div><div class="cmp-cell r"><p>He hadn&#x27;t known that until now. The knowledge didn&#x27;t arrive like a thought. It arrived like a hand squeezing his chest.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>He looked at Austėja, <mark class="in">and</mark> she was watching him, her face still, her eyes holding something he couldn&#x27;t name. She had been preparing for this morning for twenty years without knowing it. Readiness looks like presence. She was completely present.</p></div><div class="cmp-cell r"><p>He looked at Austėja. She was watching him, her face still, her eyes holding something he couldn&#x27;t name. She had been preparing for this morning for twenty years without knowing it. Readiness looks like presence. She was completely present.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He thought of Masan. Of Ada. Of Vytautas, who wrote letters for fifty years and never stopped hoping.</p></div><div class="cmp-cell r"><p>He thought of Masan. Of Ada. Of Vytautas, who wrote letters for fifty years and never stopped hoping.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>His eyes burned. He did not wipe them.</p></div><div class="cmp-cell r"><p>His eyes burned. He did not wipe them.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">✵   ✵   ✵</div></div><div class="cmp-cell r"><div class="cmp-hh">✵   ✵   ✵</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>That night, Tonas sat on the porch of the guesthouse. The river moved past, black and silver under the rising moon.</p></div><div class="cmp-cell r"><p>That night, Tonas sat on the porch of the guesthouse. The river moved past, black and silver under the rising moon.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He thought of Vytautas&#x27;s letters again. Fifty years of waiting. Fifty years of hoping. And now, tomorrow, the waiting would be different. Not because Vytautas came home. Because the words would finally rest where they belonged.</p></div><div class="cmp-cell r"><p>He thought of Vytautas&#x27;s letters again. Fifty years of waiting. Fifty years of hoping. And now, tomorrow, the waiting would be different. Not because Vytautas came home. Because the words would finally rest where they belonged.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He held the bundle in his lap — the book wrapped in Ada&#x27;s storm-pattern weaving. He didn&#x27;t bury it. Not yet. He was starting to understand: songs aren&#x27;t meant for the ground. They&#x27;re meant for throats.</p></div><div class="cmp-cell r"><p>He held the bundle in his lap — the book wrapped in Ada&#x27;s storm-pattern weaving. He didn&#x27;t bury it. Not yet. He was starting to understand: songs aren&#x27;t meant for the ground. They&#x27;re meant for throats.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;We&#x27;re almost there, Grandpa,&quot; he whispered. His voice cracked. &quot;The words are almost home.&quot;</p></div><div class="cmp-cell r"><p>&quot;We&#x27;re almost there, Grandpa,&quot; he whispered. His voice cracked. &quot;The words are almost home.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He did not sleep for a long time.</p></div><div class="cmp-cell r"><p>He did not sleep for a long time.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">✵   ✵   ✵</div></div><div class="cmp-cell r"><div class="cmp-hh">✵   ✵   ✵</div></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>The next morning was cold and clear. Austėja arrived before dawn <mark class="in">and</mark> they drove together to the edge of the field, <mark class="in">and</mark> the walk through the forest was quiet, their breath misting in the air. By the time they reached the clearing the sky was just beginning to lighten behind the trees — gray turning to pink turning to gold.</p></div><div class="cmp-cell r"><p>The next morning was cold and clear. Austėja arrived before dawn. They drove together to the edge of the field. The walk through the forest was quiet, their breath misting in the air. By the time they reached the clearing, the sky was just beginning to lighten behind the trees — gray turning to pink turning to gold.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas stood before the oak. He unwrapped the bundle — the storm-pattern weaving that had carried the book across an ocean, across a continent, across time itself.</p></div><div class="cmp-cell r"><p>Tonas stood before the oak. He unwrapped the bundle — the storm-pattern weaving that had carried the book across an ocean, across a continent, across time itself.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>He held the book in his hands. Small. Bound in worn leather. The pages yellowed and brittle. A collection of dainos , the old songs, <mark class="in">and</mark> he could feel the faint impressions of where it had been pressed against a smuggler&#x27;s chest for forty nights. <mark class="in">dainos , the old songs. He could feel the faint impressions of where it had been pressed against a smuggler&#x27;s chest for forty nights.</mark></p></div><div class="cmp-cell r"><p>He held the book in his hands. Small. Bound in worn leather. The pages yellowed and brittle. A collection of dainos , the old songs. He could feel the faint impressions of where it had been pressed against a smuggler&#x27;s chest for forty nights.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He looked at Austėja. &quot;Should I say something?&quot;</p></div><div class="cmp-cell r"><p>He looked at Austėja. &quot;Should I say something?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Only if you want to. The tree doesn&#x27;t need words. But maybe you do.&quot;</p></div><div class="cmp-cell r"><p>&quot;Only if you want to. The tree doesn&#x27;t need words. But maybe you do.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas thought for a moment. Then he spoke, his voice low.</p></div><div class="cmp-cell r"><p>Tonas thought for a moment. Then he spoke, his voice low.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I lost my grandmother four years ago. I thought she was gone. But then I would feel her — at dawn, before the light came. In the smell of juniper smoke. In the way my hands knew what to do before my mind caught up.&quot;</p></div><div class="cmp-cell r"><p>&quot;I lost my grandmother four years ago. I thought she was gone. But then I would feel her — at dawn, before the light came. In the smell of juniper smoke. In the way my hands knew what to do before my mind caught up.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He paused, his hand still on the oak&#x27;s bark.</p></div><div class="cmp-cell r"><p>He paused, his hand still on the oak&#x27;s bark.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You are not just a tree to me. You are a witness. You held his name when no one else would. Now I am bringing back what his father carried. The words that were worth dying for.&quot;</p></div><div class="cmp-cell r"><p>&quot;You are not just a tree to me. You are a witness. You held his name when no one else would. Now I am bringing back what his father carried. The words that were worth dying for.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He did not bury the book.</p></div><div class="cmp-cell r"><p>He did not bury the book.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Instead, he turned to Austėja. &quot;Ona should have this,&quot; he said. &quot;The village should have this. The songs are meant to be sung, not buried.&quot;</p></div><div class="cmp-cell r"><p>Instead, he turned to Austėja. &quot;Ona should have this,&quot; he said. &quot;The village should have this. The songs are meant to be sung, not buried.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja&#x27;s eyes widened. &quot;Are you sure?&quot;</p></div><div class="cmp-cell r"><p>Austėja&#x27;s eyes widened. &quot;Are you sure?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;My grandfather didn&#x27;t write those letters so the words could disappear into the dirt. He wrote them so someone would sing them again.&quot; He placed the book back in the blanket and handed it to her. &quot;Take it to Ona. Let her teach the songs to Ugnė. Let the next generation carry them.&quot;</p></div><div class="cmp-cell r"><p>&quot;My grandfather didn&#x27;t write those letters so the words could disappear into the dirt. He wrote them so someone would sing them again.&quot; He placed the book back in the blanket and handed it to her. &quot;Take it to Ona. Let her teach the songs to Ugnė. Let the next generation carry them.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja held the bundle against her chest. She did not open it.</p></div><div class="cmp-cell r"><p>Austėja held the bundle against her chest. She did not open it.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Then Tonas knelt at the base of the oak. From his pocket, he pulled a small piece of turquoise — rough, unpolished, the same blue as the sky over the mesa.</p></div><div class="cmp-cell r"><p>Then Tonas knelt at the base of the oak. From his pocket, he pulled a small piece of turquoise — rough, unpolished, the same blue as the sky over the mesa.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;This is from my land,&quot; he said. &quot;From the place where Masan raised me. From the red rocks and the juniper and the sheep.&quot;</p></div><div class="cmp-cell r"><p>&quot;This is from my land,&quot; he said. &quot;From the place where Masan raised me. From the red rocks and the juniper and the sheep.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He set it down among the roots, in the crook where two of them crossed, and pressed it into the earth with his thumb until it was seated but not hidden. Not buried. Not yet. That would come later, and he did not know it yet.</p></div><div class="cmp-cell r"><p>He set it down among the roots, in the crook where two of them crossed, and pressed it into the earth with his thumb until it was seated but not hidden. Not buried. Not yet. That would come later, and he did not know it yet.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja knelt beside him and set a small piece of amber in the earth beside it — rough, unpolished, the color of honey.</p></div><div class="cmp-cell r"><p>Austėja knelt beside him and set a small piece of amber in the earth beside it — rough, unpolished, the color of honey.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;For the words,&quot; she said. &quot;From the Baltic. The old ones say amber carries the light of the sun, even in the dark.&quot;</p></div><div class="cmp-cell r"><p>&quot;For the words,&quot; she said. &quot;From the Baltic. The old ones say amber carries the light of the sun, even in the dark.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas looked at her. At the amber. At the oak. At the light. &quot;Thank you,&quot; he said. &quot;For everything.&quot;</p></div><div class="cmp-cell r"><p>Tonas looked at her. At the amber. At the oak. At the light. &quot;Thank you,&quot; he said. &quot;For everything.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She met his eyes. &quot;You&#x27;re not done yet.&quot;</p></div><div class="cmp-cell r"><p>She met his eyes. &quot;You&#x27;re not done yet.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;What do you mean?&quot;</p></div><div class="cmp-cell r"><p>&quot;What do you mean?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You gave the book to Ona. But the story isn&#x27;t over. There&#x27;s more to see. More to learn. My grandmother wants to teach you the songs. The village needs the talka. And I —&quot; She stopped.</p></div><div class="cmp-cell r"><p>&quot;You gave the book to Ona. But the story isn&#x27;t over. There&#x27;s more to see. More to learn. My grandmother wants to teach you the songs. The village needs the talka. And I —&quot; She stopped.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You what?&quot;</p></div><div class="cmp-cell r"><p>&quot;You what?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She looked away, toward the forest. Then back at him. A small smile played at the corner of her mouth.</p></div><div class="cmp-cell r"><p>She looked away, toward the forest. Then back at him. A small smile played at the corner of her mouth.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I still have to kick your butt on a basketball court. Or a trail run. Take your pick. I hear you Diné worship basketball too.&quot;</p></div><div class="cmp-cell r"><p>&quot;I still have to kick your butt on a basketball court. Or a trail run. Take your pick. I hear you Diné worship basketball too.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas blinked. Then he laughed — a real laugh, the first one since he&#x27;d gotten off the bus. &quot;You&#x27;re serious.&quot;</p></div><div class="cmp-cell r"><p>Tonas blinked. Then he laughed — a real laugh, the first one since he&#x27;d gotten off the bus. &quot;You&#x27;re serious.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I&#x27;m always serious about competition.&quot; She started walking. &quot;Come on. The trail is this way.&quot;</p></div><div class="cmp-cell r"><p>&quot;I&#x27;m always serious about competition.&quot; She started walking. &quot;Come on. The trail is this way.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>They didn&#x27;t go back to the house. They ran.</p></div><div class="cmp-cell r"><p>They didn&#x27;t go back to the house. They ran.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>She set the pace — aggressive, controlled, the pace of someone who had done this a thousand times. Her breath was steady <mark class="in">and</mark> her footfall was light, <mark class="in">and</mark> Tonas matched her, his lungs burning, his legs grateful for the movement after the stillness of the morning. They didn&#x27;t speak. They didn&#x27;t need to. The forest blurred past — pine, birch, the smell of damp earth, the last light filtering through the leaves <mark class="in">— and</mark> for twenty minutes there was only the rhythm of breath and the strike of feet on the trail.</p></div><div class="cmp-cell r"><p>She set the pace — aggressive, controlled, the pace of someone who had done this a thousand times. Her breath was steady. Her footfall was light. Tonas matched her, his lungs burning, his legs grateful for the movement after the stillness of the morning. They didn&#x27;t speak. They didn&#x27;t need to. The forest blurred past — pine, birch, the smell of damp earth, the last light filtering through the leaves. For twenty minutes, there was only the rhythm of breath and the strike of feet on the trail.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>When they finished, they stood at the edge of a clearing, both breathing hard. Austėja bent over, hands on her knees, then straightened and looked at him.</p></div><div class="cmp-cell r"><p>When they finished, they stood at the edge of a clearing, both breathing hard. Austėja bent over, hands on her knees, then straightened and looked at him.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You&#x27;re faster than I expected.&quot;</p></div><div class="cmp-cell r"><p>&quot;You&#x27;re faster than I expected.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You&#x27;re not.&quot;</p></div><div class="cmp-cell r"><p>&quot;You&#x27;re not.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She almost smiled. &quot;Good. Then you&#x27;ll keep up tomorrow.&quot;</p></div><div class="cmp-cell r"><p>She almost smiled. &quot;Good. Then you&#x27;ll keep up tomorrow.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Tomorrow?&quot;</p></div><div class="cmp-cell r"><p>&quot;Tomorrow?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Dawn. My grandmother wants to teach you the songs. But first, we run.&quot;</p></div><div class="cmp-cell r"><p>&quot;Dawn. My grandmother wants to teach you the songs. But first, we run.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She turned and walked toward the house. Tonas watched her go.</p></div><div class="cmp-cell r"><p>She turned and walked toward the house. Tonas watched her go.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">✵   ✵   ✵</div></div><div class="cmp-cell r"><div class="cmp-hh">✵   ✵   ✵</div></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>That evening, Austėja carried the book to her grandmother&#x27;s kitchen, <mark class="in">and</mark> Ona took it in both hands <mark class="in">and</mark> held it against her chest. She did not open it.</p></div><div class="cmp-cell r"><p>That evening, Austėja carried the book to her grandmother&#x27;s kitchen. Ona took it in both hands. <mark class="out">She</mark> held it against her chest. She did not open it.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ugnė stood at the edge of the table, dark hair, serious eyes, watching the old woman&#x27;s face the way children watch for weather.</p></div><div class="cmp-cell r"><p>Ugnė stood at the edge of the table, dark hair, serious eyes, watching the old woman&#x27;s face the way children watch for weather.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Tonight I will read one,&quot; Ona said. &quot;Tomorrow, Ugnė will learn it. That is how the circle holds.&quot;</p></div><div class="cmp-cell r"><p>&quot;Tonight I will read one,&quot; Ona said. &quot;Tomorrow, Ugnė will learn it. That is how the circle holds.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ugnė looked at the book. &quot;Will you teach me?&quot;</p></div><div class="cmp-cell r"><p>Ugnė looked at the book. &quot;Will you teach me?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ona smiled. &quot;I will teach you. And you will teach your children.&quot;</p></div><div class="cmp-cell r"><p>Ona smiled. &quot;I will teach you. And you will teach your children.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas walked back to the guesthouse alone. He sat down on the porch steps. The river moved. The stars began to appear.</p></div><div class="cmp-cell r"><p>Tonas walked back to the guesthouse alone. He sat down on the porch steps. The river moved. The stars began to appear.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Tomorrow,&quot; he said to no one.</p></div><div class="cmp-cell r"><p>&quot;Tomorrow,&quot; he said to no one.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Chapter 2: The Book</p></div><div class="cmp-cell r"><p>Chapter 2: The Book</p></div></div>
+  <p class="muted" style="margin-top:var(--space-4);font-size:var(--step--1);max-width:60ch">
+  Gold marks what the edited version added or changed; gray marks the words it replaced.
+  The right column is the text on Payhip and Barnes &amp; Noble today. Nothing here is published.</p>
+</div></section>
+</main>
+<footer class="site-footer">
+    <div class="wrap wrap--wide">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">AncestralWatch</p>
+          <p class="footer__tag">Instructions, carried.</p>
+          <p style="margin-top: var(--space-2); max-width: 34ch;">The home of The Ancestral Watch Series by Tony Skrelūnas.</p>
+        </div>
+        <div>
+          <h4>The Series</h4>
+          <ul>
+            <li><a href="/series/stone-breath/">Stone Breath</a></li>
+            <li><a href="/series/the-council-fire/">The Council Fire</a></li>
+            <li><a href="/series/">All four books</a></li>
+            <li><a href="/tools/">The free Tools</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/far-messengers/">The Far Messengers (brand)</a></li>
+            <li><a href="/author/">The Author</a></li>
+            <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+            <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/lt/" hreflang="lt" lang="lt">Lietuvių</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>© 2026 Ancestral Watch · Tony Skrelūnas. All rights reserved.</span>
+        <span>Instructions, carried.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/js/main.js?v=11" defer></script>
+<script src="/js/vendor/gsap.min.js"></script>
+<script src="/js/vendor/ScrollTrigger.min.js"></script>
+<script src="/js/vendor/lenis.min.js"></script>
+<script src="/js/aw-world.js?v=20261105"></script>
+<script>
+(function(){var b=document.body;
+ function set(m){b.classList.remove('only-l','only-r');
+  if(m==='l')b.classList.add('only-l');if(m==='r')b.classList.add('only-r');
+  document.querySelectorAll('[data-m]').forEach(function(x){x.classList.toggle('on',x.dataset.m===m)});
+  try{localStorage.setItem('sbcmp-m',m)}catch(e){}}
+ function diffs(on){b.classList.toggle('diffs',on);
+  var t=document.getElementById('dbtn');if(t)t.classList.toggle('on',on);
+  try{localStorage.setItem('sbcmp-d',on?'1':'')}catch(e){}}
+ document.querySelectorAll('[data-m]').forEach(function(x){x.onclick=function(){set(x.dataset.m)}});
+ var d=document.getElementById('dbtn');
+ if(d)d.onclick=function(){diffs(!b.classList.contains('diffs'))};
+ var m='b',dd=false;
+ try{m=localStorage.getItem('sbcmp-m')||'b';dd=!!localStorage.getItem('sbcmp-d')}catch(e){}
+ set(m);diffs(dd);})();
+</script>
+</body></html>
