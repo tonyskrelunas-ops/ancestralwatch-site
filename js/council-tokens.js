@@ -11,7 +11,7 @@ function el(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const
 function token(kind,g){
   switch(kind){
   case 'coal': el('polygon',{points:'-24,6 -16,-16 2,-22 22,-12 26,8 10,22 -12,20',fill:'#2B2724'},g);
-    el('polyline',{points:'-16,-16 -2,0 22,-12 M-2,0',fill:'none',stroke:'#5A534C','stroke-width':2},g);
+    el('polyline',{points:'-16,-16 -2,0 22,-12',fill:'none',stroke:'#5A534C','stroke-width':2},g);
     el('polyline',{points:'-2,0 10,22',fill:'none',stroke:'#4A443F','stroke-width':2},g); break;
   case 'amber': el('circle',{r:24,fill:'#D69A3C',stroke:'#9C6A1E','stroke-width':2.5},g);
     el('ellipse',{cx:-8,cy:-9,rx:8,ry:5,fill:'#F3D08A'},g); el('circle',{r:4.5,fill:'#7A5216'},g); break;
