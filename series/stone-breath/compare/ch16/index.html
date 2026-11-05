@@ -46,19 +46,20 @@ body.only-l .cmp-row,body.only-l .cmp-heads{grid-template-columns:1fr}
 body.only-r .cmp-cell.l,body.only-r .cmp-hd.l{display:none}
 body.only-r .cmp-row,body.only-r .cmp-heads{grid-template-columns:1fr}
 body.diffs .cmp-row.same{display:none}
-.cmp-hero{position:relative;min-height:clamp(240px,42vh,440px);display:flex;align-items:flex-end;
- overflow:hidden}
+.cmp-hero{position:relative;min-height:clamp(230px,40vh,420px);display:flex;align-items:flex-end;
+ overflow:hidden;background:var(--bg)}
 .cmp-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .cmp-hero__scrim{position:absolute;inset:0;background:
- linear-gradient(to top,rgba(14,11,8,.92) 0%,rgba(14,11,8,.62) 46%,rgba(14,11,8,.26) 100%),
- linear-gradient(to right,rgba(14,11,8,.68) 0%,rgba(14,11,8,.22) 56%,rgba(14,11,8,0) 100%)}
-.cmp-hero h1,.cmp-hero .eyebrow,.cmp-hero__meta{text-shadow:0 2px 18px rgba(0,0,0,.6)}
-.cmp-hero__in{position:relative;padding:var(--space-5) 0 var(--space-3);color:#fff}
-.cmp-hero__in .eyebrow{color:var(--amber-soft)}
-.cmp-hero h1{color:#fff;margin:.1em 0 .18em;font-size:var(--step-4)}
-.cmp-hero__meta{font:400 .85rem/1.5 Inter,system-ui,sans-serif;color:rgba(255,255,255,.76)}
-.cmp-hero__cap{position:absolute;right:var(--space-3);bottom:.6rem;font:400 .68rem/1.3 Inter,sans-serif;
- letter-spacing:.06em;color:rgba(255,255,255,.58);text-align:right}
+ linear-gradient(100deg,color-mix(in srgb,var(--bg) 97%,transparent) 0%,
+ color-mix(in srgb,var(--bg) 90%,transparent) 36%,
+ color-mix(in srgb,var(--bg) 42%,transparent) 66%,
+ color-mix(in srgb,var(--bg) 6%,transparent) 100%)}
+.cmp-hero__in{position:relative;padding:var(--space-5) 0 var(--space-4);max-width:34ch}
+.cmp-hero__in .eyebrow{color:var(--amber)}
+.cmp-hero h1{margin:.08em 0 .2em;font-size:var(--step-4);color:var(--ink)}
+.cmp-hero__meta{font:400 .85rem/1.5 Inter,system-ui,sans-serif;color:var(--ink-soft)}
+.cmp-hero__cap{position:absolute;right:var(--space-3);bottom:.5rem;font:400 .66rem/1.3 Inter,sans-serif;
+ letter-spacing:.07em;color:color-mix(in srgb,var(--ink) 52%,transparent);text-align:right}
 .cmp-list{list-style:none;margin:var(--space-3) 0 0;padding:0;display:grid;gap:.6rem}
 .cmp-list a{display:grid;grid-template-columns:84px 1fr;gap:var(--space-2);align-items:center;
  text-decoration:none;background:var(--bg-panel);border:1px solid var(--rule);
