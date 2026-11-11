@@ -1,0 +1,58 @@
+PASS phone: title, description, no noindex  ["By Lamplight — the opening of The Amber and the Stone | The Ancestral Watch"]
+PASS phone: aw-gate, aw-listen and aw-readalong load
+PASS phone: read-along aligned 21 of 21 sentences  [[21,21]]
+PASS phone: the flicker is running before anything is pressed  [40]
+PASS phone: the lamp starts low and the voice is silent  [0.6]
+PASS phone: no horizontal scroll  [390]
+PASS phone: the glow breathes (distinct opacities in one second)  [13]
+PASS phone: pressing the lamp turns it up and starts the voice  [{"pressed":"true","cls":"lamp is-up was-up","target":1,"level":0.9496253881742588,"on":true,"t":1.918787}]
+PASS phone: the read-along is live on the page
+PASS phone: a sentence is lit near the start  [{"i":0,"text":"Five voices open the book.","word":"book."}]
+PASS phone: the current sentence has no box, only a warm halo  [{"bg":"rgba(0, 0, 0, 0)","shadow":true,"color":"rgb(30, 17, 6)"}]
+PASS phone: at 20.0 s the lit sentence is "The book hasn't been burned."  [{"i":9,"text":"The book hasn't been burned.","word":"burned."}]
+PASS phone: at 36.0 s the lit sentence is "A people can lose everything…"  [{"i":15,"text":"A people can lose everything — the land, the language, even the names — and still find their way home, so long as someone keeps the songs.","word":"the"}]
+PASS phone: the sentences before it rest at full ink (is-read)  [15]
+PASS phone: hidden tab: flicker stops, motes pause  [{"running":false,"f":8,"motes":"paused","cls":"lamp-html lamp-hidden"}]
+PASS phone: visible again: flicker resumes, motes drift  [{"running":true,"f":20,"motes":"running"}]
+PASS phone: room tone is off until pressed, on when pressed, off again  [{"on":true,"pressed":"true","txt":"on"}]
+PASS phone: pressing the lamp again pauses the voice and turns the lamp down  [{"paused":true,"pressed":"false","target":0.6}]
+PASS phone: when the reading ends the lamp settles low, all sentences at full ink  [{"target":0.6,"pressed":"false","read":21,"cur":0}]
+PASS phone: link out to the book page is on the page
+PASS phone: link out to the book page arrives  ["http://127.0.0.1:8137/series/by-lamplight/"]
+PASS phone: link out to chapter one is on the page
+PASS phone: link out to chapter one arrives  ["http://127.0.0.1:8137/read/"]
+PASS phone: no console errors, page errors or failed requests (the book page's MailerLite embed excepted)  [[]]
+PASS laptop: title, description, no noindex  ["By Lamplight — the opening of The Amber and the Stone | The Ancestral Watch"]
+PASS laptop: aw-gate, aw-listen and aw-readalong load
+PASS laptop: read-along aligned 21 of 21 sentences  [[21,21]]
+PASS laptop: the flicker is running before anything is pressed  [41]
+PASS laptop: the lamp starts low and the voice is silent  [0.6]
+PASS laptop: no horizontal scroll  [1440]
+PASS laptop: the glow breathes (distinct opacities in one second)  [16]
+PASS laptop: pressing the lamp turns it up and starts the voice  [{"pressed":"true","cls":"lamp is-up was-up","target":1,"level":0.9496253881742588,"on":true,"t":1.912103}]
+PASS laptop: the read-along is live on the page
+PASS laptop: a sentence is lit near the start  [{"i":0,"text":"Five voices open the book.","word":"book."}]
+PASS laptop: the current sentence has no box, only a warm halo  [{"bg":"rgba(0, 0, 0, 0)","shadow":true,"color":"rgb(30, 17, 6)"}]
+PASS laptop: at 20.0 s the lit sentence is "The book hasn't been burned."  [{"i":9,"text":"The book hasn't been burned.","word":"burned."}]
+PASS laptop: at 36.0 s the lit sentence is "A people can lose everything…"  [{"i":15,"text":"A people can lose everything — the land, the language, even the names — and still find their way home, so long as someone keeps the songs.","word":"the"}]
+PASS laptop: the sentences before it rest at full ink (is-read)  [15]
+PASS laptop: hidden tab: flicker stops, motes pause  [{"running":false,"f":9,"motes":"paused","cls":"lamp-html lamp-hidden"}]
+PASS laptop: visible again: flicker resumes, motes drift  [{"running":true,"f":21,"motes":"running"}]
+PASS laptop: room tone is off until pressed, on when pressed, off again  [{"on":true,"pressed":"true","txt":"on"}]
+PASS laptop: pressing the lamp again pauses the voice and turns the lamp down  [{"paused":true,"pressed":"false","target":0.6}]
+PASS laptop: when the reading ends the lamp settles low, all sentences at full ink  [{"target":0.6,"pressed":"false","read":21,"cur":0}]
+PASS laptop: link out to the book page is on the page
+PASS laptop: link out to the book page arrives  ["http://127.0.0.1:8137/series/by-lamplight/"]
+PASS laptop: link out to chapter one is on the page
+PASS laptop: link out to chapter one arrives  ["http://127.0.0.1:8137/read/"]
+PASS laptop: no console errors, page errors or failed requests (the book page's MailerLite embed excepted)  [[]]
+PASS /series/by-lamplight/: one "Read it by lamplight →" link  ["Read it by lamplight →"]
+PASS /series/by-lamplight/: the link arrives in the room  ["http://127.0.0.1:8137/lamplight/"]
+PASS /read/: one "Read it by lamplight →" link  ["Read it by lamplight →"]
+PASS /read/: the link arrives in the room  ["http://127.0.0.1:8137/lamplight/"]
+PASS the room's text is the book page's excerpt, word for word  [6]
+PASS links-in pages: no console errors (third-party form embeds excepted)  [["requestfailed: https://assets.mailerlite.com/js/universal.js","console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED","requestfailed: https://assets.mailerlite.com/js/universal.js","console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"]]
+PASS reduced motion: the lamp holds still, lit, and the motes rest  [{"reduced":true,"running":false,"motes":"none","glow":"0.77"}]
+PASS the phone film is 20 to 30 seconds long  ["29.5 s"]
+
+56 passed, 0 failed
