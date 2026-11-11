@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Stone Breath — Seven · The Talka — side by side</title>
+<meta name="description" content="Chapter 7 of Stone Breath, the edited version beside the published one.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/style.css?v=5">
+<link rel="stylesheet" href="/assets/daylight.css?v=8">
+<link rel="stylesheet" href="/css/aw-world.css?v=20261105">
+<style>
+.cmp{--in:color-mix(in srgb,var(--amber) 15%,transparent);
+     --out:color-mix(in srgb,var(--ink) 6%,transparent)}
+.cmp-bar{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);
+ backdrop-filter:blur(9px);border-bottom:1px solid var(--rule);padding:.6rem 0;margin-bottom:var(--space-2)}
+.cmp-bar__in{display:flex;gap:.45rem;flex-wrap:wrap;align-items:center}
+.cmp-btn{font:500 .8rem/1 Inter,system-ui,sans-serif;letter-spacing:.03em;padding:.52rem .9rem;
+ border:1px solid var(--rule);border-radius:999px;background:var(--bg-panel);color:var(--ink);
+ cursor:pointer;text-decoration:none;display:inline-block;transition:.18s}
+.cmp-btn:hover{border-color:var(--amber)}
+.cmp-btn.on{background:var(--amber);border-color:var(--amber);color:#fff}
+.cmp-sp{flex:1 1 auto}
+.cmp-heads{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);margin:var(--space-3) 0 .2rem}
+.cmp-hd{font:500 .68rem/1.3 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+ color:var(--ink-soft);padding-bottom:.45rem;border-bottom:1px solid var(--rule)}
+.cmp-hd b{color:var(--amber);font-weight:500}
+.cmp-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);align-items:start;margin-bottom:.15rem}
+.cmp-cell{padding:.55rem .85rem;border-radius:var(--radius)}
+.cmp-row.chg .cmp-cell.l{background:var(--in);box-shadow:inset 3px 0 0 var(--amber)}
+.cmp-row.chg .cmp-cell.r{background:var(--out);box-shadow:inset 3px 0 0 var(--rule)}
+.cmp-cell p{margin:0;font-size:var(--step-0);line-height:1.68}
+.cmp-cell.gone{opacity:.42;font-style:italic;color:var(--ink-soft)}
+.cmp-cell.gone:after{content:"— not in this version";font-size:var(--step--1)}
+.cmp-hh{font:500 .72rem/1.4 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+ color:var(--amber);text-align:center;margin:1.2em 0 .5em}
+.cmp-orn{text-align:center;color:var(--amber);letter-spacing:.55em;margin:1em 0}
+mark{background:none;color:inherit;padding:0}
+.cmp-row.chg mark.in{background:color-mix(in srgb,var(--amber) 34%,transparent);border-radius:3px;padding:0 .14em}
+.cmp-row.chg mark.out{background:color-mix(in srgb,var(--ink) 11%,transparent);border-radius:3px;padding:0 .14em}
+body.only-l .cmp-cell.r,body.only-l .cmp-hd.r{display:none}
+body.only-l .cmp-row,body.only-l .cmp-heads{grid-template-columns:1fr}
+body.only-r .cmp-cell.l,body.only-r .cmp-hd.l{display:none}
+body.only-r .cmp-row,body.only-r .cmp-heads{grid-template-columns:1fr}
+body.diffs .cmp-row.same{display:none}
+.cmp-hero{position:relative;min-height:clamp(230px,40vh,420px);display:flex;align-items:flex-end;
+ overflow:hidden;background:var(--bg)}
+.cmp-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cmp-hero__scrim{position:absolute;inset:0;background:
+ linear-gradient(100deg,color-mix(in srgb,var(--bg) 97%,transparent) 0%,
+ color-mix(in srgb,var(--bg) 90%,transparent) 36%,
+ color-mix(in srgb,var(--bg) 42%,transparent) 66%,
+ color-mix(in srgb,var(--bg) 6%,transparent) 100%)}
+.cmp-hero__in{position:relative;padding-block:var(--space-5) var(--space-4)}
+.cmp-hero__in>*{max-width:34ch}
+.cmp-hero__in .eyebrow{color:var(--amber)}
+.cmp-hero h1{margin:.08em 0 .2em;font-size:var(--step-4);color:var(--ink)}
+.cmp-hero__meta{font:400 .85rem/1.5 Inter,system-ui,sans-serif;color:var(--ink-soft)}
+.cmp-hero__cap{position:absolute;right:var(--space-3);bottom:.5rem;font:400 .66rem/1.3 Inter,sans-serif;
+ letter-spacing:.07em;color:color-mix(in srgb,var(--ink) 52%,transparent);text-align:right}
+.cmp-list{list-style:none;margin:var(--space-3) 0 0;padding:0;display:grid;gap:.6rem}
+.cmp-list a{display:grid;grid-template-columns:84px 1fr;gap:var(--space-2);align-items:center;
+ text-decoration:none;background:var(--bg-panel);border:1px solid var(--rule);
+ border-radius:var(--radius-lg);padding:.6rem;transition:.18s}
+.cmp-list a:hover{border-color:var(--amber);transform:translateY(-1px)}
+.cmp-list img{width:84px;height:62px;object-fit:cover;border-radius:calc(var(--radius) - 2px)}
+.cmp-list b{font-family:var(--font-display);font-weight:500;font-size:var(--step-1);color:var(--ink)}
+.cmp-list span{display:block;font:400 .78rem/1.45 Inter,sans-serif;color:var(--ink-soft);margin-top:.12rem}
+.vrow{background:var(--bg-panel);border:1px solid var(--rule);border-radius:var(--radius-lg);
+ padding:.8rem 1rem;margin-bottom:.55rem}
+.vrow b{font-family:var(--font-display);font-weight:500;font-size:var(--step-1)}
+.vrow i{display:block;font-style:normal;font:400 .8rem/1.4 Inter,sans-serif;color:var(--ink-soft);margin:.1rem 0 .5rem}
+.vrow audio{width:100%;height:36px}
+@media (max-width:860px){
+ .cmp-row,.cmp-heads{gap:.55rem}
+ .cmp-cell{padding:.45rem .55rem}
+ .cmp-cell p{font-size:.86rem;line-height:1.56}
+ .cmp-list a{grid-template-columns:62px 1fr}
+ .cmp-list img{width:62px;height:50px}}
+</style></head>
+<body class="cmp" data-sound-src="/assets/audio/wc/bed-stone-breath-creek.mp3" data-sound-name="the creek">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <nav class="nav wrap wrap--wide" aria-label="Primary">
+      <a class="brand" href="/"><img class="brand__logo" src="/assets/img/author-logo.png?v=2" alt="AncestralWatch logo" width="716" height="676"><span class="brand__wm">Ancestral<span class="brand__mark">Watch</span></span></a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">☰</button>
+      <ul class="nav__links" id="primary-nav" data-open="false">
+        <li><a href="/">Home</a></li>
+        <li><a href="/lamplight/">Reading Room</a></li>
+        <li class="has-menu">
+          <button aria-expanded="false" aria-haspopup="true">The Series</button>
+          <ul class="menu">
+            <li><a href="/series/"><span class="menu__num">All</span> The Series</a></li>
+            <li><a href="/series/stone-breath/" aria-current="page"><span class="menu__num">I</span> Stone Breath</a></li>
+            <li><a href="/series/by-lamplight/"><span class="menu__num">II</span> The Amber and the Stone</a></li>
+            <li><a href="/series/the-council-fire/"><span class="menu__num">III</span> The Council Fire</a></li>
+            <li><a href="/series/the-far-messengers/"><span class="menu__num">IV</span> The Far Messengers</a></li>
+            <li><a href="/reader/"><span class="menu__num">&mdash;</span> The Reader</a></li>
+          <li><a href="/start-here/">Start Here</a></li><li><a href="/read/stone-breath/">Read Free</a></li></ul>
+        </li>
+        <li><a href="/tools/">The Tools</a></li><li><a href="https://tribeawaken.com/" target="_blank" rel="noopener">TribeAwaken ↗</a></li>
+        <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+        <li><a href="/author/">The Author</a></li>
+        <li><a class="lang-toggle" href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a class="lang-toggle" href="/lt/" hreflang="lt" lang="lt" style="border-left:0;padding-left:0;">Lietuvių</a></li>
+        <li class="nav__cta"><a class="btn btn--primary" href="https://payhip.com/b/AhH6r" target="_blank" rel="noopener">Get the Book</a></li>
+      </ul>
+    </nav>
+
+  <div class="aw-langbar" aria-label="Languages">
+    <div class="wrap wrap--wide aw-langbar__in">
+      <p class="aw-langbar__lbl">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15 0 18M12 3c-2.6 2.6-2.6 15 0 18"/>
+        </svg><span>Read in</span>
+      </p>
+      <a href="/" data-lang="en" hreflang="en">English</a>
+      <a href="/ja/" data-lang="/ja/" hreflang="ja" lang="ja">日本語</a>
+      <a href="/lt/" data-lang="/lt/" hreflang="lt" lang="lt">Lietuvių</a>
+      <a class="aw-langbar__mail" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+  </header>
+<main id="main">
+
+<section class="cmp-hero">
+  <img src="/assets/img/wc/slickrock-group.jpg" alt="Talka — the work done together" fetchpriority="high">
+  <div class="cmp-hero__scrim"></div>
+  <div class="wrap wrap--wide cmp-hero__in">
+    <p class="eyebrow">Stone Breath · side by side · chapter 7</p>
+    <h1><em>The Talka</em></h1>
+    <p class="cmp-hero__meta">9 paragraphs differ · 29 identical</p>
+  </div>
+  <p class="cmp-hero__cap">photograph by Tony Skrelūnas</p>
+</section>
+
+<div class="cmp-bar"><div class="wrap wrap--wide cmp-bar__in">
+  <button class="cmp-btn" data-m="b">Both</button>
+  <button class="cmp-btn" data-m="l">Edited</button>
+  <button class="cmp-btn" data-m="r">Current</button>
+  <button class="cmp-btn" id="dbtn">Changes only</button>
+  <span class="cmp-sp"></span>
+  <a class="cmp-btn" href="../">All chapters</a><a class="cmp-btn" href="../ch06/">← Six</a><a class="cmp-btn" href="../ch08/">Eight →</a>
+</div></div>
+
+<section class="section section--tight"><div class="wrap wrap--wide">
+  <div class="cmp-heads"><div class="cmp-hd l"><b>Edited</b> — the new one</div>
+  <div class="cmp-hd r">Published — Draft2Digital, September 7 2026</div></div>
+  <div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">CHAPTER 7</div></div><div class="cmp-cell r"><div class="cmp-hh">CHAPTER 7</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">THE TALKA</div></div><div class="cmp-cell r"><div class="cmp-hh">THE TALKA</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">✵   ✵   ✵</div></div><div class="cmp-cell r"><div class="cmp-hh">✵   ✵   ✵</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Vienas – mažas, kartu – dideli.&quot; – Alone we are small, together we are great. Talka chant</p></div><div class="cmp-cell r"><p>&quot;Vienas – mažas, kartu – dideli.&quot; – Alone we are small, together we are great. Talka chant</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Many hands make the mountain move.” — Japanese proverb</p></div><div class="cmp-cell r"><p>“Many hands make the mountain move.” — Japanese proverb</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Forty-seven people showed up. I had attended chapter house meetings with six. I didn’t know if this was a Lithuanian miracle or if Austėja had something on all of them. Probably both.” — Tonas Yazzie</p></div><div class="cmp-cell r"><p>“Forty-seven people showed up. I had attended chapter house meetings with six. I didn’t know if this was a Lithuanian miracle or if Austėja had something on all of them. Probably both.” — Tonas Yazzie</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The call came at dawn.</p></div><div class="cmp-cell r"><p>The call came at dawn.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas was on the porch when his phone buzzed. Austėja&#x27;s voice was calm – the calm of someone who had already assessed and moved to action. &quot;The heritage center roof collapsed last night. The building is compromised.&quot;</p></div><div class="cmp-cell r"><p>Tonas was on the porch when his phone buzzed. Austėja&#x27;s voice was calm – the calm of someone who had already assessed and moved to action. &quot;The heritage center roof collapsed last night. The building is compromised.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He stood up. &quot;Are you hurt?&quot; &quot;No. The archives are safe – fireproof containers. My grandmother taught me that.&quot; A pause. &quot;I&#x27;m calling a talka. Do you want to see how we do it?&quot; He smiled. &quot;I&#x27;ll be there in ten minutes.&quot;</p></div><div class="cmp-cell r"><p>He stood up. &quot;Are you hurt?&quot; &quot;No. The archives are safe – fireproof containers. My grandmother taught me that.&quot; A pause. &quot;I&#x27;m calling a talka. Do you want to see how we do it?&quot; He smiled. &quot;I&#x27;ll be there in ten minutes.&quot;</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>When he arrived the mill was already surrounded by people, <mark class="in">and it was</mark> not chaos <mark class="in">but</mark> order <mark class="in">—</mark> Old Jonas directing a crew to tarp the exposed roof, the baker <mark class="in">setting</mark> up a table with coffee and bread, children <mark class="in">running</mark> buckets of water away from the archive room.</p></div><div class="cmp-cell r"><p>When he arrived, the mill was already surrounded by people. Not chaos <mark class="out">–</mark> order. Old Jonas <mark class="out">was</mark> directing a crew to tarp the exposed roof. The baker <mark class="out">had set</mark> up a table with coffee and bread. Children <mark class="out">ran</mark> buckets of water away from the archive room.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>And standing near the foundation, inspecting the crack with a flashlight, was an old man Tonas hadn&#x27;t met before, thin <mark class="in">and</mark> weathered, with hands that looked like tree roots, a wool vest, and a cap pulled low.</p></div><div class="cmp-cell r"><p>And standing near the foundation, inspecting the crack with a flashlight, was an old man Tonas hadn&#x27;t met before. <mark class="out">He was</mark> thin, weathered, with hands that looked like tree roots. <mark class="out">He wore</mark> a wool vest and a cap pulled low.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja saw Tonas and waved him over. &quot;This is my mother&#x27;s cousin, Rytis. He&#x27;s the one who taught me how to store the recordings.&quot;</p></div><div class="cmp-cell r"><p>Austėja saw Tonas and waved him over. &quot;This is my mother&#x27;s cousin, Rytis. He&#x27;s the one who taught me how to store the recordings.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Rytis looked up. His eyes were pale blue, almost gray. He studied Tonas for a long moment. &quot;Vytautas&#x27;s grandson,&quot; he said. Not a question. &quot;Yes.&quot; Rytis nodded slowly. &quot;Ona told us about all of you. For years. Every letter that came, she&#x27;d carry the news through the village — where the family had settled. Michigan. Los Angeles. Oregon. Palm Springs. Who married. Who was born.&quot; A faint smile. &quot;She even told us about the Navajo grandchild. We knew about you before you could walk.&quot; He tapped the foundation with his boot. &quot;When Ona&#x27;s eyes began to fail, she let me put the letters in the archive. Fireproof. Waterproof. This building can fall. Those letters won&#x27;t.&quot; Tonas felt something loosen in his chest. &quot;Thank you.&quot; Rytis shrugged. &quot;That&#x27;s what cousins are for.&quot; He turned back to the foundation. &quot;Now, let me show you how we do a talka. You think you know community? Watch.&quot;</p></div><div class="cmp-cell r"><p>Rytis looked up. His eyes were pale blue, almost gray. He studied Tonas for a long moment. &quot;Vytautas&#x27;s grandson,&quot; he said. Not a question. &quot;Yes.&quot; Rytis nodded slowly. &quot;Ona told us about all of you. For years. Every letter that came, she&#x27;d carry the news through the village — where the family had settled. Michigan. Los Angeles. Oregon. Palm Springs. Who married. Who was born.&quot; A faint smile. &quot;She even told us about the Navajo grandchild. We knew about you before you could walk.&quot; He tapped the foundation with his boot. &quot;When Ona&#x27;s eyes began to fail, she let me put the letters in the archive. Fireproof. Waterproof. This building can fall. Those letters won&#x27;t.&quot; Tonas felt something loosen in his chest. &quot;Thank you.&quot; Rytis shrugged. &quot;That&#x27;s what cousins are for.&quot; He turned back to the foundation. &quot;Now, let me show you how we do a talka. You think you know community? Watch.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Day One – The Gathering</p></div><div class="cmp-cell r"><p>Day One – The Gathering</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Three days later, forty-seven people showed up. They came from Antalieptė and Padustis and half a dozen smaller villages Tonas had never heard of. They came with tools and food and children and questions. They came because the word had spread – talka – and something in them woke up.</p></div><div class="cmp-cell r"><p>Three days later, forty-seven people showed up. They came from Antalieptė and Padustis and half a dozen smaller villages Tonas had never heard of. They came with tools and food and children and questions. They came because the word had spread – talka – and something in them woke up.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja stood at the edge of the crowd, stunned. &quot;Forty-seven. I haven&#x27;t seen forty-seven people in this town since – I don&#x27;t know when.&quot; Tonas smiled. &quot;Told you.&quot; &quot;You didn&#x27;t tell me. You just believed.&quot; &quot;That&#x27;s the same thing.&quot;</p></div><div class="cmp-cell r"><p>Austėja stood at the edge of the crowd, stunned. &quot;Forty-seven. I haven&#x27;t seen forty-seven people in this town since – I don&#x27;t know when.&quot; Tonas smiled. &quot;Told you.&quot; &quot;You didn&#x27;t tell me. You just believed.&quot; &quot;That&#x27;s the same thing.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Before anyone picked up a hammer, Austėja gathered them in a circle. &quot;My grandmother taught me this. Before you build, you breathe.&quot; Forty-seven people stood in a circle around the ruined mill. They held hands. They closed their eyes. &quot;Breathe in, light and easy. Feel the forest. Breathe out, slow. Let go of what you&#x27;re carrying.&quot; They breathed together. In. Out. In. Out.</p></div><div class="cmp-cell r"><p>Before anyone picked up a hammer, Austėja gathered them in a circle. &quot;My grandmother taught me this. Before you build, you breathe.&quot; Forty-seven people stood in a circle around the ruined mill. They held hands. They closed their eyes. &quot;Breathe in, light and easy. Feel the forest. Breathe out, slow. Let go of what you&#x27;re carrying.&quot; They breathed together. In. Out. In. Out.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas closed his eyes. For a moment, he wasn&#x27;t in Lithuania. He was on the reservation, standing in a circle of elders, breathing before the work began. Same breath. Same intention. Same prayer. Different forest.</p></div><div class="cmp-cell r"><p>Tonas closed his eyes. For a moment, he wasn&#x27;t in Lithuania. He was on the reservation, standing in a circle of elders, breathing before the work began. Same breath. Same intention. Same prayer. Different forest.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>That evening, after the first day of work, Tonas and Austėja sat on the mill steps. The sun was low. The smell of wood smoke and baking bread filled the air. &quot;You&#x27;re staying,&quot; she said. Not a question. &quot;I think so. For a while.&quot; &quot;Why?&quot; He looked at the mill. At the people still moving around, cleaning up, laughing. &quot;I don&#x27;t know yet. Something here feels... familiar.&quot; She didn&#x27;t push. They sat in silence. The river moved.</p></div><div class="cmp-cell r"><p>That evening, after the first day of work, Tonas and Austėja sat on the mill steps. The sun was low. The smell of wood smoke and baking bread filled the air. &quot;You&#x27;re staying,&quot; she said. Not a question. &quot;I think so. For a while.&quot; &quot;Why?&quot; He looked at the mill. At the people still moving around, cleaning up, laughing. &quot;I don&#x27;t know yet. Something here feels... familiar.&quot; She didn&#x27;t push. They sat in silence. The river moved.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Day Two – The Teaching</p></div><div class="cmp-cell r"><p>Day Two – The Teaching</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>The roof was framed by midday <mark class="in">and</mark> the foundation was braced with concrete, <mark class="in">and</mark> the talka was not just fixing a building <mark class="in">—</mark> it was rebuilding the village&#x27;s sense of itself.</p></div><div class="cmp-cell r"><p>The roof was framed by midday. The foundation was braced with concrete. The talka was not just fixing a building <mark class="out">–</mark> it was rebuilding the village&#x27;s sense of itself.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>At lunch, Rytis found Tonas sitting alone near the river. &quot;You look like a man trying to solve a puzzle.&quot; &quot;Maybe.&quot; &quot;What&#x27;s the puzzle?&quot; Tonas was quiet for a moment. &quot;Why do I feel like I belong here? I&#x27;ve never been to this country before. I don&#x27;t speak the language. But when I woke up this morning, I smelled the pine and the river, and I thought – I&#x27;ve been here before.&quot;</p></div><div class="cmp-cell r"><p>At lunch, Rytis found Tonas sitting alone near the river. &quot;You look like a man trying to solve a puzzle.&quot; &quot;Maybe.&quot; &quot;What&#x27;s the puzzle?&quot; Tonas was quiet for a moment. &quot;Why do I feel like I belong here? I&#x27;ve never been to this country before. I don&#x27;t speak the language. But when I woke up this morning, I smelled the pine and the river, and I thought – I&#x27;ve been here before.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Rytis nodded slowly. &quot;You have. Not you. Your blood.&quot; He picked up a small stone and turned it over in his fingers. &quot;In Lithuania, we say the land remembers. But the Diné – your people – you have a teaching about this, don&#x27;t you?&quot; Tonas looked at him. &quot;How do you know about that?&quot; Rytis smiled. &quot;I read. Your grandfather&#x27;s letters mentioned it. The umbilical cord.&quot;</p></div><div class="cmp-cell r"><p>Rytis nodded slowly. &quot;You have. Not you. Your blood.&quot; He picked up a small stone and turned it over in his fingers. &quot;In Lithuania, we say the land remembers. But the Diné – your people – you have a teaching about this, don&#x27;t you?&quot; Tonas looked at him. &quot;How do you know about that?&quot; Rytis smiled. &quot;I read. Your grandfather&#x27;s letters mentioned it. The umbilical cord.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas felt his chest tighten. &quot;Yes. When a Navajo child is born, the umbilical cord is buried in the earth of their homeland. It ties you to that place for life. No matter where you go, that land is yours. You can always come home.&quot; Rytis placed the stone in Tonas&#x27;s hand. &quot;Your grandfather&#x27;s cord was buried here. In this forest. Under an oak that no longer stands. But the earth remembers. That&#x27;s why you feel at home. You are home.&quot; Tonas stared at the stone. His hand was shaking. &quot;He never told me.&quot; &quot;Some things can&#x27;t be told. They have to be felt.&quot;</p></div><div class="cmp-cell r"><p>Tonas felt his chest tighten. &quot;Yes. When a Navajo child is born, the umbilical cord is buried in the earth of their homeland. It ties you to that place for life. No matter where you go, that land is yours. You can always come home.&quot; Rytis placed the stone in Tonas&#x27;s hand. &quot;Your grandfather&#x27;s cord was buried here. In this forest. Under an oak that no longer stands. But the earth remembers. That&#x27;s why you feel at home. You are home.&quot; Tonas stared at the stone. His hand was shaking. &quot;He never told me.&quot; &quot;Some things can&#x27;t be told. They have to be felt.&quot;</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>That night Tonas walked alone to the oak where he had given Ona the book, the moon high <mark class="in">and</mark> the river silver, <mark class="in">and</mark> he knelt at the base of the tree. “Grandfather,” he said. “I didn&#x27;t know. I&#x27;m sorry I didn&#x27;t know.” He stayed there a long time, <mark class="in">and</mark> when he finally stood something had shifted <mark class="in">—</mark> the weight in his chest was lighter, <mark class="in">and</mark> the forest did not feel foreign anymore. It felt like home.</p></div><div class="cmp-cell r"><p>That night, Tonas walked alone to the oak where he had given Ona the book. The moon <mark class="out">was</mark> high. The river <mark class="out">was</mark> silver. He knelt at the base of the tree. &quot;Grandfather,&quot; he said. &quot;I didn&#x27;t know. I&#x27;m sorry I didn&#x27;t know.&quot; He stayed there <mark class="out">for</mark> a long time. When he finally stood, something had shifted. The weight in his chest was lighter. The forest did not feel foreign anymore. It felt like home.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Day Three – The Singing and the Dance</p></div><div class="cmp-cell r"><p>Day Three – The Singing and the Dance</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>The work was finished by midday, the roof repaired, the foundation solid, the archive safe. But no one left.</p></div><div class="cmp-cell r"><p>The work was finished by midday. The roof <mark class="out">was</mark> repaired. The foundation <mark class="out">was</mark> solid. The archive <mark class="out">was</mark> safe. But no one left.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>The tables were spread with food <mark class="in">—</mark> casseroles, breads, pickles, meats <mark class="in">— and</mark> then the old women began to sing. Not loudly. Not for performance. <mark class="in">They sang</mark> the way Masan used to hum while she ground corn, the way Ada sang to the sheep when she thought no one was listening, <mark class="in">the</mark> ancient songs, <mark class="in">the</mark> dainos, the kind you sing among the grass <mark class="in">and</mark> among the animals as you do your chores. Songs that don&#x27;t need an audience. Songs that are just part of breathing.</p></div><div class="cmp-cell r"><p>The tables were spread with food <mark class="out">–</mark> casseroles, breads, pickles, meats. Then the old women began to sing. Not loudly. Not for performance. The way Masan used to hum while she ground corn. The way Ada sang to the sheep when she thought no one was listening. Ancient songs <mark class="out">–</mark> dainos <mark class="out">–</mark> the kind you sing among the grass, among the animals, as you do your chores. Songs that don&#x27;t need an audience. Songs that are just part of breathing.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>Tonas closed his eyes <mark class="in">and</mark> the sound wrapped around him, <mark class="in">and</mark> it was the sound of people who had buried their dead, lost their land, watched their language nearly disappear, and kept singing anyway. He thought of home <mark class="in">—</mark> the summer social dances after the harvest, when the lambs were growing and the corn fields were tall and green, the long days, the whole community gathered, the old ones singing while the young ones danced. Not ceremony. Just joy. Just being together. Same thing, he thought. Different words. Same thing.</p></div><div class="cmp-cell r"><p>Tonas closed his eyes. The sound wrapped around him. It was the sound of people who had buried their dead, lost their land, watched their language nearly disappear, and kept singing anyway. He thought of home. The summer social dances after the harvest, when the lambs were growing and the corn fields were tall and green. The long days, the whole community gathered, the old ones singing while the young ones danced. Not ceremony. Just joy. Just being together. Same thing, he thought. Different words. Same thing.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>After a while a small, wiry woman with silver hair stood up, <mark class="in">and</mark> she looked at Tonas, <mark class="in">and</mark> she smiled, <mark class="in">and</mark> then she began to sing a new song, different from the others. He didn&#x27;t understand the words but he understood the shape. It was a daina of welcome, of gratitude, of naming <mark class="in">—</mark> she was singing about him, the stranger who came with a book, the grandson of Vytautas, the runner who ran with the stone. When she finished the whole yard clapped, <mark class="in">and</mark> Tonas felt his throat tighten.</p></div><div class="cmp-cell r"><p>After a while, a small, wiry woman with silver hair stood up. She looked at Tonas. She smiled. Then she began to sing a new song <mark class="out">–</mark> different from the others. He didn&#x27;t understand the words. But he understood the shape. It was a daina of welcome, of gratitude, of naming. She was singing about him. The stranger who came with a book. The grandson of Vytautas. The runner who ran with the stone. When she finished, the whole yard clapped. Tonas felt his throat tighten.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Rytis nudged him. &quot;You have to give something back. That&#x27;s the rule.&quot; Tonas nodded. He walked to the center of the yard. &quot;I have a song too,&quot; he said. &quot;Not a daina. Something from my home.&quot;</p></div><div class="cmp-cell r"><p>Rytis nudged him. &quot;You have to give something back. That&#x27;s the rule.&quot; Tonas nodded. He walked to the center of the yard. &quot;I have a song too,&quot; he said. &quot;Not a daina. Something from my home.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Skip Dance</p></div><div class="cmp-cell r"><p>The Skip Dance</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;On the reservation, we have a dance called the Skip Dance. It&#x27;s not complicated. You don&#x27;t need to be good. You just need to be willing to look foolish.&quot; Laughter. Good. He had them. He demonstrated. A simple step – hop, step, hop, step – moving in a circle. Hands loose. No fancy footwork. &quot;The men dance first,&quot; he said. &quot;The women watch. Then the women choose. And if a woman chooses you, you have to dance with her. And you have to pay her.&quot; &quot;Pay her what?&quot; someone called out. Tonas grinned. &quot;Whatever she wants. That&#x27;s the tradition.&quot;</p></div><div class="cmp-cell r"><p>&quot;On the reservation, we have a dance called the Skip Dance. It&#x27;s not complicated. You don&#x27;t need to be good. You just need to be willing to look foolish.&quot; Laughter. Good. He had them. He demonstrated. A simple step – hop, step, hop, step – moving in a circle. Hands loose. No fancy footwork. &quot;The men dance first,&quot; he said. &quot;The women watch. Then the women choose. And if a woman chooses you, you have to dance with her. And you have to pay her.&quot; &quot;Pay her what?&quot; someone called out. Tonas grinned. &quot;Whatever she wants. That&#x27;s the tradition.&quot;</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>More laughter. The men began to form a circle, hesitant at first <mark class="in">and</mark> then eager, <mark class="in">and</mark> Tonas turned to a group of teenagers leaning against the mill wall. “Young men. I&#x27;ll teach you a song. You sing it while the men dance. Then I can rest.” He taught them a simple Navajo tune, three notes, repeating, call and response, <mark class="in">and</mark> they picked it up in minutes, their voices raw, untrained, perfect. The men danced. The young men sang. The women watched, arms crossed, smiling. One by one the women stepped into the circle, tapped a man on the shoulder, and pulled him out, <mark class="in">and</mark> each man had to pay <mark class="in">—</mark> a coin, a piece of bread, a promise to help with something later <mark class="in">— and</mark> the crowd roared with each payment. Tonas stood at the edge, laughing, clapping.</p></div><div class="cmp-cell r"><p>More laughter. The men began to form a circle, hesitant at first, then eager. Tonas turned to a group of teenagers leaning against the mill wall. &quot;Young men. I&#x27;ll teach you a song. You sing it while the men dance. Then I can rest.&quot; He taught them a simple Navajo tune <mark class="out">–</mark> three notes, repeating. Call and response. They picked it up in minutes. Their voices <mark class="out">were</mark> raw, untrained, perfect. The men danced. The young men sang. The women watched, arms crossed, smiling. One by one, the women stepped into the circle, tapped a man on the shoulder, and pulled him out. Each man had to pay <mark class="out">–</mark> a coin, a piece of bread, a promise to help with something later. The crowd roared with each payment. Tonas stood at the edge, laughing, clapping.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Invitation</p></div><div class="cmp-cell r"><p>The Invitation</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Then Austėja appeared beside him. &quot;You&#x27;re not dancing.&quot; &quot;I&#x27;m watching.&quot; &quot;That&#x27;s not the same.&quot; She held out her hand. &quot;Dance with me.&quot; The yard went quiet for just a second – then the young men kept singing, and the circle kept turning, and Tonas took her hand. They danced. Nothing romantic. Just two people moving together, stepping in rhythm, laughing when they got it wrong. The way people have always danced – clumsy, joyful, human.</p></div><div class="cmp-cell r"><p>Then Austėja appeared beside him. &quot;You&#x27;re not dancing.&quot; &quot;I&#x27;m watching.&quot; &quot;That&#x27;s not the same.&quot; She held out her hand. &quot;Dance with me.&quot; The yard went quiet for just a second – then the young men kept singing, and the circle kept turning, and Tonas took her hand. They danced. Nothing romantic. Just two people moving together, stepping in rhythm, laughing when they got it wrong. The way people have always danced – clumsy, joyful, human.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>When the song ended, the yard erupted in applause. Tonas bowed. Austėja shook her head. &quot;You owe me,&quot; she said. &quot;For what?&quot; &quot;For dancing with you. The man pays, remember?&quot; He laughed. &quot;What do you want?&quot; She looked at him. Then at the mill. Then at the people still laughing, still eating, still holding each other. &quot;Stay,&quot; she said. &quot;That&#x27;s what I want. Stay and learn about your other half.&quot;</p></div><div class="cmp-cell r"><p>When the song ended, the yard erupted in applause. Tonas bowed. Austėja shook her head. &quot;You owe me,&quot; she said. &quot;For what?&quot; &quot;For dancing with you. The man pays, remember?&quot; He laughed. &quot;What do you want?&quot; She looked at him. Then at the mill. Then at the people still laughing, still eating, still holding each other. &quot;Stay,&quot; she said. &quot;That&#x27;s what I want. Stay and learn about your other half.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Chapter 10: The Envy Protocol</p></div><div class="cmp-cell r"><p>Chapter 10: The Envy Protocol</p></div></div>
+  <p class="muted" style="margin-top:var(--space-4);font-size:var(--step--1);max-width:60ch">
+  Gold marks what the edited version added or changed; gray marks the words it replaced.
+  The right column is the text on Payhip and Barnes &amp; Noble today. Nothing here is published.</p>
+</div></section>
+</main>
+<footer class="site-footer">
+    <div class="wrap wrap--wide">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">AncestralWatch</p>
+          <p class="footer__tag">Instructions, carried.</p>
+          <p style="margin-top: var(--space-2); max-width: 34ch;">The home of The Ancestral Watch Series by Tony Skrelūnas.</p>
+        </div>
+        <div>
+          <h4>The Series</h4>
+          <ul>
+            <li><a href="/series/stone-breath/">Stone Breath</a></li>
+            <li><a href="/series/the-council-fire/">The Council Fire</a></li>
+            <li><a href="/series/">All four books</a></li>
+            <li><a href="/tools/">The free Tools</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/far-messengers/">The Far Messengers (brand)</a></li>
+            <li><a href="/author/">The Author</a></li>
+            <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+            <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/lt/" hreflang="lt" lang="lt">Lietuvių</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>© 2026 Ancestral Watch · Tony Skrelūnas. All rights reserved.</span>
+        <span>Instructions, carried.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/js/main.js?v=11" defer></script>
+<script src="/js/vendor/gsap.min.js"></script>
+<script src="/js/vendor/ScrollTrigger.min.js"></script>
+<script src="/js/vendor/lenis.min.js"></script>
+<script src="/js/aw-world.js?v=20261105"></script>
+<script>
+(function(){var b=document.body;
+ function set(m){b.classList.remove('only-l','only-r');
+  if(m==='l')b.classList.add('only-l');if(m==='r')b.classList.add('only-r');
+  document.querySelectorAll('[data-m]').forEach(function(x){x.classList.toggle('on',x.dataset.m===m)});
+  try{localStorage.setItem('sbcmp-m',m)}catch(e){}}
+ function diffs(on){b.classList.toggle('diffs',on);
+  var t=document.getElementById('dbtn');if(t)t.classList.toggle('on',on);
+  try{localStorage.setItem('sbcmp-d',on?'1':'')}catch(e){}}
+ document.querySelectorAll('[data-m]').forEach(function(x){x.onclick=function(){set(x.dataset.m)}});
+ var d=document.getElementById('dbtn');
+ if(d)d.onclick=function(){diffs(!b.classList.contains('diffs'))};
+ var m='b',dd=false;
+ try{m=localStorage.getItem('sbcmp-m')||'b';dd=!!localStorage.getItem('sbcmp-d')}catch(e){}
+ set(m);diffs(dd);})();
+</script>
+<script src="/js/aw-gate.js?v=1" defer></script>
+</body></html>
