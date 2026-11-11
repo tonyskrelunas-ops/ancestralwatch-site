@@ -1,0 +1,48 @@
+[calm-phone] switch appears: Masculine:true · Feminine:false
+[calm-phone] read-along aligned: the-calm-you-already-stored:true
+[calm-phone] switch while playing: sentence 2 at 5.95s (masculine) -> sentence 2 at 5.39s (feminine, sentence starts 5.38s), still playing: true, pressed: Feminine => KEPT
+[calm-phone] seek to 53.64s (feminine sentence 12): lit sentence 12 => RIGHT
+[calm-phone] seek to 140.83s (feminine sentence 28): lit sentence 28 => RIGHT
+[calm-phone] after reload: aw.voice=f, pressed=Feminine, src=/assets/audio/readings/the-calm-you-already-stored.f.m4a => PERSISTED
+[calm-phone] reloaded page plays feminine from 1.82s, lit sentence 0, expected 0 => RIGHT
+[calm-phone] console errors: console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED | console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
+[stone-breath-phone] switch appears: Masculine:true · Feminine:false
+[stone-breath-phone] read-along aligned: stone-breath-excerpt:true
+[stone-breath-phone] switch while playing: sentence 2 at 5.01s (masculine) -> sentence 2 at 4.57s (feminine, sentence starts 4.54s), still playing: true, pressed: Feminine => KEPT
+[stone-breath-phone] seek to 41.75s (feminine sentence 15): lit sentence 15 => RIGHT
+[stone-breath-phone] seek to 91.50s (feminine sentence 37): lit sentence 37 => RIGHT
+[stone-breath-phone] after reload: aw.voice=f, pressed=Feminine, src=/assets/audio/readings/stone-breath-excerpt.f.m4a => PERSISTED
+[stone-breath-phone] reloaded page plays feminine from 92.75s, lit sentence 37, expected 37 => RIGHT
+[stone-breath-phone] console errors: console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED | console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
+[lamplight-phone] switch appears: Masculine:true · Feminine:false
+[lamplight-phone] read-along aligned: by-lamplight-opening:true
+[lamplight-phone] switch while playing: sentence 2 at 5.34s (masculine) -> sentence 2 at 4.98s (feminine, sentence starts 4.96s), still playing: true, pressed: Feminine => KEPT
+[lamplight-phone] seek to 18.21s (feminine sentence 8): lit sentence 8 => RIGHT
+[lamplight-phone] seek to 51.37s (feminine sentence 19): lit sentence 19 => RIGHT
+[lamplight-phone] after reload: aw.voice=f, pressed=Feminine, src=/assets/audio/readings/by-lamplight-opening.f.m4a => PERSISTED
+[lamplight-phone] reloaded page plays feminine from 1.81s, lit sentence 0, expected 0 => RIGHT
+[lamplight-phone] console errors: none
+[calm-desktop] switch appears: Masculine:true · Feminine:false
+[calm-desktop] read-along aligned: the-calm-you-already-stored:true
+[calm-desktop] switch while playing: sentence 2 at 5.95s (masculine) -> sentence 2 at 5.40s (feminine, sentence starts 5.38s), still playing: true, pressed: Feminine => KEPT
+[calm-desktop] seek to 53.64s (feminine sentence 12): lit sentence 12 => RIGHT
+[calm-desktop] seek to 140.83s (feminine sentence 28): lit sentence 28 => RIGHT
+[calm-desktop] after reload: aw.voice=f, pressed=Feminine, src=/assets/audio/readings/the-calm-you-already-stored.f.m4a => PERSISTED
+[calm-desktop] reloaded page plays feminine from 1.82s, lit sentence 0, expected 0 => RIGHT
+[calm-desktop] console errors: console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED | console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
+[stone-breath-desktop] switch appears: Masculine:true · Feminine:false
+[stone-breath-desktop] read-along aligned: stone-breath-excerpt:true
+[stone-breath-desktop] switch while playing: sentence 2 at 5.03s (masculine) -> sentence 2 at 4.57s (feminine, sentence starts 4.54s), still playing: true, pressed: Feminine => KEPT
+[stone-breath-desktop] seek to 41.75s (feminine sentence 15): lit sentence 15 => RIGHT
+[stone-breath-desktop] seek to 91.50s (feminine sentence 37): lit sentence 37 => RIGHT
+[stone-breath-desktop] after reload: aw.voice=f, pressed=Feminine, src=/assets/audio/readings/stone-breath-excerpt.f.m4a => PERSISTED
+[stone-breath-desktop] reloaded page plays feminine from 92.80s, lit sentence 37, expected 37 => RIGHT
+[stone-breath-desktop] console errors: console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED | console: Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED
+[lamplight-desktop] switch appears: Masculine:true · Feminine:false
+[lamplight-desktop] read-along aligned: by-lamplight-opening:true
+[lamplight-desktop] switch while playing: sentence 2 at 5.49s (masculine) -> sentence 2 at 4.97s (feminine, sentence starts 4.96s), still playing: true, pressed: Feminine => KEPT
+[lamplight-desktop] seek to 18.21s (feminine sentence 8): lit sentence 8 => RIGHT
+[lamplight-desktop] seek to 51.37s (feminine sentence 19): lit sentence 19 => RIGHT
+[lamplight-desktop] after reload: aw.voice=f, pressed=Feminine, src=/assets/audio/readings/by-lamplight-opening.f.m4a => PERSISTED
+[lamplight-desktop] reloaded page plays feminine from 1.82s, lit sentence 0, expected 0 => RIGHT
+[lamplight-desktop] console errors: none

@@ -41,3 +41,20 @@
   .aw-listen .aw-listen__btn{width:52px;height:52px}
 }
 @media (prefers-reduced-motion:reduce){.aw-listen.is-waiting .aw-listen__btn{animation:none}}
+
+/* ---------- two voices: "Voice: Masculine · Feminine" under the bar (11/11/2026) ----------
+   Only on readings that exist in both voices (voices.json). Everything in currentColor so it sits as quietly
+   on the cream card as in the dark lamplight room. */
+.aw-listen .aw-listen__voice{display:flex;align-items:center;flex-wrap:wrap;gap:.1rem .4rem;margin:.45rem 0 0;padding:0;
+  font-size:.74rem;line-height:1.2;letter-spacing:.04em;color:inherit}
+.aw-listen .aw-listen__voice-k{opacity:.62}
+.aw-listen .aw-listen__voice-dot{opacity:.45}
+.aw-listen .aw-listen__voice-b{display:inline-block;margin:0;padding:.15rem .12rem;border:0;background:none;cursor:pointer;color:inherit;
+  font:inherit;letter-spacing:inherit;opacity:.62;border-radius:4px;text-decoration:none;-webkit-tap-highlight-color:transparent;
+  transition:opacity .2s ease}
+.aw-listen .aw-listen__voice-b:hover{opacity:.9}
+.aw-listen .aw-listen__voice-b[aria-pressed="true"]{opacity:1;font-weight:600;text-decoration:underline;text-decoration-color:currentColor;
+  text-decoration-thickness:1px;text-underline-offset:.22em;cursor:default}
+.aw-listen .aw-listen__voice-b:focus-visible{outline:2px solid currentColor;outline-offset:2px;opacity:1}
+@media (max-width:520px){.aw-listen .aw-listen__voice{font-size:.72rem}}
+@media (prefers-reduced-motion:reduce){.aw-listen .aw-listen__voice-b{transition:none}}

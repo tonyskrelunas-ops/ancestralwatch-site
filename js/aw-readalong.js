@@ -15,7 +15,9 @@
      Sentences already read get is-read and rest at full ink; the page follows the reading with a gentle
      scroll, unless the visitor has scrolled in the last 4 seconds. Tapping a sentence (or Enter/Space on a
      focused one) plays the reading from there. A small "Read along" switch beside the player turns the
-     highlighting off, and that choice is remembered on the device. */
+     highlighting off, and that choice is remembered on the device.
+   - Two voices (aw-listen.js): when the player swaps to the other voice it fires 'aw:voice' with that voice's
+     timeline (the same sentences, that voice's times) and the time it goes on from; the lit sentence follows. */
 (function () {
   'use strict';
   var FOLLOW_PAUSE = 4000, MIN_COVER = 0.8, MIN_RATIO = 0.62, STORE = 'aw.readalong';
@@ -188,7 +190,7 @@
   function setup(player, timeline, roots) {
     var audio = player.querySelector('audio'), btn = player.querySelector('.aw-listen__btn');
     if (!audio || !timeline || !timeline.sentences || !timeline.sentences.length) return null;
-    var sentences = timeline.sentences, page = collect(roots), res = align(sentences, page);
+    var sentences = timeline.sentences, page = collect(roots), res = align(sentences, page);  // sentences: swapped for the other voice's times on 'aw:voice'
     var state = { slug: player.getAttribute('data-id'), matched: res.matched, total: sentences.length, coverage: res.coverage, pageWords: res.pageWords, aligned: false };
     if (res.matched < 3 || res.coverage < MIN_COVER) return state;
     var dom = wrap(page, sentences, res.spans); state.aligned = true;
@@ -263,6 +265,12 @@
     }
     ui.btn.addEventListener('click', function () { setOn(!on); });
 
+    player.addEventListener('aw:voice', function (e) {
+      var d = e.detail || {}, tl = d.timeline;
+      if (tl && tl.sentences && tl.sentences.length === sentences.length) sentences = tl.sentences;
+      pend = typeof d.time === 'number' ? d.time : null; clearTimeout(pendTimer); pendTimer = setTimeout(function () { pend = null; }, 4000);
+      if (on && started) tick();
+    });
     audio.addEventListener('play', function () { activate(); if (on) { cancelAnimationFrame(raf); loop(); } });
     audio.addEventListener('pause', function () { cancelAnimationFrame(raf); if (on && started) tick(); });
     audio.addEventListener('seeked', function () { pend = null; clearTimeout(pendTimer); if (on && started) tick(); });
@@ -328,8 +336,10 @@
       var slug = player.getAttribute('data-id');
       var roots = [].slice.call(document.querySelectorAll('[data-aw-readalong="' + slug + '"]'));
       if (!roots.length) return;
-      var url = '/assets/audio/readings/' + slug + '.timeline.json';
-      fetch(url).then(function (r) { if (!r.ok) throw new Error('no timeline'); return r.json(); }).then(function (tl) {
+      var url = '/assets/audio/readings/' + slug + '.timeline.json', V = window.AWVoice, got;
+      if (V && V.get() !== 'm') got = V.manifest().then(function (man) { return V.timeline(slug, man && man.readings && man.readings.indexOf(slug) >= 0 ? V.get() : 'm'); });
+      else got = V ? V.timeline(slug, 'm') : fetch(url).then(function (r) { if (!r.ok) throw new Error('no timeline'); return r.json(); });
+      got.then(function (tl) {
         var st = setup(player, tl, roots); if (st) readings.push(st);
       }).catch(function () { readings.push({ slug: slug, aligned: false, error: true }); });
     });

@@ -1,0 +1,29 @@
+{
+ "note": "readings that exist in both voices: <slug>.m4a (masculine) and <slug>.f.m4a (feminine), each with its own timeline",
+ "voices": {
+  "m": {
+   "label": "Masculine",
+   "suffix": ""
+  },
+  "f": {
+   "label": "Feminine",
+   "suffix": ".f"
+  }
+ },
+ "readings": [
+  "blood-and-amber",
+  "by-lamplight-opening",
+  "carry-without-stealing",
+  "council-fire-excerpt",
+  "far-messengers-excerpt",
+  "garden-as-practice",
+  "koi-and-the-dragon-gate",
+  "never-only-men",
+  "stone-breath-chapter-one",
+  "stone-breath-excerpt",
+  "the-arched-bridge",
+  "the-calm-you-already-stored",
+  "the-sound-of-water",
+  "torii-in-the-desert"
+ ]
+}
