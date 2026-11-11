@@ -390,3 +390,14 @@ body.locked{overflow:hidden}
 .rv{opacity:0;transform:translateY(14px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.ph img{transition:none;transform:none}}
+
+/* world pictures, 2026-11-11: a photograph at the top of each tradition, and the author in the circle */
+.trad__ph{grid-column:1/-1;grid-row:1;margin-bottom:1.3rem}
+.trad__c .sym{grid-row:2/span 3}
+.author__circle{margin-bottom:clamp(2rem,1.2rem + 2.4vw,3.4rem)}
+.author__circle img{object-position:50% 40%}
+.state--top{align-items:start}
+.state--top .ph::after{background:linear-gradient(180deg,rgba(20,22,16,.62) 0%,rgba(20,22,16,.34) 55%,rgba(20,22,16,.12) 100%)}
+.author__circle{aspect-ratio:2/1}
+.author__circle img{object-position:50% 72%}
+@media(min-width:860px){.trad__ph{aspect-ratio:auto;height:clamp(190px,15vw,240px)}}
