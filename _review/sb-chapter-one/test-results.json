@@ -1,0 +1,200 @@
+[
+ {
+  "page": "book",
+  "width": 390,
+  "errors": [],
+  "external": [
+   "blocked: https://assets.mailerlite.com/js/universal.js",
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ],
+  "checks": {
+   "readalong": {
+    "aligned": true,
+    "matched": 260,
+    "total": 261,
+    "coverage": 1,
+    "error": false
+   },
+   "plays": true,
+   "seek": {
+    "start": {
+     "expected": 9,
+     "lit": "9",
+     "time": 24.92,
+     "ok": true,
+     "text": "Every one of them had built a life that looked right from th"
+    },
+    "middle": {
+     "expected": 107,
+     "lit": "107",
+     "time": 510.74,
+     "ok": true,
+     "text": "“Her name was Masan,” he said."
+    },
+    "end": {
+     "expected": 260,
+     "lit": "260",
+     "time": 1215.15,
+     "ok": true,
+     "text": "The day was already walking."
+    }
+   },
+   "feminine": {
+    "matched": 260,
+    "total": 261,
+    "coverage": 1,
+    "plays": true,
+    "duration": 1086.3
+   },
+   "noHorizontalScroll": true
+  },
+  "ok": true
+ },
+ {
+  "page": "book",
+  "width": 1440,
+  "errors": [],
+  "external": [
+   "blocked: https://assets.mailerlite.com/js/universal.js",
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ],
+  "checks": {
+   "readalong": {
+    "aligned": true,
+    "matched": 260,
+    "total": 261,
+    "coverage": 1,
+    "error": false
+   },
+   "plays": true,
+   "seek": {
+    "start": {
+     "expected": 9,
+     "lit": "9",
+     "time": 24.92,
+     "ok": true,
+     "text": "Every one of them had built a life that looked right from th"
+    },
+    "middle": {
+     "expected": 107,
+     "lit": "107",
+     "time": 510.71,
+     "ok": true,
+     "text": "“Her name was Masan,” he said."
+    },
+    "end": {
+     "expected": 260,
+     "lit": "260",
+     "time": 1215.13,
+     "ok": true,
+     "text": "The day was already walking."
+    }
+   },
+   "feminine": {
+    "matched": 260,
+    "total": 261,
+    "coverage": 1,
+    "plays": true,
+    "duration": 1086.3
+   },
+   "noHorizontalScroll": true
+  },
+  "ok": true
+ },
+ {
+  "page": "lamplight",
+  "width": 390,
+  "errors": [],
+  "external": [],
+  "checks": {
+   "readalong": {
+    "aligned": true,
+    "matched": 259,
+    "total": 261,
+    "coverage": 1,
+    "error": false
+   },
+   "plays": true,
+   "seek": {
+    "start": {
+     "expected": 9,
+     "lit": "9",
+     "time": 24.92,
+     "ok": true,
+     "text": "Every one of them had built a life that looked right from th"
+    },
+    "middle": {
+     "expected": 107,
+     "lit": "107",
+     "time": 510.76,
+     "ok": true,
+     "text": "“Her name was Masan,” he said."
+    },
+    "end": {
+     "expected": 260,
+     "lit": "260",
+     "time": 1215.2,
+     "ok": true,
+     "text": "The day was already walking."
+    }
+   },
+   "feminine": {
+    "matched": 259,
+    "total": 261,
+    "coverage": 1,
+    "plays": true,
+    "duration": 1086.3
+   },
+   "noHorizontalScroll": true
+  },
+  "ok": true
+ },
+ {
+  "page": "lamplight",
+  "width": 1440,
+  "errors": [],
+  "external": [],
+  "checks": {
+   "readalong": {
+    "aligned": true,
+    "matched": 259,
+    "total": 261,
+    "coverage": 1,
+    "error": false
+   },
+   "plays": true,
+   "seek": {
+    "start": {
+     "expected": 9,
+     "lit": "9",
+     "time": 24.91,
+     "ok": true,
+     "text": "Every one of them had built a life that looked right from th"
+    },
+    "middle": {
+     "expected": 107,
+     "lit": "107",
+     "time": 510.75,
+     "ok": true,
+     "text": "“Her name was Masan,” he said."
+    },
+    "end": {
+     "expected": 260,
+     "lit": "260",
+     "time": 1215.19,
+     "ok": true,
+     "text": "The day was already walking."
+    }
+   },
+   "feminine": {
+    "matched": 259,
+    "total": 261,
+    "coverage": 1,
+    "plays": true,
+    "duration": 1086.3
+   },
+   "noHorizontalScroll": true
+  },
+  "ok": true
+ }
+]
