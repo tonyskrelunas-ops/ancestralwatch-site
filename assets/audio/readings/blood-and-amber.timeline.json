@@ -1,580 +1,581 @@
 {
-"slug": "blood-and-amber",
-"audio": "/assets/audio/readings/blood-and-amber.m4a",
-"sentences": [
-{
-"p": 0,
-"s": 0,
-"start": 0.3,
-"end": 4.08,
-"text": "Blood and Amber: what the Baltic kept — and why it's yours again."
-},
-{
-"p": 1,
-"s": 0,
-"start": 5.13,
-"end": 9.24,
-"text": "In almost every Lithuanian-American family, there is a drawer."
-},
-{
-"p": 2,
-"s": 0,
-"start": 10.29,
-"end": 13.56,
-"text": "Inside it: a piece of amber gone cloudy with age."
-},
-{
-"p": 2,
-"s": 1,
-"start": 13.88,
-"end": 19.27,
-"text": "A photograph of a woman in a headscarf standing in front of a wooden house you'll never see."
-},
-{
-"p": 2,
-"s": 2,
-"start": 19.59,
-"end": 25.01,
-"text": "Maybe a rosary, maybe a woven sash — juosta — in colors that meant something once."
-},
-{
-"p": 2,
-"s": 3,
-"start": 25.33,
-"end": 38.77,
-"text": "And a language that gets a little quieter with each generation, until the grandchildren can only say labas and ačiū and the word for grandmother, močiutė, and they say it with an accent that would have made her laugh."
-},
-{
-"p": 3,
-"s": 0,
-"start": 39.82,
-"end": 43.91,
-"text": "That drawer is the whole story of the diaspora in one small space."
-},
-{
-"p": 3,
-"s": 1,
-"start": 44.23,
-"end": 53.61,
-"text": "Something precious was carried across an ocean, kept safe, and slowly, lovingly, allowed to fade — because survival in a new country asked for it."
-},
-{
-"p": 3,
-"s": 2,
-"start": 53.93,
-"end": 59.1,
-"text": "Our grandparents made a bargain most immigrants make: they traded memory for a foothold."
-},
-{
-"p": 3,
-"s": 3,
-"start": 59.42,
-"end": 62.36,
-"text": "They became American so their children could be safe."
-},
-{
-"p": 3,
-"s": 4,
-"start": 62.68,
-"end": 63.52,
-"text": "It worked."
-},
-{
-"p": 3,
-"s": 5,
-"start": 63.84,
-"end": 67.33,
-"text": "And it cost us something we're only now old enough to feel."
-},
-{
-"p": 4,
-"s": 0,
-"start": 68.38,
-"end": 73.67,
-"text": "If you've ever stood at that drawer and felt an ache you couldn't quite name — this essay is for you."
-},
-{
-"p": 5,
-"s": 0,
-"start": 74.72,
-"end": 76.23,
-"text": "The oldest secret in Europe"
-},
-{
-"p": 6,
-"s": 0,
-"start": 77.28,
-"end": 83.44,
-"text": "Here is something they probably didn't teach you in school: the Lithuanians were the last pagans in Europe."
-},
-{
-"p": 7,
-"s": 0,
-"start": 84.49,
-"end": 89.61,
-"text": "While the rest of the continent had been Christian for a thousand years, the Balts held on."
-},
-{
-"p": 7,
-"s": 1,
-"start": 89.93,
-"end": 98.97,
-"text": "Lithuania was not baptized until 1387 — and Samogitia, the stubborn northwest, held out until 1413."
-},
-{
-"p": 7,
-"s": 2,
-"start": 99.29,
-"end": 104.09,
-"text": "For centuries, deep in the forests, our ancestors still kept the old fires."
-},
-{
-"p": 7,
-"s": 3,
-"start": 104.41,
-"end": 111.07,
-"text": "And because we held on so long, more of the old world survived here than almost anywhere else on the continent."
-},
-{
-"p": 8,
-"s": 0,
-"start": 112.12,
-"end": 124.41,
-"text": "The Lithuanian language itself is a kind of living fossil — the most archaic living Indo-European tongue, so close to ancient Sanskrit that linguists travel across the world to study it."
-},
-{
-"p": 8,
-"s": 1,
-"start": 124.73,
-"end": 130.17,
-"text": "When you speak Lithuanian, you are speaking something very nearly as old as the Vedas."
-},
-{
-"p": 9,
-"s": 0,
-"start": 131.22,
-"end": 134.66,
-"text": "And the culture that language carried was not superstition."
-},
-{
-"p": 9,
-"s": 1,
-"start": 134.98,
-"end": 138.31,
-"text": "It was a way of being in relationship with a living world:"
-},
-{
-"p": 10,
-"s": 0,
-"start": 139.36,
-"end": 148.93,
-"text": "Žemyna, the earth herself, understood as a mother you thank before you eat and before you plant — you don't take from the ground without a word of gratitude."
-},
-{
-"p": 11,
-"s": 0,
-"start": 149.98,
-"end": 157.27,
-"text": "Perkūnas, the thunder, and the sacred ąžuolas, the oak — the tree you did not cut, because the divine lived in it."
-},
-{
-"p": 12,
-"s": 0,
-"start": 158.32,
-"end": 166.22,
-"text": "Gabija, the household fire, tended and covered each night like a sleeping child, never insulted, never left to die."
-},
-{
-"p": 13,
-"s": 0,
-"start": 167.27,
-"end": 170.21,
-"text": "Laima, who weaves fate, and Dievas above all."
-},
-{
-"p": 14,
-"s": 0,
-"start": 171.26,
-"end": 173.16,
-"text": "And the dainos — the folk songs."
-},
-{
-"p": 14,
-"s": 1,
-"start": 173.48,
-"end": 179.13,
-"text": "Hundreds of thousands of them were collected, more per person than almost any nation on earth."
-},
-{
-"p": 14,
-"s": 2,
-"start": 179.45,
-"end": 187.52,
-"text": "The oldest, the sutartinės, are polyphonic songs so unusual that UNESCO named them a treasure of human heritage."
-},
-{
-"p": 14,
-"s": 3,
-"start": 187.84,
-"end": 189.47,
-"text": "They were not entertainment."
-},
-{
-"p": 14,
-"s": 4,
-"start": 189.79,
-"end": 200.44,
-"text": "They were how a people remembered who they were — sung at the harvest, at the wedding, at the grave, at midsummer Rasos when the whole village walked into the shortest night together."
-},
-{
-"p": 15,
-"s": 0,
-"start": 201.49,
-"end": 203.67,
-"text": "This is the inheritance in that drawer."
-},
-{
-"p": 15,
-"s": 1,
-"start": 203.99,
-"end": 204.93,
-"text": "Not amber."
-},
-{
-"p": 15,
-"s": 2,
-"start": 205.25,
-"end": 205.94,
-"text": "This."
-},
-{
-"p": 16,
-"s": 0,
-"start": 206.99,
-"end": 208.7,
-"text": "Two peoples, one way of seeing"
-},
-{
-"p": 17,
-"s": 0,
-"start": 209.75,
-"end": 214.63,
-"text": "I know this culture from the inside, but I did not come to it by the usual road."
-},
-{
-"p": 18,
-"s": 0,
-"start": 215.68,
-"end": 217.32,
-"text": "My name is Skrelūnas."
-},
-{
-"p": 18,
-"s": 1,
-"start": 217.64,
-"end": 221.72,
-"text": "I am Lithuanian on one side and Diné — Navajo — on the other."
-},
-{
-"p": 18,
-"s": 2,
-"start": 222.04,
-"end": 225.94,
-"text": "Two peoples the world tried very hard to make forget who they were."
-},
-{
-"p": 18,
-"s": 3,
-"start": 226.26,
-"end": 229.11,
-"text": "Two peoples who, against every odd, refused."
-},
-{
-"p": 19,
-"s": 0,
-"start": 230.16,
-"end": 234.54,
-"text": "For years I lived in the gap between them, feeling like too little of each."
-},
-{
-"p": 19,
-"s": 1,
-"start": 234.86,
-"end": 239.85,
-"text": "And then, slowly, I noticed something that changed my life: they were saying the same thing."
-},
-{
-"p": 19,
-"s": 2,
-"start": 240.17,
-"end": 251.42,
-"text": "The Diné word hózhó — walking in beauty, in balance, in right relationship with a living world — and the old Baltic reverence for Žemyna are not two ideas."
-},
-{
-"p": 19,
-"s": 3,
-"start": 251.74,
-"end": 257.39,
-"text": "They are one idea, kept alive by two peoples on opposite sides of the earth who never met."
-},
-{
-"p": 19,
-"s": 4,
-"start": 257.71,
-"end": 258.89,
-"text": "The land is alive."
-},
-{
-"p": 19,
-"s": 5,
-"start": 259.21,
-"end": 262.38,
-"text": "The ancestors are not gone; they stand behind you."
-},
-{
-"p": 19,
-"s": 6,
-"start": 262.7,
-"end": 266.57,
-"text": "Gratitude is not politeness — it is how the world stays whole."
-},
-{
-"p": 20,
-"s": 0,
-"start": 267.62,
-"end": 271.36,
-"text": "Once I saw that, I stopped feeling caught between two worlds."
-},
-{
-"p": 20,
-"s": 1,
-"start": 271.68,
-"end": 278.8,
-"text": "I realized I was standing on a double foundation, older and stronger than anything the modern world was selling me."
-},
-{
-"p": 21,
-"s": 0,
-"start": 279.85,
-"end": 282.8,
-"text": "So I did the thing my grandfather would have understood."
-},
-{
-"p": 21,
-"s": 1,
-"start": 283.12,
-"end": 284.57,
-"text": "I took the songs home."
-},
-{
-"p": 21,
-"s": 2,
-"start": 284.89,
-"end": 292.34,
-"text": "And then I wrote them into books — so that my children, and their children, could never lose the thread the way I almost did."
-},
-{
-"p": 22,
-"s": 0,
-"start": 293.39,
-"end": 295.33,
-"text": "The books are a map, not a fantasy"
-},
-{
-"p": 23,
-"s": 0,
-"start": 296.38,
-"end": 300.84,
-"text": "The Ancestral Watch series is fiction, but I did not write it to entertain."
-},
-{
-"p": 23,
-"s": 1,
-"start": 301.16,
-"end": 304.88,
-"text": "I wrote it as a map home — for anyone standing at that drawer."
-},
-{
-"p": 24,
-"s": 0,
-"start": 305.93,
-"end": 308.52,
-"text": "Stone Breath is where a Baltic reader should start."
-},
-{
-"p": 24,
-"s": 1,
-"start": 308.84,
-"end": 317.6,
-"text": "It follows a Lithuanian-Navajo man who carries his grandfather's songs back to the old homeland — and meets a woman who is already whole."
-},
-{
-"p": 24,
-"s": 2,
-"start": 317.92,
-"end": 326.51,
-"text": "It is about roots, about the two halves of a divided heart finally recognizing each other, about a success that doesn't cost you your soul."
-},
-{
-"p": 24,
-"s": 3,
-"start": 326.83,
-"end": 333.49,
-"text": "If you have ever felt like a foreigner in both of your own countries, this book was written for your ache specifically."
-},
-{
-"p": 25,
-"s": 0,
-"start": 334.54,
-"end": 336.68,
-"text": "The Council Fire widens the lens."
-},
-{
-"p": 25,
-"s": 1,
-"start": 337.0,
-"end": 347.32,
-"text": "When the systems running the modern world reach their limits, the keepers of many peoples' oldest knowledge are drawn to sit at one fire and remember what actually lasts."
-},
-{
-"p": 25,
-"s": 2,
-"start": 347.64,
-"end": 352.95,
-"text": "It is about what every culture does when the world begins to buckle — including ours."
-},
-{
-"p": 26,
-"s": 0,
-"start": 354.0,
-"end": 369.15,
-"text": "The Far Messengers is about the ones trained to carry what matters across hard ground and arrive whole — which is, when you think about it, the exact job your great-grandparents did when they crossed the ocean with a language and a handful of songs."
-},
-{
-"p": 27,
-"s": 0,
-"start": 370.2,
-"end": 381.48,
-"text": "Woven through all of them is a simple promise: you can take a practice shaped by one time and place, and draw from it a principle that belongs to every time — including yours."
-},
-{
-"p": 28,
-"s": 0,
-"start": 382.53,
-"end": 383.99,
-"text": "The thread isn't broken"
-},
-{
-"p": 29,
-"s": 0,
-"start": 385.04,
-"end": 387.07,
-"text": "Here is what I most want you to know."
-},
-{
-"p": 30,
-"s": 0,
-"start": 388.12,
-"end": 391.38,
-"text": "The inheritance in that drawer survived the Crusades."
-},
-{
-"p": 30,
-"s": 1,
-"start": 391.7,
-"end": 407.86,
-"text": "It survived serfdom, and Tsars, and a ban on the very Lithuanian alphabet — for forty years it was illegal to print our language in its own letters, and the knygnešiai, the book-smugglers, carried it across the border under their coats anyway."
-},
-{
-"p": 30,
-"s": 2,
-"start": 408.18,
-"end": 412.27,
-"text": "It survived Soviet tanks and mass deportations to Siberia."
-},
-{
-"p": 30,
-"s": 3,
-"start": 412.59,
-"end": 418.95,
-"text": "It survived an ocean crossing and a hundred years of a new country politely asking us to forget."
-},
-{
-"p": 31,
-"s": 0,
-"start": 420.0,
-"end": 421.58,
-"text": "You are richer than you think."
-},
-{
-"p": 31,
-"s": 1,
-"start": 421.9,
-"end": 424.0,
-"text": "Not in money — in something older."
-},
-{
-"p": 31,
-"s": 2,
-"start": 424.32,
-"end": 428.28,
-"text": "And you don't have to imitate a village you never lived in to claim it."
-},
-{
-"p": 31,
-"s": 3,
-"start": 428.6,
-"end": 430.79,
-"text": "You only have to pick the thread back up."
-},
-{
-"p": 32,
-"s": 0,
-"start": 431.84,
-"end": 433.36,
-"text": "It survived all of that."
-},
-{
-"p": 32,
-"s": 1,
-"start": 433.68,
-"end": 437.35,
-"text": "It is not going to break now, in a quiet drawer, on your watch."
-},
-{
-"p": 33,
-"s": 0,
-"start": 438.4,
-"end": 440.07,
-"text": "That's what these books are for."
-},
-{
-"p": 33,
-"s": 1,
-"start": 440.39,
-"end": 442.12,
-"text": "That's what the free tool is for."
-},
-{
-"p": 33,
-"s": 2,
-"start": 442.44,
-"end": 447.44,
-"text": "Start wherever you like — with a story, or with three quiet minutes of breath — but start."
-},
-{
-"p": 34,
-"s": 0,
-"start": 448.49,
-"end": 450.88,
-"text": "Močiutė is still standing behind you."
-},
-{
-"p": 34,
-"s": 1,
-"start": 451.2,
-"end": 452.45,
-"text": "She always was."
-}
-]
+ "slug": "blood-and-amber",
+ "audio": "/assets/audio/readings/blood-and-amber.m4a",
+ "voice": "masculine",
+ "sentences": [
+  {
+   "p": 0,
+   "s": 0,
+   "start": 0.3,
+   "end": 4.1,
+   "text": "Blood and Amber: what the Baltic kept — and why it's yours again."
+  },
+  {
+   "p": 1,
+   "s": 0,
+   "start": 5.15,
+   "end": 9.15,
+   "text": "In almost every Lithuanian-American family, there is a drawer."
+  },
+  {
+   "p": 2,
+   "s": 0,
+   "start": 10.2,
+   "end": 13.48,
+   "text": "Inside it: a piece of amber gone cloudy with age."
+  },
+  {
+   "p": 2,
+   "s": 1,
+   "start": 13.8,
+   "end": 19.33,
+   "text": "A photograph of a woman in a headscarf standing in front of a wooden house you'll never see."
+  },
+  {
+   "p": 2,
+   "s": 2,
+   "start": 19.65,
+   "end": 25.07,
+   "text": "Maybe a rosary, maybe a woven sash — juosta — in colors that meant something once."
+  },
+  {
+   "p": 2,
+   "s": 3,
+   "start": 25.39,
+   "end": 38.97,
+   "text": "And a language that gets a little quieter with each generation, until the grandchildren can only say labas and ačiū and the word for grandmother, močiutė, and they say it with an accent that would have made her laugh."
+  },
+  {
+   "p": 3,
+   "s": 0,
+   "start": 40.02,
+   "end": 44.22,
+   "text": "That drawer is the whole story of the diaspora in one small space."
+  },
+  {
+   "p": 3,
+   "s": 1,
+   "start": 44.54,
+   "end": 54.08,
+   "text": "Something precious was carried across an ocean, kept safe, and slowly, lovingly, allowed to fade — because survival in a new country asked for it."
+  },
+  {
+   "p": 3,
+   "s": 2,
+   "start": 54.4,
+   "end": 59.8,
+   "text": "Our grandparents made a bargain most immigrants make: they traded memory for a foothold."
+  },
+  {
+   "p": 3,
+   "s": 3,
+   "start": 60.12,
+   "end": 63.2,
+   "text": "They became American so their children could be safe."
+  },
+  {
+   "p": 3,
+   "s": 4,
+   "start": 63.52,
+   "end": 64.26,
+   "text": "It worked."
+  },
+  {
+   "p": 3,
+   "s": 5,
+   "start": 64.58,
+   "end": 68.04,
+   "text": "And it cost us something we're only now old enough to feel."
+  },
+  {
+   "p": 4,
+   "s": 0,
+   "start": 69.09,
+   "end": 74.46,
+   "text": "If you've ever stood at that drawer and felt an ache you couldn't quite name — this essay is for you."
+  },
+  {
+   "p": 5,
+   "s": 0,
+   "start": 75.51,
+   "end": 77.11,
+   "text": "The oldest secret in Europe"
+  },
+  {
+   "p": 6,
+   "s": 0,
+   "start": 78.16,
+   "end": 84.58,
+   "text": "Here is something they probably didn't teach you in school: the Lithuanians were the last pagans in Europe."
+  },
+  {
+   "p": 7,
+   "s": 0,
+   "start": 85.63,
+   "end": 90.83,
+   "text": "While the rest of the continent had been Christian for a thousand years, the Balts held on."
+  },
+  {
+   "p": 7,
+   "s": 1,
+   "start": 91.15,
+   "end": 102.34,
+   "text": "Lithuania was not baptized until 1387 — and Samogitia, the stubborn northwest, held out until 1413."
+  },
+  {
+   "p": 7,
+   "s": 2,
+   "start": 102.66,
+   "end": 107.43,
+   "text": "For centuries, deep in the forests, our ancestors still kept the old fires."
+  },
+  {
+   "p": 7,
+   "s": 3,
+   "start": 107.75,
+   "end": 114.5,
+   "text": "And because we held on so long, more of the old world survived here than almost anywhere else on the continent."
+  },
+  {
+   "p": 8,
+   "s": 0,
+   "start": 115.55,
+   "end": 128.24,
+   "text": "The Lithuanian language itself is a kind of living fossil — the most archaic living Indo-European tongue, so close to ancient Sanskrit that linguists travel across the world to study it."
+  },
+  {
+   "p": 8,
+   "s": 1,
+   "start": 128.56,
+   "end": 133.77,
+   "text": "When you speak Lithuanian, you are speaking something very nearly as old as the Vedas."
+  },
+  {
+   "p": 9,
+   "s": 0,
+   "start": 134.82,
+   "end": 138.45,
+   "text": "And the culture that language carried was not superstition."
+  },
+  {
+   "p": 9,
+   "s": 1,
+   "start": 138.77,
+   "end": 142.17,
+   "text": "It was a way of being in relationship with a living world:"
+  },
+  {
+   "p": 10,
+   "s": 0,
+   "start": 143.22,
+   "end": 152.78,
+   "text": "Žemyna, the earth herself, understood as a mother you thank before you eat and before you plant — you don't take from the ground without a word of gratitude."
+  },
+  {
+   "p": 11,
+   "s": 0,
+   "start": 153.83,
+   "end": 161.11,
+   "text": "Perkūnas, the thunder, and the sacred ąžuolas, the oak — the tree you did not cut, because the divine lived in it."
+  },
+  {
+   "p": 12,
+   "s": 0,
+   "start": 162.16,
+   "end": 170.12,
+   "text": "Gabija, the household fire, tended and covered each night like a sleeping child, never insulted, never left to die."
+  },
+  {
+   "p": 13,
+   "s": 0,
+   "start": 171.17,
+   "end": 174.03,
+   "text": "Laima, who weaves fate, and Dievas above all."
+  },
+  {
+   "p": 14,
+   "s": 0,
+   "start": 175.08,
+   "end": 176.86,
+   "text": "And the dainos — the folk songs."
+  },
+  {
+   "p": 14,
+   "s": 1,
+   "start": 177.18,
+   "end": 182.82,
+   "text": "Hundreds of thousands of them were collected, more per person than almost any nation on earth."
+  },
+  {
+   "p": 14,
+   "s": 2,
+   "start": 183.14,
+   "end": 190.99,
+   "text": "The oldest, the sutartinės, are polyphonic songs so unusual that UNESCO named them a treasure of human heritage."
+  },
+  {
+   "p": 14,
+   "s": 3,
+   "start": 191.31,
+   "end": 192.75,
+   "text": "They were not entertainment."
+  },
+  {
+   "p": 14,
+   "s": 4,
+   "start": 193.07,
+   "end": 203.85,
+   "text": "They were how a people remembered who they were — sung at the harvest, at the wedding, at the grave, at midsummer Rasos when the whole village walked into the shortest night together."
+  },
+  {
+   "p": 15,
+   "s": 0,
+   "start": 204.9,
+   "end": 206.97,
+   "text": "This is the inheritance in that drawer."
+  },
+  {
+   "p": 15,
+   "s": 1,
+   "start": 207.29,
+   "end": 208.13,
+   "text": "Not amber."
+  },
+  {
+   "p": 15,
+   "s": 2,
+   "start": 208.45,
+   "end": 209.06,
+   "text": "This."
+  },
+  {
+   "p": 16,
+   "s": 0,
+   "start": 210.11,
+   "end": 211.81,
+   "text": "Two peoples, one way of seeing"
+  },
+  {
+   "p": 17,
+   "s": 0,
+   "start": 212.86,
+   "end": 217.75,
+   "text": "I know this culture from the inside, but I did not come to it by the usual road."
+  },
+  {
+   "p": 18,
+   "s": 0,
+   "start": 218.8,
+   "end": 220.37,
+   "text": "My name is Skrelūnas."
+  },
+  {
+   "p": 18,
+   "s": 1,
+   "start": 220.69,
+   "end": 224.97,
+   "text": "I am Lithuanian on one side and Diné — Navajo — on the other."
+  },
+  {
+   "p": 18,
+   "s": 2,
+   "start": 225.29,
+   "end": 229.12,
+   "text": "Two peoples the world tried very hard to make forget who they were."
+  },
+  {
+   "p": 18,
+   "s": 3,
+   "start": 229.44,
+   "end": 232.29,
+   "text": "Two peoples who, against every odd, refused."
+  },
+  {
+   "p": 19,
+   "s": 0,
+   "start": 233.34,
+   "end": 237.74,
+   "text": "For years I lived in the gap between them, feeling like too little of each."
+  },
+  {
+   "p": 19,
+   "s": 1,
+   "start": 238.06,
+   "end": 243.39,
+   "text": "And then, slowly, I noticed something that changed my life: they were saying the same thing."
+  },
+  {
+   "p": 19,
+   "s": 2,
+   "start": 243.71,
+   "end": 254.92,
+   "text": "The Diné word hózhó — walking in beauty, in balance, in right relationship with a living world — and the old Baltic reverence for Žemyna are not two ideas."
+  },
+  {
+   "p": 19,
+   "s": 3,
+   "start": 255.24,
+   "end": 261.07,
+   "text": "They are one idea, kept alive by two peoples on opposite sides of the earth who never met."
+  },
+  {
+   "p": 19,
+   "s": 4,
+   "start": 261.39,
+   "end": 262.66,
+   "text": "The land is alive."
+  },
+  {
+   "p": 19,
+   "s": 5,
+   "start": 262.98,
+   "end": 266.18,
+   "text": "The ancestors are not gone; they stand behind you."
+  },
+  {
+   "p": 19,
+   "s": 6,
+   "start": 266.5,
+   "end": 270.44,
+   "text": "Gratitude is not politeness — it is how the world stays whole."
+  },
+  {
+   "p": 20,
+   "s": 0,
+   "start": 271.49,
+   "end": 275.28,
+   "text": "Once I saw that, I stopped feeling caught between two worlds."
+  },
+  {
+   "p": 20,
+   "s": 1,
+   "start": 275.6,
+   "end": 282.67,
+   "text": "I realized I was standing on a double foundation, older and stronger than anything the modern world was selling me."
+  },
+  {
+   "p": 21,
+   "s": 0,
+   "start": 283.72,
+   "end": 286.67,
+   "text": "So I did the thing my grandfather would have understood."
+  },
+  {
+   "p": 21,
+   "s": 1,
+   "start": 286.99,
+   "end": 288.34,
+   "text": "I took the songs home."
+  },
+  {
+   "p": 21,
+   "s": 2,
+   "start": 288.66,
+   "end": 296.01,
+   "text": "And then I wrote them into books — so that my children, and their children, could never lose the thread the way I almost did."
+  },
+  {
+   "p": 22,
+   "s": 0,
+   "start": 297.06,
+   "end": 299.05,
+   "text": "The books are a map, not a fantasy"
+  },
+  {
+   "p": 23,
+   "s": 0,
+   "start": 300.1,
+   "end": 304.8,
+   "text": "The Ancestral Watch series is fiction, but I did not write it to entertain."
+  },
+  {
+   "p": 23,
+   "s": 1,
+   "start": 305.12,
+   "end": 308.76,
+   "text": "I wrote it as a map home — for anyone standing at that drawer."
+  },
+  {
+   "p": 24,
+   "s": 0,
+   "start": 309.81,
+   "end": 312.44,
+   "text": "Stone Breath is where a Baltic reader should start."
+  },
+  {
+   "p": 24,
+   "s": 1,
+   "start": 312.76,
+   "end": 321.61,
+   "text": "It follows a Lithuanian-Navajo man who carries his grandfather's songs back to the old homeland — and meets a woman who is already whole."
+  },
+  {
+   "p": 24,
+   "s": 2,
+   "start": 321.93,
+   "end": 330.82,
+   "text": "It is about roots, about the two halves of a divided heart finally recognizing each other, about a success that doesn't cost you your soul."
+  },
+  {
+   "p": 24,
+   "s": 3,
+   "start": 331.14,
+   "end": 337.74,
+   "text": "If you have ever felt like a foreigner in both of your own countries, this book was written for your ache specifically."
+  },
+  {
+   "p": 25,
+   "s": 0,
+   "start": 338.79,
+   "end": 340.95,
+   "text": "The Council Fire widens the lens."
+  },
+  {
+   "p": 25,
+   "s": 1,
+   "start": 341.27,
+   "end": 351.73,
+   "text": "When the systems running the modern world reach their limits, the keepers of many peoples' oldest knowledge are drawn to sit at one fire and remember what actually lasts."
+  },
+  {
+   "p": 25,
+   "s": 2,
+   "start": 352.05,
+   "end": 357.42,
+   "text": "It is about what every culture does when the world begins to buckle — including ours."
+  },
+  {
+   "p": 26,
+   "s": 0,
+   "start": 358.47,
+   "end": 373.86,
+   "text": "The Far Messengers is about the ones trained to carry what matters across hard ground and arrive whole — which is, when you think about it, the exact job your great-grandparents did when they crossed the ocean with a language and a handful of songs."
+  },
+  {
+   "p": 27,
+   "s": 0,
+   "start": 374.91,
+   "end": 386.1,
+   "text": "Woven through all of them is a simple promise: you can take a practice shaped by one time and place, and draw from it a principle that belongs to every time — including yours."
+  },
+  {
+   "p": 28,
+   "s": 0,
+   "start": 387.15,
+   "end": 388.56,
+   "text": "The thread isn't broken"
+  },
+  {
+   "p": 29,
+   "s": 0,
+   "start": 389.61,
+   "end": 391.57,
+   "text": "Here is what I most want you to know."
+  },
+  {
+   "p": 30,
+   "s": 0,
+   "start": 392.62,
+   "end": 395.78,
+   "text": "The inheritance in that drawer survived the Crusades."
+  },
+  {
+   "p": 30,
+   "s": 1,
+   "start": 396.1,
+   "end": 411.97,
+   "text": "It survived serfdom, and Tsars, and a ban on the very Lithuanian alphabet — for forty years it was illegal to print our language in its own letters, and the knygnešiai, the book-smugglers, carried it across the border under their coats anyway."
+  },
+  {
+   "p": 30,
+   "s": 2,
+   "start": 412.29,
+   "end": 416.44,
+   "text": "It survived Soviet tanks and mass deportations to Siberia."
+  },
+  {
+   "p": 30,
+   "s": 3,
+   "start": 416.76,
+   "end": 423.17,
+   "text": "It survived an ocean crossing and a hundred years of a new country politely asking us to forget."
+  },
+  {
+   "p": 31,
+   "s": 0,
+   "start": 424.22,
+   "end": 425.75,
+   "text": "You are richer than you think."
+  },
+  {
+   "p": 31,
+   "s": 1,
+   "start": 426.07,
+   "end": 428.08,
+   "text": "Not in money — in something older."
+  },
+  {
+   "p": 31,
+   "s": 2,
+   "start": 428.4,
+   "end": 432.3,
+   "text": "And you don't have to imitate a village you never lived in to claim it."
+  },
+  {
+   "p": 31,
+   "s": 3,
+   "start": 432.62,
+   "end": 434.72,
+   "text": "You only have to pick the thread back up."
+  },
+  {
+   "p": 32,
+   "s": 0,
+   "start": 435.77,
+   "end": 437.12,
+   "text": "It survived all of that."
+  },
+  {
+   "p": 32,
+   "s": 1,
+   "start": 437.44,
+   "end": 441.4,
+   "text": "It is not going to break now, in a quiet drawer, on your watch."
+  },
+  {
+   "p": 33,
+   "s": 0,
+   "start": 442.45,
+   "end": 444.03,
+   "text": "That's what these books are for."
+  },
+  {
+   "p": 33,
+   "s": 1,
+   "start": 444.35,
+   "end": 446.04,
+   "text": "That's what the free tool is for."
+  },
+  {
+   "p": 33,
+   "s": 2,
+   "start": 446.36,
+   "end": 451.52,
+   "text": "Start wherever you like — with a story, or with three quiet minutes of breath — but start."
+  },
+  {
+   "p": 34,
+   "s": 0,
+   "start": 452.57,
+   "end": 454.9,
+   "text": "Močiutė is still standing behind you."
+  },
+  {
+   "p": 34,
+   "s": 1,
+   "start": 455.22,
+   "end": 456.36,
+   "text": "She always was."
+  }
+ ]
 }

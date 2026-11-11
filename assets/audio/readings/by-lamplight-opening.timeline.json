@@ -1,153 +1,154 @@
 {
-"slug": "by-lamplight-opening",
-"audio": "/assets/audio/readings/by-lamplight-opening.m4a",
-"sentences": [
-{
-"p": 0,
-"s": 0,
-"start": 0.3,
-"end": 1.91,
-"text": "Five voices open the book."
-},
-{
-"p": 1,
-"s": 0,
-"start": 2.96,
-"end": 4.61,
-"text": "The dog hears what we miss."
-},
-{
-"p": 1,
-"s": 1,
-"start": 4.93,
-"end": 6.4,
-"text": "And you listened to the dog."
-},
-{
-"p": 1,
-"s": 2,
-"start": 6.72,
-"end": 8.18,
-"text": "That is how we survive."
-},
-{
-"p": 1,
-"s": 3,
-"start": 8.5,
-"end": 10.51,
-"text": "That is how we keep what is ours."
-},
-{
-"p": 2,
-"s": 0,
-"start": 11.56,
-"end": 12.92,
-"text": "mahsahn, the Matriarch."
-},
-{
-"p": 3,
-"s": 0,
-"start": 13.97,
-"end": 15.87,
-"text": "My father wasn't saving paper."
-},
-{
-"p": 3,
-"s": 1,
-"start": 16.19,
-"end": 17.38,
-"text": "He was saving code."
-},
-{
-"p": 3,
-"s": 2,
-"start": 17.7,
-"end": 19.02,
-"text": "The code of who we are..."
-},
-{
-"p": 3,
-"s": 3,
-"start": 19.34,
-"end": 20.84,
-"text": "The book hasn't been burned."
-},
-{
-"p": 3,
-"s": 4,
-"start": 21.16,
-"end": 23.32,
-"text": "It's just waiting for you to open it again."
-},
-{
-"p": 4,
-"s": 0,
-"start": 24.37,
-"end": 26.16,
-"text": "vee-tah-tis, the Iron Wolf."
-},
-{
-"p": 5,
-"s": 0,
-"start": 27.21,
-"end": 28.72,
-"text": "The land remembers you."
-},
-{
-"p": 5,
-"s": 1,
-"start": 29.04,
-"end": 30.9,
-"text": "You just have to remember it back."
-},
-{
-"p": 6,
-"s": 0,
-"start": 31.95,
-"end": 33.19,
-"text": "hahs-teen, the Singer."
-},
-{
-"p": 7,
-"s": 0,
-"start": 34.24,
-"end": 42.71,
-"text": "A people can lose everything — the land, the language, even the names — and still find their way home, so long as someone keeps the songs."
-},
-{
-"p": 8,
-"s": 0,
-"start": 43.76,
-"end": 45.1,
-"text": "ohna, the Song Keeper."
-},
-{
-"p": 9,
-"s": 0,
-"start": 46.15,
-"end": 48.99,
-"text": "The sword without the brush is mere brutality."
-},
-{
-"p": 9,
-"s": 1,
-"start": 49.31,
-"end": 52.49,
-"text": "The brush without the sword is vulnerable sentiment."
-},
-{
-"p": 9,
-"s": 2,
-"start": 52.81,
-"end": 55.1,
-"text": "Together, they form the complete guardian."
-},
-{
-"p": 10,
-"s": 0,
-"start": 56.15,
-"end": 58.57,
-"text": "The Warrior-Samurai, the Sword and Brush."
-}
-]
+ "slug": "by-lamplight-opening",
+ "audio": "/assets/audio/readings/by-lamplight-opening.m4a",
+ "voice": "masculine",
+ "sentences": [
+  {
+   "p": 0,
+   "s": 0,
+   "start": 0.3,
+   "end": 1.97,
+   "text": "Five voices open the book."
+  },
+  {
+   "p": 1,
+   "s": 0,
+   "start": 3.02,
+   "end": 4.54,
+   "text": "The dog hears what we miss."
+  },
+  {
+   "p": 1,
+   "s": 1,
+   "start": 4.86,
+   "end": 6.3,
+   "text": "And you listened to the dog."
+  },
+  {
+   "p": 1,
+   "s": 2,
+   "start": 6.62,
+   "end": 8.0,
+   "text": "That is how we survive."
+  },
+  {
+   "p": 1,
+   "s": 3,
+   "start": 8.32,
+   "end": 10.15,
+   "text": "That is how we keep what is ours."
+  },
+  {
+   "p": 2,
+   "s": 0,
+   "start": 11.2,
+   "end": 12.74,
+   "text": "Masan, the Matriarch."
+  },
+  {
+   "p": 3,
+   "s": 0,
+   "start": 13.79,
+   "end": 15.7,
+   "text": "My father wasn't saving paper."
+  },
+  {
+   "p": 3,
+   "s": 1,
+   "start": 16.02,
+   "end": 17.2,
+   "text": "He was saving code."
+  },
+  {
+   "p": 3,
+   "s": 2,
+   "start": 17.52,
+   "end": 18.87,
+   "text": "The code of who we are..."
+  },
+  {
+   "p": 3,
+   "s": 3,
+   "start": 19.19,
+   "end": 20.6,
+   "text": "The book hasn't been burned."
+  },
+  {
+   "p": 3,
+   "s": 4,
+   "start": 20.92,
+   "end": 23.14,
+   "text": "It's just waiting for you to open it again."
+  },
+  {
+   "p": 4,
+   "s": 0,
+   "start": 24.19,
+   "end": 25.9,
+   "text": "Vytautas, the Iron Wolf."
+  },
+  {
+   "p": 5,
+   "s": 0,
+   "start": 26.95,
+   "end": 28.31,
+   "text": "The land remembers you."
+  },
+  {
+   "p": 5,
+   "s": 1,
+   "start": 28.63,
+   "end": 30.56,
+   "text": "You just have to remember it back."
+  },
+  {
+   "p": 6,
+   "s": 0,
+   "start": 31.61,
+   "end": 32.83,
+   "text": "Hastiin, the Singer."
+  },
+  {
+   "p": 7,
+   "s": 0,
+   "start": 33.88,
+   "end": 42.64,
+   "text": "A people can lose everything — the land, the language, even the names — and still find their way home, so long as someone keeps the songs."
+  },
+  {
+   "p": 8,
+   "s": 0,
+   "start": 43.69,
+   "end": 44.99,
+   "text": "Ona, the Song Keeper."
+  },
+  {
+   "p": 9,
+   "s": 0,
+   "start": 46.04,
+   "end": 48.92,
+   "text": "The sword without the brush is mere brutality."
+  },
+  {
+   "p": 9,
+   "s": 1,
+   "start": 49.24,
+   "end": 52.31,
+   "text": "The brush without the sword is vulnerable sentiment."
+  },
+  {
+   "p": 9,
+   "s": 2,
+   "start": 52.63,
+   "end": 55.1,
+   "text": "Together, they form the complete guardian."
+  },
+  {
+   "p": 10,
+   "s": 0,
+   "start": 56.15,
+   "end": 58.63,
+   "text": "The Warrior-Samurai, the Sword and Brush."
+  }
+ ]
 }
