@@ -1,0 +1,363 @@
+[
+ {
+  "view": "phone",
+  "slug": "stone-breath-chapter-two",
+  "readalong": {
+   "aligned": true,
+   "matched": 440,
+   "total": 440,
+   "coverage": 0.9969854754727323,
+   "pageWords": 3649,
+   "error": false
+  },
+  "gateShown": false,
+  "hscroll": {
+   "docW": 390,
+   "bodyW": 390,
+   "innerW": 390
+  },
+  "plays": true,
+  "playing": {
+   "paused": false,
+   "t": 4.042365,
+   "isPlaying": true,
+   "readyState": 4,
+   "current": "2",
+   "timeText": "0:04 / 22:27"
+  },
+  "seeks": [
+   {
+    "seekTo": 482.02,
+    "sentence": 145,
+    "audioNow": 483.45,
+    "expectedNow": 146,
+    "lit": 146,
+    "ok": true,
+    "litText": "A mind like water, that took the shape of whatever held it and was not",
+    "word": "like",
+    "timelineText": "A mind like water, that took the shape of whatever held it and was not"
+   },
+   {
+    "seekTo": 1104,
+    "sentence": 352,
+    "audioNow": 1105.43,
+    "expectedNow": 352,
+    "lit": 352,
+    "ok": true,
+    "litText": "“It’s not much,” she said.",
+    "word": "said.",
+    "timelineText": "“It’s not much,” she said."
+   }
+  ],
+  "consoleErrors": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ],
+  "requestsFailed": [
+   "https://assets.mailerlite.com/js/universal.js (net::ERR_TUNNEL_CONNECTION_FAILED)",
+   "/assets/audio/readings/stone-breath-chapter-two.m4a (net::ERR_ABORTED)",
+   "/assets/audio/readings/stone-breath-chapter-two.m4a (net::ERR_ABORTED)"
+  ]
+ },
+ {
+  "view": "phone",
+  "slug": "council-fire-opening",
+  "readalong": {
+   "aligned": true,
+   "matched": 189,
+   "total": 189,
+   "coverage": 1,
+   "pageWords": 3406,
+   "error": false
+  },
+  "gateShown": false,
+  "hscroll": {
+   "docW": 390,
+   "bodyW": 390,
+   "innerW": 390
+  },
+  "plays": true,
+  "playing": {
+   "paused": false,
+   "t": 4.005953,
+   "isPlaying": true,
+   "readyState": 4,
+   "current": "2",
+   "timeText": "0:03 / 18:48"
+  },
+  "seeks": [
+   {
+    "seekTo": 314.75,
+    "sentence": 62,
+    "audioNow": 316.18,
+    "expectedNow": 62,
+    "lit": 62,
+    "ok": true,
+    "litText": "She called it a covenant: I carry it, and it carries me.",
+    "word": "it,",
+    "timelineText": "She called it a covenant: I carry it, and it carries me."
+   },
+   {
+    "seekTo": 911,
+    "sentence": 151,
+    "audioNow": 912.41,
+    "expectedNow": 151,
+    "lit": 151,
+    "ok": true,
+    "litText": "Four summers of clouds going to the mountain.",
+    "word": "mountain.",
+    "timelineText": "Four summers of clouds going to the mountain."
+   }
+  ],
+  "consoleErrors": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ],
+  "requestsFailed": [
+   "https://assets.mailerlite.com/js/universal.js (net::ERR_TUNNEL_CONNECTION_FAILED)",
+   "/assets/audio/readings/council-fire-opening.m4a (net::ERR_ABORTED)",
+   "/assets/audio/readings/council-fire-opening.m4a (net::ERR_ABORTED)"
+  ]
+ },
+ {
+  "view": "phone",
+  "slug": "far-messengers-before",
+  "readalong": {
+   "aligned": true,
+   "matched": 278,
+   "total": 278,
+   "coverage": 1,
+   "pageWords": 4487,
+   "error": false
+  },
+  "gateShown": false,
+  "hscroll": {
+   "docW": 390,
+   "bodyW": 390,
+   "innerW": 390
+  },
+  "plays": true,
+  "playing": {
+   "paused": false,
+   "t": 4.051548,
+   "isPlaying": true,
+   "readyState": 4,
+   "current": "2",
+   "timeText": "0:04 / 26:07"
+  },
+  "seeks": [
+   {
+    "seekTo": 532.92,
+    "sentence": 91,
+    "audioNow": 534.34,
+    "expectedNow": 92,
+    "lit": 92,
+    "ok": true,
+    "litText": "The breath coming loose in a body that had decided to live.",
+    "word": "breath",
+    "timelineText": "The breath coming loose in a body that had decided to live."
+   },
+   {
+    "seekTo": 1274.01,
+    "sentence": 222,
+    "audioNow": 1275.43,
+    "expectedNow": 223,
+    "lit": 223,
+    "ok": true,
+    "litText": "I asked in the morning and he sent me to sweep the hālau.",
+    "word": "asked",
+    "timelineText": "I asked in the morning and he sent me to sweep the hālau."
+   }
+  ],
+  "consoleErrors": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ],
+  "requestsFailed": [
+   "https://assets.mailerlite.com/js/universal.js (net::ERR_TUNNEL_CONNECTION_FAILED)",
+   "/assets/audio/readings/far-messengers-before.m4a (net::ERR_ABORTED)",
+   "/assets/audio/readings/far-messengers-before.m4a (net::ERR_ABORTED)"
+  ]
+ },
+ {
+  "view": "laptop",
+  "slug": "stone-breath-chapter-two",
+  "readalong": {
+   "aligned": true,
+   "matched": 440,
+   "total": 440,
+   "coverage": 0.9969854754727323,
+   "pageWords": 3649,
+   "error": false
+  },
+  "gateShown": false,
+  "hscroll": {
+   "docW": 1440,
+   "bodyW": 1440,
+   "innerW": 1440
+  },
+  "plays": true,
+  "playing": {
+   "paused": false,
+   "t": 4.01235,
+   "isPlaying": true,
+   "readyState": 4,
+   "current": "2",
+   "timeText": "0:04 / 22:27"
+  },
+  "seeks": [
+   {
+    "seekTo": 482.02,
+    "sentence": 145,
+    "audioNow": 483.44,
+    "expectedNow": 146,
+    "lit": 146,
+    "ok": true,
+    "litText": "A mind like water, that took the shape of whatever held it and was not",
+    "word": "like",
+    "timelineText": "A mind like water, that took the shape of whatever held it and was not"
+   },
+   {
+    "seekTo": 1104,
+    "sentence": 352,
+    "audioNow": 1105.42,
+    "expectedNow": 352,
+    "lit": 352,
+    "ok": true,
+    "litText": "“It’s not much,” she said.",
+    "word": "said.",
+    "timelineText": "“It’s not much,” she said."
+   }
+  ],
+  "consoleErrors": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ],
+  "requestsFailed": [
+   "https://assets.mailerlite.com/js/universal.js (net::ERR_TUNNEL_CONNECTION_FAILED)",
+   "/assets/audio/readings/stone-breath-chapter-two.m4a (net::ERR_ABORTED)",
+   "/assets/audio/readings/stone-breath-chapter-two.m4a (net::ERR_ABORTED)"
+  ]
+ },
+ {
+  "view": "laptop",
+  "slug": "council-fire-opening",
+  "readalong": {
+   "aligned": true,
+   "matched": 189,
+   "total": 189,
+   "coverage": 1,
+   "pageWords": 3406,
+   "error": false
+  },
+  "gateShown": false,
+  "hscroll": {
+   "docW": 1440,
+   "bodyW": 1440,
+   "innerW": 1440
+  },
+  "plays": true,
+  "playing": {
+   "paused": false,
+   "t": 4.018405,
+   "isPlaying": true,
+   "readyState": 4,
+   "current": "2",
+   "timeText": "0:04 / 18:48"
+  },
+  "seeks": [
+   {
+    "seekTo": 314.75,
+    "sentence": 62,
+    "audioNow": 316.18,
+    "expectedNow": 62,
+    "lit": 62,
+    "ok": true,
+    "litText": "She called it a covenant: I carry it, and it carries me.",
+    "word": "it,",
+    "timelineText": "She called it a covenant: I carry it, and it carries me."
+   },
+   {
+    "seekTo": 911,
+    "sentence": 151,
+    "audioNow": 912.43,
+    "expectedNow": 151,
+    "lit": 151,
+    "ok": true,
+    "litText": "Four summers of clouds going to the mountain.",
+    "word": "mountain.",
+    "timelineText": "Four summers of clouds going to the mountain."
+   }
+  ],
+  "consoleErrors": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ],
+  "requestsFailed": [
+   "https://assets.mailerlite.com/js/universal.js (net::ERR_TUNNEL_CONNECTION_FAILED)",
+   "/assets/audio/readings/council-fire-opening.m4a (net::ERR_ABORTED)",
+   "/assets/audio/readings/council-fire-opening.m4a (net::ERR_ABORTED)"
+  ]
+ },
+ {
+  "view": "laptop",
+  "slug": "far-messengers-before",
+  "readalong": {
+   "aligned": true,
+   "matched": 278,
+   "total": 278,
+   "coverage": 1,
+   "pageWords": 4487,
+   "error": false
+  },
+  "gateShown": false,
+  "hscroll": {
+   "docW": 1440,
+   "bodyW": 1440,
+   "innerW": 1440
+  },
+  "plays": true,
+  "playing": {
+   "paused": false,
+   "t": 4.03269,
+   "isPlaying": true,
+   "readyState": 4,
+   "current": "2",
+   "timeText": "0:04 / 26:07"
+  },
+  "seeks": [
+   {
+    "seekTo": 532.92,
+    "sentence": 91,
+    "audioNow": 534.34,
+    "expectedNow": 92,
+    "lit": 92,
+    "ok": true,
+    "litText": "The breath coming loose in a body that had decided to live.",
+    "word": "breath",
+    "timelineText": "The breath coming loose in a body that had decided to live."
+   },
+   {
+    "seekTo": 1274.01,
+    "sentence": 222,
+    "audioNow": 1275.41,
+    "expectedNow": 223,
+    "lit": 223,
+    "ok": true,
+    "litText": "I asked in the morning and he sent me to sweep the hālau.",
+    "word": "asked",
+    "timelineText": "I asked in the morning and he sent me to sweep the hālau."
+   }
+  ],
+  "consoleErrors": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ],
+  "requestsFailed": [
+   "https://assets.mailerlite.com/js/universal.js (net::ERR_TUNNEL_CONNECTION_FAILED)",
+   "/assets/audio/readings/far-messengers-before.m4a (net::ERR_ABORTED)",
+   "/assets/audio/readings/far-messengers-before.m4a (net::ERR_ABORTED)"
+  ]
+ },
+ {
+  "view": "phone",
+  "slug": "CONTROL existing /read/stone-breath/",
+  "consoleErrors": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+  ]
+ }
+]

@@ -1,0 +1,70 @@
+{
+ "note": "The three full chapters (11/11/2026): each reading in both voices. <slug>.m4a and <slug>.timeline.json are the masculine voice; <slug>.f.m4a and <slug>.f.timeline.json the feminine. Same sentence structure in both timelines.",
+ "slugs": [
+  "stone-breath-chapter-two",
+  "council-fire-opening",
+  "far-messengers-before"
+ ],
+ "readings": {
+  "stone-breath-chapter-two": {
+   "page": "/read/stone-breath/chapter-two/",
+   "title": "Stone Breath · Chapter Two: The Box He Carried",
+   "book": "Stone Breath",
+   "voices": {
+    "m": {
+     "voice": "am_michael",
+     "audio": "/assets/audio/readings/stone-breath-chapter-two.m4a",
+     "timeline": "/assets/audio/readings/stone-breath-chapter-two.timeline.json",
+     "dur": 1347.1
+    },
+    "f": {
+     "label": "Gentle british",
+     "voice": "bf_emma",
+     "audio": "/assets/audio/readings/stone-breath-chapter-two.f.m4a",
+     "timeline": "/assets/audio/readings/stone-breath-chapter-two.f.timeline.json",
+     "dur": 1257.0
+    }
+   }
+  },
+  "council-fire-opening": {
+   "page": "/read/the-council-fire/",
+   "title": "The Council Fire · first voice · Prologue I: The Runners",
+   "book": "The Council Fire",
+   "voices": {
+    "m": {
+     "voice": "am_michael",
+     "audio": "/assets/audio/readings/council-fire-opening.m4a",
+     "timeline": "/assets/audio/readings/council-fire-opening.timeline.json",
+     "dur": 1128.9
+    },
+    "f": {
+     "label": "Gentle british",
+     "voice": "bf_emma",
+     "audio": "/assets/audio/readings/council-fire-opening.f.m4a",
+     "timeline": "/assets/audio/readings/council-fire-opening.f.timeline.json",
+     "dur": 982.8
+    }
+   }
+  },
+  "far-messengers-before": {
+   "page": "/read/the-far-messengers/",
+   "title": "The Far Messengers · Before",
+   "book": "The Far Messengers",
+   "voices": {
+    "m": {
+     "voice": "am_michael",
+     "audio": "/assets/audio/readings/far-messengers-before.m4a",
+     "timeline": "/assets/audio/readings/far-messengers-before.timeline.json",
+     "dur": 1567.3
+    },
+    "f": {
+     "label": "Gentle british",
+     "voice": "bf_emma",
+     "audio": "/assets/audio/readings/far-messengers-before.f.m4a",
+     "timeline": "/assets/audio/readings/far-messengers-before.f.timeline.json",
+     "dur": 1387.2
+    }
+   }
+  }
+ }
+}
