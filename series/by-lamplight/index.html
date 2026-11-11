@@ -22,6 +22,7 @@
 <link rel="stylesheet" href="/assets/daylight.css?v=8">
 <link rel="stylesheet" href="/assets/peaks-tie.css?v=1">
 <link rel="stylesheet" href="/css/aw-listen.css?v=1">
+<link rel="stylesheet" href="/css/aw-readalong.css?v=1">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -133,7 +134,7 @@
     <section class="section" id="sample">
       <div class="wrap wrap--narrow">
         <p class="eyebrow" style="color: var(--amber);">Read the opening</p>
-        <h2 style="font-size: var(--step-2); margin-bottom: var(--space-2);">Five voices open the book.</h2>
+        <h2 style="font-size: var(--step-2); margin-bottom: var(--space-2);" data-aw-readalong="by-lamplight-opening">Five voices open the book.</h2>
         <div class="aw-listen" data-id="by-lamplight-opening" data-dur="59.4" data-title="By Lamplight · the opening voices">
           <button class="aw-listen__btn" type="button" aria-label="Listen, 1 minute">
             <svg class="ic-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
@@ -145,7 +146,7 @@
           </div>
           <audio preload="none" src="/assets/audio/readings/by-lamplight-opening.m4a"></audio>
         </div>
-        <div class="endorse" style="gap: var(--space-4); margin-top: var(--space-3);">
+        <div class="endorse" style="gap: var(--space-4); margin-top: var(--space-3);" data-aw-readalong="by-lamplight-opening">
           <blockquote>The dog hears what we miss. And you listened to the dog. That is how we survive. That is how we keep what is ours.<cite>— Masan, the Matriarch</cite></blockquote>
           <blockquote>My father wasn't saving paper. He was saving code. The code of who we are… The book hasn't been burned. It's just waiting for you to open it again.<cite>— Vytautas, the Iron Wolf</cite></blockquote>
           <blockquote>The land remembers you. You just have to remember it back.<cite>— Hastiin, the Singer</cite></blockquote>
@@ -253,6 +254,7 @@
 })();
 </script>
 <script src="/js/aw-listen.js?v=1" defer></script>
+<script src="/js/aw-readalong.js?v=1" defer></script>
 <script src="/js/aw-gate.js?v=1" defer></script>
 </body>
 </html>
