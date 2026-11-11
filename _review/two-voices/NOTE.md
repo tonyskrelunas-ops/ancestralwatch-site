@@ -19,6 +19,26 @@ Tony asked where the two voice channels were. There is now a masculine and a fem
   - `voices.json` — the list of the readings that exist in both voices (all 14).
 - The feminine readings run about 8–12 % shorter than the masculine ones (the same gaps, a slightly quicker reader).
 
+## Checked by ear-proxy (whisper), `whisper.txt`
+
+Hugging Face, where faster-whisper fetches its weights, is not reachable from this session's network, so the check
+ran the same model (whisper small.en, int8, on CPU) through the sherpa-onnx build of it, downloaded from GitHub.
+Every one of the 680 sentences was cut from the final feminine file by its timeline and transcribed, then compared
+with the sentence text with case, punctuation and numbers normalised.
+
+- First pass: 63 of 680 sentences over 10 % word error; no sentence cut off anywhere.
+- Each flagged sentence was spoken again at speed 0.97, at 0.95, with a settling pause after it, and, for names,
+  with a second respelling; the best rendering replaced the first one only when whisper clearly heard it better.
+  18 sentences were rebuilt that way. Four more short sentences that kept a stray sound at the end
+  ("Not the heat", "The Canyon Within", "They went on down", "Martial arts") were spoken with a dummy sentence
+  after them and the dummy cut away at the silence, which gave them a clean ending.
+- Second pass from the final files: 13 of the 21 rebuilt sentences now at 0–6 %; the 8 still over 10 % are names
+  whisper spells its own way (Laima, Dievas, dainos, Tonas, Bushidō, koi) and British homophones, not the voice.
+- Three short sentences keep a faint release at the end that no rendering removed, listed at the end of
+  `whisper.txt` ("It isn't.", "He knew what it cost.", "Not amber."). Worth one listen by ear.
+- Everything else flagged is whisper's spelling of a name (it writes Skrelūnas as "Skrallunas", Tonas as
+  "TUNAS", Diné as "Dene"), or a British homophone (drawer/draw, patience/patients, Hold four/Hold for).
+
 ## The switch
 
 - `js/aw-listen.js`: every Listen player whose reading is in `voices.json` gets a small line under the bar:
