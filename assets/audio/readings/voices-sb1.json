@@ -1,0 +1,23 @@
+{
+ "_about": "Readings that come in two voices. Each entry names the masculine file (the default the player loads) and the feminine one ('.f'), with its own timeline for the read-along.",
+ "readings": [
+  {
+   "slug": "stone-breath-chapter-one",
+   "title": "Stone Breath · Chapter One: The Canyon Within",
+   "voices": {
+    "m": {
+     "label": "Warm american",
+     "audio": "/assets/audio/readings/stone-breath-chapter-one.m4a",
+     "timeline": "/assets/audio/readings/stone-breath-chapter-one.timeline.json",
+     "duration": 1216.8
+    },
+    "f": {
+     "label": "Gentle british",
+     "audio": "/assets/audio/readings/stone-breath-chapter-one.f.m4a",
+     "timeline": "/assets/audio/readings/stone-breath-chapter-one.f.timeline.json",
+     "duration": 1086.3
+    }
+   }
+  }
+ ]
+}

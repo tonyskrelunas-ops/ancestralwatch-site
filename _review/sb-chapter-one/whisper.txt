@@ -1,0 +1,702 @@
+STONE BREATH · CHAPTER ONE — the voice check, 11/11/2026
+Every sentence of each voice was rendered on its own, then transcribed back with Whisper small.en (CPU, int8 weights, the same model faster-whisper uses;
+huggingface.co is not reachable from this build machine, so the weights came from the sherpa-onnx GitHub release and ran through sherpa-onnx).
+A sentence failed when more than one word in ten came back wrong, or the end of it was missing. Failed sentences were rendered again other ways and the best rendering kept.
+Names Tony respelled for the voice (Tonas, Masan, Diné, Ada, Mesa, hogan, Yazzie) are judged by their sound, not their spelling: Whisper writes "Tounas", "Danae", "Masan" and so on.
+
+====================================================================================================
+MASCULINE — am_michael, en-us: 261 sentences, 258 clean on the first rendering, 3 looked at again. Final length 1216.8s, -16.9 LUFS, peak -1.2 dBFS.
+
+--- #8  — Tonas Yazzie
+    sent to the voice: too-nas yahzee.
+    tried 'as written': heard 'to NASYAZI'  (wer 1.0, cut off: False, names heard as {'tonas': 'to nasyazi'})
+    tried 'too-nas yahzee. ': heard 'to NAS YAZI'  (wer 0.0, cut off: False, names heard as {'tonas': 'to nas', 'yazzie': 'yazi'})
+    kept: too-nas yahzee. 
+--- #85  Somewhere up the rim a canyon wren spilled its long falling note and went quiet.
+    sent to the voice: Somewhere up the rim a canyon wren spilled its long falling note and went quiet.
+    tried 'as written': heard 'Somewhere up the rim, a canny and wren spilled its long falling note and went quiet.'  (wer 0.133, cut off: False, names heard as {})
+    tried 'Somewhere up the rim a canyon wren spilled its long falling note and went quiet. ': heard 'Somewhere up the rim, a canny and wren spilled its long falling note and went quiet.'  (wer 0.133, cut off: False, names heard as {})
+    tried 'SPLIT': heard 'Somewhere up the rim, a canny and wren spilled its long falling note and went quiet.'  (wer 0.133, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+--- #166  Then ten thousand.
+    sent to the voice: Then ten thousand.
+    tried 'as written': heard 'than 10,000.'  (wer 0.333, cut off: False, names heard as {})
+    tried 'Then ten thousand. ': heard 'than 10,000.'  (wer 0.333, cut off: False, names heard as {})
+    tried 'SPLIT': heard 'than 10,000.'  (wer 0.333, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+
+Every sentence, first rendering, as Whisper heard it:
+  #  0 wer 0.00 | Stone Breath.  ->  stone breath
+  #  1 wer 0.00 | Chapter One.  ->  Chapter 1 Chapter 1 Chapter 1 Chapter 1 Chapter 1 Chapter
+  #  2 wer 0.00 | The Canyon Within.  ->  The Canyon Within
+  #  3 wer 0.00 | “What appears to happen to you is happening for you.”  ->  What appears to happen to you is happening for you.
+  #  4 wer 0.00 | “How you do the small thing is how you do everything.”  ->  How you do the small thing is how you do everything.
+  #  5 wer 0.00 | — Japanese teaching  ->  Japanese teaching
+  #  6 wer 0.00 | “My grandfather said the ancestors watch over us.  ->  My grandfather said the ancestors watch over us.
+  #  7 wer 0.00 | My grandmother said they’re probably just waiting to see what mess we make next.”  ->  My grandmother said they're probably just waiting to see what mess we make next.
+  #  8 wer 1.00 | — Tonas Yazzie  ->  to NASYAZI
+  #  9 wer 0.00 | Every one of them had built a life that looked right from the outside.  ->  Every one of them had built a life that looked right from the outside.
+  # 10 wer 0.00 | That was the thing the circle had in common — nine executives and two who were not, gathered from wherever in the world they had made their names.  ->  That was the thing the circle had in common. Nine executives and two who were not, gathered from wherever in the world they had made their names.
+  # 11 wer 0.00 | A woman who ran a fund in London.  ->  A woman who ran a fund in London.
+  # 12 wer 0.00 | A founder from São Paulo.  ->  A founder from Sao Paulo.
+  # 13 wer 0.00 | A man from a Tokyo trading house who was used to a car and a driver and a floor of people who moved when he moved.  ->  A man from a Tokyo trading house who was used to a car and a driver and a floor of people who moved when he moved.
+  # 14 wer 0.00 | A software chief out of Lagos.  ->  A software chief out of Lagos.
+  # 15 wer 0.00 | And sitting among them as equals, a schoolteacher who had emptied a modest savings account to be there, and a young man barely out of his twenties, barely out of harder places than that, who had paid nothing at all.  ->  and sitting among them as equals, a school teacher who had emptied a modest savings account to be there, and a young man barely out of his twenties, barely out of harder places than that, who had paid nothing at all.
+  # 16 wer 0.00 | Tonas ran the program himself, once a year.  ->  2NAS ran the program himself once a year.
+  # 17 wer 0.00 | It was an international leadership retreat he had built inside his own company, and it was the truest work he did.  ->  It was an international leadership retreat he had built inside his own company and it was the truest work he did.
+  # 18 wer 0.00 | Most of the seats went to people who could pay a great deal for them.  ->  Most of the seats went to people who could pay a great deal for them.
+  # 19 wer 0.00 | But he always held a couple open for people the room would otherwise never include, and he asked nothing for those seats but readiness.  ->  But he always held a couple open for people the room would otherwise never include and he asked nothing for those seats, but readiness
+  # 20 wer 0.00 | The code belonged to everyone, he figured, or it belonged to no one.  ->  The code belonged to everyone he figured, or it belonged to no one.
+  # 21 wer 0.00 | Because money was never the filter.  ->  Because money was never the filter.
+  # 22 wer 0.00 | There was only one filter, and it had nothing to do with what you could afford or where you were from.  ->  There was only one filter, and it had nothing to do with what you could afford or where you were from.
+  # 23 wer 0.00 | You had to want it.  ->  You had to want it.
+  # 24 wer 0.00 | You had to be tired enough of your own dark to be willing, at last, to turn and look at it.  ->  You had to be tired enough of your own dark to be willing at last to turn and look at it.
+  # 25 wer 0.00 | The CEO and the schoolteacher and the young man from the hard place were in that circle for exactly one reason: every one of them had finally shown up wanting.  ->  The CEO and the school teacher and the young man from the hard place were in that circle for exactly one reason. Every one of them had finally shown up wanting.
+  # 26 wer 0.00 | He had brought them to Sedona because Sedona was home.  ->  He had brought them to Sedona because Sedona was home.
+  # 27 wer 0.00 | Not a venue he flew into — the place he had made his life, on a dirt road close to Oak Creek.  ->  Not a venue he flew into, the place he had made his life, on a dirt road close to Oak Creek.
+  # 28 wer 0.00 | He came from a big family, the way Diné families are big — cousins and aunts and uncles scattered across the whole region — and he had chosen this ground on purpose, for reasons that had nothing to do with how beautiful it was and everything to do with how it held a life together.  ->  He came from a big family, the way Danae families are big, cousins and aunts and uncles scattered across the whole region. And he had chosen this ground on purpose, for reasons that had nothing to do with how beautiful it was, and everything to do with how it held a life together.
+  # 29 wer 0.02 | It sat at the center of everything that mattered to him: a couple of hours from the rez, from Ada, from his parents; an easy run down to Phoenix and the city and the airports that carried him out to the world and home again.  ->  It sat at the center of everything that mattered to him. A couple of hours from the res, from Adah from his parents, an easy run down to Phoenix and the city and the airports that carried him out to the world and home again.
+  # 30 wer 0.00 | And it was the one patch of earth where, since he was a boy, he had always performed at his best.  ->  And it was the one patch of earth where, since he was a boy, he had always performed at his best.
+  # 31 wer 0.01 | It gave him every kind of training a body could ask for, all within reach of the same front door: the high country and the mountains when he wanted altitude and climbing, the gyms in town when he wanted iron and structure, and — when he wanted the truth — the exact canyon trails that had forged that 4:20 mile as a boy, ground that already knew how to make him fast.  ->  It gave him every kind of training a body could ask for, all within reach of the same front door. The high country and the mountains when he wanted altitude and climbing, the gyms in town when he wanted iron and structure, and when he wanted the truth, the exact canyon trails that had forged that Fort 20 mile as a boy, ground that already knew how to make him fast.
+  # 32 wer 0.00 | Most people spend a life looking for the ground that makes them more themselves.  ->  Most people spend a life looking for the ground that makes them more themselves.
+  # 33 wer 0.00 | He had found his early, and never let it go.  ->  He had found his early and never let it go.
+  # 34 wer 0.00 | The Land, First  ->  The Land First
+  # 35 wer 0.00 | Before anything else, he honored the ground.  ->  Before anything else, he honored the ground.
+  # 36 wer 0.00 | He always started there.  ->  He always started there.
+  # 37 wer 0.00 | “We are in the beautiful sacred red-rock country of Sedona, Arizona,” he told them, that first morning.  ->  "We are in the beautiful sacred Red Rock country of Sedona, Arizona," he told them that first morning.
+  # 38 wer 0.00 | “And before we take one breath together, we honor this land.  ->  And before we take one breath together, we honor this land.
+  # 39 wer 0.04 | These red rocks are the homeland of the Yavapai and the Apache, and of the Sinagua who came before them — the ancestors of today’s Hopi.  ->  These red rocks are the homeland of the Yavapai and the Apache, and of the Senagua who came before them, the ancestors of today's Hopi.
+  # 40 wer 0.00 | And this canyon country was never one people’s alone.  ->  And this canyon country was never one peoples alone.
+  # 41 wer 0.00 | It was a crossroads.  ->  It was a crossroads.
+  # 42 wer 0.07 | The trade routes ran through here for thousands of years, and many nations met and traded on this ground — the Hopi, the Navajo, the Ute, the Paiute, and more.  ->  The trade routes ran through here for thousands of years and many nations met and traded on this ground. The Hopi, the Navajo, the Ute, the Pei Ute and more.
+  # 43 wer 0.00 | We begin by thanking the people whose home this is, and always was.”  ->  We begin by thanking the people whose home this is, and always was.
+  # 44 wer 0.00 | He did not do it because it was expected.  ->  He did not do it because it was expected.
+  # 45 wer 0.00 | He did it because it was the first tool.  ->  He did it because it was the first tool.
+  # 46 wer 0.00 | Before you can settle a single nervous system, you have to remember you are a guest on something older than you — and so is everyone sitting beside you.  ->  Before you can settle a single nervous system, you have to remember you are a guest on something older than you. And so, is everyone sitting beside you?
+  # 47 wer 0.00 | That is the whole book, said in one gesture, before the book begins.  ->  That is the whole book, said in one gesture before the book begins.
+  # 48 wer 0.00 | The Descent  ->  The Descent
+  # 49 wer 0.00 | He took them down before dawn.  ->  He took them down before dawn.
+  # 50 wer 0.00 | On purpose.  ->  On purpose.
+  # 51 wer 0.00 | Everything about the three days was ordered on purpose — the way you would descend a real canyon and climb back out carrying water.  ->  Everything about the three days was ordered on purpose, the way you would descend a real canyon and climb back out carrying water.
+  # 52 wer 0.00 | Down first, into the dark and the depth, before you were allowed anywhere near the light.  ->  Down first into the dark and the depth before you were allowed anywhere near the light.
+  # 53 wer 0.00 | They went single file behind his headlamp, breathing harder than any of them had breathed in twenty years and, for the first time in longer than that, not in charge of a single thing.  ->  They went single file behind his headlamp, breathing harder than any of them had breathed in 20 years and for the first time in longer than that, not in charge of a single thing.
+  # 54 wer 0.00 | Halfway down, the man from Tokyo stopped, hands on his knees, and made a sound that was half laugh and half despair.  ->  Halfway down, the man from Tokyo stopped, hands on his knees, and made a sound that was half laugh and half despair.
+  # 55 wer 0.00 | Tonas went back to him.  ->  2 NAS went back to him.
+  # 56 wer 0.00 | He did not offer a hand.  ->  He did not offer a hand.
+  # 57 wer 0.00 | He reached into his pocket and took out a small, smooth stone, worn round by the creek, and pressed it into the man’s palm.  ->  He reached into his pocket and took out a small, smooth stone, worn round by the creek and pressed it into the man's palm.
+  # 58 wer 0.00 | “Hold this.  ->  Hold this.
+  # 59 wer 0.00 | Breathe into it — in through the nose, out long and slow.  ->  Breathe into it in through the nose, out long and slow.
+  # 60 wer 0.00 | You are not dying.  ->  You are not dying.
+  # 61 wer 0.00 | Your body just thinks you are, and there is a difference.”  ->  Your body just thinks you are, and there is a difference.
+  # 62 wer 0.00 | He waited while the man’s shoulders came down off his ears.  ->  He waited while the man's shoulders came down off his ears.
+  # 63 wer 0.00 | “Before we look at anything you have been carrying, your body has to believe it is safe.  ->  Before we look at anything you have been carrying, your body has to believe it is safe.
+  # 64 wer 0.00 | That is not the warm-up.  ->  That is not the warm-up.
+  # 65 wer 0.00 | That is the work.  ->  That is the work.
+  # 66 wer 0.00 | You cannot reprogram a mind that is running for its life.”  ->  You cannot reprogram a mind that is running for its life.
+  # 67 wer 0.00 | The man breathed.  ->  The man breathed.
+  # 68 wer 0.00 | Something in him unclenched.  ->  Something in him unclenched.
+  # 69 wer 0.00 | They went on down.  ->  They went on down.
+  # 70 wer 0.00 | Reading the Walls  ->  reading the walls
+  # 71 wer 0.00 | They reached the canyon floor as the first gray began to bleed up the walls, and Tonas stopped them there, in the cool blue dark at the bottom of a hundred million years, and had them look up.  ->  They reached the canyon floor as the first gray began to bleed up the walls, and two nasts stopped them there, in the cool blue dark at the bottom of a hundred million years, and had them look up.
+  # 72 wer 0.00 | “People spend their whole lives at war with their own canyon,” he said.  ->  "People spend their whole lives at war with their own canyon," he said.
+  # 73 wer 0.00 | “Ashamed of the marks.  ->  Ashamed of the marks.
+  # 74 wer 0.00 | Trying to fill them in, or hide them, or pretend the storm that carved them never came.  ->  trying to fill them in or hide them or pretend the storm that carved them never came.
+  # 75 wer 0.00 | But look at what did this.  ->  But look at what did this.
+  # 76 wer 0.00 | Wind.  ->  wind
+  # 77 wer 0.00 | Water.  ->  water
+  # 78 wer 0.00 | Time.  ->  time
+  # 79 wer 0.00 | Floods that must have felt like the end of the world when they came through.  ->  Floods that must have felt like the end of the world when they came through.
+  # 80 wer 0.00 | Every mark on this wall is a thing that happened here — and every one of those things was carving the exact shape that can now hold a river.  ->  Every mark on this wall is a thing that happened here, and every one of those things was carving the exact shape that can now hold a river.
+  # 81 wer 0.00 | Hold life.  ->  Hold life.
+  # 82 wer 0.00 | Hold you, standing in it at dawn.  ->  Hold you standing in it at dawn.
+  # 83 wer 0.00 | “What looks like it happened to this canyon,” he said, “was happening for it.”  ->  "What looks like it happened to this canyon," he said, "was happening for it."
+  # 84 wer 0.00 | Nobody spoke.  ->  Nobody spoke.
+  # 85 wer 0.13 | Somewhere up the rim a canyon wren spilled its long falling note and went quiet.  ->  Somewhere up the rim, a canny and wren spilled its long falling note and went quiet.
+  # 86 wer 0.00 | “That is why we came down first.  ->  That is why we came down first.
+  # 87 wer 0.00 | Not to fix you — nothing is broken.  ->  Not to fix you, nothing is broken.
+  # 88 wer 0.00 | We came down to read the walls.  ->  We came down to read the walls.
+  # 89 wer 0.00 | To turn around and look at the thing you have spent years running from, and ask it a different question.  ->  To turn around and look at the thing you have spent years running from and ask it a different question.
+  # 90 wer 0.00 | Not why did this happen to me, but — what were you carving?  ->  Not why did this happen to me, but what were you carving?
+  # 91 wer 0.00 | What are you here to teach me?  ->  What are you here to teach me?
+  # 92 wer 0.05 | The day you stop fighting your canyon is the day the marks stop looking like damage and start looking like formation.”  ->  The day you stop fighting your canyon is the day the mark stop looking like damage and start looking like formation.
+  # 93 wer 0.02 | Then the sun came over the rim, and the whole gorge caught fire — red rock lit from the inside the way it only ever is in that first minute — and eleven people who had spent fortunes trying to find the off switch on their own minds stood in the light and forgot, briefly, everything they were so sure they already knew.  ->  Then the sun came over the rim, and the whole gorge caught fire, red rock lit from the inside the way it only ever is in that first minute. And eleven people who had spent fortunes trying to find the off switch on their own mind stood in the light and forgot, briefly, everything they were so sure they already knew.
+  # 94 wer 0.00 | One of them was crying.  ->  One of them was crying.
+  # 95 wer 0.00 | Nobody minded.  ->  Nobody minded.
+  # 96 wer 0.00 | Three Threads  ->  3 threads
+  # 97 wer 0.00 | That night, up on a bench above the creek, with the stars poured thick across the black and a fire going, the circle asked him what circles always eventually ask.  ->  That night up on a bench above the creek, with the stars poured thick across the black and a fire going, the circle asked him what circles always eventually ask.
+  # 98 wer 0.00 | So who are you?  ->  So who are you?
+  # 99 wer 0.00 | And Tonas told them the way he told everything — he had been telling stories since he was a boy — as a story.  ->  And Toon-ass told them the way he told everything. He had been telling stories since he was a boy as a story.
+  #100 wer 0.00 | “I’m three people,” he said.  ->  "I'm three people," he said.
+  #101 wer 0.00 | “I always have been.  ->  I always have been.
+  #102 wer 0.00 | “I’m Diné — Navajo.  ->  I'm Dene Navajo.
+  #103 wer 0.00 | My great-grandmother raised me on Black Mesa, in a hogan with no electricity, and she taught me to run before the sun with a stone.  ->  My great-grandmother raised me on Black Mesa in a hogan with no electricity, and she taught me to run before the sun with a stone.
+  #104 wer 0.00 | Not as a ritual — as engineering.  ->  not as a ritual as engineering.
+  #105 wer 0.00 | A way to keep the breath calm when the body wants to panic.  ->  A way to keep the breath calm when the body wants to panic.
+  #106 wer 0.00 | That’s the first thread.  ->  That's the first thread.
+  #107 wer 0.00 | “Her name was Masan,” he said.  ->  Her name was Masan, he said.
+  #108 wer 0.00 | “She was sixty-four when she took me.  ->  She was 64 when she took me.
+  #109 wer 0.00 | That is not an age at which a woman goes looking for a small boy to raise.  ->  That is not an age at which a woman goes looking for a small boy to raise.
+  #110 wer 0.00 | She did it anyway, and she did not present it as a sacrifice, and I did not understand until I was thirty that it was one.”  ->  She did it anyway, and she did not present it as a sacrifice, and I did not understand until I was thirty that it was one.
+  #111 wer 0.00 | He let that sit.  ->  He let that sit.
+  #112 wer 0.00 | “Everything I am going to hand you this week came out of her hands.  ->  Everything I am going to hand you this week came out of her hands.
+  #113 wer 0.00 | The breath.  ->  The breath.
+  #114 wer 0.00 | The morning.  ->  The Morning
+  #115 wer 0.00 | The way you sit with someone who is struggling and do not rush them.  ->  The way you sit with someone who is struggling and do not rush them.
+  #116 wer 0.00 | She had no framework for any of it.  ->  She had no framework for any of it.
+  #117 wer 0.00 | She would not have known what a framework was.”  ->  She would not have known what a framework was.
+  #118 wer 0.00 | He looked into the coals.  ->  He looked into the coals.
+  #119 wer 0.00 | “She called it Tuesday.”  ->  She called it Tuesday.
+  #120 wer 0.00 | Somebody laughed.  ->  Somebody laughed.
+  #121 wer 0.00 | “I want to be accurate about something, because I am going to be teaching all week and you should know where it comes from.  ->  I want to be accurate about something because I am going to be teaching all week and you should know where it comes from.
+  #122 wer 0.00 | I did not learn this at a university and I did not build it in a lab.  ->  I did not learn this at a university, and I did not build it in a lab.
+  #123 wer 0.00 | I learned it from one woman on a mesa who could not read English, and every single thing I have tested since has held up.”  ->  I learned it from one woman on a mesa who could not read English, and every single thing I have tested since has held up.
+  #124 wer 0.00 | “I’m Lithuanian.  ->  I'm Lithuanian.
+  #125 wer 0.00 | My grandfather’s people were craftsmen who kept their traditions alive through a Soviet occupation that would have preferred they forget — fifty years of letters and songs carried through the locked door of a country.  ->  My grandfather's people were craftsmen who kept their traditions alive through a Soviet occupation that would have preferred they forget. Fifty years of letters and songs carried through the locked door of a country.
+  #126 wer 0.00 | That’s the second thread.  ->  That's the second thread.
+  #127 wer 0.00 | “And the third I chose.  ->  and the third I chose.
+  #128 wer 0.04 | I’ve spent my life apprenticed to Japan — to the idea that mastery is a spiritual discipline, that how you do the small thing is how you do everything.  ->  I've spent my life apprentice to Japan to the idea that mastery is a spiritual discipline that how you do the small thing is how you do everything
+  #129 wer 0.00 | “Three peoples who never met, on three sides of the earth, and every one of them worked out the same handful of tools for staying human under pressure.  ->  Three peoples who never met on three sides of the earth and every one of them worked out the same handful of tools for staying human under pressure.
+  #130 wer 0.00 | I didn’t invent any of it.  ->  I didn't invent any of it.
+  #131 wer 0.00 | I just happened to be the crossroads they all ran through.”  ->  I just happened to be the crossroads. They all ran through.
+  #132 wer 0.00 | Someone asked what his people had been, before.  ->  Someone asked what his people had been before.
+  #133 wer 0.00 | “Rich,” Tonas said.  ->  Rich Toonass said.
+  #134 wer 0.00 | The woman who ran the fund in London looked up.  ->  The woman who ran the fund in London looked up.
+  #135 wer 0.00 | “I’m serious.  ->  I'm serious.
+  #136 wer 0.00 | There’s a movie — Crazy Rich Asians.  ->  There's a movie Crazy Rich Asians.
+  #137 wer 0.00 | My cousins and I watched it and laughed for a week, because we kept thinking somebody should make Crazy Rich Natives and set it in 1650.”  ->  My cousins and I watched it and laughed for a week because we kept thinking somebody should make crazy rich natives and set it in 1650.
+  #138 wer 0.00 | He turned a stick in the coals.  ->  He turned a stick in the coals.
+  #139 wer 0.00 | “I am fairly sure that is what Columbus thought when he showed up.  ->  I am fairly sure that is what Columbus thought when he showed up.
+  #140 wer 0.00 | He was not looking at poverty.  ->  He was not looking at poverty.
+  #141 wer 0.00 | He was looking at wealth he did not have a word for.”  ->  He was looking at wealth he did not have a word for.
+  #142 wer 0.00 | “What did rich look like?” the schoolteacher asked.  ->  What did Rich look like? the school teacher asked.
+  #143 wer 0.00 | “Up before the sun.  ->  Up before the sun.
+  #144 wer 0.00 | Every day.  ->  Every day.
+  #145 wer 0.00 | Without exception.  ->  without exception.
+  #146 wer 0.00 | Knowing the songs.  ->  Knowing the songs.
+  #147 wer 0.00 | Ceremony on the calendar and organization in every part of the life.  ->  Ceremony on the calendar and organization in every part of the life.
+  #148 wer 0.00 | Discipline in the work, the food, the body.  ->  Discipline in the work, the food, the body.
+  #149 wer 0.00 | The finest corn and the finest rugs, made by hand.  ->  The finest corn and the finest rugs made by hand.
+  #150 wer 0.00 | Jewelry that took a winter.  ->  jewelry that took a winter
+  #151 wer 0.00 | Fine horses.  ->  Fine horses
+  #152 wer 0.00 | Sheeps — we say sheeps, do not ask me why.  ->  Sheeps, we say sheeps, do not ask me why.
+  #153 wer 0.00 | Enough food stored that a bad winter was an inconvenience and not a catastrophe.”  ->  Enough food stored that a bad winter was an inconvenience and not a catastrophe.
+  #154 wer 0.00 | He paused.  ->  He paused.
+  #155 wer 0.00 | “And a crew.  ->  and a crew.
+  #156 wer 0.00 | Anyone actually rich had people working alongside them, and those people ate.”  ->  Anyone actually rich had people working alongside them, and those people ate.
+  #157 wer 0.00 | He looked around the fire.  ->  He looked around the fire.
+  #158 wer 0.00 | “And here is the part that would not survive a movie.  ->  And here is the part that would not survive a movie.
+  #159 wer 0.00 | You were only rich if other people were carrying the same knowledge.  ->  You were only rich if other people were carrying the same knowledge.
+  #160 wer 0.00 | If you were the last one who knew it, you were not wealthy.  ->  If you were the last one who knew it, you were not wealthy.
+  #161 wer 0.00 | You were a museum.”  ->  You were a museum.
+  #162 wer 0.00 | Nobody said anything for a moment.  ->  Nobody said anything for a moment.
+  #163 wer 0.00 | “How long were your people there?” the man from Tokyo asked.  ->  "How long were your people there?" the man from Tokyo asked.
+  #164 wer 0.00 | “Depends who is counting.  ->  Depends who is counting.
+  #165 wer 0.00 | When I was a boy the scientists said a few thousand years.  ->  When I was a boy, the scientists said a few thousand years.
+  #166 wer 0.33 | Then ten thousand.  ->  than 10,000.
+  #167 wer 0.00 | Then fifteen.  ->  then 15
+  #168 wer 0.00 | Then thirty.  ->  then 30
+  #169 wer 0.00 | Lately one or two of them are wondering out loud whether some of us started there.”  ->  Lately one or two of them are wondering out loud whether some of us started there.
+  #170 wer 0.00 | He shrugged.  ->  He shrugged.
+  #171 wer 0.00 | “Our elders find this extremely entertaining.  ->  Our elders find this extremely entertaining.
+  #172 wer 0.00 | We have had the same answer the entire time.  ->  We have had the same answer the entire time.
+  #173 wer 0.00 | Since time immemorial.”  ->  Since Time immemorial
+  #174 wer 0.00 | “And?”  ->  and
+  #175 wer 0.00 | “And we are not in a hurry.  ->  And we are not in a hurry.
+  #176 wer 0.00 | We have been right for a while.”  ->  We have been right for a while.
+  #177 wer 0.00 | “And the art,” he said.  ->  and the art, he said.
+  #178 wer 0.00 | “People say crafts.  ->  People say "crafts."
+  #179 wer 0.00 | It is not crafts.  ->  It is not crafts.
+  #180 wer 0.00 | There are weavers from that mesa whose rugs hang in museums on three continents.  ->  There are weavers from that mesa whose rugs hang in museums on three continents.
+  #181 wer 0.07 | There are silversmiths whose work you would recognize on sight and could not afford.  ->  There are silversmiths whose work you would recognize on site and could not afford.
+  #182 wer 0.00 | Painters.  ->  painters
+  #183 wer 0.00 | Potters.  ->  Potters
+  #184 wer 0.00 | Carvers.”  ->  Carvers
+  #185 wer 0.00 | “Why does nobody know the names?” the woman from London asked.  ->  Why does nobody know the names? The woman from London asked.
+  #186 wer 0.00 | “Some people do.  ->  Some people do.
+  #187 wer 0.00 | But most of them never called themselves artists, because there was no such job.  ->  But most of them never called themselves artists because there was no such job.
+  #188 wer 0.00 | You wove because the family needed a rug and because you were the one who could see it before it was there.”  ->  You wove because the family needed a rug and because you were the one who could see it before it was there.
+  #189 wer 0.00 | He turned the stick again.  ->  He turned the stick again.
+  #190 wer 0.00 | “World class, and nobody hung a sign.”  ->  World class and nobody hung a sign.
+  #191 wer 0.00 | He was quiet a moment.  ->  He was quiet a moment.
+  #192 wer 0.00 | “And here’s the strange part.  ->  And here's the strange part.
+  #193 wer 0.00 | I knew I belonged to more than one place before I ever left that mesa.  ->  I knew I belonged to more than one place before I ever left that mesa.
+  #194 wer 0.00 | My great-grandmother had a table she was proud of, and a lamp on it, and by that lamp I read books that had traveled from Switzerland, from Lithuania, from Japan — the whole world climbing the mountain to find one boy, an envelope and a paperback at a time.  ->  My great-grandmother had a table she was proud of and a lamp on it. And by that lamp I read books that had traveled from Switzerland, from Lithuania, from Japan, the whole world climbing the mountain to find one boy, an envelope and a paperback at a time.
+  #195 wer 0.00 | I got so good at carrying stories that when it came time to stand up and tell one, I was the one they called on.  ->  I got so good at carrying stories that when it came time to stand up and tell one, I was the one they called on.
+  #196 wer 0.00 | A kid from a hogan with no power lines for miles, telling the old stories into a television camera while the whole community watched from the chapter-house TV.”  ->  A kid from a hogan with no power lines for miles, telling the old stories into a television camera while the whole community watched from the Chapter House TV.
+  #197 wer 0.00 | The schoolteacher laughed softly.  ->  The schoolteacher laughed softly.
+  #198 wer 0.00 | The young man did not take his eyes off him.  ->  The young man did not take his eyes off him.
+  #199 wer 0.00 | “That lamp is the reason I’m standing in this canyon with all of you,” he said.  ->  "That lamp is the reason I'm standing in this canyon with all of you," he said.
+  #200 wer 0.00 | “The teachers at my little community school saw a boy who was too much — too well-read, too well-dressed for a mesa kid, too steeped in the old ways and too sharp from all that reading, somehow both at once.  ->  The teachers at my little community school saw a boy who was too much, too well read, too well dressed for a Mesa kid, too steeped in the old ways and too sharp from all that reading, somehow both at once.
+  #201 wer 0.00 | And instead of clipping him, they went to my great-grandmother and said: he needs a bigger challenge.  ->  And instead of clipping him, they went to my great-grandmother and said, "He needs a bigger challenge."
+  #202 wer 0.00 | A place where he won’t have to fight just to be himself.”  ->  A place where he won't have to fight just to be himself.
+  #203 wer 0.00 | Twenty Minutes Down the Road  ->  20 minutes down the road.
+  #204 wer 0.00 | That place was twenty minutes down the road.  ->  That place was 20 minutes down the road.
+  #205 wer 0.00 | Montezuma sat in Cottonwood, under Mingus Mountain, in the same red country he was showing them now — a working ranch as much as a school, where a boy grew his own food and mucked his own stalls and ran the canyons at dawn.  ->  Montezuma sat in Cottonwood, under Mingus Mountain, in the same red country he was showing them now, a working ranch as much as a school, where a boy grew his own food and mucked his own stalls and ran the canyons at dawn.
+  #206 wer 0.00 | And the thing nobody expected, least of all Tonas himself, was that it never felt like leaving.  ->  And the thing nobody expected, least of all two NASA himself, was that it never felt like leaving.
+  #207 wer 0.00 | The chores, the animals, the plain daily responsibility — he had loved all of it already, up on Black Mesa, at his great-grandmother’s side.  ->  The chores, the animals, the plain daily responsibility. He had loved all of it already, up on Black Mesa at his great-grandmother's side.
+  #208 wer 0.00 | He simply carried the same self twenty minutes down the mountain and set it loose in bigger country.  ->  He simply carried the same self 20 minutes down the mountain and set it loose in bigger country.
+  #209 wer 0.02 | He came to know that country the way you only can by living and working in it — every fold of the red rock, the creeks, the climbs, the odd trip out toward Phoenix — knowledge earned in the body, mile by mile, over years.  ->  He came to know that country the way you only can by living and working in it. Every fold of the red rock, the creeks, the climes, the odd trip out toward Phoenix knowledge earned in the body, mile by mile over years.
+  #210 wer 0.10 | He ran a 4:20 mile there as a ninth-grader, one of the fastest in the country for his age.  ->  He ran a Fort Wente mile there as a ninth grader, one of the fastest in the country for his age.
+  #211 wer 0.00 | The truth he rarely told anyone was that the race was not won on the track.  ->  The truth he rarely told anyone was that the race was not won on the track.
+  #212 wer 0.04 | It was won in the ten thousand dark mornings before it, with a stone in his pocket and his great-grandmother’s voice in his ear.  ->  It was one in the ten thousand dark mornings before it, with a stone in his pocket and his great grandmother's voice in his ear.
+  #213 wer 0.00 | This land is one of the places the earth keeps its power, she had told him once.  ->  This land is one of the places the Earth keeps its power. She had told him once.
+  #214 wer 0.00 | A meeting place.  ->  A meeting place.
+  #215 wer 0.00 | Small peoples lived here, and the world has always come looking for it.  ->  Small peoples lived here, and the world has always come looking for it.
+  #216 wer 0.00 | He looked around the fire — Tokyo, London, Lagos, São Paulo, a schoolteacher, a young man learning for the first time what it felt like to be believed in — and he thought: she was right.  ->  He looked around the fire Tokyo London Lagos Sao Paulo a school teacher a Young man learning for the first time what it felt like to be believed in and he thought she was right
+  #217 wer 0.00 | The world still comes looking.  ->  The world still comes looking.
+  #218 wer 0.00 | But there was a shadow under all of it, and there always would be, and he did not say all of it out loud.  ->  But there was a shadow under all of it, and there always would be, and he did not say all of it out loud.
+  #219 wer 0.00 | Because in those same years — while he was becoming the fast kid at the good school, running this beautiful country at dawn — his family lost theirs.  ->  Because in those same years, while he was becoming the fast kid at the good school, running this beautiful country at dawn, his family lost theirs.
+  #220 wer 0.06 | The traditional land on Black Mesa slipped away from them, the way it slipped away from so many Diné families, and his great-grandmother, who was that land, had to be moved off it — closer to the city, near his uncle and his mother, part of her time at Ada’s.  ->  The traditional land on Black Mesa slipped away from them. The way it slipped away from so many Dene families and his great-grandmother who was that land had to be moved off it, closer to the city, near his uncle and his mother, part of her time at Ad Oz.
+  #221 wer 0.00 | The woman who had seemed as permanent as the mountain, pulled off the mountain.  ->  The woman who had seemed as permanent as the mountain pulled off the mountain.
+  #222 wer 0.00 | He was gaining a world in the very season his own people were losing one.  ->  He was gaining a world in the very season his own people were losing one.
+  #223 wer 0.00 | He had spent the rest of his life learning to carry that.  ->  He had spent the rest of his life learning to carry that.
+  #224 wer 0.00 | And it was the deepest reason he could stand at the bottom of a canyon and teach a circle of strangers to turn and face what carved them.  ->  And it was the deepest reason he could stand at the bottom of a canyon and teach a circle of strangers to turn and face what carved them.
+  #225 wer 0.00 | He knew what it cost.  ->  He knew what it cost.
+  #226 wer 0.00 | And he knew, better than any of them, that the canyon does not ask your permission before it makes you.  ->  And he knew, better than any of them, that the canyon does not ask your permission before it makes you.
+  #227 wer 0.00 | The Harvest  ->  The Harvest
+  #228 wer 0.00 | You never leave people in the depths.  ->  You never leave people in the depths.
+  #229 wer 0.00 | So he lifted them back up out of it, because the other half of overcoming is gladness.  ->  So he lifted them back up out of it, because the other half of overcoming is gladness.
+  #230 wer 0.00 | There was a feast they made with their own hands — blue corn and juniper ash and old knowledge carried down and nearly lost.  ->  There was a feast they made with their own hands. Blue corn and juniper ash and old knowledge carried down and nearly lost.
+  #231 wer 0.00 | There was a man with a bundle of flutes from half the world who lifted one to his lips and let the sound move through the circle the way water moves through rock.  ->  There was a man with a bundle of flutes from half the world who lifted one to his lips, and let the sound move through the circle the way water moves through rock.
+  #232 wer 0.00 | There was singing, and a slow round dance under the stars, and eleven nervous systems falling into rhythm with one another until something in each of them remembered what a whole successful life had made them forget — that it was never meant to heal alone.  ->  There was singing and a slow round dance under the stars and 11 nervous systems falling into rhythm with one another until something in each of them remembered what a whole successful life had made them forget that it was never meant to heal alone.
+  #233 wer 0.00 | A fire you gather around to decide who you’re going to be.  ->  A fire you gather around to decide who you're going to be.
+  #234 wer 0.00 | His people had a name for that.  ->  His people had a name for that.
+  #235 wer 0.00 | He did not say it out loud.  ->  He did not say it out loud.
+  #236 wer 0.00 | Not yet.  ->  Not yet.
+  #237 wer 0.00 | The Call  ->  The call
+  #238 wer 0.00 | He banked the coals long after the others had found their tents, and sat with the last of the heat, and felt — as he always felt out here — entirely at home.  ->  He banked the coals long after the others had found their tents, and sat with the last of the heat, and felt, as he always felt out here, entirely at home.
+  #239 wer 0.00 | The calm he taught.  ->  The calm he taught.
+  #240 wer 0.00 | The excellence he taught.  ->  The excellence he taught.
+  #241 wer 0.00 | The belonging he taught.  ->  The belonging he taught.
+  #242 wer 0.00 | All of it real, and all of it his, right here on the ground that made him.  ->  All of it real and all of it his right here on the ground that made him
+  #243 wer 0.00 | His phone lit up in the dark.  ->  His phone lit up in the dark.
+  #244 wer 0.00 | A country code he rarely saw.  ->  A country code he rarely saw.
+  #245 wer 0.00 | His grandfather had passed.  ->  His grandfather had passed.
+  #246 wer 0.06 | In his eighties, at the far end of a long and good life — a craftsman who built things with his hands until his hands were done, who kept his songs through everything a century threw at him, and who let go the way a full life closes: not a tragedy, a completion.  ->  In his 80s, at the far end of a long and good life, a craftsman who built things with his hands until his hands were done, who kept his songs through everything a century through at him, and who let go the way a full life closes, not a tragedy, a completion.
+  #247 wer 0.00 | They had already had the service.  ->  They had already had the service.
+  #248 wer 0.00 | There was nothing to rush toward and nothing to fix.  ->  There was nothing to rush toward and nothing to fix.
+  #249 wer 0.00 | There was only this, arriving quiet and steady across an ocean: the songs were his to carry now.  ->  There was only this, arriving quiet and steady across an ocean. The songs were his to carry now.
+  #250 wer 0.00 | He sat with it, and he felt no grief so much as weight — the good weight of being handed something.  ->  He sat with it, and he felt no grief so much as weight, the good weight of being handed something.
+  #251 wer 0.00 | Here was the thing he had never quite let himself see.  ->  Here was the thing he had never quite let himself see.
+  #252 wer 0.00 | He had stood at this fire and named three threads with pride, and one of them he had touched the least.  ->  He had stood at this fire and named three threads with pride, and one of them he had touched the least.
+  #253 wer 0.00 | He could teach a canyon full of strangers to stop running from their own lives, and he had spent his own at a careful distance from the half of him that was now, suddenly, his to carry.  ->  He could teach a canyon full of strangers to stop running from their own lives, and he had spent his own at a careful distance from the half of him that was now, suddenly, his to carry.
+  #254 wer 0.00 | There was a box of fifty years of songs in a green country he had never once set foot in.  ->  There was a box of 50 years of songs in a green country he had never once set foot in.
+  #255 wer 0.00 | And there was no one left to carry it but him.  ->  And there was no one left to carry it but him.
+  #256 wer 0.00 | He looked at the red rock he knew in his body, and he thought of a country he had never seen, and a grandfather he would now meet only in what he left behind.  ->  He looked at the red rock he knew in his body, and he thought of a country he had never seen, and a grandfather he would now meet only in what he left behind.
+  #257 wer 0.00 | And for the first time in a long time, the man who taught others to turn and face what they were running from felt himself, gently, being turned.  ->  And for the first time in a long time, the man who taught others to turn and face what they were running from felt himself, gently being turned.
+  #258 wer 0.00 | He let the fire go down.  ->  He let the fire go down.
+  #259 wer 0.00 | Somewhere on the far side of the world, a bus was running north through birch and pine toward a village he could not yet picture, and he was going to be on it, the old songs in his pack.  ->  Somewhere on the far side of the world, a bus was running north through birch and pine toward a village he could not yet picture, and he was going to be on it, the old songs in his pack.
+  #260 wer 0.00 | The day was already walking.  ->  The day was already walking.
+
+====================================================================================================
+FEMININE — bf_emma, en-gb: 261 sentences, 239 clean on the first rendering, 22 looked at again. Final length 1086.3s, -16.5 LUFS, peak -1.4 dBFS.
+Spelling check in this accent (espeak phonemes of the spelling vs. phonemes of how Tony says it):
+  en-gb: 'Mesa' Tony says 'MAY-sa'; spelling 'may-sa' -> meɪsɑ (target meɪsɑ, distance 0)
+  en-gb: 'Yazzie' Tony says 'YAH-zee'; spelling 'yahzee' -> jɑzi (target jɑzi, distance 0)
+  en-gb: 'hogan' Tony says 'HO-gan'; spelling 'ho-gan' -> həʊɡan (target həʊɡan, distance 0)
+  en-gb: 'Diné' Tony says 'Deh-NEH'; spelling 'dehneh' -> deɪneɪ (target deɪneɪ, distance 0)
+  en-gb: 'Tonas' Tony says 'TOO-nas'; spelling 'too-nas' -> tunas (target tunas, distance 0)
+  en-gb: 'Ada' Tony says 'AH-dah'; spelling 'ah-dah' -> ɑdɑ (target ɑdɑ, distance 0)
+  en-gb: 'Masan' Tony says 'MAH-sahn'; spelling 'mahsahn' -> mɑsɑn (target mɑsɑn, distance 0)
+  en-gb: 'Ada’s' Tony says "AH-dah's"; spelling "ah-dah's" -> ɑdɑz (target ɑdɑz, distance 0)
+
+--- #0  Stone Breath.
+    sent to the voice: Stone Breath.
+    tried 'as written': heard 'stone breathy'  (wer 0.5, cut off: False, names heard as {})
+    tried 'Stone Breath. ': heard 'stone breathy'  (wer 0.5, cut off: False, names heard as {})
+    tried 'SPLIT': heard 'stone breathy'  (wer 0.5, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+--- #2  The Canyon Within.
+    sent to the voice: The Canyon Within.
+    tried 'as written': heard "The Canyon Within's"  (wer 0.333, cut off: False, names heard as {})
+    tried 'The Canyon Within. ': heard "The Canyon Within's"  (wer 0.333, cut off: False, names heard as {})
+    tried 'SPLIT': heard "The Canyon Within's"  (wer 0.333, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+--- #7  My grandmother said they’re probably just waiting to see what mess we make next.”
+    sent to the voice: My grandmother said they’re probably just waiting to see what mess we make next.”
+    tried 'as written': heard '"My grandmother said they are probably just waiting to see what mess we make next."'  (wer 0.143, cut off: False, names heard as {})
+    tried 'My grandmother said they’re probably just waiting to see what mess we make next.” ': heard '"My grandmother said they are probably just waiting to see what mess we make next."'  (wer 0.143, cut off: False, names heard as {})
+    tried 'My grandmother said they’re probably just waiting to see what mess we make next.': heard '"My grandmother said they are probably just waiting to see what mess we make next."'  (wer 0.143, cut off: False, names heard as {})
+    tried 'SPLIT': heard '"My grandmother said they are probably just waiting to see what mess we make next."'  (wer 0.143, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+--- #16  Tonas ran the program himself, once a year.
+    sent to the voice: too-nas ran the program himself, once a year.
+    tried 'as written': heard 'Tounas ran the programme himself once a year.'  (wer 0.143, cut off: False, names heard as {'tonas': 'tounas'})
+    tried 'too-nas ran the program himself, once a year. ': heard 'Tounas ran the programme himself once a year.'  (wer 0.143, cut off: False, names heard as {'tonas': 'tounas'})
+    tried 'SPLIT': heard 'Tounas ran the program himself, once a year.'  (wer 0.0, cut off: False, names heard as {'tonas': 'tounas'})
+    kept: SPLIT
+--- #34  The Land, First
+    sent to the voice: The Land, First.
+    tried 'as written': heard 'The land firsty.'  (wer 0.333, cut off: False, names heard as {})
+    tried 'The Land, First. ': heard 'The land firsty.'  (wer 0.333, cut off: False, names heard as {})
+    tried 'SPLIT': heard 'The land first.'  (wer 0.0, cut off: False, names heard as {})
+    kept: SPLIT
+--- #40  And this canyon country was never one people’s alone.
+    sent to the voice: And this canyon country was never one people’s alone.
+    tried 'as written': heard 'And this canyons country was never one peoples alone.'  (wer 0.111, cut off: False, names heard as {})
+    tried 'And this canyon country was never one people’s alone. ': heard 'And this canyons country was never one peoples alone.'  (wer 0.111, cut off: False, names heard as {})
+    tried 'SPLIT': heard 'And this canyons country was never one peoples alone.'  (wer 0.111, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+--- #48  The Descent
+    sent to the voice: The Descent.
+    tried 'as written': heard 'The Dissenter'  (wer 0.5, cut off: False, names heard as {})
+    tried 'The Descent. ': heard 'The Dissenter'  (wer 0.5, cut off: False, names heard as {})
+    tried 'SPLIT': heard 'The Dissenter'  (wer 0.5, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+--- #65  That is the work.
+    sent to the voice: That is the work.
+    tried 'as written': heard 'That is the workie.'  (wer 0.25, cut off: False, names heard as {})
+    tried 'That is the work. ': heard 'That is the workie.'  (wer 0.25, cut off: False, names heard as {})
+    tried 'SPLIT': heard 'That is the workie.'  (wer 0.25, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+--- #69  They went on down.
+    sent to the voice: They went on down.
+    tried 'as written': heard 'They went on downs.'  (wer 0.25, cut off: False, names heard as {})
+    tried 'They went on down. ': heard 'They went on downs.'  (wer 0.25, cut off: False, names heard as {})
+    tried 'SPLIT': heard 'They went on downs.'  (wer 0.25, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+--- #76  Wind.
+    sent to the voice: Wind.
+    tried 'as written': heard 'winder'  (wer 1.0, cut off: False, names heard as {})
+    tried 'Wind. ': heard 'winder'  (wer 1.0, cut off: False, names heard as {})
+    tried 'SPLIT': heard 'winder'  (wer 1.0, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+--- #96  Three Threads
+    sent to the voice: Three Threads.
+    tried 'as written': heard 'Three threads are...'  (wer 0.5, cut off: False, names heard as {})
+    tried 'Three Threads. ': heard 'Three threads are...'  (wer 0.5, cut off: False, names heard as {})
+    tried 'SPLIT': heard 'Three threads are...'  (wer 0.5, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+--- #102  “I’m Diné — Navajo.
+    sent to the voice: “I’m dehneh — Navajo.
+    tried 'as written': heard "I'm Dénais Navahov."  (wer 0.667, cut off: False, names heard as {})
+    tried '“I’m dehneh, Navajo.': heard "I'm Danae Navahov."  (wer 0.5, cut off: False, names heard as {'dine': 'danae'})
+    tried '“I’m dehneh; Navajo.': heard "I'm Dene Navajoth."  (wer 0.5, cut off: False, names heard as {'dine': 'dene'})
+    tried '“I’m dehneh — Navajo. ': heard "I'm Dénais Navahov."  (wer 0.667, cut off: False, names heard as {})
+    tried 'SPLIT': heard "I'm Danae, Navajo."  (wer 0.0, cut off: False, names heard as {'dine': 'danae'})
+    kept: SPLIT
+--- #106  That’s the first thread.
+    sent to the voice: That’s the first thread.
+    tried 'as written': heard "That's the first thready."  (wer 0.25, cut off: False, names heard as {})
+    tried 'That’s the first thread. ': heard "That's the first thready."  (wer 0.25, cut off: False, names heard as {})
+    tried 'SPLIT': heard "That's the first thready."  (wer 0.25, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+--- #114  The morning.
+    sent to the voice: The morning.
+    tried 'as written': heard 'The mornings'  (wer 0.5, cut off: False, names heard as {})
+    tried 'The morning. ': heard 'The mornings'  (wer 0.5, cut off: False, names heard as {})
+    tried 'SPLIT': heard 'The mornings'  (wer 0.5, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+--- #155  “And a crew.
+    sent to the voice: “And a crew.
+    tried 'as written': heard 'and a cruise'  (wer 0.333, cut off: False, names heard as {})
+    tried '“And a crew. ': heard 'and a cruise'  (wer 0.333, cut off: False, names heard as {})
+    tried 'SPLIT': heard 'and a cruise'  (wer 0.333, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+--- #174  “And?”
+    sent to the voice: “And?”
+    tried 'as written': heard 'zand'  (wer 1.0, cut off: False, names heard as {})
+    tried '“And?” ': heard 'zand'  (wer 1.0, cut off: False, names heard as {})
+    tried 'And? (the opening quote mark alone made the British voice start with a stray z)': heard 'and'  (wer 0.0, cut off: False, names heard as {})
+    kept: And? (question kept; only the quote mark dropped)
+--- #179  It is not crafts.
+    sent to the voice: It is not crafts.
+    tried 'as written': heard 'It is not craft.'  (wer 0.25, cut off: False, names heard as {})
+    tried 'It is not crafts. ': heard 'It is not craft.'  (wer 0.25, cut off: False, names heard as {})
+    tried 'SPLIT': heard 'It is not craft.'  (wer 0.25, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+--- #181  There are silversmiths whose work you would recognize on sight and could not afford.
+    sent to the voice: There are silversmiths whose work you would recognize on sight and could not afford.
+    tried 'as written': heard 'There are silversmiths whose work you would recognise on site and could not afford.'  (wer 0.143, cut off: False, names heard as {})
+    tried 'There are silversmiths whose work you would recognize on sight and could not afford. ': heard 'There are silversmiths whose work you would recognise on site and could not afford.'  (wer 0.143, cut off: False, names heard as {})
+    tried 'SPLIT': heard 'There are silversmiths whose work you would recognise on site and could not afford.'  (wer 0.143, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+--- #183  Potters.
+    sent to the voice: Potters.
+    tried 'as written': heard 'Pottersy'  (wer 1.0, cut off: False, names heard as {})
+    tried 'Potters. ': heard 'Pottersy'  (wer 1.0, cut off: False, names heard as {})
+    tried 'SPLIT': heard 'Pottersy'  (wer 1.0, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+--- #184  Carvers.”
+    sent to the voice: Carvers.”
+    tried 'as written': heard 'Kavas'  (wer 1.0, cut off: False, names heard as {})
+    tried 'Carvers.” ': heard 'Kavas'  (wer 1.0, cut off: False, names heard as {})
+    tried 'Carvers.': heard 'Kavas'  (wer 1.0, cut off: False, names heard as {})
+    tried 'SPLIT': heard 'Kavas'  (wer 1.0, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+--- #237  The Call
+    sent to the voice: The Call.
+    tried 'as written': heard 'The coal'  (wer 0.5, cut off: False, names heard as {})
+    tried 'The Call. ': heard 'The coal'  (wer 0.5, cut off: False, names heard as {})
+    tried 'SPLIT': heard 'The coal'  (wer 0.5, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+--- #239  The calm he taught.
+    sent to the voice: The calm he taught.
+    tried 'as written': heard 'The calm he taught her.'  (wer 0.25, cut off: False, names heard as {})
+    tried 'The calm he taught. ': heard 'The calm he taught her.'  (wer 0.25, cut off: False, names heard as {})
+    tried 'SPLIT': heard 'The calm he taught her.'  (wer 0.25, cut off: False, names heard as {})
+    kept: as written (best of the tries)
+
+Every sentence, first rendering, as Whisper heard it:
+  #  0 wer 0.50 | Stone Breath.  ->  stone breathy
+  #  1 wer 0.00 | Chapter One.  ->  Chapter 1
+  #  2 wer 0.33 | The Canyon Within.  ->  The Canyon Within's
+  #  3 wer 0.00 | “What appears to happen to you is happening for you.”  ->  What appears to happen to you is happening for you.
+  #  4 wer 0.00 | “How you do the small thing is how you do everything.”  ->  How you do the small thing is how you do everything.
+  #  5 wer 0.00 | — Japanese teaching  ->  Japanese teaching
+  #  6 wer 0.00 | “My grandfather said the ancestors watch over us.  ->  "My grandfather said the ancestors watch over us."
+  #  7 wer 0.14 | My grandmother said they’re probably just waiting to see what mess we make next.”  ->  "My grandmother said they are probably just waiting to see what mess we make next."
+  #  8 wer 0.00 | — Tonas Yazzie  ->  Toonas Yazi
+  #  9 wer 0.00 | Every one of them had built a life that looked right from the outside.  ->  Every one of them had built a life that looked right from the outside.
+  # 10 wer 0.00 | That was the thing the circle had in common — nine executives and two who were not, gathered from wherever in the world they had made their names.  ->  That was the thing the circle had in common, nine executives and two who were not, gathered from wherever in the world they had made their names.
+  # 11 wer 0.00 | A woman who ran a fund in London.  ->  A woman who ran a fund in London.
+  # 12 wer 0.00 | A founder from São Paulo.  ->  A founder from Sao Paulo.
+  # 13 wer 0.00 | A man from a Tokyo trading house who was used to a car and a driver and a floor of people who moved when he moved.  ->  A man from a Tokyo trading house who was used to a car and a driver, and a floor of people who moved when he moved.
+  # 14 wer 0.00 | A software chief out of Lagos.  ->  A software chief out of Lagos.
+  # 15 wer 0.00 | And sitting among them as equals, a schoolteacher who had emptied a modest savings account to be there, and a young man barely out of his twenties, barely out of harder places than that, who had paid nothing at all.  ->  and sitting among them as equals, a school teacher who had emptied a modest savings account to be there, and a young man barely out of his twenties, barely out of harder places than that who had paid nothing at all.
+  # 16 wer 0.14 | Tonas ran the program himself, once a year.  ->  Tounas ran the programme himself once a year.
+  # 17 wer 0.00 | It was an international leadership retreat he had built inside his own company, and it was the truest work he did.  ->  It was an international leadership retreat he had built inside his own company, and it was the truest work he did.
+  # 18 wer 0.00 | Most of the seats went to people who could pay a great deal for them.  ->  Most of the seats went to people who could pay a great deal for them.
+  # 19 wer 0.00 | But he always held a couple open for people the room would otherwise never include, and he asked nothing for those seats but readiness.  ->  But he always held a couple open for people the room would otherwise never include and he asked nothing for those seats, but readiness
+  # 20 wer 0.00 | The code belonged to everyone, he figured, or it belonged to no one.  ->  The code belonged to everyone he figured, or it belonged to no one.
+  # 21 wer 0.00 | Because money was never the filter.  ->  Because money was never the filter.
+  # 22 wer 0.00 | There was only one filter, and it had nothing to do with what you could afford or where you were from.  ->  There was only one filter, and it had nothing to do with what you could afford or where you were from.
+  # 23 wer 0.00 | You had to want it.  ->  You had to want it.
+  # 24 wer 0.00 | You had to be tired enough of your own dark to be willing, at last, to turn and look at it.  ->  You had to be tired enough of your own dark to be willing, at last, to turn and look at it.
+  # 25 wer 0.00 | The CEO and the schoolteacher and the young man from the hard place were in that circle for exactly one reason: every one of them had finally shown up wanting.  ->  The CEO and the schoolteacher and the young man from the hard place were in that circle for exactly one reason. Every one of them had finally shown up wanting.
+  # 26 wer 0.00 | He had brought them to Sedona because Sedona was home.  ->  He had brought them to Sedona because Sedona was home.
+  # 27 wer 0.00 | Not a venue he flew into — the place he had made his life, on a dirt road close to Oak Creek.  ->  Not a venue he flew into the place he had made his life, on a dirt road close to Oak Creek.
+  # 28 wer 0.00 | He came from a big family, the way Diné families are big — cousins and aunts and uncles scattered across the whole region — and he had chosen this ground on purpose, for reasons that had nothing to do with how beautiful it was and everything to do with how it held a life together.  ->  He came from a big family, the way Danae families are big, cousins and aunts and uncles scattered across the whole region. And he had chosen this ground on purpose, for reasons that had nothing to do with how beautiful it was, and everything to do with how it held a life together.
+  # 29 wer 0.04 | It sat at the center of everything that mattered to him: a couple of hours from the rez, from Ada, from his parents; an easy run down to Phoenix and the city and the airports that carried him out to the world and home again.  ->  It sat at the centre of everything that mattered to him. A couple of hours from the res, from Ardar from his parents, an easy run down to Phoenix and the city and the airports that carried him out to the world and home again.
+  # 30 wer 0.05 | And it was the one patch of earth where, since he was a boy, he had always performed at his best.  ->  And it was the one patch of earth wear, since he was a boy he had always performed at his best.
+  # 31 wer 0.01 | It gave him every kind of training a body could ask for, all within reach of the same front door: the high country and the mountains when he wanted altitude and climbing, the gyms in town when he wanted iron and structure, and — when he wanted the truth — the exact canyon trails that had forged that 4:20 mile as a boy, ground that already knew how to make him fast.  ->  It gave him every kind of training a body could ask for, all within reach of the same front door. The high country and the mountains when he wanted altitude and climbing, the gyms in town when he wanted iron and structure, and when he wanted the truth, the exact canyon trails that had forged that fought 20 mile as a boy, ground that already knew how to make him fast.
+  # 32 wer 0.07 | Most people spend a life looking for the ground that makes them more themselves.  ->  Most people spend a life looking for the ground that makes them moor themselves.
+  # 33 wer 0.00 | He had found his early, and never let it go.  ->  He had found his early and never let it go.
+  # 34 wer 0.33 | The Land, First  ->  The land firsty.
+  # 35 wer 0.00 | Before anything else, he honored the ground.  ->  Before anything else he honored the ground.
+  # 36 wer 0.00 | He always started there.  ->  He always started there.
+  # 37 wer 0.00 | “We are in the beautiful sacred red-rock country of Sedona, Arizona,” he told them, that first morning.  ->  "We are in the beautiful sacred red rock country of Sedona, Arizona," he told them that first morning.
+  # 38 wer 0.00 | “And before we take one breath together, we honor this land.  ->  And before we take one breath together, we honor this land.
+  # 39 wer 0.04 | These red rocks are the homeland of the Yavapai and the Apache, and of the Sinagua who came before them — the ancestors of today’s Hopi.  ->  These red rocks are the homeland of the Yavapai and the Apache, and of the Senaguah who came before them, the ancestors of today's Hopi.
+  # 40 wer 0.11 | And this canyon country was never one people’s alone.  ->  And this canyons country was never one peoples alone.
+  # 41 wer 0.00 | It was a crossroads.  ->  It was a crossroads.
+  # 42 wer 0.03 | The trade routes ran through here for thousands of years, and many nations met and traded on this ground — the Hopi, the Navajo, the Ute, the Paiute, and more.  ->  The trade routes ran through here for thousands of years, and many nations met and traded on this ground. The Hopi, the Navajo, the Ute, the Peyut and more.
+  # 43 wer 0.00 | We begin by thanking the people whose home this is, and always was.”  ->  We begin by thanking the people whose home this is and always was.
+  # 44 wer 0.00 | He did not do it because it was expected.  ->  He did not do it because it was expected.
+  # 45 wer 0.00 | He did it because it was the first tool.  ->  He did it because it was the first tool.
+  # 46 wer 0.00 | Before you can settle a single nervous system, you have to remember you are a guest on something older than you — and so is everyone sitting beside you.  ->  Before you can settle a single nervous system, you have to remember you are a guest on something older than you, and so is everyone sitting beside you.
+  # 47 wer 0.00 | That is the whole book, said in one gesture, before the book begins.  ->  That is the whole book, said in one gesture, before the book begins.
+  # 48 wer 0.50 | The Descent  ->  The Dissenter
+  # 49 wer 0.00 | He took them down before dawn.  ->  He took them down before dawn.
+  # 50 wer 0.00 | On purpose.  ->  on purpose
+  # 51 wer 0.00 | Everything about the three days was ordered on purpose — the way you would descend a real canyon and climb back out carrying water.  ->  Everything about the three days was ordered on purpose, the way you would descend a real canyon and climb back out carrying water.
+  # 52 wer 0.00 | Down first, into the dark and the depth, before you were allowed anywhere near the light.  ->  Down first into the dark and the depth before you were allowed anywhere near the light.
+  # 53 wer 0.00 | They went single file behind his headlamp, breathing harder than any of them had breathed in twenty years and, for the first time in longer than that, not in charge of a single thing.  ->  They went single file behind his headlamp, breathing harder than any of them had breathed in twenty years, and for the first time in longer than that, not in charge of a single thing.
+  # 54 wer 0.00 | Halfway down, the man from Tokyo stopped, hands on his knees, and made a sound that was half laugh and half despair.  ->  Halfway down, the man from Tokyo stopped, hands on his knees, and made a sound that was half laugh and half despair.
+  # 55 wer 0.00 | Tonas went back to him.  ->  Two Nars went back to him.
+  # 56 wer 0.00 | He did not offer a hand.  ->  He did not offer a hand.
+  # 57 wer 0.00 | He reached into his pocket and took out a small, smooth stone, worn round by the creek, and pressed it into the man’s palm.  ->  He reached into his pocket and took out a small, smooth stone worn round by the creek and pressed it into the man's palm.
+  # 58 wer 0.00 | “Hold this.  ->  Hold this.
+  # 59 wer 0.00 | Breathe into it — in through the nose, out long and slow.  ->  Breathe into it in through the nose out long and slow.
+  # 60 wer 0.00 | You are not dying.  ->  You are not dying.
+  # 61 wer 0.00 | Your body just thinks you are, and there is a difference.”  ->  Your body just thinks you are and there is a difference.
+  # 62 wer 0.00 | He waited while the man’s shoulders came down off his ears.  ->  He waited while the man's shoulders came down off his ears.
+  # 63 wer 0.00 | “Before we look at anything you have been carrying, your body has to believe it is safe.  ->  Before we look at anything you have been carrying, your body has to believe it is safe.
+  # 64 wer 0.00 | That is not the warm-up.  ->  That is not the warm-up.
+  # 65 wer 0.25 | That is the work.  ->  That is the workie.
+  # 66 wer 0.00 | You cannot reprogram a mind that is running for its life.”  ->  You cannot reprogram a mind that is running for its life.
+  # 67 wer 0.00 | The man breathed.  ->  The man breathed.
+  # 68 wer 0.00 | Something in him unclenched.  ->  Something in him unclenched.
+  # 69 wer 0.25 | They went on down.  ->  They went on downs.
+  # 70 wer 0.00 | Reading the Walls  ->  Reading the Walls
+  # 71 wer 0.00 | They reached the canyon floor as the first gray began to bleed up the walls, and Tonas stopped them there, in the cool blue dark at the bottom of a hundred million years, and had them look up.  ->  They reached the canyon floor as the first gray began to bleed up the walls, and two nasts stopped them there, in the cool blue dark at the bottom of a hundred million years, and had them look up.
+  # 72 wer 0.00 | “People spend their whole lives at war with their own canyon,” he said.  ->  "People spend their whole lives at war with their own canyon," he said.
+  # 73 wer 0.00 | “Ashamed of the marks.  ->  Ashamed of the marks.
+  # 74 wer 0.00 | Trying to fill them in, or hide them, or pretend the storm that carved them never came.  ->  trying to fill them in or hide them or pretend the storm that carved them never came.
+  # 75 wer 0.00 | But look at what did this.  ->  But look at what did this.
+  # 76 wer 1.00 | Wind.  ->  winder
+  # 77 wer 0.00 | Water.  ->  Water
+  # 78 wer 0.00 | Time.  ->  Time
+  # 79 wer 0.00 | Floods that must have felt like the end of the world when they came through.  ->  Floods that must have felt like the end of the world when they came through.
+  # 80 wer 0.00 | Every mark on this wall is a thing that happened here — and every one of those things was carving the exact shape that can now hold a river.  ->  Every mark on this wall is a thing that happened here, and every one of those things was carving the exact shape that can now hold a river.
+  # 81 wer 0.00 | Hold life.  ->  Hold life.
+  # 82 wer 0.00 | Hold you, standing in it at dawn.  ->  Hold you standing in it at dawn.
+  # 83 wer 0.00 | “What looks like it happened to this canyon,” he said, “was happening for it.”  ->  "What looks like it happened to this canyon," he said, "was happening for it."
+  # 84 wer 0.00 | Nobody spoke.  ->  Nobody spoke.
+  # 85 wer 0.00 | Somewhere up the rim a canyon wren spilled its long falling note and went quiet.  ->  Somewhere up the rim, a canyon wren spilled its long falling note and went quiet.
+  # 86 wer 0.00 | “That is why we came down first.  ->  That is why we came down first.
+  # 87 wer 0.00 | Not to fix you — nothing is broken.  ->  Not to fix you, nothing is broken.
+  # 88 wer 0.00 | We came down to read the walls.  ->  We came down to read the walls.
+  # 89 wer 0.00 | To turn around and look at the thing you have spent years running from, and ask it a different question.  ->  To turn around and look at the thing you have spent years running from and ask it a different question.
+  # 90 wer 0.00 | Not why did this happen to me, but — what were you carving?  ->  Not why did this happen to me but what were you carving?
+  # 91 wer 0.00 | What are you here to teach me?  ->  What are you here to teach me?
+  # 92 wer 0.00 | The day you stop fighting your canyon is the day the marks stop looking like damage and start looking like formation.”  ->  The day you stop fighting your canyon is the day the marks stop looking like damage and start looking like formation.
+  # 93 wer 0.00 | Then the sun came over the rim, and the whole gorge caught fire — red rock lit from the inside the way it only ever is in that first minute — and eleven people who had spent fortunes trying to find the off switch on their own minds stood in the light and forgot, briefly, everything they were so sure they already knew.  ->  Then the sun came over the rim, and the whole gorge caught fire, red rock lit, from the inside the way it only ever is in that first minute. And eleven people who had spent fortunes trying to find the off-switch on their own minds stood in the light and forgot, briefly, everything they were so sure they already knew.
+  # 94 wer 0.00 | One of them was crying.  ->  One of them was crying.
+  # 95 wer 0.00 | Nobody minded.  ->  Nobody minded.
+  # 96 wer 0.50 | Three Threads  ->  Three threads are...
+  # 97 wer 0.00 | That night, up on a bench above the creek, with the stars poured thick across the black and a fire going, the circle asked him what circles always eventually ask.  ->  That night, up on a bench above the creek, with the stars poured thick across the black and a fire going, the circle asked him what circles always eventually ask.
+  # 98 wer 0.00 | So who are you?  ->  So who are you?
+  # 99 wer 0.00 | And Tonas told them the way he told everything — he had been telling stories since he was a boy — as a story.  ->  And Toonas told them the way he told everything. He had been telling stories since he was a boy as a story.
+  #100 wer 0.00 | “I’m three people,” he said.  ->  "I'm three people," he said.
+  #101 wer 0.00 | “I always have been.  ->  I always have been.
+  #102 wer 0.67 | “I’m Diné — Navajo.  ->  I'm Dénais Navahov.
+  #103 wer 0.00 | My great-grandmother raised me on Black Mesa, in a hogan with no electricity, and she taught me to run before the sun with a stone.  ->  My great-grandmother raised me on black mesa in a hogan with no electricity and she taught me to run before the sun with a stone.
+  #104 wer 0.00 | Not as a ritual — as engineering.  ->  Not as a ritual as engineering.
+  #105 wer 0.00 | A way to keep the breath calm when the body wants to panic.  ->  A way to keep the breath calm when the body wants to panic.
+  #106 wer 0.25 | That’s the first thread.  ->  That's the first thready.
+  #107 wer 0.00 | “Her name was Masan,” he said.  ->  Her name was Marsan, he said.
+  #108 wer 0.00 | “She was sixty-four when she took me.  ->  She was 64 when she took me.
+  #109 wer 0.00 | That is not an age at which a woman goes looking for a small boy to raise.  ->  That is not an age at which a woman goes looking for a small boy to raise.
+  #110 wer 0.00 | She did it anyway, and she did not present it as a sacrifice, and I did not understand until I was thirty that it was one.”  ->  She did it anyway, and she did not present it as a sacrifice, and I did not understand until I was thirty that it was one.
+  #111 wer 0.00 | He let that sit.  ->  He let that sit.
+  #112 wer 0.00 | “Everything I am going to hand you this week came out of her hands.  ->  "Everything I am going to hand you this week came out of her hands."
+  #113 wer 0.00 | The breath.  ->  The breath.
+  #114 wer 0.50 | The morning.  ->  The mornings
+  #115 wer 0.00 | The way you sit with someone who is struggling and do not rush them.  ->  The way you sit with someone who is struggling and do not rush them.
+  #116 wer 0.00 | She had no framework for any of it.  ->  She had no framework for any of it.
+  #117 wer 0.00 | She would not have known what a framework was.”  ->  She would not have known what a framework was.
+  #118 wer 0.00 | He looked into the coals.  ->  He looked into the coals.
+  #119 wer 0.00 | “She called it Tuesday.”  ->  She called it Tuesday.
+  #120 wer 0.00 | Somebody laughed.  ->  Somebody laughed.
+  #121 wer 0.00 | “I want to be accurate about something, because I am going to be teaching all week and you should know where it comes from.  ->  I want to be accurate about something because I am going to be teaching all week and you should know where it comes from.
+  #122 wer 0.00 | I did not learn this at a university and I did not build it in a lab.  ->  I did not learn this at a university and I did not build it in a lab.
+  #123 wer 0.00 | I learned it from one woman on a mesa who could not read English, and every single thing I have tested since has held up.”  ->  I learned it from one woman on a mesa who could not read English, and every single thing I have tested since has held up.
+  #124 wer 0.00 | “I’m Lithuanian.  ->  I'm Lithuanian.
+  #125 wer 0.00 | My grandfather’s people were craftsmen who kept their traditions alive through a Soviet occupation that would have preferred they forget — fifty years of letters and songs carried through the locked door of a country.  ->  My grandfather's people were craftsmen, who kept their traditions alive through a Soviet occupation that would have preferred they forget. 50 years of letters and songs carried through the locked door of a country.
+  #126 wer 0.00 | That’s the second thread.  ->  That's the second thread.
+  #127 wer 0.00 | “And the third I chose.  ->  and the third I chose.
+  #128 wer 0.00 | I’ve spent my life apprenticed to Japan — to the idea that mastery is a spiritual discipline, that how you do the small thing is how you do everything.  ->  I've spent my life apprenticed to Japan, to the idea that mastery is a spiritual discipline, that how you do the small thing is how you do everything.
+  #129 wer 0.00 | “Three peoples who never met, on three sides of the earth, and every one of them worked out the same handful of tools for staying human under pressure.  ->  Three peoples who never met, on three sides of the earth, and every one of them worked out the same handful of tools for staying human under pressure.
+  #130 wer 0.00 | I didn’t invent any of it.  ->  I didn't invent any of it.
+  #131 wer 0.00 | I just happened to be the crossroads they all ran through.”  ->  I just happened to be the crossroads they all ran through.
+  #132 wer 0.00 | Someone asked what his people had been, before.  ->  Someone asked what his people had been before.
+  #133 wer 0.00 | “Rich,” Tonas said.  ->  Rich to now said
+  #134 wer 0.00 | The woman who ran the fund in London looked up.  ->  The woman who ran the fund in London looked up.
+  #135 wer 0.00 | “I’m serious.  ->  I'm serious.
+  #136 wer 0.00 | There’s a movie — Crazy Rich Asians.  ->  There's a movie Crazy Rich Asians
+  #137 wer 0.00 | My cousins and I watched it and laughed for a week, because we kept thinking somebody should make Crazy Rich Natives and set it in 1650.”  ->  My cousins and I watched it and laughed for a week, because we kept thinking somebody should make crazy rich natives and set it in 1650.
+  #138 wer 0.00 | He turned a stick in the coals.  ->  He turned a stick in the coals.
+  #139 wer 0.00 | “I am fairly sure that is what Columbus thought when he showed up.  ->  I am fairly sure that is what Columbus thought when he showed up.
+  #140 wer 0.00 | He was not looking at poverty.  ->  He was not looking at poverty.
+  #141 wer 0.00 | He was looking at wealth he did not have a word for.”  ->  He was looking at wealth he did not have a word for.
+  #142 wer 0.00 | “What did rich look like?” the schoolteacher asked.  ->  What did Rich look like? the schoolteacher asked.
+  #143 wer 0.00 | “Up before the sun.  ->  Up before the sun.
+  #144 wer 0.00 | Every day.  ->  Every day.
+  #145 wer 0.00 | Without exception.  ->  without exception
+  #146 wer 0.00 | Knowing the songs.  ->  Knowing the songs.
+  #147 wer 0.00 | Ceremony on the calendar and organization in every part of the life.  ->  Ceremony on the calendar and organization in every part of the life.
+  #148 wer 0.00 | Discipline in the work, the food, the body.  ->  Discipline in the work the food the body
+  #149 wer 0.00 | The finest corn and the finest rugs, made by hand.  ->  The finest corn and the finest rugs made by hand.
+  #150 wer 0.00 | Jewelry that took a winter.  ->  jewelry that took a winter
+  #151 wer 0.00 | Fine horses.  ->  Fine horses
+  #152 wer 0.00 | Sheeps — we say sheeps, do not ask me why.  ->  Sheeps we say sheeps do not ask me why.
+  #153 wer 0.00 | Enough food stored that a bad winter was an inconvenience and not a catastrophe.”  ->  Enough food stored that a bad winter was an inconvenience and not a catastrophe.
+  #154 wer 0.00 | He paused.  ->  He paused.
+  #155 wer 0.33 | “And a crew.  ->  and a cruise
+  #156 wer 0.00 | Anyone actually rich had people working alongside them, and those people ate.”  ->  Anyone actually rich had people working alongside them and those people ate.
+  #157 wer 0.00 | He looked around the fire.  ->  He looked around the fire.
+  #158 wer 0.00 | “And here is the part that would not survive a movie.  ->  And here is the part that would not survive a movie.
+  #159 wer 0.00 | You were only rich if other people were carrying the same knowledge.  ->  You were only rich if other people were carrying the same knowledge.
+  #160 wer 0.00 | If you were the last one who knew it, you were not wealthy.  ->  If you were the last one who knew it, you were not wealthy.
+  #161 wer 0.00 | You were a museum.”  ->  You were a museum.
+  #162 wer 0.00 | Nobody said anything for a moment.  ->  Nobody said anything for a moment.
+  #163 wer 0.00 | “How long were your people there?” the man from Tokyo asked.  ->  "How long were your people there?" the man from Tokyo asked.
+  #164 wer 0.00 | “Depends who is counting.  ->  Depends who is counting
+  #165 wer 0.08 | When I was a boy the scientists said a few thousand years.  ->  When I was a boy, the scientist said a few thousand years.
+  #166 wer 0.00 | Then ten thousand.  ->  Then ten thousand.
+  #167 wer 0.00 | Then fifteen.  ->  then 15
+  #168 wer 0.00 | Then thirty.  ->  then 30.
+  #169 wer 0.00 | Lately one or two of them are wondering out loud whether some of us started there.”  ->  Lately one or two of them are wondering out loud whether some of us started there.
+  #170 wer 0.00 | He shrugged.  ->  He shrugged.
+  #171 wer 0.00 | “Our elders find this extremely entertaining.  ->  Our elders find this extremely entertaining.
+  #172 wer 0.00 | We have had the same answer the entire time.  ->  We have had the same answer the entire time.
+  #173 wer 0.00 | Since time immemorial.”  ->  since time immemorial
+  #174 wer 1.00 | “And?”  ->  zand
+  #175 wer 0.00 | “And we are not in a hurry.  ->  And we are not in a hurry.
+  #176 wer 0.00 | We have been right for a while.”  ->  We have been right for a while.
+  #177 wer 0.00 | “And the art,” he said.  ->  and the art, he said.
+  #178 wer 0.00 | “People say crafts.  ->  People say "crafts".
+  #179 wer 0.25 | It is not crafts.  ->  It is not craft.
+  #180 wer 0.00 | There are weavers from that mesa whose rugs hang in museums on three continents.  ->  There are weavers from that mesa whose rugs hang in museums on three continents.
+  #181 wer 0.14 | There are silversmiths whose work you would recognize on sight and could not afford.  ->  There are silversmiths whose work you would recognise on site and could not afford.
+  #182 wer 0.00 | Painters.  ->  painters
+  #183 wer 1.00 | Potters.  ->  Pottersy
+  #184 wer 1.00 | Carvers.”  ->  Kavas
+  #185 wer 0.00 | “Why does nobody know the names?” the woman from London asked.  ->  "Why does nobody know the names?" the woman from London asked.
+  #186 wer 0.00 | “Some people do.  ->  Some people do.
+  #187 wer 0.00 | But most of them never called themselves artists, because there was no such job.  ->  But most of them never called themselves artists, because there was no such job.
+  #188 wer 0.00 | You wove because the family needed a rug and because you were the one who could see it before it was there.”  ->  You wove because the family needed a rug, and because you were the one who could see it before it was there.
+  #189 wer 0.00 | He turned the stick again.  ->  He turned the stick again.
+  #190 wer 0.00 | “World class, and nobody hung a sign.”  ->  World class and nobody hung a sign.
+  #191 wer 0.00 | He was quiet a moment.  ->  He was quiet a moment.
+  #192 wer 0.00 | “And here’s the strange part.  ->  And here's the strange part.
+  #193 wer 0.00 | I knew I belonged to more than one place before I ever left that mesa.  ->  I knew I belonged to more than one place before I ever left that mesa.
+  #194 wer 0.02 | My great-grandmother had a table she was proud of, and a lamp on it, and by that lamp I read books that had traveled from Switzerland, from Lithuania, from Japan — the whole world climbing the mountain to find one boy, an envelope and a paperback at a time.  ->  My great-grandmother had a table she was proud of and a lamp on it, and by that lamp I read books that had travelled from Switzerland, from Lithuania, from Japan. The whole world climbing the mountain to find one boy, an envelope and a paper back at a time.
+  #195 wer 0.00 | I got so good at carrying stories that when it came time to stand up and tell one, I was the one they called on.  ->  I got so good at carrying stories that when it came time to stand up and tell one, I was the one they called on.
+  #196 wer 0.00 | A kid from a hogan with no power lines for miles, telling the old stories into a television camera while the whole community watched from the chapter-house TV.”  ->  A kid from a hogan with no power lines for miles, telling the old stories into a television camera, while the whole community watched from the chapter house TV.
+  #197 wer 0.00 | The schoolteacher laughed softly.  ->  The schoolteacher laughed softly.
+  #198 wer 0.00 | The young man did not take his eyes off him.  ->  The young man did not take his eyes off him.
+  #199 wer 0.00 | “That lamp is the reason I’m standing in this canyon with all of you,” he said.  ->  "That lamp is the reason I'm standing in this canyon with all of you," he said.
+  #200 wer 0.00 | “The teachers at my little community school saw a boy who was too much — too well-read, too well-dressed for a mesa kid, too steeped in the old ways and too sharp from all that reading, somehow both at once.  ->  The teachers at my little community school saw a boy who was too much, too well read, too well dressed for a Mesa kid, too steeped in the old ways and too sharp from all that reading, somehow both at once.
+  #201 wer 0.00 | And instead of clipping him, they went to my great-grandmother and said: he needs a bigger challenge.  ->  And instead of clipping him, they went to my great-grandmother and said, "He needs a bigger challenge."
+  #202 wer 0.00 | A place where he won’t have to fight just to be himself.”  ->  A place where he won't have to fight just to be himself.
+  #203 wer 0.00 | Twenty Minutes Down the Road  ->  20 minutes down the road.
+  #204 wer 0.00 | That place was twenty minutes down the road.  ->  That place was 20 minutes down the road.
+  #205 wer 0.00 | Montezuma sat in Cottonwood, under Mingus Mountain, in the same red country he was showing them now — a working ranch as much as a school, where a boy grew his own food and mucked his own stalls and ran the canyons at dawn.  ->  Montezuma sat in Cottonwood, under Mingus Mountain, in the same red country he was showing them now, a working ranch as much as a school, where a boy grew his own food and mucked his own stalls and ran the canyons at dawn.
+  #206 wer 0.00 | And the thing nobody expected, least of all Tonas himself, was that it never felt like leaving.  ->  And the thing nobody expected, least of all to NaaS himself, was that it never felt like leaving.
+  #207 wer 0.00 | The chores, the animals, the plain daily responsibility — he had loved all of it already, up on Black Mesa, at his great-grandmother’s side.  ->  The chores the animals the plain daily responsibility He had loved all of it already up on Black Mesa at his great-grandmother's side
+  #208 wer 0.00 | He simply carried the same self twenty minutes down the mountain and set it loose in bigger country.  ->  He simply carried the same self twenty minutes down the mountain and set it loose in bigger country.
+  #209 wer 0.00 | He came to know that country the way you only can by living and working in it — every fold of the red rock, the creeks, the climbs, the odd trip out toward Phoenix — knowledge earned in the body, mile by mile, over years.  ->  He came to know that country the way you only can by living and working in it. Every fold of the red rock, the creeks, the climbs, the odd trip out toward Phoenix knowledge earned in the body, mile by mile over years.
+  #210 wer 0.05 | He ran a 4:20 mile there as a ninth-grader, one of the fastest in the country for his age.  ->  He ran a 420 mile there as a ninth grader, one of the fastest in the country for his age.
+  #211 wer 0.00 | The truth he rarely told anyone was that the race was not won on the track.  ->  The truth he rarely told anyone was that the race was not won on the track.
+  #212 wer 0.04 | It was won in the ten thousand dark mornings before it, with a stone in his pocket and his great-grandmother’s voice in his ear.  ->  It was one in the ten thousand dark mornings before it, with a stone in his pocket and his great-grandmother's voice in his ear.
+  #213 wer 0.00 | This land is one of the places the earth keeps its power, she had told him once.  ->  This land is one of the places the earth keeps its power," she had told him once.
+  #214 wer 0.00 | A meeting place.  ->  A meeting place
+  #215 wer 0.00 | Small peoples lived here, and the world has always come looking for it.  ->  Small peoples lived here and the world has always come looking for it.
+  #216 wer 0.00 | He looked around the fire — Tokyo, London, Lagos, São Paulo, a schoolteacher, a young man learning for the first time what it felt like to be believed in — and he thought: she was right.  ->  He looked around the fire, Tokyo, London, Lagos, Sao Paulo, a schoolteacher, a young man learning for the first time what it felt like to be believed in and he thought, she was right.
+  #217 wer 0.00 | The world still comes looking.  ->  The world still comes looking.
+  #218 wer 0.00 | But there was a shadow under all of it, and there always would be, and he did not say all of it out loud.  ->  But there was a shadow under all of it, and there always would be, and he did not say all of it out loud.
+  #219 wer 0.00 | Because in those same years — while he was becoming the fast kid at the good school, running this beautiful country at dawn — his family lost theirs.  ->  Because in those same years, while he was becoming the fast kid at the good school, running this beautiful country at dawn, his family lost theirs.
+  #220 wer 0.00 | The traditional land on Black Mesa slipped away from them, the way it slipped away from so many Diné families, and his great-grandmother, who was that land, had to be moved off it — closer to the city, near his uncle and his mother, part of her time at Ada’s.  ->  The traditional land on Black Mesa slipped away from them, the way it slipped away from so many Dene families, and his great-grandmother who was that land had to be moved off it, closer to the city, near his uncle and his mother, part of her time at Ardars.
+  #221 wer 0.00 | The woman who had seemed as permanent as the mountain, pulled off the mountain.  ->  The woman who had seemed as permanent as the mountain, pulled off the mountain.
+  #222 wer 0.00 | He was gaining a world in the very season his own people were losing one.  ->  He was gaining a world in the very season his own people were losing one.
+  #223 wer 0.00 | He had spent the rest of his life learning to carry that.  ->  He had spent the rest of his life learning to carry that.
+  #224 wer 0.00 | And it was the deepest reason he could stand at the bottom of a canyon and teach a circle of strangers to turn and face what carved them.  ->  And it was the deepest reason he could stand at the bottom of a canyon and teach a circle of strangers to turn and face what carved them.
+  #225 wer 0.00 | He knew what it cost.  ->  He knew what it cost.
+  #226 wer 0.00 | And he knew, better than any of them, that the canyon does not ask your permission before it makes you.  ->  And he knew, better than any of them, that the canyon does not ask your permission before it makes you.
+  #227 wer 0.00 | The Harvest  ->  The Harvest
+  #228 wer 0.00 | You never leave people in the depths.  ->  You never leave people in the depths.
+  #229 wer 0.00 | So he lifted them back up out of it, because the other half of overcoming is gladness.  ->  So he lifted them back up out of it, because the other half of overcoming is gladness.
+  #230 wer 0.00 | There was a feast they made with their own hands — blue corn and juniper ash and old knowledge carried down and nearly lost.  ->  There was a feast they made with their own hands, blue corn and juniper ash and old knowledge carried down and nearly lost.
+  #231 wer 0.00 | There was a man with a bundle of flutes from half the world who lifted one to his lips and let the sound move through the circle the way water moves through rock.  ->  There was a man with a bundle of flutes from half the world who lifted one to his lips and let the sound move through the circle the way water moves through rock.
+  #232 wer 0.00 | There was singing, and a slow round dance under the stars, and eleven nervous systems falling into rhythm with one another until something in each of them remembered what a whole successful life had made them forget — that it was never meant to heal alone.  ->  There was singing and a slow round dance under the stars, and eleven nervous systems falling into rhythm with one another until something in each of them remembered what a whole successful life had made them forget, that it was never meant to heal alone.
+  #233 wer 0.00 | A fire you gather around to decide who you’re going to be.  ->  A fire you gather around to decide who you're going to be.
+  #234 wer 0.00 | His people had a name for that.  ->  His people had a name for that.
+  #235 wer 0.00 | He did not say it out loud.  ->  He did not say it out loud.
+  #236 wer 0.00 | Not yet.  ->  Not yet.
+  #237 wer 0.50 | The Call  ->  The coal
+  #238 wer 0.00 | He banked the coals long after the others had found their tents, and sat with the last of the heat, and felt — as he always felt out here — entirely at home.  ->  He banked the coals long after the others had found their tents and sat with the last of the heat and felt, as he always felt out here entirely at home.
+  #239 wer 0.25 | The calm he taught.  ->  The calm he taught her.
+  #240 wer 0.00 | The excellence he taught.  ->  The excellence he taught.
+  #241 wer 0.00 | The belonging he taught.  ->  The belonging he taught.
+  #242 wer 0.00 | All of it real, and all of it his, right here on the ground that made him.  ->  All of it real and all of it his, right here on the ground that made him.
+  #243 wer 0.00 | His phone lit up in the dark.  ->  His phone lit up in the dark.
+  #244 wer 0.00 | A country code he rarely saw.  ->  A country code he rarely saw.
+  #245 wer 0.00 | His grandfather had passed.  ->  His grandfather had passed.
+  #246 wer 0.02 | In his eighties, at the far end of a long and good life — a craftsman who built things with his hands until his hands were done, who kept his songs through everything a century threw at him, and who let go the way a full life closes: not a tragedy, a completion.  ->  In his eighties, at the far end of a long and good life, a craftsman who built things with his hands until his hands were done, who kept his songs through everything a century through at him, and who let go the way a full life closes, not a tragedy a completion.
+  #247 wer 0.00 | They had already had the service.  ->  They had already had the service.
+  #248 wer 0.00 | There was nothing to rush toward and nothing to fix.  ->  There was nothing to rush toward and nothing to fix.
+  #249 wer 0.00 | There was only this, arriving quiet and steady across an ocean: the songs were his to carry now.  ->  There was only this, arriving quiet and steady across an ocean. The songs were his to carry now.
+  #250 wer 0.00 | He sat with it, and he felt no grief so much as weight — the good weight of being handed something.  ->  He sat with it, and he felt no grief so much as weight, the good weight of being handed something.
+  #251 wer 0.00 | Here was the thing he had never quite let himself see.  ->  Here was the thing he had never quite let himself see.
+  #252 wer 0.00 | He had stood at this fire and named three threads with pride, and one of them he had touched the least.  ->  He had stood at this fire and named three threads with pride, and one of them he had touched the least.
+  #253 wer 0.00 | He could teach a canyon full of strangers to stop running from their own lives, and he had spent his own at a careful distance from the half of him that was now, suddenly, his to carry.  ->  He could teach a canyon full of strangers to stop running from their own lives, and he had spent his own at a careful distance from the half of him that was now, suddenly, his to carry.
+  #254 wer 0.00 | There was a box of fifty years of songs in a green country he had never once set foot in.  ->  There was a box of 50 years of songs in a green country he had never once set foot in.
+  #255 wer 0.00 | And there was no one left to carry it but him.  ->  And there was no one left to carry it but him.
+  #256 wer 0.00 | He looked at the red rock he knew in his body, and he thought of a country he had never seen, and a grandfather he would now meet only in what he left behind.  ->  He looked at the red rock he knew in his body, and he thought of a country he had never seen, and a grandfather he would now meet only in what he left behind.
+  #257 wer 0.00 | And for the first time in a long time, the man who taught others to turn and face what they were running from felt himself, gently, being turned.  ->  And for the first time in a long time, the man who taught others to turn and face what they were running from felt himself, gently being turned.
+  #258 wer 0.00 | He let the fire go down.  ->  He let the fire go down.
+  #259 wer 0.00 | Somewhere on the far side of the world, a bus was running north through birch and pine toward a village he could not yet picture, and he was going to be on it, the old songs in his pack.  ->  Somewhere on the far side of the world, a bus was running north through Birch and Pine toward a village he could not yet picture. And he was going to be on it, the old songs in his pack.
+  #260 wer 0.00 | The day was already walking.  ->  The day was already walking.
+
