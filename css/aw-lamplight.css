@@ -214,3 +214,10 @@ html.lamp-hidden .motes i{animation-play-state:paused}
   .motes{display:none}
   .page .aw-ra .aw-ra__s,.page .aw-ra .aw-ra__w,.lamp__hint{transition:none}
 }
+
+/* 11/11: the room reads Stone Breath, Chapter One — book prose on the lit page */
+.page__prose p{margin:0;font-size:clamp(1.12rem,1.02rem + .5vw,1.3rem);line-height:1.66;text-wrap:pretty;hanging-punctuation:first}
+.page__prose p + p{margin-top:1.05em;text-indent:0}
+.page__prose .page__epi{font-style:italic;text-align:center;margin:0 0 1.6em}
+.page__prose .page__sub{margin:2.1em 0 .9em;font-family:var(--prose);font-weight:400;font-style:italic;font-size:1.08em;text-align:center;letter-spacing:.02em}
+@media (min-width:900px){.page__prose p{font-size:1.28rem;line-height:1.68}}

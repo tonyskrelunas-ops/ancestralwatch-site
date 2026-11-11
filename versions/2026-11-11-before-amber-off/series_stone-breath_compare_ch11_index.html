@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Stone Breath — Eleven · The Community Kitchen — side by side</title>
+<meta name="description" content="Chapter 11 of Stone Breath, the edited version beside the published one.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/style.css?v=5">
+<link rel="stylesheet" href="/assets/daylight.css?v=8">
+<link rel="stylesheet" href="/css/aw-world.css?v=20261105">
+<style>
+.cmp{--in:color-mix(in srgb,var(--amber) 15%,transparent);
+     --out:color-mix(in srgb,var(--ink) 6%,transparent)}
+.cmp-bar{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);
+ backdrop-filter:blur(9px);border-bottom:1px solid var(--rule);padding:.6rem 0;margin-bottom:var(--space-2)}
+.cmp-bar__in{display:flex;gap:.45rem;flex-wrap:wrap;align-items:center}
+.cmp-btn{font:500 .8rem/1 Inter,system-ui,sans-serif;letter-spacing:.03em;padding:.52rem .9rem;
+ border:1px solid var(--rule);border-radius:999px;background:var(--bg-panel);color:var(--ink);
+ cursor:pointer;text-decoration:none;display:inline-block;transition:.18s}
+.cmp-btn:hover{border-color:var(--amber)}
+.cmp-btn.on{background:var(--amber);border-color:var(--amber);color:#fff}
+.cmp-sp{flex:1 1 auto}
+.cmp-heads{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);margin:var(--space-3) 0 .2rem}
+.cmp-hd{font:500 .68rem/1.3 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+ color:var(--ink-soft);padding-bottom:.45rem;border-bottom:1px solid var(--rule)}
+.cmp-hd b{color:var(--amber);font-weight:500}
+.cmp-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);align-items:start;margin-bottom:.15rem}
+.cmp-cell{padding:.55rem .85rem;border-radius:var(--radius)}
+.cmp-row.chg .cmp-cell.l{background:var(--in);box-shadow:inset 3px 0 0 var(--amber)}
+.cmp-row.chg .cmp-cell.r{background:var(--out);box-shadow:inset 3px 0 0 var(--rule)}
+.cmp-cell p{margin:0;font-size:var(--step-0);line-height:1.68}
+.cmp-cell.gone{opacity:.42;font-style:italic;color:var(--ink-soft)}
+.cmp-cell.gone:after{content:"— not in this version";font-size:var(--step--1)}
+.cmp-hh{font:500 .72rem/1.4 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+ color:var(--amber);text-align:center;margin:1.2em 0 .5em}
+.cmp-orn{text-align:center;color:var(--amber);letter-spacing:.55em;margin:1em 0}
+mark{background:none;color:inherit;padding:0}
+.cmp-row.chg mark.in{background:color-mix(in srgb,var(--amber) 34%,transparent);border-radius:3px;padding:0 .14em}
+.cmp-row.chg mark.out{background:color-mix(in srgb,var(--ink) 11%,transparent);border-radius:3px;padding:0 .14em}
+body.only-l .cmp-cell.r,body.only-l .cmp-hd.r{display:none}
+body.only-l .cmp-row,body.only-l .cmp-heads{grid-template-columns:1fr}
+body.only-r .cmp-cell.l,body.only-r .cmp-hd.l{display:none}
+body.only-r .cmp-row,body.only-r .cmp-heads{grid-template-columns:1fr}
+body.diffs .cmp-row.same{display:none}
+.cmp-hero{position:relative;min-height:clamp(230px,40vh,420px);display:flex;align-items:flex-end;
+ overflow:hidden;background:var(--bg)}
+.cmp-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cmp-hero__scrim{position:absolute;inset:0;background:
+ linear-gradient(100deg,color-mix(in srgb,var(--bg) 97%,transparent) 0%,
+ color-mix(in srgb,var(--bg) 90%,transparent) 36%,
+ color-mix(in srgb,var(--bg) 42%,transparent) 66%,
+ color-mix(in srgb,var(--bg) 6%,transparent) 100%)}
+.cmp-hero__in{position:relative;padding-block:var(--space-5) var(--space-4)}
+.cmp-hero__in>*{max-width:34ch}
+.cmp-hero__in .eyebrow{color:var(--amber)}
+.cmp-hero h1{margin:.08em 0 .2em;font-size:var(--step-4);color:var(--ink)}
+.cmp-hero__meta{font:400 .85rem/1.5 Inter,system-ui,sans-serif;color:var(--ink-soft)}
+.cmp-hero__cap{position:absolute;right:var(--space-3);bottom:.5rem;font:400 .66rem/1.3 Inter,sans-serif;
+ letter-spacing:.07em;color:color-mix(in srgb,var(--ink) 52%,transparent);text-align:right}
+.cmp-list{list-style:none;margin:var(--space-3) 0 0;padding:0;display:grid;gap:.6rem}
+.cmp-list a{display:grid;grid-template-columns:84px 1fr;gap:var(--space-2);align-items:center;
+ text-decoration:none;background:var(--bg-panel);border:1px solid var(--rule);
+ border-radius:var(--radius-lg);padding:.6rem;transition:.18s}
+.cmp-list a:hover{border-color:var(--amber);transform:translateY(-1px)}
+.cmp-list img{width:84px;height:62px;object-fit:cover;border-radius:calc(var(--radius) - 2px)}
+.cmp-list b{font-family:var(--font-display);font-weight:500;font-size:var(--step-1);color:var(--ink)}
+.cmp-list span{display:block;font:400 .78rem/1.45 Inter,sans-serif;color:var(--ink-soft);margin-top:.12rem}
+.vrow{background:var(--bg-panel);border:1px solid var(--rule);border-radius:var(--radius-lg);
+ padding:.8rem 1rem;margin-bottom:.55rem}
+.vrow b{font-family:var(--font-display);font-weight:500;font-size:var(--step-1)}
+.vrow i{display:block;font-style:normal;font:400 .8rem/1.4 Inter,sans-serif;color:var(--ink-soft);margin:.1rem 0 .5rem}
+.vrow audio{width:100%;height:36px}
+@media (max-width:860px){
+ .cmp-row,.cmp-heads{gap:.55rem}
+ .cmp-cell{padding:.45rem .55rem}
+ .cmp-cell p{font-size:.86rem;line-height:1.56}
+ .cmp-list a{grid-template-columns:62px 1fr}
+ .cmp-list img{width:62px;height:50px}}
+</style><link rel="stylesheet" href="/assets/aw-editorial.css?v=1">
+</head>
+<body class="cmp" data-sound-src="/assets/audio/wc/bed-stone-breath-creek.mp3" data-sound-name="the creek">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <nav class="nav wrap wrap--wide" aria-label="Primary">
+      <a class="brand" href="/"><img class="brand__logo" src="/assets/img/author-logo.png?v=2" alt="AncestralWatch logo" width="716" height="676"><span class="brand__wm">Ancestral<span class="brand__mark">Watch</span></span></a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">☰</button>
+      <ul class="nav__links" id="primary-nav" data-open="false">
+        <li><a href="/">Home</a></li>
+        <li><a href="/lamplight/">Reading Room</a></li>
+        <li class="has-menu">
+          <button aria-expanded="false" aria-haspopup="true">The Series</button>
+          <ul class="menu">
+            <li><a href="/series/"><span class="menu__num">All</span> The Series</a></li>
+            <li><a href="/series/stone-breath/" aria-current="page"><span class="menu__num">I</span> Stone Breath</a></li>
+            <li><a href="/series/by-lamplight/"><span class="menu__num">II</span> The Amber and the Stone</a></li>
+            <li><a href="/series/the-council-fire/"><span class="menu__num">III</span> The Council Fire</a></li>
+            <li><a href="/series/the-far-messengers/"><span class="menu__num">IV</span> The Far Messengers</a></li>
+            <li><a href="/reader/"><span class="menu__num">&mdash;</span> The Reader</a></li>
+          <li><a href="/start-here/">Start Here</a></li><li><a href="/read/stone-breath/">Read Free</a></li></ul>
+        </li>
+        <li><a href="/tools/">The Tools</a></li><li><a href="https://tribeawaken.com/" target="_blank" rel="noopener">TribeAwaken ↗</a></li>
+        <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+        <li><a href="/author/">The Author</a></li>
+        <li><a class="lang-toggle" href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a class="lang-toggle" href="/lt/" hreflang="lt" lang="lt" style="border-left:0;padding-left:0;">Lietuvių</a></li>
+        <li class="nav__cta"><a class="btn btn--primary" href="https://payhip.com/b/AhH6r" target="_blank" rel="noopener">Get the Book</a></li>
+      </ul>
+    </nav>
+
+  <div class="aw-langbar" aria-label="Languages">
+    <div class="wrap wrap--wide aw-langbar__in">
+      <p class="aw-langbar__lbl">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15 0 18M12 3c-2.6 2.6-2.6 15 0 18"/>
+        </svg><span>Read in</span>
+      </p>
+      <a href="/" data-lang="en" hreflang="en">English</a>
+      <a href="/ja/" data-lang="/ja/" hreflang="ja" lang="ja">日本語</a>
+      <a href="/lt/" data-lang="/lt/" hreflang="lt" lang="lt">Lietuvių</a>
+      <a class="aw-langbar__mail" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+  </header>
+<main id="main">
+
+<section class="cmp-hero">
+  <img src="/assets/img/wc/fire-circle.jpg" alt="The kitchen fire" fetchpriority="high">
+  <div class="cmp-hero__scrim"></div>
+  <div class="wrap wrap--wide cmp-hero__in">
+    <p class="eyebrow">Stone Breath · side by side · chapter 11</p>
+    <h1><em>The Community Kitchen</em></h1>
+    <p class="cmp-hero__meta">8 paragraphs differ · 33 identical</p>
+  </div>
+  <p class="cmp-hero__cap">photograph by Tony Skrelūnas</p>
+</section>
+
+<div class="cmp-bar"><div class="wrap wrap--wide cmp-bar__in">
+  <button class="cmp-btn" data-m="b">Both</button>
+  <button class="cmp-btn" data-m="l">Edited</button>
+  <button class="cmp-btn" data-m="r">Current</button>
+  <button class="cmp-btn" id="dbtn">Changes only</button>
+  <span class="cmp-sp"></span>
+  <a class="cmp-btn" href="../">All chapters</a><a class="cmp-btn" href="../ch10/">← Ten</a><a class="cmp-btn" href="../ch12/">Twelve →</a>
+</div></div>
+
+<section class="section section--tight"><div class="wrap wrap--wide">
+  <div class="cmp-heads"><div class="cmp-hd l"><b>Edited</b> — the new one</div>
+  <div class="cmp-hd r">Published — Draft2Digital, September 7 2026</div></div>
+  <div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">CHAPTER 11</div></div><div class="cmp-cell r"><div class="cmp-hh">CHAPTER 11</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">THE COMMUNITY KITCHEN</div></div><div class="cmp-cell r"><div class="cmp-hh">THE COMMUNITY KITCHEN</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">✵   ✵   ✵</div></div><div class="cmp-cell r"><div class="cmp-hh">✵   ✵   ✵</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Ona said: &#x27;A meeting without food is just people being angry at each other.&#x27; So we started every meeting with bread. It didn&#x27;t solve everything. But it made the anger taste better.&quot; – Tonas Yazzie</p></div><div class="cmp-cell r"><p>&quot;Ona said: &#x27;A meeting without food is just people being angry at each other.&#x27; So we started every meeting with bread. It didn&#x27;t solve everything. But it made the anger taste better.&quot; – Tonas Yazzie</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“A meal shared is a bond made.” — Japanese saying</p></div><div class="cmp-cell r"><p>“A meal shared is a bond made.” — Japanese saying</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Ona sat me down at her kitchen table. She didn’t offer tea. She just looked at me for a full minute. Then she said: ‘You’re not from here. You’re not going to stay. Prove me wrong.’ I said: ‘Okay.’ She said: ‘Good. Now eat.’” — Tonas Yazzie</p></div><div class="cmp-cell r"><p>“Ona sat me down at her kitchen table. She didn’t offer tea. She just looked at me for a full minute. Then she said: ‘You’re not from here. You’re not going to stay. Prove me wrong.’ I said: ‘Okay.’ She said: ‘Good. Now eat.’” — Tonas Yazzie</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>The first meeting was a disaster. Twenty-three people crammed into the heritage center, <mark class="in">and</mark> Old Jonas wanted to talk about the river, Marija wanted to talk about the school, the young mothers wanted a playground, the teenagers wanted WiFi, <mark class="in">and</mark> the carpenter wanted to fix the mill. Everyone talked at once. No one listened.</p></div><div class="cmp-cell r"><p>The first meeting was a disaster. Twenty-three people crammed into the heritage center. Old Jonas wanted to talk about the river. Marija wanted to talk about the school. The young mothers wanted a playground. The teenagers wanted WiFi. The carpenter wanted to fix the mill. Everyone talked at once. No one listened.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas leaned over to Austėja. “What is that one about?”</p></div><div class="cmp-cell r"><p>Tonas leaned over to Austėja. “What is that one about?”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“A fence.”</p></div><div class="cmp-cell r"><p>“A fence.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Whose fence?”</p></div><div class="cmp-cell r"><p>“Whose fence?”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Nobody’s. It came down in 1991.”</p></div><div class="cmp-cell r"><p>“Nobody’s. It came down in 1991.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas stood at the front, hands in his pockets, waiting. After ten minutes, Austėja leaned over. &quot;Aren&#x27;t you going to say something?&quot; &quot;Not yet.&quot; After twenty minutes, Ona banged her cane on the floor. The room went quiet. &quot;You,&quot; she said, pointing at Tonas. &quot;You brought us here. Now talk.&quot; Tonas stepped forward.</p></div><div class="cmp-cell r"><p>Tonas stood at the front, hands in his pockets, waiting. After ten minutes, Austėja leaned over. &quot;Aren&#x27;t you going to say something?&quot; &quot;Not yet.&quot; After twenty minutes, Ona banged her cane on the floor. The room went quiet. &quot;You,&quot; she said, pointing at Tonas. &quot;You brought us here. Now talk.&quot; Tonas stepped forward.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I&#x27;m not here to tell you what to do,&quot; he said. &quot;I&#x27;m here to ask you four questions. And then I&#x27;m going to shut up and listen.&quot; He wrote on a large sheet of paper: 1. What do we love about this place? 2. What is hurting? 3. What do we have that we can build with? 4. What&#x27;s the smallest thing we could do together – and finish – in six months? &quot;We&#x27;ll go around the circle,&quot; he said. &quot;You don&#x27;t have to speak. But if you do, you only answer the question on the wall. No speeches. No fixing. Just say what&#x27;s true for you.&quot;</p></div><div class="cmp-cell r"><p>&quot;I&#x27;m not here to tell you what to do,&quot; he said. &quot;I&#x27;m here to ask you four questions. And then I&#x27;m going to shut up and listen.&quot; He wrote on a large sheet of paper: 1. What do we love about this place? 2. What is hurting? 3. What do we have that we can build with? 4. What&#x27;s the smallest thing we could do together – and finish – in six months? &quot;We&#x27;ll go around the circle,&quot; he said. &quot;You don&#x27;t have to speak. But if you do, you only answer the question on the wall. No speeches. No fixing. Just say what&#x27;s true for you.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Old Jonas went first. &quot;I love the river. I&#x27;ve fished it since I was a boy.&quot; A young mother: &quot;I love that my grandmother is still here. When she&#x27;s gone, I don&#x27;t know what I&#x27;ll love.&quot; Marija: &quot;What&#x27;s hurting? The old café. It&#x27;s been empty for years. There&#x27;s nowhere to gather anymore. No place to share a meal. No place to sell what we make.&quot; A teenager: &quot;There&#x27;s nothing to do. That&#x27;s what&#x27;s hurting.&quot; Rytis: &quot;What do we have? We have Ona&#x27;s recipes. We have people who can cook. We have a building that&#x27;s just sitting there.&quot; Ona, last: &quot;The smallest thing we could do in six months? Open the café again. Not for profit – for community. A place where old ones teach young ones to cook. A place where we can sell our bread, our pickles, our mushrooms. A place where people who don&#x27;t have gardens can buy fresh food.&quot; The room murmured. It was simple. It was possible.</p></div><div class="cmp-cell r"><p>Old Jonas went first. &quot;I love the river. I&#x27;ve fished it since I was a boy.&quot; A young mother: &quot;I love that my grandmother is still here. When she&#x27;s gone, I don&#x27;t know what I&#x27;ll love.&quot; Marija: &quot;What&#x27;s hurting? The old café. It&#x27;s been empty for years. There&#x27;s nowhere to gather anymore. No place to share a meal. No place to sell what we make.&quot; A teenager: &quot;There&#x27;s nothing to do. That&#x27;s what&#x27;s hurting.&quot; Rytis: &quot;What do we have? We have Ona&#x27;s recipes. We have people who can cook. We have a building that&#x27;s just sitting there.&quot; Ona, last: &quot;The smallest thing we could do in six months? Open the café again. Not for profit – for community. A place where old ones teach young ones to cook. A place where we can sell our bread, our pickles, our mushrooms. A place where people who don&#x27;t have gardens can buy fresh food.&quot; The room murmured. It was simple. It was possible.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Factions</p></div><div class="cmp-cell r"><p>The Factions</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>After the meeting, Austėja walked him home. &quot;That was messy,&quot; she said. &quot;Some people didn&#x27;t speak. Some people talked too long.&quot; &quot;That&#x27;s how it works,&quot; he said. &quot;The first meeting, people test the water. The second meeting, they start to trust. The third meeting, they tell you what they really think.&quot; &quot;We don&#x27;t have time for three meetings.&quot; &quot;We don&#x27;t have time not to. If we rush, we lose the old ones. If we rush, the young ones check out. If we rush, the people who are angry stay angry.&quot; She looked at him. &quot;How do you know this?&quot; &quot;Because I&#x27;ve done it wrong before,&quot; he said. &quot;In business. In community work. You can&#x27;t skip the messy part. The messy part is the work.&quot;</p></div><div class="cmp-cell r"><p>After the meeting, Austėja walked him home. &quot;That was messy,&quot; she said. &quot;Some people didn&#x27;t speak. Some people talked too long.&quot; &quot;That&#x27;s how it works,&quot; he said. &quot;The first meeting, people test the water. The second meeting, they start to trust. The third meeting, they tell you what they really think.&quot; &quot;We don&#x27;t have time for three meetings.&quot; &quot;We don&#x27;t have time not to. If we rush, we lose the old ones. If we rush, the young ones check out. If we rush, the people who are angry stay angry.&quot; She looked at him. &quot;How do you know this?&quot; &quot;Because I&#x27;ve done it wrong before,&quot; he said. &quot;In business. In community work. You can&#x27;t skip the messy part. The messy part is the work.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Second Meeting – Nemawashi</p></div><div class="cmp-cell r"><p>The Second Meeting – Nemawashi</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>The next day Tonas did something no one expected. He didn&#x27;t call another big meeting <mark class="in">—</mark> instead he visited people one-on-one <mark class="in">—</mark> Old Jonas in his kitchen, Marija in her bakery, the carpenter in his workshop, the teenagers where they hung out behind the mill, smoking. He didn&#x27;t pitch. He asked questions, <mark class="in">and</mark> he listened. In Japan they call this nemawashi, preparing the roots before you transplant the tree: you talk to everyone privately before you bring them together publicly, you find out what they really think, <mark class="in">and</mark> you address their fears before they become fights. By the third day he knew who was afraid of change, who worried about money, who didn&#x27;t trust outsiders, who wanted credit, <mark class="in">and</mark> who just wanted to help. He also knew who the natural leaders were <mark class="in">—</mark> not the loudest, but the ones everyone listened to when they spoke quietly.</p></div><div class="cmp-cell r"><p>The next day, Tonas did something no one expected. He didn&#x27;t call another big meeting. Instead, he visited people one-on-one. Old Jonas in his kitchen. Marija in her bakery. The carpenter in his workshop. The teenagers where they hung out <mark class="out">–</mark> behind the mill, smoking. He didn&#x27;t pitch. He asked questions. He listened. In Japan, they call this nemawashi <mark class="out">–</mark> preparing the roots before you transplant the tree. You talk to everyone privately before you bring them together publicly. You find out what they really think. You address their fears before they become fights. By the third day, he knew who was afraid of change, who worried about money, who didn&#x27;t trust outsiders, who wanted credit, who just wanted to help. He also knew who the natural leaders were <mark class="out">–</mark> not the loudest, but the ones everyone listened to when they spoke quietly.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Third Meeting – The Circle</p></div><div class="cmp-cell r"><p>The Third Meeting – The Circle</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>A week later they gathered again, same room, same people, but this time Tonas arranged the chairs in a circle. &quot;No head of the table,&quot; he said. &quot;No back row. Everyone can see everyone.&quot; He placed a small stone in the center of the circle. &quot;This stone represents what we&#x27;re building. It doesn&#x27;t belong to any one of us. It belongs to the circle.&quot; He asked the four questions again. This time, the answers were more focused. &quot;What do we love?&quot; – The river. The forest. The old recipes. The children. &quot;What is hurting?&quot; – The empty café. The loneliness. The young people leaving. &quot;What do we have?&quot; – Ona&#x27;s recipes. Rytis&#x27;s hands. The carpenter&#x27;s tools. The baker&#x27;s oven. The old building. &quot;What&#x27;s the smallest thing we could do in six months?&quot; – Clean out the old café. Paint it. Put in a few tables. Start with one night a week – a community dinner, cooked by volunteers, using food from local gardens. Then add a small market table for people to sell their bread, eggs, pickles, mushrooms. Then, if it works, open two nights. Then three.</p></div><div class="cmp-cell r"><p>A week later, they gathered again. Same room. Same people. But this time, Tonas arranged the chairs in a circle. &quot;No head of the table,&quot; he said. &quot;No back row. Everyone can see everyone.&quot; He placed a small stone in the center of the circle. &quot;This stone represents what we&#x27;re building. It doesn&#x27;t belong to any one of us. It belongs to the circle.&quot; He asked the four questions again. This time, the answers were more focused. &quot;What do we love?&quot; – The river. The forest. The old recipes. The children. &quot;What is hurting?&quot; – The empty café. The loneliness. The young people leaving. &quot;What do we have?&quot; – Ona&#x27;s recipes. Rytis&#x27;s hands. The carpenter&#x27;s tools. The baker&#x27;s oven. The old building. &quot;What&#x27;s the smallest thing we could do in six months?&quot; – Clean out the old café. Paint it. Put in a few tables. Start with one night a week – a community dinner, cooked by volunteers, using food from local gardens. Then add a small market table for people to sell their bread, eggs, pickles, mushrooms. Then, if it works, open two nights. Then three.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Marija raised her hand. &quot;Who will lead it?&quot; Tonas looked at Austėja. She looked at Ona. Ona pointed a gnarled finger at a young woman in the back – a quiet woman who had been a chef in Vilnius before she came home to care for her mother. &quot;Jurgita,&quot; Ona said. &quot;You.&quot; The room turned. Jurgita blushed. &quot;I haven&#x27;t cooked professionally in years.&quot; &quot;You haven&#x27;t forgotten,&quot; Ona said. &quot;The hands remember.&quot; Jurgita looked at the floor. Then at Tonas. Then at Austėja. &quot;I&#x27;ll try,&quot; she said. &quot;That&#x27;s all any of us can do,&quot; Tonas said.</p></div><div class="cmp-cell r"><p>Marija raised her hand. &quot;Who will lead it?&quot; Tonas looked at Austėja. She looked at Ona. Ona pointed a gnarled finger at a young woman in the back – a quiet woman who had been a chef in Vilnius before she came home to care for her mother. &quot;Jurgita,&quot; Ona said. &quot;You.&quot; The room turned. Jurgita blushed. &quot;I haven&#x27;t cooked professionally in years.&quot; &quot;You haven&#x27;t forgotten,&quot; Ona said. &quot;The hands remember.&quot; Jurgita looked at the floor. Then at Tonas. Then at Austėja. &quot;I&#x27;ll try,&quot; she said. &quot;That&#x27;s all any of us can do,&quot; Tonas said.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Garden</p></div><div class="cmp-cell r"><p>The Garden</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>The next morning Rytis showed Tonas a patch of land behind the old café. “This used to be a garden,” he said. “My grandmother grew everything here. Potatoes, carrots, beets, dill. The café used to buy from her.” “We could do that again,” Tonas said. “A communal garden. Anyone who wants to help can plant. Anyone who needs food can take. The café buys what&#x27;s left.” Rytis nodded. “The old way. Before supermarkets. Before everyone forgot how to grow.” They spent the morning turning the soil, <mark class="in">and</mark> the teenagers showed up, not many but a few, <mark class="in">and</mark> they complained about the work <mark class="in">and</mark> stayed <mark class="in">anyway, and</mark> by noon they had planted potatoes, carrots, and a row of sunflowers just because. “Sunflowers don&#x27;t feed anyone,” Rytis said. “They feed the soul,” one of the teenagers said. Rytis looked at Tonas. “She&#x27;s right.”</p></div><div class="cmp-cell r"><p>The next morning, Rytis showed Tonas a patch of land behind the old café. &quot;This used to be a garden,&quot; he said. &quot;My grandmother grew everything here. Potatoes, carrots, beets, dill. The café used to buy from her.&quot; &quot;We could do that again,&quot; Tonas said. &quot;A communal garden. Anyone who wants to help can plant. Anyone who needs food can take. The café buys what&#x27;s left.&quot; Rytis nodded. &quot;The old way. Before supermarkets. Before everyone forgot how to grow.&quot; They spent the morning turning the soil. The teenagers showed up <mark class="out">–</mark> not many, but a few. They complained about the work, <mark class="out">but they</mark> stayed. By noon, they had planted potatoes, carrots, and a row of sunflowers &quot;just because.&quot; &quot;Sunflowers don&#x27;t feed anyone,&quot; Rytis said. &quot;They feed the soul,&quot; one of the teenagers said. Rytis looked at Tonas. &quot;She&#x27;s right.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Market Table</p></div><div class="cmp-cell r"><p>The Market Table</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>The first Saturday they set up a table outside the old café, <mark class="in">and</mark> Marija brought bread, Rytis brought mushrooms, Old Jonas brought smoked fish, a young mother brought eggs, <mark class="in">and</mark> Jurgita brought pickles <mark class="in">made from</mark> her grandmother&#x27;s recipe. Only a few people came. But they bought. And they talked. And they said: “We&#x27;ll come back next week.” The second Saturday more people came, <mark class="in">and</mark> the third Saturday someone brought honey <mark class="in">and</mark> someone else brought wool socks <mark class="in">and</mark> a teenager sold handmade candles, <mark class="in">and</mark> by the end of the first month the market table had become a market. Not big. Not fancy. Just a few tables on the sidewalk, people selling what they made, people buying what they needed. “This is how it used to be,” Old Jonas said. “Before the big stores. Before everyone forgot each other.”</p></div><div class="cmp-cell r"><p>The first Saturday, they set up a table outside the old café. Marija brought bread. Rytis brought mushrooms. Old Jonas brought smoked fish. A young mother brought eggs. Jurgita brought pickles <mark class="out">–</mark> her grandmother&#x27;s recipe. Only a few people came. But they bought. And they talked. And they said: &quot;We&#x27;ll come back next week.&quot; The second Saturday, more people came. The third Saturday, someone brought honey. Someone else brought wool socks. A teenager sold handmade candles. By the end of the first month, the market table had become a market. Not big. Not fancy. Just a few tables on the sidewalk, people selling what they made, people buying what they needed. &quot;This is how it used to be,&quot; Old Jonas said. &quot;Before the big stores. Before everyone forgot each other.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Grant and the Fundraising</p></div><div class="cmp-cell r"><p>The Grant and the Fundraising</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>The grant application was rejected. “Not enough demonstrated community support,” the letter said. Tonas read it twice, then called a meeting. “They&#x27;re wrong,” he said. “We have community support. We just need to prove it.” They planned six events over two months <mark class="in">—</mark> a bake sale, a raffle, a community dinner, a talka to paint the café, a <mark class="in">sweat-equity</mark> day where volunteers earned meal vouchers, <mark class="in">and</mark> a silent auction with <mark class="in">items</mark> donated <mark class="in">by</mark> local businesses. Old Jonas donated a <mark class="in">hand-carved</mark> walking stick, Marija a week&#x27;s worth of bread, Rytis <mark class="in">a mushroom-foraging</mark> walk, <mark class="in">and</mark> the teenagers sold handmade candles. Then, a break. A wealthy businessman from Vilnius read about their efforts in a local newspaper <mark class="in">and</mark> called Tonas. “I grew up in a village like this,” he said. “I&#x27;ll match whatever you raise. Euro for euro. Up to fifty thousand euros. But it has to be sustainable <mark class="in">—</mark> an endowment that pays for operations in perpetuity.” Tonas hung up and called another meeting. “We have a matching donor,” he said. “Now we need to raise the rest.” By the end of the second month they had raised eleven thousand euros, the businessman matched it, <mark class="in">and</mark> the endowment was seeded — enough, with the grant, to carry the café through its first years without a landlord at the door. Tonas called the foundation. “We have the money. We have the community. We have the plan.” They sent a new proposal, <mark class="in">and</mark> this time it was approved.</p></div><div class="cmp-cell r"><p>The grant application was rejected. &quot;Not enough demonstrated community support,&quot; the letter said. Tonas read it twice. Then <mark class="out">he</mark> called a meeting. &quot;They&#x27;re wrong,&quot; he said. &quot;We have community support. We just need to prove it.&quot; They planned six events over two months. A bake sale. A raffle. A community dinner. A talka to paint the café. A <mark class="out">&quot;sweat equity&quot;</mark> day where volunteers earned meal vouchers. A silent auction with donated <mark class="out">items from</mark> local businesses. Old Jonas donated a <mark class="out">handcarved</mark> walking stick. Marija <mark class="out">donated</mark> a week&#x27;s worth of bread. Rytis <mark class="out">donated a mushroomforaging</mark> walk. The teenagers sold handmade candles. Then, a break. A wealthy businessman from Vilnius read about their efforts in a local newspaper. <mark class="out">He</mark> called Tonas. &quot;I grew up in a village like this,&quot; he said. &quot;I&#x27;ll match whatever you raise. Euro for euro. Up to fifty thousand euros. But it has to be sustainable <mark class="out">–</mark> an endowment that pays for operations in perpetuity.&quot; Tonas hung up and called another meeting. &quot;We have a matching donor,&quot; he said. &quot;Now we need to raise the rest.&quot; By the end of the second month, they had raised eleven thousand euros. The businessman matched it. The endowment was seeded — enough, with the grant, to carry the café through its first years without a landlord at the door. Tonas called the foundation. &quot;We have the money. We have the community. We have the plan.&quot; They sent a new proposal. This time, it was approved.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Grand Opening</p></div><div class="cmp-cell r"><p>The Grand Opening</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>The night of the first community dinner the old café was full <mark class="in">—</mark> not fancy, mismatched chairs, paper tablecloths, candles in jars, but full. Jurgita cooked, Ona watched, the teenagers served, <mark class="in">and</mark> the old ones ate. Then Ona began to sing. Not loudly. Not for performance. The way she sang in the forest, just because the song was there.</p></div><div class="cmp-cell r"><p>The night of the first community dinner, the old café was full. Not fancy <mark class="out">–</mark> mismatched chairs, paper tablecloths, candles in jars. But full. Jurgita cooked. Ona watched. The teenagers served. The old ones ate. Then Ona began to sing. Not loudly. Not for performance. The way she sang in the forest <mark class="out">–</mark> just because the song was there.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Teka saulė, teka mėnulis, du broliuku žirgus joja. Vienas joja rytų link, kitas vakarų, vidury jų – tėvo žemė laukia.&quot;</p></div><div class="cmp-cell r"><p>&quot;Teka saulė, teka mėnulis, du broliuku žirgus joja. Vienas joja rytų link, kitas vakarų, vidury jų – tėvo žemė laukia.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She translated softly for Tonas: &quot;The sun rises, the moon rises. Two brothers ride their horses. One rides east, one rides west. Between them, the father&#x27;s land waits.&quot; Ugnė leaned against her grandmother, listening. Her lips moved, forming words she didn&#x27;t fully understand but would never forget.</p></div><div class="cmp-cell r"><p>She translated softly for Tonas: &quot;The sun rises, the moon rises. Two brothers ride their horses. One rides east, one rides west. Between them, the father&#x27;s land waits.&quot; Ugnė leaned against her grandmother, listening. Her lips moved, forming words she didn&#x27;t fully understand but would never forget.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>When the song ended the room was quiet, <mark class="in">and</mark> then Old Jonas raised his glass. “To the ones who remember.” Tonas stood next to Austėja. “You did this,” she said. “No,” he said. “The circle did this.” Ona raised her glass <mark class="in">—</mark> water, not wine. “To the ones who came before,” she said. “And the ones who will come after. The circle holds.” Everyone drank, the candles flickered, the children laughed, <mark class="in">and</mark> the old ones told stories. It was small. It was simple. It was theirs.</p></div><div class="cmp-cell r"><p>When the song ended, the room was quiet. Then Old Jonas raised his glass. &quot;To the ones who remember.&quot; Tonas stood next to Austėja. &quot;You did this,&quot; she said. &quot;No,&quot; he said. &quot;The circle did this.&quot; Ona raised her glass <mark class="out">–</mark> water, not wine. &quot;To the ones who came before,&quot; she said. &quot;And the ones who will come after. The circle holds.&quot; Everyone drank. The candles flickered. The children laughed. The old ones told stories. It was small. It was simple. It was theirs.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">── ONA ──</div></div><div class="cmp-cell r"><div class="cmp-hh">── ONA ──</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>You want to know how a village stays alive? It eats together.</p></div><div class="cmp-cell r"><p>You want to know how a village stays alive? It eats together.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Not once. Not for a special occasion. Every week. Same table. Same circle. Different food, but the same intention: we are still here, we are still each other&#x27;s, and no one at this table is invisible tonight.</p></div><div class="cmp-cell r"><p>Not once. Not for a special occasion. Every week. Same table. Same circle. Different food, but the same intention: we are still here, we are still each other&#x27;s, and no one at this table is invisible tonight.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>My grandmother told me: a fire that is never fed goes out. A community that never gathers is not a community. It is just people living near each other, waiting for something to go wrong before they speak.</p></div><div class="cmp-cell r"><p>My grandmother told me: a fire that is never fed goes out. A community that never gathers is not a community. It is just people living near each other, waiting for something to go wrong before they speak.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The four questions are the root. Ask them before you build anything: What do you love? What is hurting? What do you have? What is the smallest thing you can finish this week? Listen all the way to the end of the answer. Then visit each person alone before you call a meeting. In Japan they call this nemawashi — preparing the roots before you transplant the tree. We call it respect.</p></div><div class="cmp-cell r"><p>The four questions are the root. Ask them before you build anything: What do you love? What is hurting? What do you have? What is the smallest thing you can finish this week? Listen all the way to the end of the answer. Then visit each person alone before you call a meeting. In Japan they call this nemawashi — preparing the roots before you transplant the tree. We call it respect.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Then gather. Sit in a circle. No head of the table. A stone in the center, or a candle, or a loaf of bread. Something that belongs to everyone. Start with one night. Cook together. Eat together. Let the song come when it comes.</p></div><div class="cmp-cell r"><p>Then gather. Sit in a circle. No head of the table. A stone in the center, or a candle, or a loaf of bread. Something that belongs to everyone. Start with one night. Cook together. Eat together. Let the song come when it comes.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>You just watched it work. Old Jonas raised his glass. That man had not raised anything for this village in thirty years. He raised it tonight because someone finally asked what he loved.</p></div><div class="cmp-cell r"><p>You just watched it work. Old Jonas raised his glass. That man had not raised anything for this village in thirty years. He raised it tonight because someone finally asked what he loved.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The full practice is in the back of this book. But you already know the heart of it. Ask. Listen. Gather. Feed them. Do it again next week. That is all a village ever needed.</p></div><div class="cmp-cell r"><p>The full practice is in the back of this book. But you already know the heart of it. Ask. Listen. Gather. Feed them. Do it again next week. That is all a village ever needed.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Chapter 4: The Song</p></div><div class="cmp-cell r"><p>Chapter 4: The Song</p></div></div>
+  <p class="muted" style="margin-top:var(--space-4);font-size:var(--step--1);max-width:60ch">
+  Gold marks what the edited version added or changed; gray marks the words it replaced.
+  The right column is the text on Payhip and Barnes &amp; Noble today. Nothing here is published.</p>
+</div></section>
+</main>
+<footer class="site-footer">
+    <div class="wrap wrap--wide">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">AncestralWatch</p>
+          <p class="footer__tag">Instructions, carried.</p>
+          <p style="margin-top: var(--space-2); max-width: 34ch;">The home of The Ancestral Watch Series by Tony Skrelūnas.</p>
+        </div>
+        <div>
+          <h4>The Series</h4>
+          <ul>
+            <li><a href="/series/stone-breath/">Stone Breath</a></li>
+            <li><a href="/series/the-council-fire/">The Council Fire</a></li>
+            <li><a href="/series/">All four books</a></li>
+            <li><a href="/tools/">The free Tools</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/far-messengers/">The Far Messengers (brand)</a></li>
+            <li><a href="/author/">The Author</a></li>
+            <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+            <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/lt/" hreflang="lt" lang="lt">Lietuvių</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>© 2026 Ancestral Watch · Tony Skrelūnas. All rights reserved.</span>
+        <span>Instructions, carried.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/js/main.js?v=11" defer></script>
+<script src="/js/vendor/gsap.min.js"></script>
+<script src="/js/vendor/ScrollTrigger.min.js"></script>
+<script src="/js/vendor/lenis.min.js"></script>
+<script src="/js/aw-world.js?v=20261105"></script>
+<script>
+(function(){var b=document.body;
+ function set(m){b.classList.remove('only-l','only-r');
+  if(m==='l')b.classList.add('only-l');if(m==='r')b.classList.add('only-r');
+  document.querySelectorAll('[data-m]').forEach(function(x){x.classList.toggle('on',x.dataset.m===m)});
+  try{localStorage.setItem('sbcmp-m',m)}catch(e){}}
+ function diffs(on){b.classList.toggle('diffs',on);
+  var t=document.getElementById('dbtn');if(t)t.classList.toggle('on',on);
+  try{localStorage.setItem('sbcmp-d',on?'1':'')}catch(e){}}
+ document.querySelectorAll('[data-m]').forEach(function(x){x.onclick=function(){set(x.dataset.m)}});
+ var d=document.getElementById('dbtn');
+ if(d)d.onclick=function(){diffs(!b.classList.contains('diffs'))};
+ var m='b',dd=false;
+ try{m=localStorage.getItem('sbcmp-m')||'b';dd=!!localStorage.getItem('sbcmp-d')}catch(e){}
+ set(m);diffs(dd);})();
+</script>
+<script src="/js/aw-gate.js?v=1" defer></script>
+</body></html>
