@@ -1,0 +1,80 @@
+{
+ "voices": [
+  "masculine",
+  "feminine"
+ ],
+ "slugs": [
+  "blood-and-amber",
+  "by-lamplight-opening",
+  "carry-without-stealing",
+  "council-fire-excerpt",
+  "far-messengers-excerpt",
+  "garden-as-practice",
+  "koi-and-the-dragon-gate",
+  "never-only-men",
+  "stone-breath-chapter-one",
+  "stone-breath-excerpt",
+  "the-arched-bridge",
+  "the-calm-you-already-stored",
+  "the-sound-of-water",
+  "torii-in-the-desert"
+ ],
+ "duration": {
+  "blood-and-amber": {
+   "masculine": 457.2,
+   "feminine": 399.8
+  },
+  "by-lamplight-opening": {
+   "masculine": 59.5,
+   "feminine": 56.8
+  },
+  "carry-without-stealing": {
+   "masculine": 162.4,
+   "feminine": 141.7
+  },
+  "council-fire-excerpt": {
+   "masculine": 175.9,
+   "feminine": 155.8
+  },
+  "far-messengers-excerpt": {
+   "masculine": 91.3,
+   "feminine": 80.7
+  },
+  "garden-as-practice": {
+   "masculine": 200.3,
+   "feminine": 173.7
+  },
+  "koi-and-the-dragon-gate": {
+   "masculine": 193.2,
+   "feminine": 168.3
+  },
+  "never-only-men": {
+   "masculine": 152.4,
+   "feminine": 132.2
+  },
+  "stone-breath-chapter-one": {
+   "masculine": 969.7,
+   "feminine": 851.9
+  },
+  "stone-breath-excerpt": {
+   "masculine": 113.7,
+   "feminine": 104.4
+  },
+  "the-arched-bridge": {
+   "masculine": 187.5,
+   "feminine": 162.3
+  },
+  "the-calm-you-already-stored": {
+   "masculine": 169.2,
+   "feminine": 147.0
+  },
+  "the-sound-of-water": {
+   "masculine": 182.0,
+   "feminine": 158.1
+  },
+  "torii-in-the-desert": {
+   "masculine": 409.7,
+   "feminine": 359.5
+  }
+ }
+}

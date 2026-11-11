@@ -1,0 +1,224 @@
+WHISPER CHECK OF BOTH VOICES — 11 November 2026
+Model: whisper small.en (OpenAI weights, int8 ONNX encoder + decoder), run on the CPU with sherpa-onnx 2.0.1.
+(faster-whisper 1.2.1 was installed as asked, but huggingface.co, where it fetches its weights, is blocked by this session's network policy; the same small.en weights came from the sherpa-onnx release on GitHub.)
+Each sentence clip was transcribed on its own and compared with the sentence text, normalised: lower case, no accents, no punctuation, numbers written out.
+Word error is counted after exempting names: every word of the 140 names (true spelling and voice spelling), proper nouns and any word with letters outside ASCII. Those are judged by the phoneme check (tools/voice), not by how whisper spells them.
+A sentence over 10% word error, or one whose last word was missing, was re-synthesized with up to four nudged inputs and the best take kept. Kokoro is deterministic, so most re-takes came back the same: the lines still listed are whisper's hearing of short sentences, not the voice mis-speaking.
+
+== by-lamplight-opening · masculine: 21 sentences · mean word error 0.8% · 20 sentences heard word for word · 2 re-synthesized · 1 still over 10% or short
+   #  2  16.7%
+        text:    And you listened to the dog.
+        whisper: and you listen to the dog.
+== by-lamplight-opening · feminine: 21 sentences · mean word error 0.8% · 20 sentences heard word for word · 2 re-synthesized · 1 still over 10% or short
+   #  2  16.7%
+        text:    And you listened to the dog.
+        whisper: and you listen to the dog.
+== blood-and-amber · masculine: 82 sentences · mean word error 0.3% · 78 sentences heard word for word · 3 re-synthesized · 1 still over 10% or short
+   # 26  12.5%
+        text:    Laima, who weaves fate, and Dievas above all.
+        whisper: Lema, who weaves fate, and D'Evez above all.
+== blood-and-amber · feminine: 82 sentences · mean word error 1.3% · 73 sentences heard word for word · 5 re-synthesized · 3 still over 10% or short
+   # 26  12.5%
+        text:    Laima, who weaves fate, and Dievas above all.
+        whisper: Lamer who weaves fate and D'Evez above all
+   # 27  33.3%
+        text:    And the dainos — the folk songs.
+        whisper: and the day knows the folk songs.
+   # 67  12.5%
+        text:    The inheritance in that drawer survived the Crusades.
+        whisper: The inheritance in that draw survived the Crusades.
+== carry-without-stealing · masculine: 32 sentences · mean word error 0.0% · 32 sentences heard word for word · 0 re-synthesized · 0 still over 10% or short
+== carry-without-stealing · feminine: 32 sentences · mean word error 2.5% · 29 sentences heard word for word · 3 re-synthesized · 3 still over 10% or short
+   #  9  33.3%
+        text:    The first plunders.
+        whisper: The first plunder Z
+   # 13  33.3%
+        text:    Call it what it is: metamodernist.
+        whisper: Call it what it is, Meta-Modernist.
+   # 14  12.5%
+        text:    The ancestral practices were tested — ten thousand years of field trials with survival as the endpoint.
+        whisper: The ancestral practices were tested. 10,000 years of field trials with survival as the end point.
+== council-fire-excerpt · masculine: 42 sentences · mean word error 1.0% · 38 sentences heard word for word · 2 re-synthesized · 2 still over 10% or short
+   # 34  16.7%
+        text:    Te Rangi spoke of the waves.
+        whisper: T. Rangi spoke of the waves.
+   # 38  20.0%
+        text:    Chariya spoke of the rice.
+        whisper: Charya spoke of the rise.
+== council-fire-excerpt · feminine: 42 sentences · mean word error 2.4% · 39 sentences heard word for word · 3 re-synthesized · 3 still over 10% or short
+   # 15  33.3%
+        text:    Not the heat.
+        whisper: not the heater.
+   # 16  50.0% (take 1)
+        text:    The silence.
+        whisper: The silence is
+   # 34  16.7%
+        text:    Te Rangi spoke of the waves.
+        whisper: T. Rangi spoke of the waves.
+== far-messengers-excerpt · masculine: 20 sentences · mean word error 0.2% · 19 sentences heard word for word · 2 re-synthesized · 0 still over 10% or short
+== far-messengers-excerpt · feminine: 20 sentences · mean word error 2.5% · 19 sentences heard word for word · 2 re-synthesized · 1 still over 10% or short
+   # 16  50.0%
+        text:    It remembered.
+        whisper: It remembered it.
+== garden-as-practice · masculine: 34 sentences · mean word error 0.5% · 32 sentences heard word for word · 1 re-synthesized · 1 still over 10% or short
+   # 22  12.5%
+        text:    The garden bows to something larger than itself.
+        whisper: The garden bodes to something larger than itself.
+== garden-as-practice · feminine: 34 sentences · mean word error 0.9% · 32 sentences heard word for word · 1 re-synthesized · 1 still over 10% or short
+   # 32  25.0%
+        text:    They are working technology for a modern life.
+        whisper: They are working technology from modern life.
+== koi-and-the-dragon-gate · masculine: 34 sentences · mean word error 1.1% · 30 sentences heard word for word · 2 re-synthesized · 1 still over 10% or short
+   #  2  16.7%
+        text:    A koi swims into the current.
+        whisper: A coy swims into the current.
+== koi-and-the-dragon-gate · feminine: 34 sentences · mean word error 0.7% · 32 sentences heard word for word · 2 re-synthesized · 1 still over 10% or short
+   #  2  16.7%
+        text:    A koi swims into the current.
+        whisper: A coy swims into the current.
+== never-only-men · masculine: 23 sentences · mean word error 3.3% · 20 sentences heard word for word · 3 re-synthesized · 3 still over 10% or short
+   #  0  14.3%
+        text:    The far messengers were never only men.
+        whisper: The farm messengers were never only men.
+   #  8  11.8%
+        text:    The divers of the cold coasts worked the deep on a single held breath into their seventies.
+        whisper: The divers of the cold coasts worked the deep on a single held breath into their 70s.
+   # 17  50.0%
+        text:    It isn't.
+        whisper: There isn't.
+== never-only-men · feminine: 23 sentences · mean word error 2.9% · 20 sentences heard word for word · 2 re-synthesized · 2 still over 10% or short
+   #  8  11.8%
+        text:    The divers of the cold coasts worked the deep on a single held breath into their seventies.
+        whisper: The divers of the cold coasts worked the deep on a single held breath into their 70s.
+   # 17  50.0%
+        text:    It isn't.
+        whisper: It isn't a
+== stone-breath-chapter-one · masculine: 180 sentences · mean word error 0.6% · 170 sentences heard word for word · 2 re-synthesized · 2 still over 10% or short
+   # 80  13.3%
+        text:    Somewhere up the rim a canyon wren spilled its long falling note and went quiet.
+        whisper: Somewhere up the rim, a canny and wren spilled its long falling note and went quiet.
+   #116  50.0%
+        text:    The schoolteacher laughed softly.
+        whisper: The school teacher laughed softly.
+== stone-breath-chapter-one · feminine: 180 sentences · mean word error 0.5% · 170 sentences heard word for word · 5 re-synthesized · 3 still over 10% or short
+   # 60  25.0%
+        text:    That is the work.
+        whisper: That is the work key.
+   #144  20.0%
+        text:    He knew what it cost.
+        whisper: He knew what it cost to
+   #158  25.0%
+        text:    The calm he taught.
+        whisper: The calm he taught her.
+== stone-breath-excerpt · masculine: 39 sentences · mean word error 0.2% · 38 sentences heard word for word · 0 re-synthesized · 0 still over 10% or short
+== stone-breath-excerpt · feminine: 39 sentences · mean word error 2.7% · 36 sentences heard word for word · 4 re-synthesized · 2 still over 10% or short
+   # 18  50.0%
+        text:    Hold — four.
+        whisper: Hold for
+   # 20  50.0%
+        text:    Hold — four.
+        whisper: Hold for
+== the-arched-bridge · masculine: 35 sentences · mean word error 0.8% · 32 sentences heard word for word · 2 re-synthesized · 1 still over 10% or short
+   #  1  14.3%
+        text:    For twelve years, in a garden I built and tended, there was a small arched stone bridge over the koi pond.
+        whisper: For twelve years, in a garden I built intended, there was a small arch stone bridge over the koi pond.
+== the-arched-bridge · feminine: 35 sentences · mean word error 0.3% · 33 sentences heard word for word · 0 re-synthesized · 0 still over 10% or short
+== the-calm-you-already-stored · masculine: 30 sentences · mean word error 0.9% · 27 sentences heard word for word · 1 re-synthesized · 1 still over 10% or short
+   # 23  11.1%
+        text:    The old runners did not have the word vagal.
+        whisper: The old runners did not have the word "vaggle."
+== the-calm-you-already-stored · feminine: 30 sentences · mean word error 1.3% · 26 sentences heard word for word · 2 re-synthesized · 2 still over 10% or short
+   # 23  11.1%
+        text:    The old runners did not have the word vagal.
+        whisper: The old runners did not have the word "vaggle".
+   # 24  12.5%
+        text:    They had the count, and ten thousand years of field trials with survival as the endpoint.
+        whisper: They had the count, and 10,000 years of field trials with survival as the end point.
+== the-sound-of-water · masculine: 31 sentences · mean word error 0.5% · 29 sentences heard word for word · 0 re-synthesized · 0 still over 10% or short
+== the-sound-of-water · feminine: 31 sentences · mean word error 1.3% · 28 sentences heard word for word · 1 re-synthesized · 1 still over 10% or short
+   # 29  25.0%
+        text:    Not with a pond.
+        whisper: Not with a pon-
+== torii-in-the-desert · masculine: 77 sentences · mean word error 1.1% · 69 sentences heard word for word · 4 re-synthesized · 4 still over 10% or short
+   # 24  14.3%
+        text:    I sent away for paper-making kits and learned to pull washi by hand.
+        whisper: I sent away for papermaking kits and learned to pull washi by hand.
+   # 34  20.0%
+        text:    The koi and the waterfall
+        whisper: the kai and the waterfall.
+   # 44  20.0%
+        text:    The patience the garden demands.
+        whisper: the patients the garden demands.
+   # 55  10.5%
+        text:    So the koi pond, the torii, the meditation room, the paper pulled by hand — these are not my hobbies.
+        whisper: So the koi-pon, the torii, the meditation room, the paper pulled by hand, these are not my habeas.
+== torii-in-the-desert · feminine: 77 sentences · mean word error 1.5% · 68 sentences heard word for word · 3 re-synthesized · 3 still over 10% or short
+   #  7  50.0%
+        text:    Martial arts.
+        whisper: Marshall Artsy
+   # 44  20.0%
+        text:    The patience the garden demands.
+        whisper: The patients the garden demands.
+   # 53  11.1%
+        text:    I built it for the ones who come after.
+        whisper: I built it for the wands who come after.
+
+TOTAL: 1360 sentence clips (680 sentences × 2 voices) · mean word error 1.0% · 59 re-synthesized · 43 still over 10% or short (all listed above, with what whisper heard)
+
+== THE NAMES ALONE (_review/two-voices/names/) ==
+What whisper writes for a lone name is only its best guess at an English spelling of the sound; the sound itself is set by the phoneme check below.
+name         Tony says          voice input      masculine, whisper hears     feminine, whisper hears
+Tonas        TOO-nas            too-nas          To NAS                       to NASA.
+Austėja      ah-STAY-ya         ah-stay-ya       Australia.                   I'll stay here
+Ona          OH-nah             oh-nah           Oh nigh                      owner
+Ada          AH-dah             ah-dah           I die.                       Aada
+Ugnė         AHG-neh            ahgneh           Agne                         Agne
+Masan        MAH-sahn           mahsahn          Maslan                       Ma-san
+Rytis        REE-tus            ree-tus          retus                        Retus
+Lukas        LOO-kas            loo-kas          Luke As                      Lucas
+Vytautas     vee-TAH-tis        vee-tah-tis      VITA TIS                     VITA TEZ
+Vilnius      VIL-nee-oos        vilneeoos        Vilnius                      Villneus
+talka        TAH-kah            tah-kah          TAKA                         Taka
+Yazzie       YAH-zee            yahzee           Yazi                         YAZY
+Gintarė      YIN-tah-reh        yin-tah-reh      Yintare                      Yintare
+Marija       mah-REE-hah        mah-ree-hah      Mari Hot                     My Rehearsed
+Jurgita      Yer-PEE-ta         yer-pee-ta       Your Pizza                   You Peter
+Skrelūnas    Skrull-OO-nas      skrull-oo-nas    Skrulloon ass.               Scrullooness
+Diné         Deh-NEH            dehneh           Danae                        Danae
+
+== THE PHONEME CHECK, FEMININE VOICE (en-gb) ==
+say_spellings.json was solved against espeak en-us for the masculine voice. The feminine voice (bf_emma) reads en-gb, so each spelling was phonemized again with espeak en-gb and compared with the en-us target after folding accent-only differences (əʊ/oʊ, e/ɛ, a/æ, ɒ/ɑ, ɜː/ɚ, the centring diphthongs against the r-coloured ones, an unsounded British r before a consonant). Where that changed the sound, lowercase alternatives were searched (as solve_say.py does). Result: tools/voice/say_spellings.en-gb.json.
+138/140 names come out the same in en-gb. 1 spellings needed changing. The 2 that still differ, by one accent feature each:
+   Yá’át’ééh    Tony: YAH-ah-TAY       en-gb says jˈɑːɹˈɑːtˈeɪ             target jˈɑː ˈɑː tˈeɪ            (not in any reading)
+   Māori        Tony: MAH-oh-ree       en-gb says mˈɑːɹˈəʊɹˈiː             target mˈɑː ˈoʊ ɹˈiː            (not in any reading)
+   The two with an extra r are the British voice's linking r between two vowels (yah-r-ah, mah-r-oh); no lowercase spelling removes it, and neither name is read anywhere.
+
+== LOUDNESS AND LENGTH (join.log) ==
+blood-and-amber masculine: 82 sentences, 457.16s (original 453.25s), loudness -16.8 LUFS (original -16.8, diff +0.0 LU), peak -0.2 dBFS
+blood-and-amber feminine: 82 sentences, 399.77s (original 453.25s), loudness -17.0 LUFS (original -16.8, diff -0.2 LU), peak -1.1 dBFS
+by-lamplight-opening masculine: 21 sentences, 59.42s (original 59.37s), loudness -16.9 LUFS (original -16.9, diff +0.0 LU), peak -0.3 dBFS
+by-lamplight-opening feminine: 21 sentences, 56.78s (original 59.37s), loudness -17.2 LUFS (original -16.9, diff -0.3 LU), peak -1.2 dBFS
+carry-without-stealing masculine: 32 sentences, 162.31s (original 160.63s), loudness -16.7 LUFS (original -16.7, diff +0.0 LU), peak -0.4 dBFS
+carry-without-stealing feminine: 32 sentences, 141.70s (original 160.63s), loudness -17.0 LUFS (original -16.7, diff -0.3 LU), peak -1.2 dBFS
+council-fire-excerpt masculine: 42 sentences, 175.85s (original 175.30s), loudness -16.8 LUFS (original -16.8, diff +0.0 LU), peak -0.1 dBFS
+council-fire-excerpt feminine: 42 sentences, 155.79s (original 175.30s), loudness -16.9 LUFS (original -16.8, diff -0.1 LU), peak -1.1 dBFS
+far-messengers-excerpt masculine: 20 sentences, 91.27s (original 90.21s), loudness -16.8 LUFS (original -16.8, diff +0.0 LU), peak -0.3 dBFS
+far-messengers-excerpt feminine: 20 sentences, 80.67s (original 90.21s), loudness -17.1 LUFS (original -16.8, diff -0.3 LU), peak -1.3 dBFS
+garden-as-practice masculine: 34 sentences, 200.29s (original 196.72s), loudness -16.9 LUFS (original -16.9, diff +0.0 LU), peak -0.2 dBFS
+garden-as-practice feminine: 34 sentences, 173.62s (original 196.72s), loudness -17.2 LUFS (original -16.9, diff -0.3 LU), peak -1.3 dBFS
+koi-and-the-dragon-gate masculine: 34 sentences, 193.12s (original 190.94s), loudness -16.8 LUFS (original -16.8, diff +0.0 LU), peak -0.3 dBFS
+koi-and-the-dragon-gate feminine: 34 sentences, 168.30s (original 190.94s), loudness -17.0 LUFS (original -16.8, diff -0.2 LU), peak -1.2 dBFS
+never-only-men masculine: 23 sentences, 152.39s (original 152.03s), loudness -16.8 LUFS (original -16.8, diff +0.0 LU), peak -0.4 dBFS
+never-only-men feminine: 23 sentences, 132.14s (original 152.03s), loudness -17.1 LUFS (original -16.8, diff -0.3 LU), peak -1.2 dBFS
+stone-breath-chapter-one masculine: 180 sentences, 969.64s (original 967.93s), loudness -16.8 LUFS (original -16.8, diff +0.0 LU), peak -0.1 dBFS
+stone-breath-chapter-one feminine: 180 sentences, 851.89s (original 967.93s), loudness -17.0 LUFS (original -16.8, diff -0.2 LU), peak -1.0 dBFS
+stone-breath-excerpt masculine: 39 sentences, 113.61s (original 115.17s), loudness -16.8 LUFS (original -16.8, diff +0.0 LU), peak -0.3 dBFS
+stone-breath-excerpt feminine: 39 sentences, 104.31s (original 115.17s), loudness -17.1 LUFS (original -16.8, diff -0.3 LU), peak -1.4 dBFS
+the-arched-bridge masculine: 35 sentences, 187.48s (original 186.35s), loudness -16.9 LUFS (original -16.9, diff +0.0 LU), peak 0.1 dBFS
+the-arched-bridge feminine: 35 sentences, 162.25s (original 186.35s), loudness -17.2 LUFS (original -16.9, diff -0.3 LU), peak -1.3 dBFS
+the-calm-you-already-stored masculine: 30 sentences, 169.15s (original 166.63s), loudness -16.7 LUFS (original -16.7, diff +0.0 LU), peak -0.5 dBFS
+the-calm-you-already-stored feminine: 30 sentences, 146.95s (original 166.63s), loudness -16.9 LUFS (original -16.7, diff -0.2 LU), peak -1.2 dBFS
+the-sound-of-water masculine: 31 sentences, 181.93s (original 180.81s), loudness -16.8 LUFS (original -16.8, diff +0.0 LU), peak -0.1 dBFS
+the-sound-of-water feminine: 31 sentences, 158.07s (original 180.81s), loudness -17.0 LUFS (original -16.8, diff -0.2 LU), peak -1.1 dBFS
+torii-in-the-desert masculine: 77 sentences, 409.61s (original 403.87s), loudness -16.7 LUFS (original -16.8, diff +0.1 LU), peak -0.4 dBFS
+torii-in-the-desert feminine: 77 sentences, 359.41s (original 403.87s), loudness -17.0 LUFS (original -16.8, diff -0.2 LU), peak -1.2 dBFS

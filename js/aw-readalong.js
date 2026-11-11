@@ -15,7 +15,11 @@
      Sentences already read get is-read and rest at full ink; the page follows the reading with a gentle
      scroll, unless the visitor has scrolled in the last 4 seconds. Tapping a sentence (or Enter/Space on a
      focused one) plays the reading from there. A small "Read along" switch beside the player turns the
-     highlighting off, and that choice is remembered on the device. */
+     highlighting off, and that choice is remembered on the device.
+   - Two voices (11/11/2026): a reading in /assets/audio/readings/voices.json has a feminine recording too, with its
+     own <slug>.f.timeline.json (the same sentences, their own times). The timeline fetched on load is the one for
+     the voice remembered on the device ("aw.voice", see aw-listen.js). When the player switches voice it fires
+     "aw-voice" on itself with the new timeline's URL; the times are swapped in place and the highlight carries on. */
 (function () {
   'use strict';
   var FOLLOW_PAUSE = 4000, MIN_COVER = 0.8, MIN_RATIO = 0.62, STORE = 'aw.readalong';
@@ -229,6 +233,7 @@
       try { window.scrollTo({ top: Math.max(0, top), behavior: reduced ? 'auto' : 'smooth' }); } catch (e) { window.scrollTo(0, Math.max(0, top)); }
     }
     function tick() {
+      if (swapping) return;
       var t = pend !== null ? pend : (audio.currentTime || 0), n = sentences.length, i = cur;
       if (i < 0 || sentences[i].start > t) i = -1;
       while (i + 1 < n && sentences[i + 1].start <= t) i++;
@@ -310,6 +315,21 @@
       });
     });
 
+    // the other voice: the same sentences with their own times
+    var swapping = null;
+    player.addEventListener('aw-voice', function (e) {
+      var url = e.detail && e.detail.timeline; if (!url) return;
+      var n = swapping = {};
+      fetch(url).then(function (r) { if (!r.ok) throw new Error('no timeline'); return r.json(); }).then(function (tl) {
+        if (swapping !== n) return; swapping = null;
+        if (!tl || !tl.sentences || tl.sentences.length !== sentences.length) return;
+        for (var i = 0; i < sentences.length; i++) { sentences[i].start = tl.sentences[i].start; sentences[i].end = tl.sentences[i].end; }
+        state.timeline = url; cur = -1; word = -1;
+        for (var k = 0; k < dom.segs.length; k++) { setClass(dom.segs[k], 'is-read', false); setClass(dom.segs[k], 'is-current', false); }
+        if (on && started) tick();
+      }).catch(function () { if (swapping === n) swapping = null; });
+    });
+
     // the device remembered a place in the reading (aw-listen.js): show it once the voice goes on
     state.sentenceAt = function (t) { for (var i = sentences.length - 1; i >= 0; i--) if (sentences[i].start <= t) return i; return -1; };
     state.current = function () { return cur; };
@@ -324,14 +344,24 @@
   function boot() {
     var players = document.querySelectorAll('.aw-listen[data-id]');
     if (!players.length || !window.fetch) return;
-    players.forEach(function (player) {
-      var slug = player.getAttribute('data-id');
-      var roots = [].slice.call(document.querySelectorAll('[data-aw-readalong="' + slug + '"]'));
-      if (!roots.length) return;
-      var url = '/assets/audio/readings/' + slug + '.timeline.json';
-      fetch(url).then(function (r) { if (!r.ok) throw new Error('no timeline'); return r.json(); }).then(function (tl) {
-        var st = setup(player, tl, roots); if (st) readings.push(st);
-      }).catch(function () { readings.push({ slug: slug, aligned: false, error: true }); });
+    // which voice's timeline: the one remembered on the device, when the reading has that voice (voices.json, shared with aw-listen.js)
+    var BASE = '/assets/audio/readings/';
+    if (!window.AWVoices) {
+      window.AWVoices = fetch(BASE + 'voices.json').then(function (r) { return r.ok ? r.json() : {}; })
+        .then(function (j) { return j && j.slugs ? j : { slugs: [] }; }).catch(function () { return { slugs: [] }; });
+    }
+    var want = 'masculine'; try { if (localStorage.getItem('aw.voice') === 'feminine') want = 'feminine'; } catch (e) {}
+    window.AWVoices.then(function (j) {
+      players.forEach(function (player) {
+        var slug = player.getAttribute('data-id');
+        var roots = [].slice.call(document.querySelectorAll('[data-aw-readalong="' + slug + '"]'));
+        if (!roots.length) return;
+        var v = (want === 'feminine' && j.slugs && j.slugs.indexOf(slug) >= 0) ? 'feminine' : 'masculine';
+        var url = BASE + slug + (v === 'feminine' ? '.f' : '') + '.timeline.json';
+        fetch(url).then(function (r) { if (!r.ok) throw new Error('no timeline'); return r.json(); }).then(function (tl) {
+          var st = setup(player, tl, roots); if (st) { st.timeline = url; readings.push(st); }
+        }).catch(function () { readings.push({ slug: slug, aligned: false, error: true }); });
+      });
     });
   }
   window.AWReadAlong = { readings: readings, align: align, collect: collect, keys: keys, ratio: ratio };
