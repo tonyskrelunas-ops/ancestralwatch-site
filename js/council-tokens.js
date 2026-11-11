@@ -6,7 +6,7 @@ const K=[['Käthe','lump of coal','coal'],['Ugnė','amber bead','amber'],['Illar
 ['Nizhoní','river stone','river'],['Aoi','black go stone','go'],['Vahan','stone cross','cross'],
 ['Lobsang','mala of bodhi seeds','mala'],['Te Rangi','pounamu','pounamu'],['Warrun','spinifex resin','resin'],
 ['Kiprono','beaded bracelet','bracelet'],['Hamish','granite clan stone','granite'],['Chariya','rice seed','rice']];
-const INK='#3B3020', GOLD='#B98D3E', PAPER='#F7F0E1';
+const INK='#0E0E0E', GOLD='#0E0E0E', PAPER='#F4F4F2';
 function el(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
 function token(kind,g){
   switch(kind){
@@ -53,9 +53,9 @@ window.CouncilTokens=function(host,opts){
   const f1=el('path',{d:'M0,-70 C22,-40 40,-18 34,10 C30,30 14,40 0,40 C-14,40 -30,30 -34,10 C-40,-18 -22,-40 0,-70 Z',fill:'#D9822B'},fire);
   const f2=el('path',{d:'M0,-42 C14,-22 24,-8 20,12 C17,26 8,32 0,32 C-8,32 -17,26 -20,12 C-24,-8 -14,-22 0,-42 Z',fill:'#E8A93C'},fire);
   const f3=el('path',{d:'M0,-18 C7,-8 11,0 9,12 C8,20 4,24 0,24 C-4,24 -8,20 -9,12 C-11,0 -7,-8 0,-18 Z',fill:'#F6D27A'},fire);
-  const cap1=el('text',{x:500,y:78,'text-anchor':'middle','font-family':'Fraunces, Georgia, serif','font-size':44,fill:INK,'font-style':'italic'},svg); cap1.textContent='Twelve peoples. Twelve tokens. One fire.';
-  const cap2=el('text',{x:500,y:880,'text-anchor':'middle','font-family':'Fraunces, Georgia, serif','font-size':46,fill:INK,'font-style':'italic'},svg); cap2.textContent='And at the end, a child holds them all.';
-  const cap3=el('text',{x:500,y:940,'text-anchor':'middle','font-family':'Inter, Helvetica, sans-serif','font-size':24,fill:GOLD,'letter-spacing':4},svg); cap3.textContent='THE COUNCIL FIRE';
+  const cap1=el('text',{x:500,y:78,'text-anchor':'middle','font-family':'Newsreader, Georgia, serif','font-size':44,fill:INK,'font-style':'italic'},svg); cap1.textContent='Twelve peoples. Twelve tokens. One fire.';
+  const cap2=el('text',{x:500,y:880,'text-anchor':'middle','font-family':'Newsreader, Georgia, serif','font-size':46,fill:INK,'font-style':'italic'},svg); cap2.textContent='And at the end, a child holds them all.';
+  const cap3=el('text',{x:500,y:940,'text-anchor':'middle','font-family':'Inter Tight, Inter, Helvetica, sans-serif','font-size':24,fill:GOLD,'letter-spacing':4},svg); cap3.textContent='THE COUNCIL FIRE';
   const items=K.map((k,i)=>{
     const a=-Math.PI/2+i/12*Math.PI*2;
     const g=el('g',{},svg); token(k[2],g);
@@ -63,8 +63,8 @@ window.CouncilTokens=function(host,opts){
     const c=Math.cos(a), sn=Math.sin(a), tx=CX+R*c, ty=CY+R*sn;
     const side=c>0.35?'start':c<-0.35?'end':'middle';
     const lx=side==='middle'?tx:tx+(c>0?52:-52), ly=side==='middle'?ty+(sn<0?-52:84):ty+4;
-    const t1=el('text',{x:lx,y:ly-4,'text-anchor':side,'font-family':'Fraunces, Georgia, serif','font-size':27,'font-weight':600,fill:INK},lab); t1.textContent=k[0];
-    const t2=el('text',{x:lx,y:ly+22,'text-anchor':side,'font-family':'Fraunces, Georgia, serif','font-size':20,'font-style':'italic',fill:'#6E5E48'},lab); t2.textContent=k[1];
+    const t1=el('text',{x:lx,y:ly-4,'text-anchor':side,'font-family':'Newsreader, Georgia, serif','font-size':27,'font-weight':600,fill:INK},lab); t1.textContent=k[0];
+    const t2=el('text',{x:lx,y:ly+22,'text-anchor':side,'font-family':'Newsreader, Georgia, serif','font-size':20,'font-style':'italic',fill:'#555555'},lab); t2.textContent=k[1];
     return {a,g,lab};
   });
   host.appendChild(svg);

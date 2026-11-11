@@ -6,7 +6,7 @@
 // The road each star travels is real sky geometry (a star of one declination, seen from 21 degrees north).
 (function(){
 const NS='http://www.w3.org/2000/svg';
-const INK='#3B3020', GOLD='#B98D3E', GOLD_DEEP='#91691F', GOLD_LIGHT='#D7B071', PAPER='#F7F0E1', DOME='#EEE1C6';
+const INK='#0E0E0E', GOLD='#0E0E0E', GOLD_DEEP='#555555', GOLD_LIGHT='#FFFFFF', PAPER='#F4F4F2', DOME='#E4E4E1';
 const D=Math.PI/180;
 function el(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
 const ease=x=>x<0?0:x>1?1:x*x*(3-2*x);
@@ -40,7 +40,7 @@ window.FarMessengersStars=function(host,opts){
   // ---- the horizon and its thirty-two points
   const defs=el('defs',{},svg), gid='fms-dome-'+Math.random().toString(36).slice(2,8);
   const rg=el('radialGradient',{id:gid,cx:'50%',cy:'50%',r:'50%'},defs);
-  el('stop',{offset:'0%','stop-color':'#FAF4E6'},rg); el('stop',{offset:'100%','stop-color':DOME},rg);
+  el('stop',{offset:'0%','stop-color':'#FFFFFF'},rg); el('stop',{offset:'100%','stop-color':DOME},rg);
   const dome=el('circle',{cx:CX,cy:CY,r:R,fill:`url(#${gid})`},svg);
   const CIRC=2*Math.PI*R;
   const ring=el('circle',{cx:CX,cy:CY,r:R,fill:'none',stroke:INK,'stroke-width':2.4,'stroke-opacity':.62,
@@ -93,7 +93,7 @@ window.FarMessengersStars=function(host,opts){
     el('circle',{r:30,fill:GOLD_LIGHT,opacity:.32},g);
     el('circle',{r:17,fill:GOLD_LIGHT,opacity:.42},g);
     el('path',{d:'M0,-30 C3,-8 8,-3 30,0 C8,3 3,8 0,30 C-3,8 -8,3 -30,0 C-8,-3 -3,-8 0,-30 Z',fill:GOLD,stroke:GOLD_DEEP,'stroke-width':1.6,'stroke-linejoin':'round'},g);
-    el('circle',{r:3.4,fill:'#FFF6DE'},g);
+    el('circle',{r:3.4,fill:'#FFFFFF'},g);
     return g;
   }
   const HIGH=42, FADE_FROM=24, LOW_REST=13;       // too high to use by about forty degrees
@@ -104,9 +104,9 @@ window.FarMessengersStars=function(host,opts){
   // ---- the words (left off on the book page, where the heading and caption carry them)
   let cap1=null, cap2=null;
   if(words){
-    cap1=el('text',{x:500,y:96,'text-anchor':'middle','font-family':'Fraunces, Georgia, serif','font-size':44,fill:INK,'font-style':'italic'},svg);
+    cap1=el('text',{x:500,y:96,'text-anchor':'middle','font-family':'Newsreader, Georgia, serif','font-size':44,fill:INK,'font-style':'italic'},svg);
     cap1.textContent='The stars overhead ran their fixed roads.';
-    cap2=el('text',{x:500,y:948,'text-anchor':'middle','font-family':'Inter, Helvetica, sans-serif','font-size':24,fill:GOLD,'letter-spacing':4},svg);
+    cap2=el('text',{x:500,y:948,'text-anchor':'middle','font-family':'Inter Tight, Inter, Helvetica, sans-serif','font-size':24,fill:GOLD,'letter-spacing':4},svg);
     cap2.textContent='THE FAR MESSENGERS';
   }
   host.appendChild(svg);

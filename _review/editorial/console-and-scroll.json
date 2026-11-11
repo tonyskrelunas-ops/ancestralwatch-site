@@ -1,0 +1,279 @@
+{
+  "/ @phone": {
+    "errors": [],
+    "scroll": {
+      "sw": 390,
+      "cw": 390,
+      "bw": 390
+    }
+  },
+  "/series/ @phone": {
+    "errors": [],
+    "scroll": {
+      "sw": 390,
+      "cw": 390,
+      "bw": 390
+    }
+  },
+  "/series/stone-breath/ @phone": {
+    "errors": [
+      "reqfail: https://assets.mailerlite.com/js/universal.js",
+      "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+      "reqfail: http://localhost:8200/assets/video/stone-breath-oak-creek.mp4"
+    ],
+    "scroll": {
+      "sw": 390,
+      "cw": 390,
+      "bw": 390
+    }
+  },
+  "/series/the-council-fire/ @phone": {
+    "errors": [
+      "reqfail: https://assets.mailerlite.com/js/universal.js",
+      "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+    ],
+    "scroll": {
+      "sw": 390,
+      "cw": 390,
+      "bw": 390
+    }
+  },
+  "/series/the-far-messengers/ @phone": {
+    "errors": [
+      "reqfail: https://assets.mailerlite.com/js/universal.js",
+      "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+    ],
+    "scroll": {
+      "sw": 390,
+      "cw": 390,
+      "bw": 390
+    }
+  },
+  "/series/by-lamplight/ @phone": {
+    "errors": [
+      "reqfail: https://assets.mailerlite.com/js/universal.js",
+      "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+    ],
+    "scroll": {
+      "sw": 390,
+      "cw": 390,
+      "bw": 390
+    }
+  },
+  "/read/ @phone": {
+    "errors": [],
+    "scroll": {
+      "sw": 390,
+      "cw": 390,
+      "bw": 390
+    }
+  },
+  "/tools/ @phone": {
+    "errors": [],
+    "scroll": {
+      "sw": 390,
+      "cw": 390,
+      "bw": 390
+    }
+  },
+  "/stories/ @phone": {
+    "errors": [],
+    "scroll": {
+      "sw": 390,
+      "cw": 390,
+      "bw": 390
+    }
+  },
+  "/stories/the-calm-you-already-stored/ @phone": {
+    "errors": [
+      "reqfail: https://assets.mailerlite.com/js/universal.js",
+      "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+    ],
+    "scroll": {
+      "sw": 390,
+      "cw": 390,
+      "bw": 390
+    }
+  },
+  "/author/ @phone": {
+    "errors": [],
+    "scroll": {
+      "sw": 390,
+      "cw": 390,
+      "bw": 390
+    }
+  },
+  "/reader/ @phone": {
+    "errors": [
+      "reqfail: https://assets.mailerlite.com/js/universal.js",
+      "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+    ],
+    "scroll": {
+      "sw": 390,
+      "cw": 390,
+      "bw": 390
+    }
+  },
+  "/ja/ @phone": {
+    "errors": [],
+    "scroll": {
+      "sw": 390,
+      "cw": 390,
+      "bw": 390
+    }
+  },
+  "/lt/ @phone": {
+    "errors": [],
+    "scroll": {
+      "sw": 390,
+      "cw": 390,
+      "bw": 390
+    }
+  },
+  "/lamplight/ @phone": {
+    "errors": [],
+    "scroll": {
+      "sw": 390,
+      "cw": 390,
+      "bw": 390
+    }
+  },
+  "/ @desk": {
+    "errors": [],
+    "scroll": {
+      "sw": 1440,
+      "cw": 1440,
+      "bw": 1440
+    }
+  },
+  "/series/ @desk": {
+    "errors": [],
+    "scroll": {
+      "sw": 1440,
+      "cw": 1440,
+      "bw": 1440
+    }
+  },
+  "/series/stone-breath/ @desk": {
+    "errors": [
+      "reqfail: https://assets.mailerlite.com/js/universal.js",
+      "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+    ],
+    "scroll": {
+      "sw": 1440,
+      "cw": 1440,
+      "bw": 1770
+    }
+  },
+  "/series/the-council-fire/ @desk": {
+    "errors": [
+      "reqfail: https://assets.mailerlite.com/js/universal.js",
+      "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+    ],
+    "scroll": {
+      "sw": 1440,
+      "cw": 1440,
+      "bw": 1770
+    }
+  },
+  "/series/the-far-messengers/ @desk": {
+    "errors": [
+      "reqfail: https://assets.mailerlite.com/js/universal.js",
+      "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+    ],
+    "scroll": {
+      "sw": 1440,
+      "cw": 1440,
+      "bw": 1770
+    }
+  },
+  "/series/by-lamplight/ @desk": {
+    "errors": [
+      "reqfail: https://assets.mailerlite.com/js/universal.js",
+      "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+    ],
+    "scroll": {
+      "sw": 1440,
+      "cw": 1440,
+      "bw": 1440
+    }
+  },
+  "/read/ @desk": {
+    "errors": [],
+    "scroll": {
+      "sw": 1440,
+      "cw": 1440,
+      "bw": 1440
+    }
+  },
+  "/tools/ @desk": {
+    "errors": [],
+    "scroll": {
+      "sw": 1440,
+      "cw": 1440,
+      "bw": 1440
+    }
+  },
+  "/stories/ @desk": {
+    "errors": [],
+    "scroll": {
+      "sw": 1440,
+      "cw": 1440,
+      "bw": 1440
+    }
+  },
+  "/stories/the-calm-you-already-stored/ @desk": {
+    "errors": [
+      "reqfail: https://assets.mailerlite.com/js/universal.js",
+      "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+    ],
+    "scroll": {
+      "sw": 1440,
+      "cw": 1440,
+      "bw": 1440
+    }
+  },
+  "/author/ @desk": {
+    "errors": [],
+    "scroll": {
+      "sw": 1440,
+      "cw": 1440,
+      "bw": 1440
+    }
+  },
+  "/reader/ @desk": {
+    "errors": [
+      "reqfail: https://assets.mailerlite.com/js/universal.js",
+      "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED"
+    ],
+    "scroll": {
+      "sw": 1440,
+      "cw": 1440,
+      "bw": 1440
+    }
+  },
+  "/ja/ @desk": {
+    "errors": [],
+    "scroll": {
+      "sw": 1440,
+      "cw": 1440,
+      "bw": 1440
+    }
+  },
+  "/lt/ @desk": {
+    "errors": [],
+    "scroll": {
+      "sw": 1440,
+      "cw": 1440,
+      "bw": 1440
+    }
+  },
+  "/lamplight/ @desk": {
+    "errors": [],
+    "scroll": {
+      "sw": 1440,
+      "cw": 1440,
+      "bw": 1440
+    }
+  }
+}

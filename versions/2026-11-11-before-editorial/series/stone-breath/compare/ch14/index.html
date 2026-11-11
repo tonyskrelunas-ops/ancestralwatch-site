@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Stone Breath — Fourteen · The Injury and the Herb Walk — side by side</title>
+<meta name="description" content="Chapter 14 of Stone Breath, the edited version beside the published one.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/style.css?v=5">
+<link rel="stylesheet" href="/assets/daylight.css?v=8">
+<link rel="stylesheet" href="/css/aw-world.css?v=20261105">
+<style>
+.cmp{--in:color-mix(in srgb,var(--amber) 15%,transparent);
+     --out:color-mix(in srgb,var(--ink) 6%,transparent)}
+.cmp-bar{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);
+ backdrop-filter:blur(9px);border-bottom:1px solid var(--rule);padding:.6rem 0;margin-bottom:var(--space-2)}
+.cmp-bar__in{display:flex;gap:.45rem;flex-wrap:wrap;align-items:center}
+.cmp-btn{font:500 .8rem/1 Inter,system-ui,sans-serif;letter-spacing:.03em;padding:.52rem .9rem;
+ border:1px solid var(--rule);border-radius:999px;background:var(--bg-panel);color:var(--ink);
+ cursor:pointer;text-decoration:none;display:inline-block;transition:.18s}
+.cmp-btn:hover{border-color:var(--amber)}
+.cmp-btn.on{background:var(--amber);border-color:var(--amber);color:#fff}
+.cmp-sp{flex:1 1 auto}
+.cmp-heads{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);margin:var(--space-3) 0 .2rem}
+.cmp-hd{font:500 .68rem/1.3 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+ color:var(--ink-soft);padding-bottom:.45rem;border-bottom:1px solid var(--rule)}
+.cmp-hd b{color:var(--amber);font-weight:500}
+.cmp-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);align-items:start;margin-bottom:.15rem}
+.cmp-cell{padding:.55rem .85rem;border-radius:var(--radius)}
+.cmp-row.chg .cmp-cell.l{background:var(--in);box-shadow:inset 3px 0 0 var(--amber)}
+.cmp-row.chg .cmp-cell.r{background:var(--out);box-shadow:inset 3px 0 0 var(--rule)}
+.cmp-cell p{margin:0;font-size:var(--step-0);line-height:1.68}
+.cmp-cell.gone{opacity:.42;font-style:italic;color:var(--ink-soft)}
+.cmp-cell.gone:after{content:"— not in this version";font-size:var(--step--1)}
+.cmp-hh{font:500 .72rem/1.4 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+ color:var(--amber);text-align:center;margin:1.2em 0 .5em}
+.cmp-orn{text-align:center;color:var(--amber);letter-spacing:.55em;margin:1em 0}
+mark{background:none;color:inherit;padding:0}
+.cmp-row.chg mark.in{background:color-mix(in srgb,var(--amber) 34%,transparent);border-radius:3px;padding:0 .14em}
+.cmp-row.chg mark.out{background:color-mix(in srgb,var(--ink) 11%,transparent);border-radius:3px;padding:0 .14em}
+body.only-l .cmp-cell.r,body.only-l .cmp-hd.r{display:none}
+body.only-l .cmp-row,body.only-l .cmp-heads{grid-template-columns:1fr}
+body.only-r .cmp-cell.l,body.only-r .cmp-hd.l{display:none}
+body.only-r .cmp-row,body.only-r .cmp-heads{grid-template-columns:1fr}
+body.diffs .cmp-row.same{display:none}
+.cmp-hero{position:relative;min-height:clamp(230px,40vh,420px);display:flex;align-items:flex-end;
+ overflow:hidden;background:var(--bg)}
+.cmp-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cmp-hero__scrim{position:absolute;inset:0;background:
+ linear-gradient(100deg,color-mix(in srgb,var(--bg) 97%,transparent) 0%,
+ color-mix(in srgb,var(--bg) 90%,transparent) 36%,
+ color-mix(in srgb,var(--bg) 42%,transparent) 66%,
+ color-mix(in srgb,var(--bg) 6%,transparent) 100%)}
+.cmp-hero__in{position:relative;padding-block:var(--space-5) var(--space-4)}
+.cmp-hero__in>*{max-width:34ch}
+.cmp-hero__in .eyebrow{color:var(--amber)}
+.cmp-hero h1{margin:.08em 0 .2em;font-size:var(--step-4);color:var(--ink)}
+.cmp-hero__meta{font:400 .85rem/1.5 Inter,system-ui,sans-serif;color:var(--ink-soft)}
+.cmp-hero__cap{position:absolute;right:var(--space-3);bottom:.5rem;font:400 .66rem/1.3 Inter,sans-serif;
+ letter-spacing:.07em;color:color-mix(in srgb,var(--ink) 52%,transparent);text-align:right}
+.cmp-list{list-style:none;margin:var(--space-3) 0 0;padding:0;display:grid;gap:.6rem}
+.cmp-list a{display:grid;grid-template-columns:84px 1fr;gap:var(--space-2);align-items:center;
+ text-decoration:none;background:var(--bg-panel);border:1px solid var(--rule);
+ border-radius:var(--radius-lg);padding:.6rem;transition:.18s}
+.cmp-list a:hover{border-color:var(--amber);transform:translateY(-1px)}
+.cmp-list img{width:84px;height:62px;object-fit:cover;border-radius:calc(var(--radius) - 2px)}
+.cmp-list b{font-family:var(--font-display);font-weight:500;font-size:var(--step-1);color:var(--ink)}
+.cmp-list span{display:block;font:400 .78rem/1.45 Inter,sans-serif;color:var(--ink-soft);margin-top:.12rem}
+.vrow{background:var(--bg-panel);border:1px solid var(--rule);border-radius:var(--radius-lg);
+ padding:.8rem 1rem;margin-bottom:.55rem}
+.vrow b{font-family:var(--font-display);font-weight:500;font-size:var(--step-1)}
+.vrow i{display:block;font-style:normal;font:400 .8rem/1.4 Inter,sans-serif;color:var(--ink-soft);margin:.1rem 0 .5rem}
+.vrow audio{width:100%;height:36px}
+@media (max-width:860px){
+ .cmp-row,.cmp-heads{gap:.55rem}
+ .cmp-cell{padding:.45rem .55rem}
+ .cmp-cell p{font-size:.86rem;line-height:1.56}
+ .cmp-list a{grid-template-columns:62px 1fr}
+ .cmp-list img{width:62px;height:50px}}
+</style></head>
+<body class="cmp" data-sound-src="/assets/audio/wc/bed-stone-breath-creek.mp3" data-sound-name="the creek">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <nav class="nav wrap wrap--wide" aria-label="Primary">
+      <a class="brand" href="/"><img class="brand__logo" src="/assets/img/author-logo.png?v=2" alt="AncestralWatch logo" width="716" height="676"><span class="brand__wm">Ancestral<span class="brand__mark">Watch</span></span></a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">☰</button>
+      <ul class="nav__links" id="primary-nav" data-open="false">
+        <li><a href="/">Home</a></li>
+        <li><a href="/lamplight/">Reading Room</a></li>
+        <li class="has-menu">
+          <button aria-expanded="false" aria-haspopup="true">The Series</button>
+          <ul class="menu">
+            <li><a href="/series/"><span class="menu__num">All</span> The Series</a></li>
+            <li><a href="/series/stone-breath/" aria-current="page"><span class="menu__num">I</span> Stone Breath</a></li>
+            <li><a href="/series/by-lamplight/"><span class="menu__num">II</span> The Amber and the Stone</a></li>
+            <li><a href="/series/the-council-fire/"><span class="menu__num">III</span> The Council Fire</a></li>
+            <li><a href="/series/the-far-messengers/"><span class="menu__num">IV</span> The Far Messengers</a></li>
+            <li><a href="/reader/"><span class="menu__num">&mdash;</span> The Reader</a></li>
+          <li><a href="/start-here/">Start Here</a></li><li><a href="/read/stone-breath/">Read Free</a></li></ul>
+        </li>
+        <li><a href="/tools/">The Tools</a></li><li><a href="https://tribeawaken.com/" target="_blank" rel="noopener">TribeAwaken ↗</a></li>
+        <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+        <li><a href="/author/">The Author</a></li>
+        <li><a class="lang-toggle" href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a class="lang-toggle" href="/lt/" hreflang="lt" lang="lt" style="border-left:0;padding-left:0;">Lietuvių</a></li>
+        <li class="nav__cta"><a class="btn btn--primary" href="https://payhip.com/b/AhH6r" target="_blank" rel="noopener">Get the Book</a></li>
+      </ul>
+    </nav>
+
+  <div class="aw-langbar" aria-label="Languages">
+    <div class="wrap wrap--wide aw-langbar__in">
+      <p class="aw-langbar__lbl">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15 0 18M12 3c-2.6 2.6-2.6 15 0 18"/>
+        </svg><span>Read in</span>
+      </p>
+      <a href="/" data-lang="en" hreflang="en">English</a>
+      <a href="/ja/" data-lang="/ja/" hreflang="ja" lang="ja">日本語</a>
+      <a href="/lt/" data-lang="/lt/" hreflang="lt" lang="lt">Lietuvių</a>
+      <a class="aw-langbar__mail" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+  </header>
+<main id="main">
+
+<section class="cmp-hero">
+  <img src="/assets/img/wc/hiking-creek.jpg" alt="The herb walk" fetchpriority="high">
+  <div class="cmp-hero__scrim"></div>
+  <div class="wrap wrap--wide cmp-hero__in">
+    <p class="eyebrow">Stone Breath · side by side · chapter 14</p>
+    <h1><em>The Injury and the Herb Walk</em></h1>
+    <p class="cmp-hero__meta">12 paragraphs differ · 69 identical</p>
+  </div>
+  <p class="cmp-hero__cap">photograph by Tony Skrelūnas</p>
+</section>
+
+<div class="cmp-bar"><div class="wrap wrap--wide cmp-bar__in">
+  <button class="cmp-btn" data-m="b">Both</button>
+  <button class="cmp-btn" data-m="l">Edited</button>
+  <button class="cmp-btn" data-m="r">Current</button>
+  <button class="cmp-btn" id="dbtn">Changes only</button>
+  <span class="cmp-sp"></span>
+  <a class="cmp-btn" href="../">All chapters</a><a class="cmp-btn" href="../ch13/">← Thirteen</a><a class="cmp-btn" href="../ch15/">Fifteen →</a>
+</div></div>
+
+<section class="section section--tight"><div class="wrap wrap--wide">
+  <div class="cmp-heads"><div class="cmp-hd l"><b>Edited</b> — the new one</div>
+  <div class="cmp-hd r">Published — Draft2Digital, September 7 2026</div></div>
+  <div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">CHAPTER 14</div></div><div class="cmp-cell r"><div class="cmp-hh">CHAPTER 14</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">THE INJURY AND THE HERB WALK</div></div><div class="cmp-cell r"><div class="cmp-hh">THE INJURY AND THE HERB WALK</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">✵   ✵   ✵</div></div><div class="cmp-cell r"><div class="cmp-hh">✵   ✵   ✵</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Kraujažolė. Yarrow. Stops bleeding.”</p></div><div class="cmp-cell r"><p>“Kraujažolė. Yarrow. Stops bleeding.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“And that?”</p></div><div class="cmp-cell r"><p>“And that?”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Also stops bleeding.”</p></div><div class="cmp-cell r"><p>“Also stops bleeding.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“And that one?”</p></div><div class="cmp-cell r"><p>“And that one?”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“That one is grass, Tonas.”</p></div><div class="cmp-cell r"><p>“That one is grass, Tonas.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She pressed her thumb into the back of his heel and he made a sound he had not made in public since he was nine.</p></div><div class="cmp-cell r"><p>She pressed her thumb into the back of his heel and he made a sound he had not made in public since he was nine.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Ah,” said Austėja, pleased. “There.”</p></div><div class="cmp-cell r"><p>“Ah,” said Austėja, pleased. “There.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“That’s the spot.”</p></div><div class="cmp-cell r"><p>“That’s the spot.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“I know it is the spot. I found it.”</p></div><div class="cmp-cell r"><p>“I know it is the spot. I found it.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>I am here for what matters.
+What is not mine, I leave at the door.
+What is mine, I carry with strength.</p></div><div class="cmp-cell r"><p>I am here for what matters.
+What is not mine, I leave at the door.
+What is mine, I carry with strength.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;The wound and the medicine come from the same ground.&quot; – Navajo healing teaching&quot;Kur skausmas, ten ir vaistas.&quot; – Where the pain is, there is also the cure. Lithuanian proverb</p></div><div class="cmp-cell r"><p>&quot;The wound and the medicine come from the same ground.&quot; – Navajo healing teaching&quot;Kur skausmas, ten ir vaistas.&quot; – Where the pain is, there is also the cure. Lithuanian proverb</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“She said: you’re limping. I said: I’m fine. She said: you’re not fine. I said: I’m fine. She knelt and touched my heel. I said: okay I’m not fine.” — Tonas Yazzie</p></div><div class="cmp-cell r"><p>“She said: you’re limping. I said: I’m fine. She said: you’re not fine. I said: I’m fine. She knelt and touched my heel. I said: okay I’m not fine.” — Tonas Yazzie</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas had been hiding it for weeks.</p></div><div class="cmp-cell r"><p>Tonas had been hiding it for weeks.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The dull ache in his heel started as hardly noticeable – a twinge after long runs, a stiffness in the morning. He ignored it. Ran through it. Told himself it was nothing. By the time they returned from Japan, the ache had become a scream.</p></div><div class="cmp-cell r"><p>The dull ache in his heel started as hardly noticeable – a twinge after long runs, a stiffness in the morning. He ignored it. Ran through it. Told himself it was nothing. By the time they returned from Japan, the ache had become a scream.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He limped off the plane in Vilnius, favoring his right foot, trying to hide it. Austėja noticed immediately. &quot;You&#x27;re limping.&quot; &quot;I&#x27;m fine.&quot; &quot;You&#x27;re not fine. You&#x27;ve been limping since Tokyo. I thought it was jet lag. It&#x27;s not.&quot; He didn&#x27;t answer.</p></div><div class="cmp-cell r"><p>He limped off the plane in Vilnius, favoring his right foot, trying to hide it. Austėja noticed immediately. &quot;You&#x27;re limping.&quot; &quot;I&#x27;m fine.&quot; &quot;You&#x27;re not fine. You&#x27;ve been limping since Tokyo. I thought it was jet lag. It&#x27;s not.&quot; He didn&#x27;t answer.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>That night, she found him on the guesthouse porch, his shoe off, his heel swollen and red. &quot;Plantar fasciitis,&quot; she said. &quot;Too many miles. Too little stretching. Too much pride.&quot; &quot;I don&#x27;t have pride.&quot; &quot;You have enough for both of us.&quot; She knelt and touched his heel. He winced. &quot;How long?&quot; &quot;A while.&quot; &quot;Why didn&#x27;t you say something?&quot; &quot;Because I&#x27;m an idiot.&quot; She almost smiled. &quot;We&#x27;ll fix it. But not with running. With walking.&quot; She handed him a woven basket. &quot;Tomorrow morning. We&#x27;re going to the forest. Not to train. To gather.&quot; &quot;Gather what?&quot; &quot;Medicine.&quot;</p></div><div class="cmp-cell r"><p>That night, she found him on the guesthouse porch, his shoe off, his heel swollen and red. &quot;Plantar fasciitis,&quot; she said. &quot;Too many miles. Too little stretching. Too much pride.&quot; &quot;I don&#x27;t have pride.&quot; &quot;You have enough for both of us.&quot; She knelt and touched his heel. He winced. &quot;How long?&quot; &quot;A while.&quot; &quot;Why didn&#x27;t you say something?&quot; &quot;Because I&#x27;m an idiot.&quot; She almost smiled. &quot;We&#x27;ll fix it. But not with running. With walking.&quot; She handed him a woven basket. &quot;Tomorrow morning. We&#x27;re going to the forest. Not to train. To gather.&quot; &quot;Gather what?&quot; &quot;Medicine.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Herb Walk – Dawn</p></div><div class="cmp-cell r"><p>The Herb Walk – Dawn</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>They left before sunrise. The forest was quiet, the mist low over the ferns. Austėja led him down a path he hadn&#x27;t noticed before – narrow, overgrown, disappearing into a grove of birch and pine.</p></div><div class="cmp-cell r"><p>They left before sunrise. The forest was quiet, the mist low over the ferns. Austėja led him down a path he hadn&#x27;t noticed before – narrow, overgrown, disappearing into a grove of birch and pine.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Lukas was already at the edge of the yard when they stepped outside. Tonas raised an eyebrow. &quot;You&#x27;re early.&quot; &quot;You said the morning matters.&quot; &quot;It does. But we&#x27;re not running today. We&#x27;re walking. Slow. Gathering plants. You okay with that?&quot; Lukas nodded. He fell in behind them, silent.</p></div><div class="cmp-cell r"><p>Lukas was already at the edge of the yard when they stepped outside. Tonas raised an eyebrow. &quot;You&#x27;re early.&quot; &quot;You said the morning matters.&quot; &quot;It does. But we&#x27;re not running today. We&#x27;re walking. Slow. Gathering plants. You okay with that?&quot; Lukas nodded. He fell in behind them, silent.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>He had clearly been expecting hill repeats. He had dressed for hill repeats. He said nothing about it, which Tonas noted and respected.</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas glanced east, out of habit, searching for the familiar silhouette of the San Francisco Peaks. There was nothing but flat horizon and dark pines. A small, familiar ache. He touched the stone in his pocket and kept walking.</p></div><div class="cmp-cell r"><p>Tonas glanced east, out of habit, searching for the familiar silhouette of the San Francisco Peaks. There was nothing but flat horizon and dark pines. A small, familiar ache. He touched the stone in his pocket and kept walking.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;My grandmother taught me this,&quot; Austėja said. &quot;The old ones said you don&#x27;t take from the earth without asking. You don&#x27;t harvest without gratitude. And you never, ever take the last of anything.&quot; She stopped at a patch of lowgrowing plants with small, round leaves and tiny white flowers. &quot;Gyslotis. Plantain. You&#x27;ve walked past it a hundred times and never seen it.&quot; &quot;What&#x27;s it for?&quot; &quot;Everything. Cuts, burns, insect bites, inflammation. It has been used here for a very long time. My mother knew what to do with it. I know what to do with it. That is as far as I am taking you today.&quot; She knelt and touched the leaf gently. &quot;The old name for it is žaizdolė – &#x27;wound healer.&#x27; The plant tells you what it&#x27;s for. You just have to listen.&quot;</p></div><div class="cmp-cell r"><p>&quot;My grandmother taught me this,&quot; Austėja said. &quot;The old ones said you don&#x27;t take from the earth without asking. You don&#x27;t harvest without gratitude. And you never, ever take the last of anything.&quot; She stopped at a patch of lowgrowing plants with small, round leaves and tiny white flowers. &quot;Gyslotis. Plantain. You&#x27;ve walked past it a hundred times and never seen it.&quot; &quot;What&#x27;s it for?&quot; &quot;Everything. Cuts, burns, insect bites, inflammation. It has been used here for a very long time. My mother knew what to do with it. I know what to do with it. That is as far as I am taking you today.&quot; She knelt and touched the leaf gently. &quot;The old name for it is žaizdolė – &#x27;wound healer.&#x27; The plant tells you what it&#x27;s for. You just have to listen.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas knelt beside her. &quot;In Navajo, we say the plants were put here for us. But they&#x27;re not just medicine. They&#x27;re relatives. You don&#x27;t take from a relative without asking.&quot; He pointed to a cluster of bright yellow flowers. &quot;That&#x27;s ch&#x27;il gohwéhí – Navajo tea. Greenthread. It is a whole apothecary in one plant, if you have been taught it properly. I was taught it over eleven years.&quot; &quot;How do you harvest it?&quot; &quot;You take only what you need. Leave the rest. And you always leave an offering – a pinch of cornmeal, a few drops of water, a prayer.&quot; He touched the plant. &quot;Ahéhee&#x27;. Thank you. I take this for healing.&quot; Lukas watched from behind, not speaking, but his eyes were tracking everything.</p></div><div class="cmp-cell r"><p>Tonas knelt beside her. &quot;In Navajo, we say the plants were put here for us. But they&#x27;re not just medicine. They&#x27;re relatives. You don&#x27;t take from a relative without asking.&quot; He pointed to a cluster of bright yellow flowers. &quot;That&#x27;s ch&#x27;il gohwéhí – Navajo tea. Greenthread. It is a whole apothecary in one plant, if you have been taught it properly. I was taught it over eleven years.&quot; &quot;How do you harvest it?&quot; &quot;You take only what you need. Leave the rest. And you always leave an offering – a pinch of cornmeal, a few drops of water, a prayer.&quot; He touched the plant. &quot;Ahéhee&#x27;. Thank you. I take this for healing.&quot; Lukas watched from behind, not speaking, but his eyes were tracking everything.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>Then Austėja stood and looked off into the trees for a moment, the way a person does when they are deciding whether to show you something.</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>She walked twenty steps off the path, crouched, and came back with a brown-capped mushroom the size of her fist.</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>&quot;Baravykas,&quot; she said. &quot;The king. You dry it, you cook it with potatoes, you remember who you are.&quot;</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>&quot;What does a mushroom have to do with who I am?&quot;</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>&quot;Nothing. It is just very good.&quot; She turned it over in her hand. &quot;But it grows out of the roots of the trees. It connects them underneath, where you cannot see it. The connection is there anyway.&quot; She set it in her basket. &quot;Same with people.&quot;</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>&quot;And the spot you just took that from?&quot;</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>&quot;I will not be telling you where that is.&quot;</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>&quot;We are —&quot;</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>&quot;Not yet.&quot;</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>Lukas laughed. It was the first sound he had made all morning.</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Honorable Harvest – Teaching Lukas</p></div><div class="cmp-cell r"><p>The Honorable Harvest – Teaching Lukas</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>They walked deeper. Tonas&#x27;s heel throbbed. He tried not to show it. Austėja stopped at a patch of plantain. She knelt and began to gather leaves. &quot;The Honorable Harvest,&quot; she said. &quot;Masan taught it to you. Ona taught it to me. The Potawatomi botanist Robin Wall Kimmerer wrote it down for everyone else. Same thing.&quot; &quot;Same thing,&quot; Tonas said. He turned to Lukas. &quot;Before you take anything – from the land, from a person, from an opportunity – you ask three questions.&quot; Lukas looked up. &quot;Am I taking only what is given? Am I leaving enough for the next season? Am I offering something in return?&quot; Lukas stared at the plantain. &quot;What if the answer is no?&quot; &quot;Then you don&#x27;t take. You wait. You ask again later.&quot; Lukas was quiet for a long moment. Then he knelt and touched a plantain leaf. &quot;What do I offer?&quot; &quot;A promise,&quot; Tonas said. &quot;That you will use what you take. That you won&#x27;t waste it. That you&#x27;ll remember where it came from.&quot; Lukas nodded slowly. He picked one leaf. Just one. He held it in his palm like it was fragile. They walked for another hour. By the end, Lukas&#x27;s hands were dirty, his basket half full of plantain and mint and chamomile. He hadn&#x27;t said much. But his shoulders were less curled.</p></div><div class="cmp-cell r"><p>They walked deeper. Tonas&#x27;s heel throbbed. He tried not to show it. Austėja stopped at a patch of plantain. She knelt and began to gather leaves. &quot;The Honorable Harvest,&quot; she said. &quot;Masan taught it to you. Ona taught it to me. The Potawatomi botanist Robin Wall Kimmerer wrote it down for everyone else. Same thing.&quot; &quot;Same thing,&quot; Tonas said. He turned to Lukas. &quot;Before you take anything – from the land, from a person, from an opportunity – you ask three questions.&quot; Lukas looked up. &quot;Am I taking only what is given? Am I leaving enough for the next season? Am I offering something in return?&quot; Lukas stared at the plantain. &quot;What if the answer is no?&quot; &quot;Then you don&#x27;t take. You wait. You ask again later.&quot; Lukas was quiet for a long moment. Then he knelt and touched a plantain leaf. &quot;What do I offer?&quot; &quot;A promise,&quot; Tonas said. &quot;That you will use what you take. That you won&#x27;t waste it. That you&#x27;ll remember where it came from.&quot; Lukas nodded slowly. He picked one leaf. Just one. He held it in his palm like it was fragile. They walked for another hour. By the end, Lukas&#x27;s hands were dirty, his basket half full of plantain and mint and chamomile. He hadn&#x27;t said much. But his shoulders were less curled.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>She taught him plantain for wounds, rowan for kidneys, juniper for purification. He taught her Navajo tea for fevers, wild mint for digestion, the prayer of thanks.</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Centering – At the Stream</p></div><div class="cmp-cell r"><p>The Centering – At the Stream</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>They stopped at a small stream. Austėja knelt in front of Tonas, removed his shoe, and began to massage the arch of his foot. &quot;This is going to hurt.&quot; &quot;It already hurts.&quot; &quot;This will hurt more.&quot; She pressed her thumb into the knot. He gasped. &quot;Breathe,&quot; she said. &quot;The centering. Now.&quot; He held his thumb. &quot;I am safe. I am calm. My mind is quiet.&quot; His voice shook. His hand over his heart. &quot;The power I was born with is still mine.&quot; His forehead. &quot;I am awake.&quot; His palm outward. &quot;Help me overcome all my challenges.&quot; His fist over his heart, then open. &quot;Let me carry out your purpose with positive power.&quot; She pressed again. He breathed. &quot;Good,&quot; she said. &quot;The body holds tension where the mind holds worry. Release the body, and the mind follows.&quot; She worked on his foot for ten minutes. The pain lessened, and something else shifted – a knot in his chest he hadn&#x27;t known was there.</p></div><div class="cmp-cell r"><p>They stopped at a small stream. Austėja knelt in front of Tonas, removed his shoe, and began to massage the arch of his foot. &quot;This is going to hurt.&quot; &quot;It already hurts.&quot; &quot;This will hurt more.&quot; She pressed her thumb into the knot. He gasped. &quot;Breathe,&quot; she said. &quot;The centering. Now.&quot; He held his thumb. &quot;I am safe. I am calm. My mind is quiet.&quot; His voice shook. His hand over his heart. &quot;The power I was born with is still mine.&quot; His forehead. &quot;I am awake.&quot; His palm outward. &quot;Help me overcome all my challenges.&quot; His fist over his heart, then open. &quot;Let me carry out your purpose with positive power.&quot; She pressed again. He breathed. &quot;Good,&quot; she said. &quot;The body holds tension where the mind holds worry. Release the body, and the mind follows.&quot; She worked on his foot for ten minutes. The pain lessened, and something else shifted – a knot in his chest he hadn&#x27;t known was there.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Lukas watched from the bank. He didn&#x27;t say anything. But later, as they walked back, he asked: &quot;The centering. Does it work for anything?&quot; Tonas nodded. &quot;Fear. Doubt. Walking into a room full of strangers. It works for all of it.&quot; Lukas was quiet. Then: &quot;Teach me. When we get back.&quot; Tonas smiled. &quot;Tomorrow. 4:30. Bring your stone.&quot;</p></div><div class="cmp-cell r"><p>Lukas watched from the bank. He didn&#x27;t say anything. But later, as they walked back, he asked: &quot;The centering. Does it work for anything?&quot; Tonas nodded. &quot;Fear. Doubt. Walking into a room full of strangers. It works for all of it.&quot; Lukas was quiet. Then: &quot;Teach me. When we get back.&quot; Tonas smiled. &quot;Tomorrow. 4:30. Bring your stone.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Additional Plants</p></div><div class="cmp-cell r"><p>Additional Plants</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja stopped at a tall shrub heavy with bright orange berries. &quot;Šaltalankis. Sea buckthorn. The berries are sour, but they are medicine for the heart. The old ones made tea from the leaves. They said it helped them see clearly.&quot;</p></div><div class="cmp-cell r"><p>Austėja stopped at a tall shrub heavy with bright orange berries. &quot;Šaltalankis. Sea buckthorn. The berries are sour, but they are medicine for the heart. The old ones made tea from the leaves. They said it helped them see clearly.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas knelt. &quot;In Navajo, we have ch&#x27;il ahwééh – Navajo tea. Different plant. Same purpose. Clear eyes, clear mind.&quot; &quot;Same thing,&quot; she said.</p></div><div class="cmp-cell r"><p>Tonas knelt. &quot;In Navajo, we have ch&#x27;il ahwééh – Navajo tea. Different plant. Same purpose. Clear eyes, clear mind.&quot; &quot;Same thing,&quot; she said.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>A few paces further, she pointed to a cluster of bright red berries hanging from a thorny bush. &quot;Erškėtis. Rose hip. After the frost, they become sweet. The old ones said the rose teaches patience – the thorns come first, then the flower, then the fruit.&quot;</p></div><div class="cmp-cell r"><p>A few paces further, she pointed to a cluster of bright red berries hanging from a thorny bush. &quot;Erškėtis. Rose hip. After the frost, they become sweet. The old ones said the rose teaches patience – the thorns come first, then the flower, then the fruit.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas nodded. &quot;Masan used to say the same about the juniper. The berries take two years to ripen. You cannot rush them. You can only wait.&quot;</p></div><div class="cmp-cell r"><p>Tonas nodded. &quot;Masan used to say the same about the juniper. The berries take two years to ripen. You cannot rush them. You can only wait.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>They walked in silence for a while, the basket growing heavier, the forest growing quieter. Then Austėja stopped again.</p></div><div class="cmp-cell r"><p>They walked in silence for a while, the basket growing heavier, the forest growing quieter. Then Austėja stopped again.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;One more,&quot; she said. &quot;The most important one.&quot;</p></div><div class="cmp-cell r"><p>&quot;One more,&quot; she said. &quot;The most important one.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She pointed to a patch of wildflowers – white petals, yellow centers, growing low to the ground.</p></div><div class="cmp-cell r"><p>She pointed to a patch of wildflowers – white petals, yellow centers, growing low to the ground.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Ramunė. Chamomile. For everything. For sleep, for digestion, for calming the mind. You make a tea and drink it before bed. You put the flowers in a cloth and steep them in your bath. When my hands are unquiet I come and stand near it. That is all I will say about that one.&quot; She picked a single flower and held it out to him.</p></div><div class="cmp-cell r"><p>&quot;Ramunė. Chamomile. For everything. For sleep, for digestion, for calming the mind. You make a tea and drink it before bed. You put the flowers in a cloth and steep them in your bath. When my hands are unquiet I come and stand near it. That is all I will say about that one.&quot; She picked a single flower and held it out to him.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;In Lithuania, we say chamomile is the plant that loves you back. It doesn&#x27;t just heal your body. It heals your spirit.&quot; Tonas took the flower. Held it in his palm.</p></div><div class="cmp-cell r"><p>&quot;In Lithuania, we say chamomile is the plant that loves you back. It doesn&#x27;t just heal your body. It heals your spirit.&quot; Tonas took the flower. Held it in his palm.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;In Navajo, we say the plants are our relatives. They were here before us. They&#x27;ll be here after us. We&#x27;re just borrowing them.&quot;</p></div><div class="cmp-cell r"><p>&quot;In Navajo, we say the plants are our relatives. They were here before us. They&#x27;ll be here after us. We&#x27;re just borrowing them.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He put the flower in his pocket, next to the stone.</p></div><div class="cmp-cell r"><p>He put the flower in his pocket, next to the stone.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Same thing,&quot; Austėja said.</p></div><div class="cmp-cell r"><p>&quot;Same thing,&quot; Austėja said.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Same thing.&quot;</p></div><div class="cmp-cell r"><p>&quot;Same thing.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He&#x27;d started attending Austėja&#x27;s wellness class every week. The other women had stopped staring. They just passed him the tea and saved him a mat. He learned to lie still while the bowls sang, to let the vibrations loosen what his mind couldn&#x27;t reach.</p></div><div class="cmp-cell r"><p>He&#x27;d started attending Austėja&#x27;s wellness class every week. The other women had stopped staring. They just passed him the tea and saved him a mat. He learned to lie still while the bowls sang, to let the vibrations loosen what his mind couldn&#x27;t reach.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">── MASAN ──</div></div><div class="cmp-cell r"><div class="cmp-hh">── MASAN ──</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Before you walk into anything hard, you stop at the door. Any door. I will show you the way I did it every morning of my life.</p></div><div class="cmp-cell r"><p>Before you walk into anything hard, you stop at the door. Any door. I will show you the way I did it every morning of my life.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>I re-clayed my own hogan by hand each year. I dyed my own wool. I did nothing carelessly. A life is only the sum of how you do the small things. The door was where I gathered myself before I crossed it. You can do the same. At any threshold. Your whole life long.</p></div><div class="cmp-cell r"><p>I re-clayed my own hogan by hand each year. I dyed my own wool. I did nothing carelessly. A life is only the sum of how you do the small things. The door was where I gathered myself before I crossed it. You can do the same. At any threshold. Your whole life long.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Place your hand flat on the frame. One breath first. In four. Hold four. Out six. Hold four. Then say it. Out loud, or only to yourself.</p></div><div class="cmp-cell r"><p>Place your hand flat on the frame. One breath first. In four. Hold four. Out six. Hold four. Then say it. Out loud, or only to yourself.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>I am safe. I am calm. My mind is quiet. Hold your thumb; you are not alone, you never were. The power I was born with is still mine. Hand over your heart; you came in with it, and it is still yours. I am awake. Touch your forehead. Help me overcome all my challenges. Turn your palm out; ask, and let the way open. Let me carry out your purpose with positive power. A fist over the heart. Then let the hand fall open.</p></div><div class="cmp-cell r"><p>I am safe. I am calm. My mind is quiet. Hold your thumb; you are not alone, you never were. The power I was born with is still mine. Hand over your heart; you came in with it, and it is still yours. I am awake. Touch your forehead. Help me overcome all my challenges. Turn your palm out; ask, and let the way open. Let me carry out your purpose with positive power. A fist over the heart. Then let the hand fall open.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Take one breath. Walk through.</p></div><div class="cmp-cell r"><p>Take one breath. Walk through.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>That is the whole thing. It is not a spell. It is you, telling your own body. We are here. We are covered. We are ready. Do it every morning. The floor under you changes. Do it again tomorrow.</p></div><div class="cmp-cell r"><p>That is the whole thing. It is not a spell. It is you, telling your own body. We are here. We are covered. We are ready. Do it every morning. The floor under you changes. Do it again tomorrow.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The ancestors are walking. Don&#x27;t let them find you asleep. The longer way is at the back of this book.</p></div><div class="cmp-cell r"><p>The ancestors are walking. Don&#x27;t let them find you asleep. The longer way is at the back of this book.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“One more thing,” Ona said, and she did not smile when she said it. “Everything I have shown you has a sister that will hurt you. Some of them look nearly the same. My mother taught me these in this forest over eleven years, and I still do not pick what I am not certain of.”</p></div><div class="cmp-cell r"><p>“One more thing,” Ona said, and she did not smile when she said it. “Everything I have shown you has a sister that will hurt you. Some of them look nearly the same. My mother taught me these in this forest over eleven years, and I still do not pick what I am not certain of.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“What happens if you are wrong?”</p></div><div class="cmp-cell r"><p>“What happens if you are wrong?”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Then you are wrong,” she said, “and being wrong about a plant kills you just as dead as being wrong about a river. Learn them from a person. Not from a book, and not from me in one afternoon.”</p></div><div class="cmp-cell r"><p>“Then you are wrong,” she said, “and being wrong about a plant kills you just as dead as being wrong about a river. Learn them from a person. Not from a book, and not from me in one afternoon.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>They walked a while without talking. His heel hurt. It hurt less than it had at the airport, which was not the same as better, but he noticed it anyway.</p></div><div class="cmp-cell r"><p>They walked a while without talking. His heel hurt. It hurt less than it had at the airport, which was not the same as better, but he noticed it anyway.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“You are limping less,” she said, without turning around.</p></div><div class="cmp-cell r"><p>“You are limping less,” she said, without turning around.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“You are not even looking at me.”</p></div><div class="cmp-cell r"><p>“You are not even looking at me.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“I am listening to you. You come down harder on the right when it is bad.” She stopped to look at something on the ground that she did not pick. “My grandmother walked these woods for sixty years. She never once had to turn around to know how anyone was.”</p></div><div class="cmp-cell r"><p>“I am listening to you. You come down harder on the right when it is bad.” She stopped to look at something on the ground that she did not pick. “My grandmother walked these woods for sixty years. She never once had to turn around to know how anyone was.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He thought about that for the next hundred meters.</p></div><div class="cmp-cell r"><p>He thought about that for the next hundred meters.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Austėja.”</p></div><div class="cmp-cell r"><p>“Austėja.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Mm.”</p></div><div class="cmp-cell r"><p>“Mm.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Thank you for the afternoon.”</p></div><div class="cmp-cell r"><p>“Thank you for the afternoon.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She made a small dismissive noise and kept walking. Then, about ten steps later, without stopping and without looking back: “You are welcome.”</p></div><div class="cmp-cell r"><p>She made a small dismissive noise and kept walking. Then, about ten steps later, without stopping and without looking back: “You are welcome.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>It was the first time she had thanked him for anything, and she did it facing the other way.</p></div><div class="cmp-cell r"><p>It was the first time she had thanked him for anything, and she did it facing the other way.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Somewhere in the second hour she told him a story about her grandmother and a bucket that he did not entirely follow, because it was in three languages and two of them were not his, and at the end of it she laughed so hard she had to stop walking and put a hand on a birch.</p></div><div class="cmp-cell r"><p>Somewhere in the second hour she told him a story about her grandmother and a bucket that he did not entirely follow, because it was in three languages and two of them were not his, and at the end of it she laughed so hard she had to stop walking and put a hand on a birch.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He had not seen her laugh like that once in six weeks.</p></div><div class="cmp-cell r"><p>He had not seen her laugh like that once in six weeks.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He stood in the path holding his bad heel off the ground and laughed too, at a joke he had not understood, in a forest he had no claim to, six thousand miles from anyone who had raised him.</p></div><div class="cmp-cell r"><p>He stood in the path holding his bad heel off the ground and laughed too, at a joke he had not understood, in a forest he had no claim to, six thousand miles from anyone who had raised him.</p></div></div>
+  <p class="muted" style="margin-top:var(--space-4);font-size:var(--step--1);max-width:60ch">
+  Gold marks what the edited version added or changed; gray marks the words it replaced.
+  The right column is the text on Payhip and Barnes &amp; Noble today. Nothing here is published.</p>
+</div></section>
+</main>
+<footer class="site-footer">
+    <div class="wrap wrap--wide">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">AncestralWatch</p>
+          <p class="footer__tag">Instructions, carried.</p>
+          <p style="margin-top: var(--space-2); max-width: 34ch;">The home of The Ancestral Watch Series by Tony Skrelūnas.</p>
+        </div>
+        <div>
+          <h4>The Series</h4>
+          <ul>
+            <li><a href="/series/stone-breath/">Stone Breath</a></li>
+            <li><a href="/series/the-council-fire/">The Council Fire</a></li>
+            <li><a href="/series/">All four books</a></li>
+            <li><a href="/tools/">The free Tools</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/far-messengers/">The Far Messengers (brand)</a></li>
+            <li><a href="/author/">The Author</a></li>
+            <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+            <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/lt/" hreflang="lt" lang="lt">Lietuvių</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>© 2026 Ancestral Watch · Tony Skrelūnas. All rights reserved.</span>
+        <span>Instructions, carried.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/js/main.js?v=11" defer></script>
+<script src="/js/vendor/gsap.min.js"></script>
+<script src="/js/vendor/ScrollTrigger.min.js"></script>
+<script src="/js/vendor/lenis.min.js"></script>
+<script src="/js/aw-world.js?v=20261105"></script>
+<script>
+(function(){var b=document.body;
+ function set(m){b.classList.remove('only-l','only-r');
+  if(m==='l')b.classList.add('only-l');if(m==='r')b.classList.add('only-r');
+  document.querySelectorAll('[data-m]').forEach(function(x){x.classList.toggle('on',x.dataset.m===m)});
+  try{localStorage.setItem('sbcmp-m',m)}catch(e){}}
+ function diffs(on){b.classList.toggle('diffs',on);
+  var t=document.getElementById('dbtn');if(t)t.classList.toggle('on',on);
+  try{localStorage.setItem('sbcmp-d',on?'1':'')}catch(e){}}
+ document.querySelectorAll('[data-m]').forEach(function(x){x.onclick=function(){set(x.dataset.m)}});
+ var d=document.getElementById('dbtn');
+ if(d)d.onclick=function(){diffs(!b.classList.contains('diffs'))};
+ var m='b',dd=false;
+ try{m=localStorage.getItem('sbcmp-m')||'b';dd=!!localStorage.getItem('sbcmp-d')}catch(e){}
+ set(m);diffs(dd);})();
+</script>
+<script src="/js/aw-gate.js?v=1" defer></script>
+</body></html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <title>Lost the trail — The Ancestral Watch</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/tokens.css" />
+  <link rel="stylesheet" href="/css/style.css?v=5" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav wrap wrap--wide" aria-label="Primary">
+      <a class="brand" href="/"><img class="brand__logo" src="/assets/img/author-logo.png?v=2" alt="AncestralWatch logo" width="716" height="676"><span class="brand__wm">Ancestral<span class="brand__mark">Watch</span></span></a>
+      <ul class="nav__links" id="primary-nav" data-open="false" style="transform:none;">
+        <li><a href="/">Home</a></li>
+        <li><a href="/series/">The Series</a>
+        <a href="/reader/">The Reader</a></li>
+        <li><a href="/tools/">The Tools</a></li><li><a href="https://tribeawaken.com/" target="_blank" rel="noopener">TribeAwaken ↗</a></li>
+        <li><a href="/author/">The Author</a></li>
+      <li><a href="/start-here/">Start Here</a></li><li><a href="/read/stone-breath/">Read Free</a></li></ul>
+    </nav>
+  
+  <div class="aw-langbar" aria-label="Languages">
+    <div class="wrap wrap--wide aw-langbar__in">
+      <p class="aw-langbar__lbl">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15 0 18M12 3c-2.6 2.6-2.6 15 0 18"/>
+        </svg><span>Read in</span>
+      </p>
+      <a href="/" data-lang="en" hreflang="en">English</a>
+      <a href="/ja/" data-lang="/ja/" hreflang="ja" lang="ja">日本語</a>
+      <a href="/lt/" data-lang="/lt/" hreflang="lt" lang="lt">Lietuvių</a>
+      <a class="aw-langbar__mail" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" style="min-height:70vh; display:grid; align-items:center;">
+      <div class="wrap page-hero__inner center">
+        <p class="eyebrow" style="justify-self:center;">404</p>
+        <h1 style="margin-inline:auto;">You've wandered off the trail.</h1>
+        <p class="lead" style="margin-inline:auto; max-width: 46ch;">
+          This page isn't here — but the path is easy to find again. Start at the beginning, or pick up a free tool.
+        </p>
+        <div class="hero__actions" style="justify-content:center;">
+          <a class="btn btn--primary btn--lg" href="/">Back to the start</a>
+          <a class="btn btn--ghost btn--lg" href="/tools/">Get a free tool</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap wrap--wide">
+      <div class="footer__legal" style="border-top:0; margin-top:0;">
+        <span>© 2026 Ancestral Watch · Tony Skrelūnas.</span>
+        <span>Instructions, carried.</span>
+      </div>
+    </div>
+  </footer>
+<script>
+(function(){
+  var p=location.pathname.replace(/index\.html$/,'');
+  if(p.charAt(p.length-1)!=='/')p+='/';
+  var k=/^\/(ja|lt)\//.exec(p); k=k?'/'+k[1]+'/':'en';
+  document.querySelectorAll('.aw-langbar a[data-lang]').forEach(function(a){
+    if(a.getAttribute('data-lang')===k)a.setAttribute('aria-current','true');
+  });
+})();
+</script>
+<script src="/js/aw-gate.js?v=1" defer></script>
+</body>
+</html>

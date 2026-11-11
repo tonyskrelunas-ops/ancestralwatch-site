@@ -4,7 +4,7 @@
 // Symbols only, drawn by hand in SVG. Same shape as council-tokens.js: StoneBreathPractice(host) -> {seek(t), DUR}.
 (function(){
 const NS='http://www.w3.org/2000/svg';
-const INK='#3B3020', GOLD='#B98D3E', GOLD_TEXT='#7A5516', FAINT='#6E5E48', PAPER='#F7F0E1';
+const INK='#0E0E0E', GOLD='#0E0E0E', GOLD_TEXT='#0E0E0E', FAINT='#555555', PAPER='#F4F4F2';
 const STEPS=[['In',4],['Hold',4],['Out',6],['Hold',4]];
 const ROUND=STEPS.reduce((a,s)=>a+s[1],0);   // 18
 const ROUNDS=5, DUR=ROUND*ROUNDS;             // 90
@@ -62,8 +62,8 @@ window.StoneBreathPractice=function(host,opts){
   const halo=el('circle',{cx:CX,cy:CY,r:R0,fill:'none',stroke:GOLD,'stroke-width':26,opacity:.12},svg);
   const ring=el('circle',{cx:CX,cy:CY,r:R0,fill:GOLD,'fill-opacity':.05,stroke:GOLD,'stroke-width':6},svg);
   // the count
-  const word=el('text',{x:CX,y:120,'text-anchor':'middle','font-family':'Fraunces, Georgia, serif','font-style':'italic','font-size':78,fill:INK,opacity:0},svg);
-  const endWord=el('text',{x:CX,y:120,'text-anchor':'middle','font-family':'Fraunces, Georgia, serif','font-style':'italic','font-size':66,fill:INK,opacity:0},svg);
+  const word=el('text',{x:CX,y:120,'text-anchor':'middle','font-family':'Newsreader, Georgia, serif','font-style':'italic','font-size':78,fill:INK,opacity:0},svg);
+  const endWord=el('text',{x:CX,y:120,'text-anchor':'middle','font-family':'Newsreader, Georgia, serif','font-style':'italic','font-size':66,fill:INK,opacity:0},svg);
   endWord.textContent='Five rounds.';
   const dots=[0,1,2,3,4,5].map(()=>el('circle',{cx:CX,cy:164,r:10,fill:GOLD,'fill-opacity':0,stroke:GOLD,'stroke-width':2.5,opacity:0},svg));
   const legend=el('text',{x:CX,y:906,'text-anchor':'middle','font-family':'Inter, Helvetica, Arial, sans-serif','font-size':31,'font-weight':500,'letter-spacing':3},svg);
