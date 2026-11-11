@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Stone Breath — side by side</title>
+<meta name="description" content="Every chapter of Stone Breath twice: the edited version beside the published one.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/style.css?v=5">
+<link rel="stylesheet" href="/assets/daylight.css?v=8">
+<link rel="stylesheet" href="/css/aw-world.css?v=20261105">
+<style>
+.cmp{--in:color-mix(in srgb,var(--amber) 15%,transparent);
+     --out:color-mix(in srgb,var(--ink) 6%,transparent)}
+.cmp-bar{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);
+ backdrop-filter:blur(9px);border-bottom:1px solid var(--rule);padding:.6rem 0;margin-bottom:var(--space-2)}
+.cmp-bar__in{display:flex;gap:.45rem;flex-wrap:wrap;align-items:center}
+.cmp-btn{font:500 .8rem/1 Inter,system-ui,sans-serif;letter-spacing:.03em;padding:.52rem .9rem;
+ border:1px solid var(--rule);border-radius:999px;background:var(--bg-panel);color:var(--ink);
+ cursor:pointer;text-decoration:none;display:inline-block;transition:.18s}
+.cmp-btn:hover{border-color:var(--amber)}
+.cmp-btn.on{background:var(--amber);border-color:var(--amber);color:#fff}
+.cmp-sp{flex:1 1 auto}
+.cmp-heads{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);margin:var(--space-3) 0 .2rem}
+.cmp-hd{font:500 .68rem/1.3 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+ color:var(--ink-soft);padding-bottom:.45rem;border-bottom:1px solid var(--rule)}
+.cmp-hd b{color:var(--amber);font-weight:500}
+.cmp-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);align-items:start;margin-bottom:.15rem}
+.cmp-cell{padding:.55rem .85rem;border-radius:var(--radius)}
+.cmp-row.chg .cmp-cell.l{background:var(--in);box-shadow:inset 3px 0 0 var(--amber)}
+.cmp-row.chg .cmp-cell.r{background:var(--out);box-shadow:inset 3px 0 0 var(--rule)}
+.cmp-cell p{margin:0;font-size:var(--step-0);line-height:1.68}
+.cmp-cell.gone{opacity:.42;font-style:italic;color:var(--ink-soft)}
+.cmp-cell.gone:after{content:"— not in this version";font-size:var(--step--1)}
+.cmp-hh{font:500 .72rem/1.4 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+ color:var(--amber);text-align:center;margin:1.2em 0 .5em}
+.cmp-orn{text-align:center;color:var(--amber);letter-spacing:.55em;margin:1em 0}
+mark{background:none;color:inherit;padding:0}
+.cmp-row.chg mark.in{background:color-mix(in srgb,var(--amber) 34%,transparent);border-radius:3px;padding:0 .14em}
+.cmp-row.chg mark.out{background:color-mix(in srgb,var(--ink) 11%,transparent);border-radius:3px;padding:0 .14em}
+body.only-l .cmp-cell.r,body.only-l .cmp-hd.r{display:none}
+body.only-l .cmp-row,body.only-l .cmp-heads{grid-template-columns:1fr}
+body.only-r .cmp-cell.l,body.only-r .cmp-hd.l{display:none}
+body.only-r .cmp-row,body.only-r .cmp-heads{grid-template-columns:1fr}
+body.diffs .cmp-row.same{display:none}
+.cmp-hero{position:relative;min-height:clamp(230px,40vh,420px);display:flex;align-items:flex-end;
+ overflow:hidden;background:var(--bg)}
+.cmp-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cmp-hero__scrim{position:absolute;inset:0;background:
+ linear-gradient(100deg,color-mix(in srgb,var(--bg) 97%,transparent) 0%,
+ color-mix(in srgb,var(--bg) 90%,transparent) 36%,
+ color-mix(in srgb,var(--bg) 42%,transparent) 66%,
+ color-mix(in srgb,var(--bg) 6%,transparent) 100%)}
+.cmp-hero__in{position:relative;padding-block:var(--space-5) var(--space-4)}
+.cmp-hero__in>*{max-width:34ch}
+.cmp-hero__in .eyebrow{color:var(--amber)}
+.cmp-hero h1{margin:.08em 0 .2em;font-size:var(--step-4);color:var(--ink)}
+.cmp-hero__meta{font:400 .85rem/1.5 Inter,system-ui,sans-serif;color:var(--ink-soft)}
+.cmp-hero__cap{position:absolute;right:var(--space-3);bottom:.5rem;font:400 .66rem/1.3 Inter,sans-serif;
+ letter-spacing:.07em;color:color-mix(in srgb,var(--ink) 52%,transparent);text-align:right}
+.cmp-list{list-style:none;margin:var(--space-3) 0 0;padding:0;display:grid;gap:.6rem}
+.cmp-list a{display:grid;grid-template-columns:84px 1fr;gap:var(--space-2);align-items:center;
+ text-decoration:none;background:var(--bg-panel);border:1px solid var(--rule);
+ border-radius:var(--radius-lg);padding:.6rem;transition:.18s}
+.cmp-list a:hover{border-color:var(--amber);transform:translateY(-1px)}
+.cmp-list img{width:84px;height:62px;object-fit:cover;border-radius:calc(var(--radius) - 2px)}
+.cmp-list b{font-family:var(--font-display);font-weight:500;font-size:var(--step-1);color:var(--ink)}
+.cmp-list span{display:block;font:400 .78rem/1.45 Inter,sans-serif;color:var(--ink-soft);margin-top:.12rem}
+.vrow{background:var(--bg-panel);border:1px solid var(--rule);border-radius:var(--radius-lg);
+ padding:.8rem 1rem;margin-bottom:.55rem}
+.vrow b{font-family:var(--font-display);font-weight:500;font-size:var(--step-1)}
+.vrow i{display:block;font-style:normal;font:400 .8rem/1.4 Inter,sans-serif;color:var(--ink-soft);margin:.1rem 0 .5rem}
+.vrow audio{width:100%;height:36px}
+@media (max-width:860px){
+ .cmp-row,.cmp-heads{gap:.55rem}
+ .cmp-cell{padding:.45rem .55rem}
+ .cmp-cell p{font-size:.86rem;line-height:1.56}
+ .cmp-list a{grid-template-columns:62px 1fr}
+ .cmp-list img{width:62px;height:50px}}
+
+.cmp-top .wc-hero__scrim{background:linear-gradient(100deg,
+ color-mix(in srgb,var(--bg) 98%,transparent) 0%,
+ color-mix(in srgb,var(--bg) 95%,transparent) 40%,
+ color-mix(in srgb,var(--bg) 60%,transparent) 68%,
+ color-mix(in srgb,var(--bg) 10%,transparent) 100%)}
+.cmp-top .wc-hero__meta{max-width:40ch}
+</style></head>
+<body class="cmp" data-sound-src="/assets/audio/wc/bed-stone-breath-creek.mp3" data-sound-name="the creek">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <nav class="nav wrap wrap--wide" aria-label="Primary">
+      <a class="brand" href="/"><img class="brand__logo" src="/assets/img/author-logo.png?v=2" alt="AncestralWatch logo" width="716" height="676"><span class="brand__wm">Ancestral<span class="brand__mark">Watch</span></span></a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">☰</button>
+      <ul class="nav__links" id="primary-nav" data-open="false">
+        <li><a href="/">Home</a></li>
+        <li class="has-menu">
+          <button aria-expanded="false" aria-haspopup="true">The Series</button>
+          <ul class="menu">
+            <li><a href="/series/"><span class="menu__num">All</span> The Series</a></li>
+            <li><a href="/series/stone-breath/" aria-current="page"><span class="menu__num">I</span> Stone Breath</a></li>
+            <li><a href="/series/by-lamplight/"><span class="menu__num">II</span> The Amber and the Stone</a></li>
+            <li><a href="/series/the-council-fire/"><span class="menu__num">III</span> The Council Fire</a></li>
+            <li><a href="/series/the-far-messengers/"><span class="menu__num">IV</span> The Far Messengers</a></li>
+            <li><a href="/reader/"><span class="menu__num">&mdash;</span> The Reader</a></li>
+          <li><a href="/start-here/">Start Here</a></li><li><a href="/read/stone-breath/">Read Free</a></li></ul>
+        </li>
+        <li><a href="/tools/">The Tools</a></li><li><a href="https://tribeawaken.com/" target="_blank" rel="noopener">TribeAwaken ↗</a></li>
+        <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+        <li><a href="/author/">The Author</a></li>
+        <li><a class="lang-toggle" href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a class="lang-toggle" href="/lt/" hreflang="lt" lang="lt" style="border-left:0;padding-left:0;">Lietuvių</a></li>
+        <li class="nav__cta"><a class="btn btn--primary" href="https://payhip.com/b/AhH6r" target="_blank" rel="noopener">Get the Book</a></li>
+      </ul>
+    </nav>
+
+  <div class="aw-langbar" aria-label="Languages">
+    <div class="wrap wrap--wide aw-langbar__in">
+      <p class="aw-langbar__lbl">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15 0 18M12 3c-2.6 2.6-2.6 15 0 18"/>
+        </svg><span>Read in</span>
+      </p>
+      <a href="/" data-lang="en" hreflang="en">English</a>
+      <a href="/ja/" data-lang="/ja/" hreflang="ja" lang="ja">日本語</a>
+      <a href="/lt/" data-lang="/lt/" hreflang="lt" lang="lt">Lietuvių</a>
+      <a class="aw-langbar__mail" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+  </header>
+<main id="main">
+
+<section class="book-hero wc-hero cmp-top" id="top">
+  <div class="wc-hero__media" aria-hidden="true">
+    <img src="/assets/img/wc/oak-creek-wide-poster.jpg" alt="" width="1600" height="900" fetchpriority="high">
+    <video data-loop data-decor muted loop playsinline preload="metadata"
+      poster="/assets/img/wc/oak-creek-wide-poster.jpg"
+      data-src-wide="/assets/video/wc/stone-breath-oak-creek-wide.mp4"
+      data-src-tall="/assets/video/stone-breath-oak-creek.mp4"></video>
+  </div>
+  <div class="wc-hero__scrim" aria-hidden="true"></div>
+  <div class="wrap wrap--wide wc-hero__grid">
+    <div class="book-hero__meta wc-hero__meta">
+      <p class="eyebrow" data-reveal>Stone Breath · a private reading surface</p>
+      <h1 data-reveal><em>Side by side</em></h1>
+      <p class="book-hero__subtitle" data-reveal>Every chapter twice — the edited one beside the one that is published</p>
+      <p class="book-teaching" data-reveal>
+        The left column is the chapter re-fused back toward your own sentences. The right column is
+        the edition published through Draft2Digital on September 7 2026. 139 paragraphs differ across the
+        twenty-one chapters. Nothing here is published, and nothing is indexed.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight"><div class="wrap wrap--wide wc-row wc-row--right">
+  <div class="wc-row__text" data-reveal>
+    <p class="eyebrow" style="color:var(--amber)">How to read it</p>
+    <p class="lead">Each chapter page opens with both columns. <b>Changes only</b> drops away every
+    paragraph that did not move — chapter five goes from a hundred and nine paragraphs down to
+    nineteen. <b>Edited</b> and <b>Current</b> give you one column at a time, which is the way to
+    read it on the phone. Gold marks what changed.</p>
+  </div>
+  <figure class="wc-bleed">
+    <div class="wc-par" data-parallax="10">
+      <img src="/assets/img/wc/oak-creek-pebbles-1800.jpg"
+        srcset="/assets/img/wc/oak-creek-pebbles-900.jpg 900w, /assets/img/wc/oak-creek-pebbles-1800.jpg 1800w"
+        sizes="(max-width:900px) 100vw, 50vw" alt="Pebbles under moving water in Oak Creek"
+        loading="lazy" width="1800" height="1350">
+    </div>
+    <figcaption>Oak Creek Canyon, Arizona · photograph by Tony Skrelūnas</figcaption>
+  </figure>
+</div></section>
+
+<section class="section section--tight"><div class="wrap">
+  <p class="eyebrow" style="color:var(--amber)" data-reveal>Pick the voice</p>
+  <h2 style="font-size:var(--step-3);max-width:26ch" data-reveal>The same lines in five readers.</h2>
+  <p class="muted" style="max-width:58ch" data-reveal>Each one over flute, drone, frame drum, wind and
+  birds — synthesized here, the way the 1440 meditations were built. Every name in them is said the
+  way you say it on your own recording: Masan, Tonas, Ada, Austėja, Ugnė, Rytis, Lukas, talka.</p>
+  <div data-reveal style="margin-top:var(--space-3)"><div class="vrow"><b>Fenrir</b><i>warm and unhurried — the closest to a fire-side read</i><audio controls preload="none" src="/assets/audio/wc/voices/am_fenrir.mp3"></audio></div>
+<div class="vrow"><b>Onyx</b><i>deeper, more weight on the low notes</i><audio controls preload="none" src="/assets/audio/wc/voices/am_onyx.mp3"></audio></div>
+<div class="vrow"><b>Eric</b><i>plainer and quicker, less performed</i><audio controls preload="none" src="/assets/audio/wc/voices/am_eric.mp3"></audio></div>
+<div class="vrow"><b>Liam</b><i>younger, lighter</i><audio controls preload="none" src="/assets/audio/wc/voices/am_liam.mp3"></audio></div>
+<div class="vrow"><b>Michael</b><i>the reader on the old files, for comparison</i><audio controls preload="none" src="/assets/audio/wc/voices/am_michael.mp3"></audio></div></div>
+</div></section>
+
+<section class="section section--tight"><div class="wrap wrap--wide">
+  <p class="eyebrow" style="color:var(--amber)" data-reveal>The chapters</p>
+  <ol class="cmp-list" data-reveal><li><a href="ch01/"><img src="/assets/img/wc/horseshoe-bend-standing-1800.jpg" alt="" loading="lazy"><div><b>One · The Canyon Within</b><span>3 of 84 paragraphs differ · same length</span></div></a></li>
+<li><a href="ch02/"><img src="/assets/img/wc/baltic.jpg" alt="" loading="lazy"><div><b>Two · The Book</b><span>10 of 110 paragraphs differ · -122 words</span></div></a></li>
+<li><a href="ch03/"><img src="/assets/img/wc/lamplight-desk.jpg" alt="" loading="lazy"><div><b>Three · The Grandmother&#x27;s Letters</b><span>10 of 102 paragraphs differ · +33 words</span></div></a></li>
+<li><a href="ch04/"><img src="/assets/img/wc/baltic-forest.jpg" alt="" loading="lazy"><div><b>Four · The Song</b><span>3 of 58 paragraphs differ · +2 words</span></div></a></li>
+<li><a href="ch05/"><img src="/assets/img/wc/juniper-ancient.jpg" alt="" loading="lazy"><div><b>Five · The Oak</b><span>19 of 109 paragraphs differ · +185 words</span></div></a></li>
+<li><a href="ch06/"><img src="/assets/img/wc/stone-dawn.jpg" alt="" loading="lazy"><div><b>Six · The Morning Practice</b><span>6 of 109 paragraphs differ · +6 words</span></div></a></li>
+<li><a href="ch07/"><img src="/assets/img/wc/slickrock-group.jpg" alt="" loading="lazy"><div><b>Seven · The Talka</b><span>9 of 38 paragraphs differ · +16 words</span></div></a></li>
+<li><a href="ch08/"><img src="/assets/img/wc/rowing.jpg" alt="" loading="lazy"><div><b>Eight · The Extension</b><span>6 of 153 paragraphs differ · -32 words</span></div></a></li>
+<li><a href="ch09/"><img src="/assets/img/wc/bench-talk.jpg" alt="" loading="lazy"><div><b>Nine · The First Date</b><span>21 of 193 paragraphs differ · +304 words</span></div></a></li>
+<li><a href="ch10/"><img src="/assets/img/wc/pine-bark.jpg" alt="" loading="lazy"><div><b>Ten · The Envy Protocol</b><span>6 of 66 paragraphs differ · +11 words</span></div></a></li>
+<li><a href="ch11/"><img src="/assets/img/wc/fire-circle.jpg" alt="" loading="lazy"><div><b>Eleven · The Community Kitchen</b><span>8 of 41 paragraphs differ · +17 words</span></div></a></li>
+<li><a href="ch12/"><img src="/assets/img/wc/hat-child-family.jpg" alt="" loading="lazy"><div><b>Twelve · The Daughter</b><span>8 of 91 paragraphs differ · +8 words</span></div></a></li>
+<li><a href="ch13/"><img src="/assets/img/wc/japan-stone-bridge.jpg" alt="" loading="lazy"><div><b>Thirteen · The Japanese Thread</b><span>0 of 176 paragraphs differ · same length</span></div></a></li>
+<li><a href="ch14/"><img src="/assets/img/wc/hiking-creek.jpg" alt="" loading="lazy"><div><b>Fourteen · The Injury and the Herb Walk</b><span>12 of 81 paragraphs differ · +205 words</span></div></a></li>
+<li><a href="ch15/"><img src="/assets/img/wc/oak-creek-pebbles-1800.jpg" alt="" loading="lazy"><div><b>Fifteen · Where Two Lands Meet</b><span>0 of 48 paragraphs differ · same length</span></div></a></li>
+<li><a href="ch16/"><img src="/assets/img/wc/awards-group.jpg" alt="" loading="lazy"><div><b>Sixteen · The Honorable Recognition</b><span>9 of 156 paragraphs differ · +20 words</span></div></a></li>
+<li><a href="ch17/"><img src="/assets/img/wc/grandfather-porch.jpg" alt="" loading="lazy"><div><b>Seventeen · The Dowry Negotiation</b><span>1 of 125 paragraphs differ · same length</span></div></a></li>
+<li><a href="ch18/"><img src="/assets/img/wc/creek-stones-superior-900.jpg" alt="" loading="lazy"><div><b>Eighteen · The Mantra Anchor</b><span>3 of 104 paragraphs differ · +5 words</span></div></a></li>
+<li><a href="ch19/"><img src="/assets/img/wc/peaks-meadow.jpg" alt="" loading="lazy"><div><b>Nineteen · The Stillness Before Storm</b><span>0 of 154 paragraphs differ · same length</span></div></a></li>
+<li><a href="ch20/"><img src="/assets/img/wc/canyon-sunset-forest.jpg" alt="" loading="lazy"><div><b>Twenty · The Oak at Dusk</b><span>5 of 73 paragraphs differ · +67 words</span></div></a></li>
+<li><a href="ch21/"><img src="/assets/img/wc/peaks-pines.jpg" alt="" loading="lazy"><div><b>Twenty-One · The Headlamp in the Dark</b><span>0 of 539 paragraphs differ · same length</span></div></a></li></ol>
+</div></section>
+</main>
+<footer class="site-footer">
+    <div class="wrap wrap--wide">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">AncestralWatch</p>
+          <p class="footer__tag">Instructions, carried.</p>
+          <p style="margin-top: var(--space-2); max-width: 34ch;">The home of The Ancestral Watch Series by Tony Skrelūnas.</p>
+        </div>
+        <div>
+          <h4>The Series</h4>
+          <ul>
+            <li><a href="/series/stone-breath/">Stone Breath</a></li>
+            <li><a href="/series/the-council-fire/">The Council Fire</a></li>
+            <li><a href="/series/">All four books</a></li>
+            <li><a href="/tools/">The free Tools</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/far-messengers/">The Far Messengers (brand)</a></li>
+            <li><a href="/author/">The Author</a></li>
+            <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+            <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/lt/" hreflang="lt" lang="lt">Lietuvių</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>© 2026 Ancestral Watch · Tony Skrelūnas. All rights reserved.</span>
+        <span>Instructions, carried.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/js/main.js?v=11" defer></script>
+<script src="/js/vendor/gsap.min.js"></script>
+<script src="/js/vendor/ScrollTrigger.min.js"></script>
+<script src="/js/vendor/lenis.min.js"></script>
+<script src="/js/aw-world.js?v=20261105"></script>
+<script>
+(function(){var b=document.body;
+ function set(m){b.classList.remove('only-l','only-r');
+  if(m==='l')b.classList.add('only-l');if(m==='r')b.classList.add('only-r');
+  document.querySelectorAll('[data-m]').forEach(function(x){x.classList.toggle('on',x.dataset.m===m)});
+  try{localStorage.setItem('sbcmp-m',m)}catch(e){}}
+ function diffs(on){b.classList.toggle('diffs',on);
+  var t=document.getElementById('dbtn');if(t)t.classList.toggle('on',on);
+  try{localStorage.setItem('sbcmp-d',on?'1':'')}catch(e){}}
+ document.querySelectorAll('[data-m]').forEach(function(x){x.onclick=function(){set(x.dataset.m)}});
+ var d=document.getElementById('dbtn');
+ if(d)d.onclick=function(){diffs(!b.classList.contains('diffs'))};
+ var m='b',dd=false;
+ try{m=localStorage.getItem('sbcmp-m')||'b';dd=!!localStorage.getItem('sbcmp-d')}catch(e){}
+ set(m);diffs(dd);})();
+</script>
+</body></html>

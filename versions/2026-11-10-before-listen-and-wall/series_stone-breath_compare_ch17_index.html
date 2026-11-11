@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Stone Breath — Seventeen · The Dowry Negotiation — side by side</title>
+<meta name="description" content="Chapter 17 of Stone Breath, the edited version beside the published one.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/style.css?v=5">
+<link rel="stylesheet" href="/assets/daylight.css?v=8">
+<link rel="stylesheet" href="/css/aw-world.css?v=20261105">
+<style>
+.cmp{--in:color-mix(in srgb,var(--amber) 15%,transparent);
+     --out:color-mix(in srgb,var(--ink) 6%,transparent)}
+.cmp-bar{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);
+ backdrop-filter:blur(9px);border-bottom:1px solid var(--rule);padding:.6rem 0;margin-bottom:var(--space-2)}
+.cmp-bar__in{display:flex;gap:.45rem;flex-wrap:wrap;align-items:center}
+.cmp-btn{font:500 .8rem/1 Inter,system-ui,sans-serif;letter-spacing:.03em;padding:.52rem .9rem;
+ border:1px solid var(--rule);border-radius:999px;background:var(--bg-panel);color:var(--ink);
+ cursor:pointer;text-decoration:none;display:inline-block;transition:.18s}
+.cmp-btn:hover{border-color:var(--amber)}
+.cmp-btn.on{background:var(--amber);border-color:var(--amber);color:#fff}
+.cmp-sp{flex:1 1 auto}
+.cmp-heads{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);margin:var(--space-3) 0 .2rem}
+.cmp-hd{font:500 .68rem/1.3 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+ color:var(--ink-soft);padding-bottom:.45rem;border-bottom:1px solid var(--rule)}
+.cmp-hd b{color:var(--amber);font-weight:500}
+.cmp-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);align-items:start;margin-bottom:.15rem}
+.cmp-cell{padding:.55rem .85rem;border-radius:var(--radius)}
+.cmp-row.chg .cmp-cell.l{background:var(--in);box-shadow:inset 3px 0 0 var(--amber)}
+.cmp-row.chg .cmp-cell.r{background:var(--out);box-shadow:inset 3px 0 0 var(--rule)}
+.cmp-cell p{margin:0;font-size:var(--step-0);line-height:1.68}
+.cmp-cell.gone{opacity:.42;font-style:italic;color:var(--ink-soft)}
+.cmp-cell.gone:after{content:"— not in this version";font-size:var(--step--1)}
+.cmp-hh{font:500 .72rem/1.4 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+ color:var(--amber);text-align:center;margin:1.2em 0 .5em}
+.cmp-orn{text-align:center;color:var(--amber);letter-spacing:.55em;margin:1em 0}
+mark{background:none;color:inherit;padding:0}
+.cmp-row.chg mark.in{background:color-mix(in srgb,var(--amber) 34%,transparent);border-radius:3px;padding:0 .14em}
+.cmp-row.chg mark.out{background:color-mix(in srgb,var(--ink) 11%,transparent);border-radius:3px;padding:0 .14em}
+body.only-l .cmp-cell.r,body.only-l .cmp-hd.r{display:none}
+body.only-l .cmp-row,body.only-l .cmp-heads{grid-template-columns:1fr}
+body.only-r .cmp-cell.l,body.only-r .cmp-hd.l{display:none}
+body.only-r .cmp-row,body.only-r .cmp-heads{grid-template-columns:1fr}
+body.diffs .cmp-row.same{display:none}
+.cmp-hero{position:relative;min-height:clamp(230px,40vh,420px);display:flex;align-items:flex-end;
+ overflow:hidden;background:var(--bg)}
+.cmp-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cmp-hero__scrim{position:absolute;inset:0;background:
+ linear-gradient(100deg,color-mix(in srgb,var(--bg) 97%,transparent) 0%,
+ color-mix(in srgb,var(--bg) 90%,transparent) 36%,
+ color-mix(in srgb,var(--bg) 42%,transparent) 66%,
+ color-mix(in srgb,var(--bg) 6%,transparent) 100%)}
+.cmp-hero__in{position:relative;padding-block:var(--space-5) var(--space-4)}
+.cmp-hero__in>*{max-width:34ch}
+.cmp-hero__in .eyebrow{color:var(--amber)}
+.cmp-hero h1{margin:.08em 0 .2em;font-size:var(--step-4);color:var(--ink)}
+.cmp-hero__meta{font:400 .85rem/1.5 Inter,system-ui,sans-serif;color:var(--ink-soft)}
+.cmp-hero__cap{position:absolute;right:var(--space-3);bottom:.5rem;font:400 .66rem/1.3 Inter,sans-serif;
+ letter-spacing:.07em;color:color-mix(in srgb,var(--ink) 52%,transparent);text-align:right}
+.cmp-list{list-style:none;margin:var(--space-3) 0 0;padding:0;display:grid;gap:.6rem}
+.cmp-list a{display:grid;grid-template-columns:84px 1fr;gap:var(--space-2);align-items:center;
+ text-decoration:none;background:var(--bg-panel);border:1px solid var(--rule);
+ border-radius:var(--radius-lg);padding:.6rem;transition:.18s}
+.cmp-list a:hover{border-color:var(--amber);transform:translateY(-1px)}
+.cmp-list img{width:84px;height:62px;object-fit:cover;border-radius:calc(var(--radius) - 2px)}
+.cmp-list b{font-family:var(--font-display);font-weight:500;font-size:var(--step-1);color:var(--ink)}
+.cmp-list span{display:block;font:400 .78rem/1.45 Inter,sans-serif;color:var(--ink-soft);margin-top:.12rem}
+.vrow{background:var(--bg-panel);border:1px solid var(--rule);border-radius:var(--radius-lg);
+ padding:.8rem 1rem;margin-bottom:.55rem}
+.vrow b{font-family:var(--font-display);font-weight:500;font-size:var(--step-1)}
+.vrow i{display:block;font-style:normal;font:400 .8rem/1.4 Inter,sans-serif;color:var(--ink-soft);margin:.1rem 0 .5rem}
+.vrow audio{width:100%;height:36px}
+@media (max-width:860px){
+ .cmp-row,.cmp-heads{gap:.55rem}
+ .cmp-cell{padding:.45rem .55rem}
+ .cmp-cell p{font-size:.86rem;line-height:1.56}
+ .cmp-list a{grid-template-columns:62px 1fr}
+ .cmp-list img{width:62px;height:50px}}
+</style></head>
+<body class="cmp" data-sound-src="/assets/audio/wc/bed-stone-breath-creek.mp3" data-sound-name="the creek">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <nav class="nav wrap wrap--wide" aria-label="Primary">
+      <a class="brand" href="/"><img class="brand__logo" src="/assets/img/author-logo.png?v=2" alt="AncestralWatch logo" width="716" height="676"><span class="brand__wm">Ancestral<span class="brand__mark">Watch</span></span></a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">☰</button>
+      <ul class="nav__links" id="primary-nav" data-open="false">
+        <li><a href="/">Home</a></li>
+        <li class="has-menu">
+          <button aria-expanded="false" aria-haspopup="true">The Series</button>
+          <ul class="menu">
+            <li><a href="/series/"><span class="menu__num">All</span> The Series</a></li>
+            <li><a href="/series/stone-breath/" aria-current="page"><span class="menu__num">I</span> Stone Breath</a></li>
+            <li><a href="/series/by-lamplight/"><span class="menu__num">II</span> The Amber and the Stone</a></li>
+            <li><a href="/series/the-council-fire/"><span class="menu__num">III</span> The Council Fire</a></li>
+            <li><a href="/series/the-far-messengers/"><span class="menu__num">IV</span> The Far Messengers</a></li>
+            <li><a href="/reader/"><span class="menu__num">&mdash;</span> The Reader</a></li>
+          <li><a href="/start-here/">Start Here</a></li><li><a href="/read/stone-breath/">Read Free</a></li></ul>
+        </li>
+        <li><a href="/tools/">The Tools</a></li><li><a href="https://tribeawaken.com/" target="_blank" rel="noopener">TribeAwaken ↗</a></li>
+        <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+        <li><a href="/author/">The Author</a></li>
+        <li><a class="lang-toggle" href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a class="lang-toggle" href="/lt/" hreflang="lt" lang="lt" style="border-left:0;padding-left:0;">Lietuvių</a></li>
+        <li class="nav__cta"><a class="btn btn--primary" href="https://payhip.com/b/AhH6r" target="_blank" rel="noopener">Get the Book</a></li>
+      </ul>
+    </nav>
+
+  <div class="aw-langbar" aria-label="Languages">
+    <div class="wrap wrap--wide aw-langbar__in">
+      <p class="aw-langbar__lbl">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15 0 18M12 3c-2.6 2.6-2.6 15 0 18"/>
+        </svg><span>Read in</span>
+      </p>
+      <a href="/" data-lang="en" hreflang="en">English</a>
+      <a href="/ja/" data-lang="/ja/" hreflang="ja" lang="ja">日本語</a>
+      <a href="/lt/" data-lang="/lt/" hreflang="lt" lang="lt">Lietuvių</a>
+      <a class="aw-langbar__mail" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+  </header>
+<main id="main">
+
+<section class="cmp-hero">
+  <img src="/assets/img/wc/grandfather-porch.jpg" alt="On the porch" fetchpriority="high">
+  <div class="cmp-hero__scrim"></div>
+  <div class="wrap wrap--wide cmp-hero__in">
+    <p class="eyebrow">Stone Breath · side by side · chapter 17</p>
+    <h1><em>The Dowry Negotiation</em></h1>
+    <p class="cmp-hero__meta">1 paragraph differ · 124 identical</p>
+  </div>
+  <p class="cmp-hero__cap">photograph by Tony Skrelūnas</p>
+</section>
+
+<div class="cmp-bar"><div class="wrap wrap--wide cmp-bar__in">
+  <button class="cmp-btn" data-m="b">Both</button>
+  <button class="cmp-btn" data-m="l">Edited</button>
+  <button class="cmp-btn" data-m="r">Current</button>
+  <button class="cmp-btn" id="dbtn">Changes only</button>
+  <span class="cmp-sp"></span>
+  <a class="cmp-btn" href="../">All chapters</a><a class="cmp-btn" href="../ch16/">← Sixteen</a><a class="cmp-btn" href="../ch18/">Eighteen →</a>
+</div></div>
+
+<section class="section section--tight"><div class="wrap wrap--wide">
+  <div class="cmp-heads"><div class="cmp-hd l"><b>Edited</b> — the new one</div>
+  <div class="cmp-hd r">Published — Draft2Digital, September 7 2026</div></div>
+  <div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">CHAPTER 17</div></div><div class="cmp-cell r"><div class="cmp-hh">CHAPTER 17</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">THE DOWRY NEGOTIATION</div></div><div class="cmp-cell r"><div class="cmp-hh">THE DOWRY NEGOTIATION</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">✵   ✵   ✵</div></div><div class="cmp-cell r"><div class="cmp-hh">✵   ✵   ✵</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Dvi šeimos – vienas ratas.&quot; – Two families, one circle. Lithuanian saying</p></div><div class="cmp-cell r"><p>&quot;Dvi šeimos – vienas ratas.&quot; – Two families, one circle. Lithuanian saying</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Two families, one roof beam.” — Japanese saying</p></div><div class="cmp-cell r"><p>“Two families, one roof beam.” — Japanese saying</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Ada called me one night and said: ‘We need to talk about the dowry.’ I said: ‘Ada, it’s not the 1800s.’ She said: ‘Every culture has a dowry. They just call it something else. Find out what they call it.’ She hung up. I called Austėja. She laughed for ten minutes. Then her grandmother got on the phone.” — Tonas Yazzie</p></div><div class="cmp-cell r"><p>“Ada called me one night and said: ‘We need to talk about the dowry.’ I said: ‘Ada, it’s not the 1800s.’ She said: ‘Every culture has a dowry. They just call it something else. Find out what they call it.’ She hung up. I called Austėja. She laughed for ten minutes. Then her grandmother got on the phone.” — Tonas Yazzie</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The phone sat in the middle of Ona’s kitchen table with Ada inside it, half a world behind and fully in charge.</p></div><div class="cmp-cell r"><p>The phone sat in the middle of Ona’s kitchen table with Ada inside it, half a world behind and fully in charge.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“In the old days,” Ada said, “a man’s worth was in sheeps. More sheeps, better bachelor. That was most of the system.”</p></div><div class="cmp-cell r"><p>“In the old days,” Ada said, “a man’s worth was in sheeps. More sheeps, better bachelor. That was most of the system.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ona considered this. “And the woman?”</p></div><div class="cmp-cell r"><p>Ona considered this. “And the woman?”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“The woman already had the sheeps.” Ada let that sit for a moment. “And the hogan. And the land she used, and the say in who got what, and the children — they belong to her clan, not his. A man came into her family. He arrived with what he could carry and he was useful or he was not.”</p></div><div class="cmp-cell r"><p>“The woman already had the sheeps.” Ada let that sit for a moment. “And the hogan. And the land she used, and the say in who got what, and the children — they belong to her clan, not his. A man came into her family. He arrived with what he could carry and he was useful or he was not.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Then what was there to negotiate?”</p></div><div class="cmp-cell r"><p>“Then what was there to negotiate?”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Whether her mother liked him.”</p></div><div class="cmp-cell r"><p>“Whether her mother liked him.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“That is not a negotiation.”</p></div><div class="cmp-cell r"><p>“That is not a negotiation.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“No,” Ada agreed. “It is a verdict.”</p></div><div class="cmp-cell r"><p>“No,” Ada agreed. “It is a verdict.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ona set down her cup. “We had the same arrangement,” she said. “We simply never wrote it down either.”</p></div><div class="cmp-cell r"><p>Ona set down her cup. “We had the same arrangement,” she said. “We simply never wrote it down either.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“And if the verdict went the other way?”</p></div><div class="cmp-cell r"><p>“And if the verdict went the other way?”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“His saddle was outside in the morning.” Ada shrugged. “With everything else he came in with. Stacked neat, out by the corral. Nobody said a word to him. He knew.”</p></div><div class="cmp-cell r"><p>“His saddle was outside in the morning.” Ada shrugged. “With everything else he came in with. Stacked neat, out by the corral. Nobody said a word to him. He knew.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“That is brutal.”</p></div><div class="cmp-cell r"><p>“That is brutal.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“That is efficient,” Ada said. “Nobody argued. Nobody had to be told twice. And he still had his horse.”</p></div><div class="cmp-cell r"><p>“That is efficient,” Ada said. “Nobody argued. Nobody had to be told twice. And he still had his horse.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas had been addressing the stove for twenty minutes.</p></div><div class="cmp-cell r"><p>Tonas had been addressing the stove for twenty minutes.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Not out of rudeness. He had not looked directly at Ona once since she sat down, and he had not said a single word to her that was not routed through Austėja or offered to the room in general, and he was not going to.</p></div><div class="cmp-cell r"><p>Not out of rudeness. He had not looked directly at Ona once since she sat down, and he had not said a single word to her that was not routed through Austėja or offered to the room in general, and he was not going to.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Why does he keep talking to the stove,” Ona said in Lithuanian.</p></div><div class="cmp-cell r"><p>“Why does he keep talking to the stove,” Ona said in Lithuanian.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja translated. Tonas answered — to Austėja.</p></div><div class="cmp-cell r"><p>Austėja translated. Tonas answered — to Austėja.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Tell her it is respect. A man does not look at his mother-in-law. Or his wife’s grandmother. Or speak to her directly. Ever.”</p></div><div class="cmp-cell r"><p>“Tell her it is respect. A man does not look at his mother-in-law. Or his wife’s grandmother. Or speak to her directly. Ever.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja told her.</p></div><div class="cmp-cell r"><p>Austėja told her.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ona considered this for a long moment. “Ask him if it works.”</p></div><div class="cmp-cell r"><p>Ona considered this for a long moment. “Ask him if it works.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“It has been working for about a thousand years,” Tonas said, to the stove.</p></div><div class="cmp-cell r"><p>“It has been working for about a thousand years,” Tonas said, to the stove.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Ask him why.”</p></div><div class="cmp-cell r"><p>“Ask him why.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He thought about it. “Because you cannot have an argument with someone you never speak to directly. You can be angry. You simply have no route to deliver it. So it goes nowhere, and everyone stays family.”</p></div><div class="cmp-cell r"><p>He thought about it. “Because you cannot have an argument with someone you never speak to directly. You can be angry. You simply have no route to deliver it. So it goes nowhere, and everyone stays family.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja translated. Ona put both hands flat on the table.</p></div><div class="cmp-cell r"><p>Austėja translated. Ona put both hands flat on the table.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Write that down,” she said. “We should have had that one.”</p></div><div class="cmp-cell r"><p>“Write that down,” she said. “We should have had that one.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ada, who had understood none of the Lithuanian and all of the meaning, allowed herself — alone on her porch, an ocean away — something that was almost a smile.</p></div><div class="cmp-cell r"><p>Ada, who had understood none of the Lithuanian and all of the meaning, allowed herself — alone on her porch, an ocean away — something that was almost a smile.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Challenge</p></div><div class="cmp-cell r"><p>The Challenge</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ada was seventy-three. Ona was seventy-four. They lived half a world apart. Neither could travel far. Neither would pretend.</p></div><div class="cmp-cell r"><p>Ada was seventy-three. Ona was seventy-four. They lived half a world apart. Neither could travel far. Neither would pretend.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;We need to talk,&quot; Ada said when Tonas picked up the phone one morning. &quot;Me and the old woman. Before anything else happens.&quot;</p></div><div class="cmp-cell r"><p>&quot;We need to talk,&quot; Ada said when Tonas picked up the phone one morning. &quot;Me and the old woman. Before anything else happens.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You mean Ona.&quot;</p></div><div class="cmp-cell r"><p>&quot;You mean Ona.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I mean the old woman. The one who sings.&quot;</p></div><div class="cmp-cell r"><p>&quot;I mean the old woman. The one who sings.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas called Austėja. She handed the phone to Ona. The call was arranged – not video (Ona could never figure out the screen), but speakerphone, with Kee Bahé translating and Rytis on the other end.</p></div><div class="cmp-cell r"><p>Tonas called Austėja. She handed the phone to Ona. The call was arranged – not video (Ona could never figure out the screen), but speakerphone, with Kee Bahé translating and Rytis on the other end.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Two elders. One ocean. Two families deciding whether to become one.</p></div><div class="cmp-cell r"><p>Two elders. One ocean. Two families deciding whether to become one.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Not because the English would have failed them — Ona had managed Tonas fine since the day he walked into the mill. Because for this, you do not use a borrowed language. A family is negotiated in your own words, carried across properly, and heard in the other family’s own words on the other end. The translators were not a necessity. They were a formality — which is a thing older and better than a necessity. The only work English did that day was carry.</p></div><div class="cmp-cell r"><p>Not because the English would have failed them — Ona had managed Tonas fine since the day he walked into the mill. Because for this, you do not use a borrowed language. A family is negotiated in your own words, carried across properly, and heard in the other family’s own words on the other end. The translators were not a necessity. They were a formality — which is a thing older and better than a necessity. The only work English did that day was carry.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The First Question: What Kind of Family?</p></div><div class="cmp-cell r"><p>The First Question: What Kind of Family?</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>Ada did not begin with the cow. She began with questions. This was the old way: You do not negotiate price until you know what you are buying – and in this case, neither family was buying anything. They were investing.</p></div><div class="cmp-cell r"><p>Ada did not begin with the cow. She began with questions. This was the old way. You do not negotiate price until you know what you are buying – and in this case, neither family was buying anything. They were investing.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;What does your family value?&quot; Ada asked.</p></div><div class="cmp-cell r"><p>&quot;What does your family value?&quot; Ada asked.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ona&#x27;s answer came through Rytis. &quot;Hard work. Songs. The forest. The old recipes. Taking care of each other when the winter comes.&quot;</p></div><div class="cmp-cell r"><p>Ona&#x27;s answer came through Rytis. &quot;Hard work. Songs. The forest. The old recipes. Taking care of each other when the winter comes.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;What do you do with your young men who have no direction?&quot;</p></div><div class="cmp-cell r"><p>&quot;What do you do with your young men who have no direction?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Send them to the forest. Let them cut wood. Let them be cold. They learn.&quot;</p></div><div class="cmp-cell r"><p>&quot;Send them to the forest. Let them cut wood. Let them be cold. They learn.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;And your young women?&quot;</p></div><div class="cmp-cell r"><p>&quot;And your young women?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Same thing. The forest does not distinguish.&quot;</p></div><div class="cmp-cell r"><p>&quot;Same thing. The forest does not distinguish.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ada nodded. That was the right answer.</p></div><div class="cmp-cell r"><p>Ada nodded. That was the right answer.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She asked about health, about temperament, about how the family handled grief when someone died. Ona answered each question without hesitation. Her grandmother had taught her: &quot;When you are asked about your family, tell the truth. The truth is the only thing that survives inspection.&quot;</p></div><div class="cmp-cell r"><p>She asked about health, about temperament, about how the family handled grief when someone died. Ona answered each question without hesitation. Her grandmother had taught her: &quot;When you are asked about your family, tell the truth. The truth is the only thing that survives inspection.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Then Ona asked her own questions.</p></div><div class="cmp-cell r"><p>Then Ona asked her own questions.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;How does your family treat strangers who have nothing to offer?&quot;</p></div><div class="cmp-cell r"><p>&quot;How does your family treat strangers who have nothing to offer?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ada smiled. &quot;We feed them. We ask where they came from. We offer them a place to sleep.&quot;</p></div><div class="cmp-cell r"><p>Ada smiled. &quot;We feed them. We ask where they came from. We offer them a place to sleep.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;And if they steal from you?&quot;</p></div><div class="cmp-cell r"><p>&quot;And if they steal from you?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;That has never happened. But if it did, we would remind them who they are. Then we would feed them again. Hunger makes people do things they regret. Full bellies make them remember.&quot;</p></div><div class="cmp-cell r"><p>&quot;That has never happened. But if it did, we would remind them who they are. Then we would feed them again. Hunger makes people do things they regret. Full bellies make them remember.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ona was quiet for a moment. &quot;Beautiful.&quot;</p></div><div class="cmp-cell r"><p>Ona was quiet for a moment. &quot;Beautiful.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Second Question: What Do You Do When Someone is Sunkūs (emotionally heavy)?</p></div><div class="cmp-cell r"><p>The Second Question: What Do You Do When Someone is Sunkūs (emotionally heavy)?</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ada leaned forward. She had been waiting for this.</p></div><div class="cmp-cell r"><p>Ada leaned forward. She had been waiting for this.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;In the old way, we watched how people treated those who could do nothing for them. The weak. The old. The children. The annoying ones.&quot;</p></div><div class="cmp-cell r"><p>&quot;In the old way, we watched how people treated those who could do nothing for them. The weak. The old. The children. The annoying ones.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She explained the framework – not as a lecture, but as a story.</p></div><div class="cmp-cell r"><p>She explained the framework – not as a lecture, but as a story.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;My mother, Masan, could look at someone for five minutes and tell you whether they were going to help the family or hurt it. She watched for three things. The Navajo call them Woshdee, Bahozho, and K&#x27;enidzin.&quot;</p></div><div class="cmp-cell r"><p>&quot;My mother, Masan, could look at someone for five minutes and tell you whether they were going to help the family or hurt it. She watched for three things. The Navajo call them Woshdee, Bahozho, and K&#x27;enidzin.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She held up one finger.</p></div><div class="cmp-cell r"><p>She held up one finger.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Woshdee – welcome. Do they offer food and genuine warmth? Or do they hold back, measure you, wait to see what you can do for them?&quot;</p></div><div class="cmp-cell r"><p>&quot;Woshdee – welcome. Do they offer food and genuine warmth? Or do they hold back, measure you, wait to see what you can do for them?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Second finger.</p></div><div class="cmp-cell r"><p>Second finger.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Bahozho – happiness. Do they carry lightness? Do they laugh easily? Or do they drain the energy from every room they enter?&quot;</p></div><div class="cmp-cell r"><p>&quot;Bahozho – happiness. Do they carry lightness? Do they laugh easily? Or do they drain the energy from every room they enter?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Third finger.</p></div><div class="cmp-cell r"><p>Third finger.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;K&#x27;enidzin – honor. Do they lift others up? Do they celebrate your wins without jealousy? Or do they cut communication, relay gossip, get frantic when you succeed?&quot;</p></div><div class="cmp-cell r"><p>&quot;K&#x27;enidzin – honor. Do they lift others up? Do they celebrate your wins without jealousy? Or do they cut communication, relay gossip, get frantic when you succeed?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ona listened. Rytis translated. Kee Bahé translated back.</p></div><div class="cmp-cell r"><p>Ona listened. Rytis translated. Kee Bahé translated back.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Then Ona spoke. &quot;We have a word for the people you describe. We call them sunkūs (heavy). They are not bad people. They are injured. But they will injure you too if you let them.&quot;</p></div><div class="cmp-cell r"><p>Then Ona spoke. &quot;We have a word for the people you describe. We call them sunkūs (heavy). They are not bad people. They are injured. But they will injure you too if you let them.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ada nodded. &quot;Same thing. Different word.&quot;</p></div><div class="cmp-cell r"><p>Ada nodded. &quot;Same thing. Different word.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Same thing.&quot;</p></div><div class="cmp-cell r"><p>&quot;Same thing.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Third Question: What About Austėja? What About Tonas?</p></div><div class="cmp-cell r"><p>The Third Question: What About Austėja? What About Tonas?</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ada asked first. &quot;What has she shown you?&quot;</p></div><div class="cmp-cell r"><p>Ada asked first. &quot;What has she shown you?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ona did not hesitate. &quot;She stayed. When everyone left the village, she stayed. When her mother died, she stayed. When the old ways were dying, she learned them. She did not leave. That is the highest thing a person can do.&quot;</p></div><div class="cmp-cell r"><p>Ona did not hesitate. &quot;She stayed. When everyone left the village, she stayed. When her mother died, she stayed. When the old ways were dying, she learned them. She did not leave. That is the highest thing a person can do.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;And what about Tonas? What do you see in him?&quot;</p></div><div class="cmp-cell r"><p>&quot;And what about Tonas? What do you see in him?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ona was quiet for a long moment. Then: &quot;He came with a book. He gave it to me. He did not bury it. He did not keep it. He gave it. That is the second highest thing a person can do. The first is staying. The second is giving.&quot;</p></div><div class="cmp-cell r"><p>Ona was quiet for a long moment. Then: &quot;He came with a book. He gave it to me. He did not bury it. He did not keep it. He gave it. That is the second highest thing a person can do. The first is staying. The second is giving.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ada felt something loosen in her chest. She had not known how much she needed to hear that.</p></div><div class="cmp-cell r"><p>Ada felt something loosen in her chest. She had not known how much she needed to hear that.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Cow: Not a Price, a Covenant</p></div><div class="cmp-cell r"><p>The Cow: Not a Price, a Covenant</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>After the questions came the negotiation. This was not about money. This was about mutual investment. Both families had to put something in. Both families had to receive something back.</p></div><div class="cmp-cell r"><p>After the questions came the negotiation. This was not about money. This was about mutual investment. Both families had to put something in. Both families had to receive something back.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;My mother gave seventeen sheep for my father,&quot; Ada said. &quot;From Sore Foot&#x27;s lineage. That&#x27;s what you&#x27;re getting – not just sheep, legacy.&quot;</p></div><div class="cmp-cell r"><p>&quot;My mother gave seventeen sheep for my father,&quot; Ada said. &quot;From Sore Foot&#x27;s lineage. That&#x27;s what you&#x27;re getting – not just sheep, legacy.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ona listened. Then she spoke.</p></div><div class="cmp-cell r"><p>Ona listened. Then she spoke.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;We don&#x27;t want sheep. We want land.&quot;</p></div><div class="cmp-cell r"><p>&quot;We don&#x27;t want sheep. We want land.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ada raised an eyebrow. &quot;How much land?&quot;</p></div><div class="cmp-cell r"><p>Ada raised an eyebrow. &quot;How much land?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ona held her hands up to no one – but Ada could imagine. &quot;A corner. Enough for oaks.&quot;</p></div><div class="cmp-cell r"><p>Ona held her hands up to no one – but Ada could imagine. &quot;A corner. Enough for oaks.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Oaks?&quot;</p></div><div class="cmp-cell r"><p>&quot;Oaks?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ona explained. The tree planted at birth. The felled at death. The circle of a life, held in wood.</p></div><div class="cmp-cell r"><p>Ona explained. The tree planted at birth. The felled at death. The circle of a life, held in wood.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ada was quiet for a long time. Then: &quot;That&#x27;s the most honest thing I&#x27;ve ever heard. Five sheep. From Sore Foot&#x27;s lineage. And a cow.&quot;</p></div><div class="cmp-cell r"><p>Ada was quiet for a long time. Then: &quot;That&#x27;s the most honest thing I&#x27;ve ever heard. Five sheep. From Sore Foot&#x27;s lineage. And a cow.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;A cow?&quot;</p></div><div class="cmp-cell r"><p>&quot;A cow?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Every family needs milk. Every family needs meat. A cow is life. You&#x27;ll understand.&quot;</p></div><div class="cmp-cell r"><p>&quot;Every family needs milk. Every family needs meat. A cow is life. You&#x27;ll understand.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Five sheep. A cow. And the necklace.&quot;</p></div><div class="cmp-cell r"><p>&quot;Five sheep. A cow. And the necklace.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She meant the squash blossom necklace. The one in the photograph. The one that had been Masan&#x27;s.</p></div><div class="cmp-cell r"><p>She meant the squash blossom necklace. The one in the photograph. The one that had been Masan&#x27;s.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ada laughed – a crackling, dry sound. &quot;You drive a hard bargain, old woman.&quot;</p></div><div class="cmp-cell r"><p>Ada laughed – a crackling, dry sound. &quot;You drive a hard bargain, old woman.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I&#x27;ve had seventy-four years to practice.&quot;</p></div><div class="cmp-cell r"><p>&quot;I&#x27;ve had seventy-four years to practice.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>They shook hands across the ocean.</p></div><div class="cmp-cell r"><p>They shook hands across the ocean.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Delivery</p></div><div class="cmp-cell r"><p>The Delivery</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>A week later, the gifts arrived – not in person, but in photographs, in stories, in promises.</p></div><div class="cmp-cell r"><p>A week later, the gifts arrived – not in person, but in photographs, in stories, in promises.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ada&#x27;s aunties sent pictures of the sheep: five strong animals from Sore Foot&#x27;s lineage, with the markings that meant they came from the original herd. They sent a video of the cow – small, brown, with a white star on her forehead. Austėja&#x27;s cousin Jurgita had already named her Amerikietė – &quot;the American.&quot;</p></div><div class="cmp-cell r"><p>Ada&#x27;s aunties sent pictures of the sheep: five strong animals from Sore Foot&#x27;s lineage, with the markings that meant they came from the original herd. They sent a video of the cow – small, brown, with a white star on her forehead. Austėja&#x27;s cousin Jurgita had already named her Amerikietė – &quot;the American.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The squash blossom necklace came in a small box, wrapped in storm-pattern cloth. Tonas placed it in Austėja&#x27;s hands in Ona&#x27;s kitchen.</p></div><div class="cmp-cell r"><p>The squash blossom necklace came in a small box, wrapped in storm-pattern cloth. Tonas placed it in Austėja&#x27;s hands in Ona&#x27;s kitchen.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;This was Masan&#x27;s,&quot; he said. &quot;She wore it when she married. When she buried her husband. When she raised Ada. Now it&#x27;s yours.&quot;</p></div><div class="cmp-cell r"><p>&quot;This was Masan&#x27;s,&quot; he said. &quot;She wore it when she married. When she buried her husband. When she raised Ada. Now it&#x27;s yours.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja held it. The turquoise was cool, the silver warm. She put it on.</p></div><div class="cmp-cell r"><p>Austėja held it. The turquoise was cool, the silver warm. She put it on.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;It fits,&quot; Tonas said. &quot;Ada said it would.&quot;</p></div><div class="cmp-cell r"><p>&quot;It fits,&quot; Tonas said. &quot;Ada said it would.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ona watched from her chair. She did not cry. She nodded once.</p></div><div class="cmp-cell r"><p>Ona watched from her chair. She did not cry. She nodded once.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The CounterGift</p></div><div class="cmp-cell r"><p>The CounterGift</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Two days later, Ona called Ada.</p></div><div class="cmp-cell r"><p>Two days later, Ona called Ada.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Tell her there is a corner of my land. Oaks will grow there. When her grandchildren are born, they will plant them. When she dies, her children will cut them down and carry her home.&quot;</p></div><div class="cmp-cell r"><p>&quot;Tell her there is a corner of my land. Oaks will grow there. When her grandchildren are born, they will plant them. When she dies, her children will cut them down and carry her home.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ada listened. She did not speak for a long time.</p></div><div class="cmp-cell r"><p>Ada listened. She did not speak for a long time.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Then she said: &quot;Same thing.&quot;</p></div><div class="cmp-cell r"><p>Then she said: &quot;Same thing.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Rytis translated. Ona nodded. &quot;Same thing.&quot;</p></div><div class="cmp-cell r"><p>Rytis translated. Ona nodded. &quot;Same thing.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Before the call ended, Ada said one more thing. &quot;The young ones will marry. But not over a telephone, and not in a hurry. Next year. When the oaks have had a winter. They will come to Lithuania, all of us who can travel, and we will do it under Ona’s trees, the right way.&quot;</p></div><div class="cmp-cell r"><p>Before the call ended, Ada said one more thing. &quot;The young ones will marry. But not over a telephone, and not in a hurry. Next year. When the oaks have had a winter. They will come to Lithuania, all of us who can travel, and we will do it under Ona’s trees, the right way.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ona was quiet. Then: &quot;Next year. I will still be here. The trees will tell me to wait.&quot;</p></div><div class="cmp-cell r"><p>Ona was quiet. Then: &quot;Next year. I will still be here. The trees will tell me to wait.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>And so a date was set — a year out, an ocean to cross, a wedding under the oaks. Not yet. But coming. Something to run toward.</p></div><div class="cmp-cell r"><p>And so a date was set — a year out, an ocean to cross, a wedding under the oaks. Not yet. But coming. Something to run toward.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">── MASAN + ONA ──</div></div><div class="cmp-cell r"><div class="cmp-hh">── MASAN + ONA ──</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">── MASAN ──</div></div><div class="cmp-cell r"><div class="cmp-hh">── MASAN ──</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>You want to know how I read a person? I watch how they treat the ones who cannot help them. The child who is boring. The old one who moves slowly. The visitor who has nothing to offer. That is who they actually are. Everything else is performance.</p></div><div class="cmp-cell r"><p>You want to know how I read a person? I watch how they treat the ones who cannot help them. The child who is boring. The old one who moves slowly. The visitor who has nothing to offer. That is who they actually are. Everything else is performance.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>I had three questions. I never called them that. I just watched.</p></div><div class="cmp-cell r"><p>I had three questions. I never called them that. I just watched.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Woshdee — welcome. When you walk into their space, do they move toward you? Or do they wait to decide if you are worth it? The one who moves toward you without calculating — that one has a warm house inside.</p></div><div class="cmp-cell r"><p>Woshdee — welcome. When you walk into their space, do they move toward you? Or do they wait to decide if you are worth it? The one who moves toward you without calculating — that one has a warm house inside.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Bahozho — happiness. Do they carry their own light? Or do they need yours to see by? The ones who drain you are not bad people. They are empty people. And you cannot fill them. No matter how long you try.</p></div><div class="cmp-cell r"><p>Bahozho — happiness. Do they carry their own light? Or do they need yours to see by? The ones who drain you are not bad people. They are empty people. And you cannot fill them. No matter how long you try.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>K&#x27;enidzin — honor. When something good happens to you — a win, a recognition, a joy — do they move toward it? Or do they get quiet? Watch carefully. The ones who cannot celebrate your wins will eventually need your wins to stop.</p></div><div class="cmp-cell r"><p>K&#x27;enidzin — honor. When something good happens to you — a win, a recognition, a joy — do they move toward it? Or do they get quiet? Watch carefully. The ones who cannot celebrate your wins will eventually need your wins to stop.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Those three things. That is all you need. Not day one. By day three, you know. Day one everyone is performing. Day three, the real person shows up. Trust day three.</p></div><div class="cmp-cell r"><p>Those three things. That is all you need. Not day one. By day three, you know. Day one everyone is performing. Day three, the real person shows up. Trust day three.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">── ONA ──</div></div><div class="cmp-cell r"><div class="cmp-hh">── ONA ──</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>We did not have a framework. We had eyes.</p></div><div class="cmp-cell r"><p>We did not have a framework. We had eyes.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>In Lithuania we said: show me how a person leaves a room and I will tell you whether they are coming back. The ones who leave cleanly — who say goodbye to everyone, who notice who is standing alone, who pick up what fell on their way to the door — those ones come back. And they come back the same.</p></div><div class="cmp-cell r"><p>In Lithuania we said: show me how a person leaves a room and I will tell you whether they are coming back. The ones who leave cleanly — who say goodbye to everyone, who notice who is standing alone, who pick up what fell on their way to the door — those ones come back. And they come back the same.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The talka was our test. Not because we designed it as a test. Because real work reveals real character in a way that dinner conversation never will. You put people in a room with a problem that is too heavy for one person. You watch who picks up the load without being asked. Who disappears when it gets hard. Who takes credit for what others carried. Who stays until the work is finished.</p></div><div class="cmp-cell r"><p>The talka was our test. Not because we designed it as a test. Because real work reveals real character in a way that dinner conversation never will. You put people in a room with a problem that is too heavy for one person. You watch who picks up the load without being asked. Who disappears when it gets hard. Who takes credit for what others carried. Who stays until the work is finished.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>That is your answer. Not what they say about themselves when you ask. What they do when there is something heavy to carry and no one is keeping score.</p></div><div class="cmp-cell r"><p>That is your answer. Not what they say about themselves when you ask. What they do when there is something heavy to carry and no one is keeping score.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Masan&#x27;s three words and my one talka — they are measuring the same thing from different directions. The person who passes both is the person worth building something with. The person who fails one will eventually fail the other. This is not judgment. This is the oldest protection there is: knowing who you are standing with before you need them to hold.</p></div><div class="cmp-cell r"><p>Masan&#x27;s three words and my one talka — they are measuring the same thing from different directions. The person who passes both is the person worth building something with. The person who fails one will eventually fail the other. This is not judgment. This is the oldest protection there is: knowing who you are standing with before you need them to hold.</p></div></div>
+  <p class="muted" style="margin-top:var(--space-4);font-size:var(--step--1);max-width:60ch">
+  Gold marks what the edited version added or changed; gray marks the words it replaced.
+  The right column is the text on Payhip and Barnes &amp; Noble today. Nothing here is published.</p>
+</div></section>
+</main>
+<footer class="site-footer">
+    <div class="wrap wrap--wide">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">AncestralWatch</p>
+          <p class="footer__tag">Instructions, carried.</p>
+          <p style="margin-top: var(--space-2); max-width: 34ch;">The home of The Ancestral Watch Series by Tony Skrelūnas.</p>
+        </div>
+        <div>
+          <h4>The Series</h4>
+          <ul>
+            <li><a href="/series/stone-breath/">Stone Breath</a></li>
+            <li><a href="/series/the-council-fire/">The Council Fire</a></li>
+            <li><a href="/series/">All four books</a></li>
+            <li><a href="/tools/">The free Tools</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/far-messengers/">The Far Messengers (brand)</a></li>
+            <li><a href="/author/">The Author</a></li>
+            <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+            <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/lt/" hreflang="lt" lang="lt">Lietuvių</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>© 2026 Ancestral Watch · Tony Skrelūnas. All rights reserved.</span>
+        <span>Instructions, carried.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/js/main.js?v=11" defer></script>
+<script src="/js/vendor/gsap.min.js"></script>
+<script src="/js/vendor/ScrollTrigger.min.js"></script>
+<script src="/js/vendor/lenis.min.js"></script>
+<script src="/js/aw-world.js?v=20261105"></script>
+<script>
+(function(){var b=document.body;
+ function set(m){b.classList.remove('only-l','only-r');
+  if(m==='l')b.classList.add('only-l');if(m==='r')b.classList.add('only-r');
+  document.querySelectorAll('[data-m]').forEach(function(x){x.classList.toggle('on',x.dataset.m===m)});
+  try{localStorage.setItem('sbcmp-m',m)}catch(e){}}
+ function diffs(on){b.classList.toggle('diffs',on);
+  var t=document.getElementById('dbtn');if(t)t.classList.toggle('on',on);
+  try{localStorage.setItem('sbcmp-d',on?'1':'')}catch(e){}}
+ document.querySelectorAll('[data-m]').forEach(function(x){x.onclick=function(){set(x.dataset.m)}});
+ var d=document.getElementById('dbtn');
+ if(d)d.onclick=function(){diffs(!b.classList.contains('diffs'))};
+ var m='b',dd=false;
+ try{m=localStorage.getItem('sbcmp-m')||'b';dd=!!localStorage.getItem('sbcmp-d')}catch(e){}
+ set(m);diffs(dd);})();
+</script>
+</body></html>

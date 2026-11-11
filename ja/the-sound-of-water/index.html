@@ -24,6 +24,7 @@
     .article figure figcaption { font-size: var(--step--1); opacity: .72; margin-top: .5rem; text-align: center; font-style: italic; }
   </style>
 <link rel="stylesheet" href="/assets/daylight.css?v=8">
+<link rel="stylesheet" href="/css/aw-listen.css?v=1">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -63,6 +64,17 @@
         <p class="eyebrow">庭の随筆 · Garden essays</p>
         <h1>The Sound of Water.</h1>
         <p class="article-meta">Why we build waterfalls — and what the falling water is saying.</p>
+        <div class="aw-listen" data-id="the-sound-of-water" data-dur="180.8" data-title="The Sound of Water">
+          <button class="aw-listen__btn" type="button" aria-label="Listen, 3 minutes">
+            <svg class="ic-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <svg class="ic-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+          </button>
+          <div class="aw-listen__body">
+            <div class="aw-listen__top"><p class="aw-listen__k">Listen · 3 min</p><p class="aw-listen__t">3:01</p></div>
+            <div class="aw-listen__bar" role="slider" tabindex="0" aria-label="Where you are in the reading" aria-valuemin="0" aria-valuemax="180" aria-valuenow="0"><span class="aw-listen__fill"></span><span class="aw-listen__knob"></span></div>
+          </div>
+          <audio preload="none" src="/assets/audio/readings/the-sound-of-water.m4a"></audio>
+        </div>
       </div>
     </section>
 
@@ -144,5 +156,7 @@
   });
 })();
 </script>
+<script src="/js/aw-listen.js?v=1" defer></script>
+<script src="/js/aw-gate.js?v=1" defer></script>
 </body>
 </html>

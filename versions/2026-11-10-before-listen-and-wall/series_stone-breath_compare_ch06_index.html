@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Stone Breath — Six · The Morning Practice — side by side</title>
+<meta name="description" content="Chapter 6 of Stone Breath, the edited version beside the published one.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/style.css?v=5">
+<link rel="stylesheet" href="/assets/daylight.css?v=8">
+<link rel="stylesheet" href="/css/aw-world.css?v=20261105">
+<style>
+.cmp{--in:color-mix(in srgb,var(--amber) 15%,transparent);
+     --out:color-mix(in srgb,var(--ink) 6%,transparent)}
+.cmp-bar{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);
+ backdrop-filter:blur(9px);border-bottom:1px solid var(--rule);padding:.6rem 0;margin-bottom:var(--space-2)}
+.cmp-bar__in{display:flex;gap:.45rem;flex-wrap:wrap;align-items:center}
+.cmp-btn{font:500 .8rem/1 Inter,system-ui,sans-serif;letter-spacing:.03em;padding:.52rem .9rem;
+ border:1px solid var(--rule);border-radius:999px;background:var(--bg-panel);color:var(--ink);
+ cursor:pointer;text-decoration:none;display:inline-block;transition:.18s}
+.cmp-btn:hover{border-color:var(--amber)}
+.cmp-btn.on{background:var(--amber);border-color:var(--amber);color:#fff}
+.cmp-sp{flex:1 1 auto}
+.cmp-heads{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);margin:var(--space-3) 0 .2rem}
+.cmp-hd{font:500 .68rem/1.3 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+ color:var(--ink-soft);padding-bottom:.45rem;border-bottom:1px solid var(--rule)}
+.cmp-hd b{color:var(--amber);font-weight:500}
+.cmp-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);align-items:start;margin-bottom:.15rem}
+.cmp-cell{padding:.55rem .85rem;border-radius:var(--radius)}
+.cmp-row.chg .cmp-cell.l{background:var(--in);box-shadow:inset 3px 0 0 var(--amber)}
+.cmp-row.chg .cmp-cell.r{background:var(--out);box-shadow:inset 3px 0 0 var(--rule)}
+.cmp-cell p{margin:0;font-size:var(--step-0);line-height:1.68}
+.cmp-cell.gone{opacity:.42;font-style:italic;color:var(--ink-soft)}
+.cmp-cell.gone:after{content:"— not in this version";font-size:var(--step--1)}
+.cmp-hh{font:500 .72rem/1.4 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+ color:var(--amber);text-align:center;margin:1.2em 0 .5em}
+.cmp-orn{text-align:center;color:var(--amber);letter-spacing:.55em;margin:1em 0}
+mark{background:none;color:inherit;padding:0}
+.cmp-row.chg mark.in{background:color-mix(in srgb,var(--amber) 34%,transparent);border-radius:3px;padding:0 .14em}
+.cmp-row.chg mark.out{background:color-mix(in srgb,var(--ink) 11%,transparent);border-radius:3px;padding:0 .14em}
+body.only-l .cmp-cell.r,body.only-l .cmp-hd.r{display:none}
+body.only-l .cmp-row,body.only-l .cmp-heads{grid-template-columns:1fr}
+body.only-r .cmp-cell.l,body.only-r .cmp-hd.l{display:none}
+body.only-r .cmp-row,body.only-r .cmp-heads{grid-template-columns:1fr}
+body.diffs .cmp-row.same{display:none}
+.cmp-hero{position:relative;min-height:clamp(230px,40vh,420px);display:flex;align-items:flex-end;
+ overflow:hidden;background:var(--bg)}
+.cmp-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cmp-hero__scrim{position:absolute;inset:0;background:
+ linear-gradient(100deg,color-mix(in srgb,var(--bg) 97%,transparent) 0%,
+ color-mix(in srgb,var(--bg) 90%,transparent) 36%,
+ color-mix(in srgb,var(--bg) 42%,transparent) 66%,
+ color-mix(in srgb,var(--bg) 6%,transparent) 100%)}
+.cmp-hero__in{position:relative;padding-block:var(--space-5) var(--space-4)}
+.cmp-hero__in>*{max-width:34ch}
+.cmp-hero__in .eyebrow{color:var(--amber)}
+.cmp-hero h1{margin:.08em 0 .2em;font-size:var(--step-4);color:var(--ink)}
+.cmp-hero__meta{font:400 .85rem/1.5 Inter,system-ui,sans-serif;color:var(--ink-soft)}
+.cmp-hero__cap{position:absolute;right:var(--space-3);bottom:.5rem;font:400 .66rem/1.3 Inter,sans-serif;
+ letter-spacing:.07em;color:color-mix(in srgb,var(--ink) 52%,transparent);text-align:right}
+.cmp-list{list-style:none;margin:var(--space-3) 0 0;padding:0;display:grid;gap:.6rem}
+.cmp-list a{display:grid;grid-template-columns:84px 1fr;gap:var(--space-2);align-items:center;
+ text-decoration:none;background:var(--bg-panel);border:1px solid var(--rule);
+ border-radius:var(--radius-lg);padding:.6rem;transition:.18s}
+.cmp-list a:hover{border-color:var(--amber);transform:translateY(-1px)}
+.cmp-list img{width:84px;height:62px;object-fit:cover;border-radius:calc(var(--radius) - 2px)}
+.cmp-list b{font-family:var(--font-display);font-weight:500;font-size:var(--step-1);color:var(--ink)}
+.cmp-list span{display:block;font:400 .78rem/1.45 Inter,sans-serif;color:var(--ink-soft);margin-top:.12rem}
+.vrow{background:var(--bg-panel);border:1px solid var(--rule);border-radius:var(--radius-lg);
+ padding:.8rem 1rem;margin-bottom:.55rem}
+.vrow b{font-family:var(--font-display);font-weight:500;font-size:var(--step-1)}
+.vrow i{display:block;font-style:normal;font:400 .8rem/1.4 Inter,sans-serif;color:var(--ink-soft);margin:.1rem 0 .5rem}
+.vrow audio{width:100%;height:36px}
+@media (max-width:860px){
+ .cmp-row,.cmp-heads{gap:.55rem}
+ .cmp-cell{padding:.45rem .55rem}
+ .cmp-cell p{font-size:.86rem;line-height:1.56}
+ .cmp-list a{grid-template-columns:62px 1fr}
+ .cmp-list img{width:62px;height:50px}}
+</style></head>
+<body class="cmp" data-sound-src="/assets/audio/wc/bed-stone-breath-creek.mp3" data-sound-name="the creek">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <nav class="nav wrap wrap--wide" aria-label="Primary">
+      <a class="brand" href="/"><img class="brand__logo" src="/assets/img/author-logo.png?v=2" alt="AncestralWatch logo" width="716" height="676"><span class="brand__wm">Ancestral<span class="brand__mark">Watch</span></span></a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">☰</button>
+      <ul class="nav__links" id="primary-nav" data-open="false">
+        <li><a href="/">Home</a></li>
+        <li class="has-menu">
+          <button aria-expanded="false" aria-haspopup="true">The Series</button>
+          <ul class="menu">
+            <li><a href="/series/"><span class="menu__num">All</span> The Series</a></li>
+            <li><a href="/series/stone-breath/" aria-current="page"><span class="menu__num">I</span> Stone Breath</a></li>
+            <li><a href="/series/by-lamplight/"><span class="menu__num">II</span> The Amber and the Stone</a></li>
+            <li><a href="/series/the-council-fire/"><span class="menu__num">III</span> The Council Fire</a></li>
+            <li><a href="/series/the-far-messengers/"><span class="menu__num">IV</span> The Far Messengers</a></li>
+            <li><a href="/reader/"><span class="menu__num">&mdash;</span> The Reader</a></li>
+          <li><a href="/start-here/">Start Here</a></li><li><a href="/read/stone-breath/">Read Free</a></li></ul>
+        </li>
+        <li><a href="/tools/">The Tools</a></li><li><a href="https://tribeawaken.com/" target="_blank" rel="noopener">TribeAwaken ↗</a></li>
+        <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+        <li><a href="/author/">The Author</a></li>
+        <li><a class="lang-toggle" href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a class="lang-toggle" href="/lt/" hreflang="lt" lang="lt" style="border-left:0;padding-left:0;">Lietuvių</a></li>
+        <li class="nav__cta"><a class="btn btn--primary" href="https://payhip.com/b/AhH6r" target="_blank" rel="noopener">Get the Book</a></li>
+      </ul>
+    </nav>
+
+  <div class="aw-langbar" aria-label="Languages">
+    <div class="wrap wrap--wide aw-langbar__in">
+      <p class="aw-langbar__lbl">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15 0 18M12 3c-2.6 2.6-2.6 15 0 18"/>
+        </svg><span>Read in</span>
+      </p>
+      <a href="/" data-lang="en" hreflang="en">English</a>
+      <a href="/ja/" data-lang="/ja/" hreflang="ja" lang="ja">日本語</a>
+      <a href="/lt/" data-lang="/lt/" hreflang="lt" lang="lt">Lietuvių</a>
+      <a class="aw-langbar__mail" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+  </header>
+<main id="main">
+
+<section class="cmp-hero">
+  <img src="/assets/img/wc/stone-dawn.jpg" alt="The stone, at first light" fetchpriority="high">
+  <div class="cmp-hero__scrim"></div>
+  <div class="wrap wrap--wide cmp-hero__in">
+    <p class="eyebrow">Stone Breath · side by side · chapter 6</p>
+    <h1><em>The Morning Practice</em></h1>
+    <p class="cmp-hero__meta">6 paragraphs differ · 103 identical</p>
+  </div>
+  <p class="cmp-hero__cap">photograph by Tony Skrelūnas</p>
+</section>
+
+<div class="cmp-bar"><div class="wrap wrap--wide cmp-bar__in">
+  <button class="cmp-btn" data-m="b">Both</button>
+  <button class="cmp-btn" data-m="l">Edited</button>
+  <button class="cmp-btn" data-m="r">Current</button>
+  <button class="cmp-btn" id="dbtn">Changes only</button>
+  <span class="cmp-sp"></span>
+  <a class="cmp-btn" href="../">All chapters</a><a class="cmp-btn" href="../ch05/">← Five</a><a class="cmp-btn" href="../ch07/">Seven →</a>
+</div></div>
+
+<section class="section section--tight"><div class="wrap wrap--wide">
+  <div class="cmp-heads"><div class="cmp-hd l"><b>Edited</b> — the new one</div>
+  <div class="cmp-hd r">Published — Draft2Digital, September 7 2026</div></div>
+  <div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">CHAPTER 6</div></div><div class="cmp-cell r"><div class="cmp-hh">CHAPTER 6</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">THE MORNING PRACTICE</div></div><div class="cmp-cell r"><div class="cmp-hh">THE MORNING PRACTICE</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">✵   ✵   ✵</div></div><div class="cmp-cell r"><div class="cmp-hh">✵   ✵   ✵</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>By the third kilometer he was, in the words of his own coach twenty years earlier, panting like a dog.</p></div><div class="cmp-cell r"><p>By the third kilometer he was, in the words of his own coach twenty years earlier, panting like a dog.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja was not. Austėja was having what appeared to be a pleasant morning.</p></div><div class="cmp-cell r"><p>Austėja was not. Austėja was having what appeared to be a pleasant morning.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“You’re breathing through your mouth,” she said.</p></div><div class="cmp-cell r"><p>“You’re breathing through your mouth,” she said.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“I’m aware.”</p></div><div class="cmp-cell r"><p>“I’m aware.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“You wrote a book about breathing.”</p></div><div class="cmp-cell r"><p>“You wrote a book about breathing.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“I’m aware of that too.”</p></div><div class="cmp-cell r"><p>“I’m aware of that too.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>I am here for what matters.
+What is not mine, I leave at the door.
+What is mine, I carry with strength.</p></div><div class="cmp-cell r"><p>I am here for what matters.
+What is not mine, I leave at the door.
+What is mine, I carry with strength.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Rytas aukso burną turi.&quot; – Morning has gold in its mouth. Lithuanian proverb</p></div><div class="cmp-cell r"><p>&quot;Rytas aukso burną turi.&quot; – Morning has gold in its mouth. Lithuanian proverb</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Masan never used an alarm clock. She said the sun knew when to rise. Also, she could hear me sneaking out from a mile away.” — Tonas Yazzie</p></div><div class="cmp-cell r"><p>“Masan never used an alarm clock. She said the sun knew when to rise. Also, she could hear me sneaking out from a mile away.” — Tonas Yazzie</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The day after the oak, Tonas woke at four-thirty. Not because he had to. Because he always did.</p></div><div class="cmp-cell r"><p>The day after the oak, Tonas woke at four-thirty. Not because he had to. Because he always did.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>He stepped onto the porch. The river was black, the sky still deep blue, <mark class="in">and</mark> he held the stone in his palm. He closed his eyes and ran the stone breath: four counts in (light and easy, through mouth and nose or slightly through his mouth), hold four, six out, hold four. The stone was an anchor, not a rule. His body knew the rhythm. He repeated the cycle five times. One minute. His heart rate settled. The noise in his head faded.</p></div><div class="cmp-cell r"><p>He stepped onto the porch. The river was black, the sky still deep blue. He held the stone in his palm. He closed his eyes and ran the stone breath: four counts in (light and easy, through mouth and nose or slightly through his mouth), hold four, six out, hold four. The stone was an anchor, not a rule. His body knew the rhythm. He repeated the cycle five times. One minute. His heart rate settled. The noise in his head faded.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Then he faced east.</p></div><div class="cmp-cell r"><p>Then he faced east.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I am here. I am awake. I walk in beauty. Thank you for everything positive in my life and in our world. The day is beginning. May all that I approach today be beautiful. The power I was born with is still mine.&quot;</p></div><div class="cmp-cell r"><p>&quot;I am here. I am awake. I walk in beauty. Thank you for everything positive in my life and in our world. The day is beginning. May all that I approach today be beautiful. The power I was born with is still mine.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He laced his shoes and stepped off the porch.</p></div><div class="cmp-cell r"><p>He laced his shoes and stepped off the porch.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>Austėja was already at the edge of the forest, stretching. She wore black tights, a thin jacket, her dark hair braided tight, <mark class="in">and</mark> the low dawn light caught the amber at her throat. She was elegant. Slim and strong – the way Ada had been among the sheep, moving with an economy that looked effortless but was earned over decades. He didn&#x27;t stare. He noticed. There is a difference.</p></div><div class="cmp-cell r"><p>Austėja was already at the edge of the forest, stretching. She wore black tights, a thin jacket, her dark hair braided tight. The low dawn light caught the amber at her throat. She was elegant. Slim and strong – the way Ada had been among the sheep, moving with an economy that looked effortless but was earned over decades. He didn&#x27;t stare. He noticed. There is a difference.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She looked up. &quot;Ready?&quot; He nodded. They ran.</p></div><div class="cmp-cell r"><p>She looked up. &quot;Ready?&quot; He nodded. They ran.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>The same loop as yesterday – five kilometers through the forest, hard pace, no talking. Her footfall light, her breath steady, <mark class="in">and</mark> he matched her. The forest blurred past. For twenty minutes, only rhythm.</p></div><div class="cmp-cell r"><p>The same loop as yesterday – five kilometers through the forest, hard pace, no talking. Her footfall light, her breath steady. He matched her. The forest blurred past. For twenty minutes, only rhythm.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>At the finish, both breathing hard, she bent over, then straightened. &quot;Fifteen flat?&quot; she said. &quot;You weren&#x27;t lying.&quot; &quot;I don&#x27;t lie about times.&quot;</p></div><div class="cmp-cell r"><p>At the finish, both breathing hard, she bent over, then straightened. &quot;Fifteen flat?&quot; she said. &quot;You weren&#x27;t lying.&quot; &quot;I don&#x27;t lie about times.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He studied her for a moment. Not her body – her stance. The stillness in her frame. The economy of her movements. She was disciplined. Not performative. He recognized it because he lived it.</p></div><div class="cmp-cell r"><p>He studied her for a moment. Not her body – her stance. The stillness in her frame. The economy of her movements. She was disciplined. Not performative. He recognized it because he lived it.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>He thought of his college years, when he would drive from Flagstaff to the rez every other weekend, the truck bed loaded with hay bales and sacks of groceries. First stop: Hastiin&#x27;s place, where he&#x27;d unload the hay for the sheep, <mark class="in">and</mark> Hastiin would be waiting on the porch, his silver hair in a bun, a walking stick in his hand. He never said thank you. He just nodded. That was enough.</p></div><div class="cmp-cell r"><p>He thought of his college years, when he would drive from Flagstaff to the rez every other weekend. The truck bed loaded with hay bales and sacks of groceries. First stop: Hastiin&#x27;s place, where he&#x27;d unload the hay for the sheep. Hastiin would be waiting on the porch, his silver hair in a bun, a walking stick in his hand. He never said thank you. He just nodded. That was enough.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Then on to Ada&#x27;s, where they&#x27;d cook together – lamb stew, frybread, coffee so strong it could wake the whole countryside. Sometimes Tonas would bring Hastiin along. They would sit in silence, three generations, the fire crackling, the stars coming out. Hastiin would hum – not songs, just sounds, a frequency that seemed to hold the room together.</p></div><div class="cmp-cell r"><p>Then on to Ada&#x27;s, where they&#x27;d cook together – lamb stew, frybread, coffee so strong it could wake the whole countryside. Sometimes Tonas would bring Hastiin along. They would sit in silence, three generations, the fire crackling, the stars coming out. Hastiin would hum – not songs, just sounds, a frequency that seemed to hold the room together.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Later, when Tonas ran the mesa trails by lamplight, he carried those silences with him. They were heavier than any stone.</p></div><div class="cmp-cell r"><p>Later, when Tonas ran the mesa trails by lamplight, he carried those silences with him. They were heavier than any stone.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You have a morning practice,&quot; he said. It wasn&#x27;t a question. She tilted her head. &quot;So do you.&quot; &quot;How can you tell?&quot; &quot;Your breathing. When you came up the steps – four in, hold four, six out, hold four. You weren&#x27;t thinking about it. It&#x27;s automatic.&quot;</p></div><div class="cmp-cell r"><p>&quot;You have a morning practice,&quot; he said. It wasn&#x27;t a question. She tilted her head. &quot;So do you.&quot; &quot;How can you tell?&quot; &quot;Your breathing. When you came up the steps – four in, hold four, six out, hold four. You weren&#x27;t thinking about it. It&#x27;s automatic.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He nodded. &quot;Masan. My great-grandmother. She said the dawn is when the ancestors walk. You don&#x27;t hide from them. You let them see you and you breathe the same air.&quot;</p></div><div class="cmp-cell r"><p>He nodded. &quot;Masan. My great-grandmother. She said the dawn is when the ancestors walk. You don&#x27;t hide from them. You let them see you and you breathe the same air.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja was quiet for a moment. Then: &quot;In Japan, they say the same thing. The morning kami – the spirits of the land – are active at first light. You greet them with empty hands and a straight back.&quot;</p></div><div class="cmp-cell r"><p>Austėja was quiet for a moment. Then: &quot;In Japan, they say the same thing. The morning kami – the spirits of the land – are active at first light. You greet them with empty hands and a straight back.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Same thing,&quot; Tonas said. &quot;Same thing,&quot; she agreed.</p></div><div class="cmp-cell r"><p>&quot;Same thing,&quot; Tonas said. &quot;Same thing,&quot; she agreed.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She walked to a fallen log and sat. &quot;Now the other part.&quot; &quot;Forest bathing?&quot; &quot;Walking meditation. The things that don&#x27;t make you faster but make you smarter.&quot;</p></div><div class="cmp-cell r"><p>She walked to a fallen log and sat. &quot;Now the other part.&quot; &quot;Forest bathing?&quot; &quot;Walking meditation. The things that don&#x27;t make you faster but make you smarter.&quot;</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>She led him to a clearing where the trees opened just enough to see the sky. The grass was wet with dew <mark class="in">and</mark> the birds were singing. &quot;Shinrin-yoku,&quot; she said. &quot;Close your eyes.&quot; He did. &quot;Breathe. Let the forest breathe with you.&quot; His mind chattered. She noticed. &quot;Your shoulders are always up,&quot; she said, stepping behind him. Her hands pulled his shoulders back. His chest opened. &quot;No one&#x27;s going to hit you here.&quot; He breathed. His shoulders dropped. His jaw unclenched.</p></div><div class="cmp-cell r"><p>She led him to a clearing where the trees opened just enough to see the sky. The grass was wet with dew. The birds were singing. &quot;Shinrin-yoku,&quot; she said. &quot;Close your eyes.&quot; He did. &quot;Breathe. Let the forest breathe with you.&quot; His mind chattered. She noticed. &quot;Your shoulders are always up,&quot; she said, stepping behind him. Her hands pulled his shoulders back. His chest opened. &quot;No one&#x27;s going to hit you here.&quot; He breathed. His shoulders dropped. His jaw unclenched.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Misogi no kokyu,&quot; she said. &quot;Four in, seven hold, eight out.&quot; He tried. His head felt lighter.</p></div><div class="cmp-cell r"><p>&quot;Misogi no kokyu,&quot; she said. &quot;Four in, seven hold, eight out.&quot; He tried. His head felt lighter.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>They walked slowly – kinhin – one breath per half step.</p></div><div class="cmp-cell r"><p>They walked slowly – kinhin – one breath per half step.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Kyoto?&quot; he asked. &quot;Three years. Zen masters. Olympic athletes. Body and mind not separate.&quot; &quot;What were you training for?&quot; &quot;Myself. I thought if I became good enough, I&#x27;d belong somewhere.&quot; &quot;Did it work?&quot; &quot;No.&quot; She smiled. &quot;So I came home. You don&#x27;t belong because you earn it. You belong because you show up. Because you stay.&quot;</p></div><div class="cmp-cell r"><p>&quot;Kyoto?&quot; he asked. &quot;Three years. Zen masters. Olympic athletes. Body and mind not separate.&quot; &quot;What were you training for?&quot; &quot;Myself. I thought if I became good enough, I&#x27;d belong somewhere.&quot; &quot;Did it work?&quot; &quot;No.&quot; She smiled. &quot;So I came home. You don&#x27;t belong because you earn it. You belong because you show up. Because you stay.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>They stopped at the river bend. The water was gray and silver in the early light.</p></div><div class="cmp-cell r"><p>They stopped at the river bend. The water was gray and silver in the early light.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;What do you compete in?&quot; he asked. &quot;5k. Sub-17. I also consult for the Lithuanian Olympic basketball team – guards, conditioning, mental prep. Every other week I go up to Vilnius — footwork and conditioning, whoever is in town. When the team is in camp, they get me every day.&quot; He raised an eyebrow. &quot;Basketball?&quot; &quot;Lithuania lives for it. The strategy. The pace. The moment a player trusts their body and stops thinking.&quot;</p></div><div class="cmp-cell r"><p>&quot;What do you compete in?&quot; he asked. &quot;5k. Sub-17. I also consult for the Lithuanian Olympic basketball team – guards, conditioning, mental prep. Every other week I go up to Vilnius — footwork and conditioning, whoever is in town. When the team is in camp, they get me every day.&quot; He raised an eyebrow. &quot;Basketball?&quot; &quot;Lithuania lives for it. The strategy. The pace. The moment a player trusts their body and stops thinking.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas smiled. &quot;Navajo are the same. There&#x27;s an old saying: the three major sports on the Navajo Nation are basketball, running, and rodeo.&quot;</p></div><div class="cmp-cell r"><p>Tonas smiled. &quot;Navajo are the same. There&#x27;s an old saying: the three major sports on the Navajo Nation are basketball, running, and rodeo.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja laughed. &quot;Perfect. They say in Lithuania, basketball is the second religion. The first is Catholic.&quot;</p></div><div class="cmp-cell r"><p>Austėja laughed. &quot;Perfect. They say in Lithuania, basketball is the second religion. The first is Catholic.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;So you understand,&quot; she said. &quot;I understand.&quot;</p></div><div class="cmp-cell r"><p>&quot;So you understand,&quot; she said. &quot;I understand.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She studied him. &quot;You never said what you do. You&#x27;re not just a guy who runs fast and carries old books.&quot; Tonas looked at the river. &quot;I fix broken people and broken companies.&quot; She raised an eyebrow. &quot;So you&#x27;re a healer?&quot; He met her eyes. A small, confident smile. &quot;Yes. So to speak. I&#x27;m pretty good at it.&quot;</p></div><div class="cmp-cell r"><p>She studied him. &quot;You never said what you do. You&#x27;re not just a guy who runs fast and carries old books.&quot; Tonas looked at the river. &quot;I fix broken people and broken companies.&quot; She raised an eyebrow. &quot;So you&#x27;re a healer?&quot; He met her eyes. A small, confident smile. &quot;Yes. So to speak. I&#x27;m pretty good at it.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She didn&#x27;t ask for details. She didn&#x27;t need to.</p></div><div class="cmp-cell r"><p>She didn&#x27;t ask for details. She didn&#x27;t need to.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You&#x27;re not here to sell me anything,&quot; she said. &quot;No. I&#x27;m here to bring my grandfather&#x27;s book home.&quot; &quot;And after?&quot; He looked at the river. &quot;I don&#x27;t know yet.&quot; She nodded. &quot;Good. That&#x27;s honest.&quot;</p></div><div class="cmp-cell r"><p>&quot;You&#x27;re not here to sell me anything,&quot; she said. &quot;No. I&#x27;m here to bring my grandfather&#x27;s book home.&quot; &quot;And after?&quot; He looked at the river. &quot;I don&#x27;t know yet.&quot; She nodded. &quot;Good. That&#x27;s honest.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She knelt on the earth. Gestured for him to do the same. &quot;Seiza. Spine straight. Don&#x27;t fight the discomfort. Breathe into it.&quot;</p></div><div class="cmp-cell r"><p>She knelt on the earth. Gestured for him to do the same. &quot;Seiza. Spine straight. Don&#x27;t fight the discomfort. Breathe into it.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>They knelt in silence. The river moved. The sun rose. Somewhere in the fourth minute, something released in his shoulders – a knot he hadn&#x27;t known was there. His body took the opportunity without asking. She saw it. Said nothing.</p></div><div class="cmp-cell r"><p>They knelt in silence. The river moved. The sun rose. Somewhere in the fourth minute, something released in his shoulders – a knot he hadn&#x27;t known was there. His body took the opportunity without asking. She saw it. Said nothing.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>After a while, she opened her eyes. &quot;That&#x27;s enough.&quot; He opened his eyes. The world looked sharper. Slower. &quot;How long?&quot; &quot;Seven minutes.&quot; &quot;Felt like an hour.&quot; &quot;That&#x27;s the point.&quot;</p></div><div class="cmp-cell r"><p>After a while, she opened her eyes. &quot;That&#x27;s enough.&quot; He opened his eyes. The world looked sharper. Slower. &quot;How long?&quot; &quot;Seven minutes.&quot; &quot;Felt like an hour.&quot; &quot;That&#x27;s the point.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>They walked back. At the guesthouse door, she stopped. &quot;Tomorrow. Same time. Harder pace.&quot; &quot;You&#x27;re on.&quot; She almost smiled. Then she turned and walked away.</p></div><div class="cmp-cell r"><p>They walked back. At the guesthouse door, she stopped. &quot;Tomorrow. Same time. Harder pace.&quot; &quot;You&#x27;re on.&quot; She almost smiled. Then she turned and walked away.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>On the third morning she stopped him with one raised hand, watched him run past her, and said nothing until the top of the ridge.</p></div><div class="cmp-cell r"><p>On the third morning she stopped him with one raised hand, watched him run past her, and said nothing until the top of the ridge.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Your form is perfect,” she said.</p></div><div class="cmp-cell r"><p>“Your form is perfect,” she said.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Thank you.”</p></div><div class="cmp-cell r"><p>“Thank you.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“It was not a compliment.” She fell in beside him. “You run like a man taking an exam. Every step graded. In Kyoto they taught the beginner’s mind — and the beginner runs better than you, because the beginner is not defending anything.”</p></div><div class="cmp-cell r"><p>“It was not a compliment.” She fell in beside him. “You run like a man taking an exam. Every step graded. In Kyoto they taught the beginner’s mind — and the beginner runs better than you, because the beginner is not defending anything.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“So what do I do?”</p></div><div class="cmp-cell r"><p>“So what do I do?”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Remember running before it was training. You were a boy on a mesa once. Nobody timed you. You ran because the morning was there and your legs worked and the sheep were out. You ran from abundance, not from debt. Run like there is already enough. The body knows the difference — it shows in the jaw first.”</p></div><div class="cmp-cell r"><p>“Remember running before it was training. You were a boy on a mesa once. Nobody timed you. You ran because the morning was there and your legs worked and the sheep were out. You ran from abundance, not from debt. Run like there is already enough. The body knows the difference — it shows in the jaw first.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He tried it on the last stretch — let the grade go, let the boy back in — and it was ragged and imperfect and faster. She did not say 
+I told you
+, though every line of her back said it.</p></div><div class="cmp-cell r"><p>He tried it on the last stretch — let the grade go, let the boy back in — and it was ragged and imperfect and faster. She did not say 
+I told you
+, though every line of her back said it.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>What Austėja didn&#x27;t mention was that she had trained at a culinary institute in Paris, worked in Michelin-starred kitchens, catered for embassies. She had left that world when Ona&#x27;s health faltered, trading tweezers and foam for foraged mushrooms and Ona&#x27;s cast-iron pot. Now she did special food events on weekends — a wedding in Vilnius, a harvest festival in Kaunas, a pop-up dinner for a Slow Food chapter in the lakes. The money was good and the freedom was better. She cooked what the land offered, not what a menu demanded.</p></div><div class="cmp-cell r"><p>What Austėja didn&#x27;t mention was that she had trained at a culinary institute in Paris, worked in Michelin-starred kitchens, catered for embassies. She had left that world when Ona&#x27;s health faltered, trading tweezers and foam for foraged mushrooms and Ona&#x27;s cast-iron pot. Now she did special food events on weekends — a wedding in Vilnius, a harvest festival in Kaunas, a pop-up dinner for a Slow Food chapter in the lakes. The money was good and the freedom was better. She cooked what the land offered, not what a menu demanded.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The next evening, Austėja showed up at the blacksmith shop with a basketball under her arm and a look that meant business.</p></div><div class="cmp-cell r"><p>The next evening, Austėja showed up at the blacksmith shop with a basketball under her arm and a look that meant business.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You&#x27;ve been talking,&quot; she said.</p></div><div class="cmp-cell r"><p>&quot;You&#x27;ve been talking,&quot; she said.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;About what?&quot;</p></div><div class="cmp-cell r"><p>&quot;About what?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;About how you &#x27;used to play.&#x27; About how you &#x27;could have gone pro if you hadn&#x27;t chosen books.&#x27;&quot;</p></div><div class="cmp-cell r"><p>&quot;About how you &#x27;used to play.&#x27; About how you &#x27;could have gone pro if you hadn&#x27;t chosen books.&#x27;&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas leaned back in his chair. &quot;I never said that.&quot;</p></div><div class="cmp-cell r"><p>Tonas leaned back in his chair. &quot;I never said that.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Rytis said you said that.&quot;</p></div><div class="cmp-cell r"><p>&quot;Rytis said you said that.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Rytis is a liar.&quot;</p></div><div class="cmp-cell r"><p>&quot;Rytis is a liar.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Rytis is my mother&#x27;s cousin. He doesn&#x27;t lie. He exaggerates. There&#x27;s a difference.&quot;</p></div><div class="cmp-cell r"><p>&quot;Rytis is my mother&#x27;s cousin. He doesn&#x27;t lie. He exaggerates. There&#x27;s a difference.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She tossed him the ball. He caught it against his chest.</p></div><div class="cmp-cell r"><p>She tossed him the ball. He caught it against his chest.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Court. Tomorrow. 5 PM. Winner buys dinner.&quot;</p></div><div class="cmp-cell r"><p>&quot;Court. Tomorrow. 5 PM. Winner buys dinner.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;What&#x27;s the stakes?&quot;</p></div><div class="cmp-cell r"><p>&quot;What&#x27;s the stakes?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She smiled. &quot;The stakes are your pride. And my money. I&#x27;m tired of cooking for you.&quot;</p></div><div class="cmp-cell r"><p>She smiled. &quot;The stakes are your pride. And my money. I&#x27;m tired of cooking for you.&quot;</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>The next evening, the court was full. Not of fans — of witnesses. Old Jonas sat on a crate with a bottle of beer, Rytis leaned against the fence smoking his pipe, <mark class="in">and</mark> Ugnė sat cross-legged on the asphalt with a notebook, ready to record every mistake.</p></div><div class="cmp-cell r"><p>The next evening, the court was full. Not of fans — of witnesses. Old Jonas sat on a crate with a bottle of beer. Rytis leaned against the fence, smoking his pipe. Ugnė sat cross-legged on the asphalt with a notebook, ready to record every mistake.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;No referees,&quot; Austėja said. &quot;First to eleven. Ones only. Make it, take it.&quot;</p></div><div class="cmp-cell r"><p>&quot;No referees,&quot; Austėja said. &quot;First to eleven. Ones only. Make it, take it.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You&#x27;re going to regret this.&quot;</p></div><div class="cmp-cell r"><p>&quot;You&#x27;re going to regret this.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I never regret anything.&quot;</p></div><div class="cmp-cell r"><p>&quot;I never regret anything.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She stripped off her warm-up jacket. Underneath, she wore a faded Lithuanian national team shirt — not the current one, an old one, from before Ugnė was born.</p></div><div class="cmp-cell r"><p>She stripped off her warm-up jacket. Underneath, she wore a faded Lithuanian national team shirt — not the current one, an old one, from before Ugnė was born.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas raised an eyebrow. &quot;You kept that?&quot;</p></div><div class="cmp-cell r"><p>Tonas raised an eyebrow. &quot;You kept that?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I kept a lot of things.&quot;</p></div><div class="cmp-cell r"><p>&quot;I kept a lot of things.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>They played.</p></div><div class="cmp-cell r"><p>They played.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She was faster. He was stronger. She used her conditioning to run him ragged; he used his body to post her up. The game was ugly and beautiful and completely ridiculous — two grown adults playing one-on-one on cracked asphalt while an old man heckled them and a child kept score.</p></div><div class="cmp-cell r"><p>She was faster. He was stronger. She used her conditioning to run him ragged; he used his body to post her up. The game was ugly and beautiful and completely ridiculous — two grown adults playing one-on-one on cracked asphalt while an old man heckled them and a child kept score.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You&#x27;re traveling,&quot; Ugnė called out.</p></div><div class="cmp-cell r"><p>&quot;You&#x27;re traveling,&quot; Ugnė called out.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I&#x27;m not traveling.&quot;</p></div><div class="cmp-cell r"><p>&quot;I&#x27;m not traveling.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You took three steps.&quot;</p></div><div class="cmp-cell r"><p>&quot;You took three steps.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;That&#x27;s a euro step.&quot;</p></div><div class="cmp-cell r"><p>&quot;That&#x27;s a euro step.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;That&#x27;s traveling.&quot;</p></div><div class="cmp-cell r"><p>&quot;That&#x27;s traveling.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja laughed. &quot;She&#x27;s right. Traveling. My ball.&quot;</p></div><div class="cmp-cell r"><p>Austėja laughed. &quot;She&#x27;s right. Traveling. My ball.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas threw his hands up. &quot;You&#x27;re raising a monster.&quot;</p></div><div class="cmp-cell r"><p>Tonas threw his hands up. &quot;You&#x27;re raising a monster.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I know.&quot;</p></div><div class="cmp-cell r"><p>&quot;I know.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The game went to 10-9, Austėja leading. One point from victory. Tonas had the ball.</p></div><div class="cmp-cell r"><p>The game went to 10-9, Austėja leading. One point from victory. Tonas had the ball.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He dribbled slowly, watching her stance. She was low, hands active, eyes locked on his chest. He faked left, drove right — and she stripped the ball clean.</p></div><div class="cmp-cell r"><p>He dribbled slowly, watching her stance. She was low, hands active, eyes locked on his chest. He faked left, drove right — and she stripped the ball clean.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Fast break. Layup. Game over.</p></div><div class="cmp-cell r"><p>Fast break. Layup. Game over.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She didn&#x27;t gloat. She just picked up the ball and handed it to him.</p></div><div class="cmp-cell r"><p>She didn&#x27;t gloat. She just picked up the ball and handed it to him.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You owe me dinner.&quot;</p></div><div class="cmp-cell r"><p>&quot;You owe me dinner.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I owe you dinner.&quot;</p></div><div class="cmp-cell r"><p>&quot;I owe you dinner.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;And you have to cook it.&quot;</p></div><div class="cmp-cell r"><p>&quot;And you have to cook it.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I was going to cook anyway.&quot;</p></div><div class="cmp-cell r"><p>&quot;I was going to cook anyway.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Good. Then nothing&#x27;s changed.&quot;</p></div><div class="cmp-cell r"><p>&quot;Good. Then nothing&#x27;s changed.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She walked off the court. Ugnė ran after her.</p></div><div class="cmp-cell r"><p>She walked off the court. Ugnė ran after her.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas stood there, holding the ball, watching them go.</p></div><div class="cmp-cell r"><p>Tonas stood there, holding the ball, watching them go.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Rytis tapped ash from his pipe. &quot;She let you get to ten.&quot;</p></div><div class="cmp-cell r"><p>Rytis tapped ash from his pipe. &quot;She let you get to ten.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;What?&quot;</p></div><div class="cmp-cell r"><p>&quot;What?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;She was up 8-2 at one point. Could have ended it then. She didn&#x27;t.&quot;</p></div><div class="cmp-cell r"><p>&quot;She was up 8-2 at one point. Could have ended it then. She didn&#x27;t.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas looked at the court. At the faded lines. At the dented rim.</p></div><div class="cmp-cell r"><p>Tonas looked at the court. At the faded lines. At the dented rim.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Why?&quot;</p></div><div class="cmp-cell r"><p>&quot;Why?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Rytis shrugged. &quot;Maybe she likes playing with you. Maybe she didn&#x27;t want to embarrass you in front of the child. Maybe she&#x27;s just nice.&quot;</p></div><div class="cmp-cell r"><p>Rytis shrugged. &quot;Maybe she likes playing with you. Maybe she didn&#x27;t want to embarrass you in front of the child. Maybe she&#x27;s just nice.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Austėja isn&#x27;t nice.&quot;</p></div><div class="cmp-cell r"><p>&quot;Austėja isn&#x27;t nice.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;No,&quot; Rytis agreed. &quot;She&#x27;s not. That&#x27;s why you should marry her.&quot;</p></div><div class="cmp-cell r"><p>&quot;No,&quot; Rytis agreed. &quot;She&#x27;s not. That&#x27;s why you should marry her.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He walked away, leaving Tonas alone on the court, the ball in his hands, the sun setting behind the mill.</p></div><div class="cmp-cell r"><p>He walked away, leaving Tonas alone on the court, the ball in his hands, the sun setting behind the mill.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">── THE WARRIOR-SAMURAI ──</div></div><div class="cmp-cell r"><div class="cmp-hh">── THE WARRIOR-SAMURAI ──</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She let you win a point you didn&#x27;t earn. She was up eight to two and she pulled back. You noticed the score. You missed the teaching.</p></div><div class="cmp-cell r"><p>She let you win a point you didn&#x27;t earn. She was up eight to two and she pulled back. You noticed the score. You missed the teaching.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The scout does not wait for the enemy to announce himself. He reads the ground before he steps on it. He reads the person before he trusts them.</p></div><div class="cmp-cell r"><p>The scout does not wait for the enemy to announce himself. He reads the ground before he steps on it. He reads the person before he trusts them.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Here is what the ground said: She competed at full capacity against you, then chose restraint — not weakness, restraint. She did not need to humiliate you to prove she was better. That is not nice. That is something rarer. That is honor.</p></div><div class="cmp-cell r"><p>Here is what the ground said: She competed at full capacity against you, then chose restraint — not weakness, restraint. She did not need to humiliate you to prove she was better. That is not nice. That is something rarer. That is honor.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Watch how people treat those who can do nothing for them. Watch what they do when they are winning. Watch what they do when no one is keeping score. The person who shows you grace when they have the advantage — that person is worth ten of the ones who are gracious only when they need something.</p></div><div class="cmp-cell r"><p>Watch how people treat those who can do nothing for them. Watch what they do when they are winning. Watch what they do when no one is keeping score. The person who shows you grace when they have the advantage — that person is worth ten of the ones who are gracious only when they need something.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Rytis already knows. You are standing on a court with a ball in your hands, watching the sun set, wondering why your chest feels like that. You already know too. Stop wondering. Start paying attention.</p></div><div class="cmp-cell r"><p>Rytis already knows. You are standing on a court with a ball in your hands, watching the sun set, wondering why your chest feels like that. You already know too. Stop wondering. Start paying attention.</p></div></div>
+  <p class="muted" style="margin-top:var(--space-4);font-size:var(--step--1);max-width:60ch">
+  Gold marks what the edited version added or changed; gray marks the words it replaced.
+  The right column is the text on Payhip and Barnes &amp; Noble today. Nothing here is published.</p>
+</div></section>
+</main>
+<footer class="site-footer">
+    <div class="wrap wrap--wide">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">AncestralWatch</p>
+          <p class="footer__tag">Instructions, carried.</p>
+          <p style="margin-top: var(--space-2); max-width: 34ch;">The home of The Ancestral Watch Series by Tony Skrelūnas.</p>
+        </div>
+        <div>
+          <h4>The Series</h4>
+          <ul>
+            <li><a href="/series/stone-breath/">Stone Breath</a></li>
+            <li><a href="/series/the-council-fire/">The Council Fire</a></li>
+            <li><a href="/series/">All four books</a></li>
+            <li><a href="/tools/">The free Tools</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/far-messengers/">The Far Messengers (brand)</a></li>
+            <li><a href="/author/">The Author</a></li>
+            <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+            <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/lt/" hreflang="lt" lang="lt">Lietuvių</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>© 2026 Ancestral Watch · Tony Skrelūnas. All rights reserved.</span>
+        <span>Instructions, carried.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/js/main.js?v=11" defer></script>
+<script src="/js/vendor/gsap.min.js"></script>
+<script src="/js/vendor/ScrollTrigger.min.js"></script>
+<script src="/js/vendor/lenis.min.js"></script>
+<script src="/js/aw-world.js?v=20261105"></script>
+<script>
+(function(){var b=document.body;
+ function set(m){b.classList.remove('only-l','only-r');
+  if(m==='l')b.classList.add('only-l');if(m==='r')b.classList.add('only-r');
+  document.querySelectorAll('[data-m]').forEach(function(x){x.classList.toggle('on',x.dataset.m===m)});
+  try{localStorage.setItem('sbcmp-m',m)}catch(e){}}
+ function diffs(on){b.classList.toggle('diffs',on);
+  var t=document.getElementById('dbtn');if(t)t.classList.toggle('on',on);
+  try{localStorage.setItem('sbcmp-d',on?'1':'')}catch(e){}}
+ document.querySelectorAll('[data-m]').forEach(function(x){x.onclick=function(){set(x.dataset.m)}});
+ var d=document.getElementById('dbtn');
+ if(d)d.onclick=function(){diffs(!b.classList.contains('diffs'))};
+ var m='b',dd=false;
+ try{m=localStorage.getItem('sbcmp-m')||'b';dd=!!localStorage.getItem('sbcmp-d')}catch(e){}
+ set(m);diffs(dd);})();
+</script>
+</body></html>

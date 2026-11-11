@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Stone Breath — Ten · The Envy Protocol — side by side</title>
+<meta name="description" content="Chapter 10 of Stone Breath, the edited version beside the published one.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/style.css?v=5">
+<link rel="stylesheet" href="/assets/daylight.css?v=8">
+<link rel="stylesheet" href="/css/aw-world.css?v=20261105">
+<style>
+.cmp{--in:color-mix(in srgb,var(--amber) 15%,transparent);
+     --out:color-mix(in srgb,var(--ink) 6%,transparent)}
+.cmp-bar{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);
+ backdrop-filter:blur(9px);border-bottom:1px solid var(--rule);padding:.6rem 0;margin-bottom:var(--space-2)}
+.cmp-bar__in{display:flex;gap:.45rem;flex-wrap:wrap;align-items:center}
+.cmp-btn{font:500 .8rem/1 Inter,system-ui,sans-serif;letter-spacing:.03em;padding:.52rem .9rem;
+ border:1px solid var(--rule);border-radius:999px;background:var(--bg-panel);color:var(--ink);
+ cursor:pointer;text-decoration:none;display:inline-block;transition:.18s}
+.cmp-btn:hover{border-color:var(--amber)}
+.cmp-btn.on{background:var(--amber);border-color:var(--amber);color:#fff}
+.cmp-sp{flex:1 1 auto}
+.cmp-heads{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);margin:var(--space-3) 0 .2rem}
+.cmp-hd{font:500 .68rem/1.3 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+ color:var(--ink-soft);padding-bottom:.45rem;border-bottom:1px solid var(--rule)}
+.cmp-hd b{color:var(--amber);font-weight:500}
+.cmp-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);align-items:start;margin-bottom:.15rem}
+.cmp-cell{padding:.55rem .85rem;border-radius:var(--radius)}
+.cmp-row.chg .cmp-cell.l{background:var(--in);box-shadow:inset 3px 0 0 var(--amber)}
+.cmp-row.chg .cmp-cell.r{background:var(--out);box-shadow:inset 3px 0 0 var(--rule)}
+.cmp-cell p{margin:0;font-size:var(--step-0);line-height:1.68}
+.cmp-cell.gone{opacity:.42;font-style:italic;color:var(--ink-soft)}
+.cmp-cell.gone:after{content:"— not in this version";font-size:var(--step--1)}
+.cmp-hh{font:500 .72rem/1.4 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+ color:var(--amber);text-align:center;margin:1.2em 0 .5em}
+.cmp-orn{text-align:center;color:var(--amber);letter-spacing:.55em;margin:1em 0}
+mark{background:none;color:inherit;padding:0}
+.cmp-row.chg mark.in{background:color-mix(in srgb,var(--amber) 34%,transparent);border-radius:3px;padding:0 .14em}
+.cmp-row.chg mark.out{background:color-mix(in srgb,var(--ink) 11%,transparent);border-radius:3px;padding:0 .14em}
+body.only-l .cmp-cell.r,body.only-l .cmp-hd.r{display:none}
+body.only-l .cmp-row,body.only-l .cmp-heads{grid-template-columns:1fr}
+body.only-r .cmp-cell.l,body.only-r .cmp-hd.l{display:none}
+body.only-r .cmp-row,body.only-r .cmp-heads{grid-template-columns:1fr}
+body.diffs .cmp-row.same{display:none}
+.cmp-hero{position:relative;min-height:clamp(230px,40vh,420px);display:flex;align-items:flex-end;
+ overflow:hidden;background:var(--bg)}
+.cmp-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cmp-hero__scrim{position:absolute;inset:0;background:
+ linear-gradient(100deg,color-mix(in srgb,var(--bg) 97%,transparent) 0%,
+ color-mix(in srgb,var(--bg) 90%,transparent) 36%,
+ color-mix(in srgb,var(--bg) 42%,transparent) 66%,
+ color-mix(in srgb,var(--bg) 6%,transparent) 100%)}
+.cmp-hero__in{position:relative;padding-block:var(--space-5) var(--space-4)}
+.cmp-hero__in>*{max-width:34ch}
+.cmp-hero__in .eyebrow{color:var(--amber)}
+.cmp-hero h1{margin:.08em 0 .2em;font-size:var(--step-4);color:var(--ink)}
+.cmp-hero__meta{font:400 .85rem/1.5 Inter,system-ui,sans-serif;color:var(--ink-soft)}
+.cmp-hero__cap{position:absolute;right:var(--space-3);bottom:.5rem;font:400 .66rem/1.3 Inter,sans-serif;
+ letter-spacing:.07em;color:color-mix(in srgb,var(--ink) 52%,transparent);text-align:right}
+.cmp-list{list-style:none;margin:var(--space-3) 0 0;padding:0;display:grid;gap:.6rem}
+.cmp-list a{display:grid;grid-template-columns:84px 1fr;gap:var(--space-2);align-items:center;
+ text-decoration:none;background:var(--bg-panel);border:1px solid var(--rule);
+ border-radius:var(--radius-lg);padding:.6rem;transition:.18s}
+.cmp-list a:hover{border-color:var(--amber);transform:translateY(-1px)}
+.cmp-list img{width:84px;height:62px;object-fit:cover;border-radius:calc(var(--radius) - 2px)}
+.cmp-list b{font-family:var(--font-display);font-weight:500;font-size:var(--step-1);color:var(--ink)}
+.cmp-list span{display:block;font:400 .78rem/1.45 Inter,sans-serif;color:var(--ink-soft);margin-top:.12rem}
+.vrow{background:var(--bg-panel);border:1px solid var(--rule);border-radius:var(--radius-lg);
+ padding:.8rem 1rem;margin-bottom:.55rem}
+.vrow b{font-family:var(--font-display);font-weight:500;font-size:var(--step-1)}
+.vrow i{display:block;font-style:normal;font:400 .8rem/1.4 Inter,sans-serif;color:var(--ink-soft);margin:.1rem 0 .5rem}
+.vrow audio{width:100%;height:36px}
+@media (max-width:860px){
+ .cmp-row,.cmp-heads{gap:.55rem}
+ .cmp-cell{padding:.45rem .55rem}
+ .cmp-cell p{font-size:.86rem;line-height:1.56}
+ .cmp-list a{grid-template-columns:62px 1fr}
+ .cmp-list img{width:62px;height:50px}}
+</style></head>
+<body class="cmp" data-sound-src="/assets/audio/wc/bed-stone-breath-creek.mp3" data-sound-name="the creek">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <nav class="nav wrap wrap--wide" aria-label="Primary">
+      <a class="brand" href="/"><img class="brand__logo" src="/assets/img/author-logo.png?v=2" alt="AncestralWatch logo" width="716" height="676"><span class="brand__wm">Ancestral<span class="brand__mark">Watch</span></span></a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">☰</button>
+      <ul class="nav__links" id="primary-nav" data-open="false">
+        <li><a href="/">Home</a></li>
+        <li class="has-menu">
+          <button aria-expanded="false" aria-haspopup="true">The Series</button>
+          <ul class="menu">
+            <li><a href="/series/"><span class="menu__num">All</span> The Series</a></li>
+            <li><a href="/series/stone-breath/" aria-current="page"><span class="menu__num">I</span> Stone Breath</a></li>
+            <li><a href="/series/by-lamplight/"><span class="menu__num">II</span> The Amber and the Stone</a></li>
+            <li><a href="/series/the-council-fire/"><span class="menu__num">III</span> The Council Fire</a></li>
+            <li><a href="/series/the-far-messengers/"><span class="menu__num">IV</span> The Far Messengers</a></li>
+            <li><a href="/reader/"><span class="menu__num">&mdash;</span> The Reader</a></li>
+          <li><a href="/start-here/">Start Here</a></li><li><a href="/read/stone-breath/">Read Free</a></li></ul>
+        </li>
+        <li><a href="/tools/">The Tools</a></li><li><a href="https://tribeawaken.com/" target="_blank" rel="noopener">TribeAwaken ↗</a></li>
+        <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+        <li><a href="/author/">The Author</a></li>
+        <li><a class="lang-toggle" href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a class="lang-toggle" href="/lt/" hreflang="lt" lang="lt" style="border-left:0;padding-left:0;">Lietuvių</a></li>
+        <li class="nav__cta"><a class="btn btn--primary" href="https://payhip.com/b/AhH6r" target="_blank" rel="noopener">Get the Book</a></li>
+      </ul>
+    </nav>
+
+  <div class="aw-langbar" aria-label="Languages">
+    <div class="wrap wrap--wide aw-langbar__in">
+      <p class="aw-langbar__lbl">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15 0 18M12 3c-2.6 2.6-2.6 15 0 18"/>
+        </svg><span>Read in</span>
+      </p>
+      <a href="/" data-lang="en" hreflang="en">English</a>
+      <a href="/ja/" data-lang="/ja/" hreflang="ja" lang="ja">日本語</a>
+      <a href="/lt/" data-lang="/lt/" hreflang="lt" lang="lt">Lietuvių</a>
+      <a class="aw-langbar__mail" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+  </header>
+<main id="main">
+
+<section class="cmp-hero">
+  <img src="/assets/img/wc/pine-bark.jpg" alt="Bark, close" fetchpriority="high">
+  <div class="cmp-hero__scrim"></div>
+  <div class="wrap wrap--wide cmp-hero__in">
+    <p class="eyebrow">Stone Breath · side by side · chapter 10</p>
+    <h1><em>The Envy Protocol</em></h1>
+    <p class="cmp-hero__meta">6 paragraphs differ · 60 identical</p>
+  </div>
+  <p class="cmp-hero__cap">photograph by Tony Skrelūnas</p>
+</section>
+
+<div class="cmp-bar"><div class="wrap wrap--wide cmp-bar__in">
+  <button class="cmp-btn" data-m="b">Both</button>
+  <button class="cmp-btn" data-m="l">Edited</button>
+  <button class="cmp-btn" data-m="r">Current</button>
+  <button class="cmp-btn" id="dbtn">Changes only</button>
+  <span class="cmp-sp"></span>
+  <a class="cmp-btn" href="../">All chapters</a><a class="cmp-btn" href="../ch09/">← Nine</a><a class="cmp-btn" href="../ch11/">Eleven →</a>
+</div></div>
+
+<section class="section section--tight"><div class="wrap wrap--wide">
+  <div class="cmp-heads"><div class="cmp-hd l"><b>Edited</b> — the new one</div>
+  <div class="cmp-hd r">Published — Draft2Digital, September 7 2026</div></div>
+  <div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">CHAPTER 10</div></div><div class="cmp-cell r"><div class="cmp-hh">CHAPTER 10</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">THE ENVY PROTOCOL</div></div><div class="cmp-cell r"><div class="cmp-hh">THE ENVY PROTOCOL</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">✵   ✵   ✵</div></div><div class="cmp-cell r"><div class="cmp-hh">✵   ✵   ✵</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Ada used to say: &#x27;The only thing worse than an enemy outside the family is an enemy inside the family. The first one you can see coming. The second one hands you a cup of coffee first.&#x27;&quot; – Tonas Yazzie</p></div><div class="cmp-cell r"><p>&quot;Ada used to say: &#x27;The only thing worse than an enemy outside the family is an enemy inside the family. The first one you can see coming. The second one hands you a cup of coffee first.&#x27;&quot; – Tonas Yazzie</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Ada told me once: ‘The only thing tougher than a Navajo woman is a Navajo woman who’s decided you’re worth the trouble.’ I think Austėja’s grandmother was the same.” — Tonas Yazzie</p></div><div class="cmp-cell r"><p>“Ada told me once: ‘The only thing tougher than a Navajo woman is a Navajo woman who’s decided you’re worth the trouble.’ I think Austėja’s grandmother was the same.” — Tonas Yazzie</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The call came late. Tonas was on the guesthouse porch, the river black and silver under the moon, when his phone buzzed. Austėja&#x27;s voice was tight. &quot;Can you come to Vilnius tomorrow? I need your help.&quot; &quot;What&#x27;s wrong?&quot; &quot;It&#x27;s Gintarė. Our starting guard. She&#x27;s... falling apart.&quot;</p></div><div class="cmp-cell r"><p>The call came late. Tonas was on the guesthouse porch, the river black and silver under the moon, when his phone buzzed. Austėja&#x27;s voice was tight. &quot;Can you come to Vilnius tomorrow? I need your help.&quot; &quot;What&#x27;s wrong?&quot; &quot;It&#x27;s Gintarė. Our starting guard. She&#x27;s... falling apart.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Training Center – Next Morning</p></div><div class="cmp-cell r"><p>The Training Center – Next Morning</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>Tonas arrived at the national training center before dawn, <mark class="in">and</mark> the gym was empty except for Austėja and a young woman sitting on the baseline <mark class="in">with</mark> her head in her hands <mark class="in">—</mark> tall, athletic, built for speed, but her shoulders curled forward <mark class="in">and</mark> her whole body folded like she was trying to disappear.</p></div><div class="cmp-cell r"><p>Tonas arrived at the national training center before dawn. The gym was empty except for Austėja and a young woman sitting on the baseline, her head in her hands. <mark class="out">She was</mark> tall, athletic, built for speed <mark class="out">–</mark> but her shoulders <mark class="out">were</mark> curled forward, her whole body folded like she was trying to disappear.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Gintarė,&quot; Austėja said softly, &quot;this is Tonas. The one I told you about.&quot; The young woman looked up. Dark circles under her eyes. Red-rimmed. She hadn&#x27;t been sleeping. &quot;I know who you are,&quot; Gintarė said. Her voice was flat. &quot;The American who talks to stones.&quot; Tonas smiled. &quot;That&#x27;s not the weirdest thing I&#x27;ve been called.&quot; She didn&#x27;t smile back.</p></div><div class="cmp-cell r"><p>&quot;Gintarė,&quot; Austėja said softly, &quot;this is Tonas. The one I told you about.&quot; The young woman looked up. Dark circles under her eyes. Red-rimmed. She hadn&#x27;t been sleeping. &quot;I know who you are,&quot; Gintarė said. Her voice was flat. &quot;The American who talks to stones.&quot; Tonas smiled. &quot;That&#x27;s not the weirdest thing I&#x27;ve been called.&quot; She didn&#x27;t smile back.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja sat beside her. &quot;Tell him what you told me.&quot; Gintarė stared at the floor. &quot;My shooting percentage has dropped twenty points in three weeks. I can&#x27;t sleep. I can&#x27;t eat. Every time I step on the court, I hear them.&quot; &quot;Hear who?&quot; Tonas asked. &quot;The ones who didn&#x27;t make the team. They sit in the stands during practice. They don&#x27;t say anything loud enough to be called out. But they talk to you. &#x27;She only made it because of her uncle.&#x27; &#x27;She&#x27;s not that good.&#x27; &#x27;Wait until the tournament – she&#x27;ll choke.&#x27;&quot; Her voice cracked. &quot;And the worst part is, I&#x27;m starting to believe them.&quot;</p></div><div class="cmp-cell r"><p>Austėja sat beside her. &quot;Tell him what you told me.&quot; Gintarė stared at the floor. &quot;My shooting percentage has dropped twenty points in three weeks. I can&#x27;t sleep. I can&#x27;t eat. Every time I step on the court, I hear them.&quot; &quot;Hear who?&quot; Tonas asked. &quot;The ones who didn&#x27;t make the team. They sit in the stands during practice. They don&#x27;t say anything loud enough to be called out. But they talk to you. &#x27;She only made it because of her uncle.&#x27; &#x27;She&#x27;s not that good.&#x27; &#x27;Wait until the tournament – she&#x27;ll choke.&#x27;&quot; Her voice cracked. &quot;And the worst part is, I&#x27;m starting to believe them.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas sat down on the floor across from her. Not above her. At her level. &quot;Tell me about your grandmother,&quot; he said. Gintarė blinked. &quot;What?&quot; &quot;Your grandmother. The one who raised you. Austėja mentioned her. She was a farmer, right?&quot; &quot;She... yes. She had a small farm near Ukmergė. Potatoes, beets, a few cows.&quot; &quot;Did she ever have a neighbor who was jealous of her?&quot; Gintarė was quiet for a moment. Then, slowly: &quot;There was a woman. She spread rumors that my grandmother&#x27;s butter was watered down. That she was cheating customers. My grandmother never said a word against her. She just kept making her butter. Kept selling it. Kept being kind.&quot; &quot;What happened?&quot; &quot;The woman&#x27;s own daughter started buying from my grandmother. Then the woman&#x27;s husband. Then the woman herself, pretending not to remember what she&#x27;d said.&quot; Gintarė looked up. &quot;How did you know that?&quot; &quot;Because that&#x27;s how it always works,&quot; Tonas said. &quot;The envious ones try to reduce you. The answer is never to argue. The answer is to keep building. Build so well, so consistently, that eventually there&#x27;s nothing left for the reducing to do.&quot;</p></div><div class="cmp-cell r"><p>Tonas sat down on the floor across from her. Not above her. At her level. &quot;Tell me about your grandmother,&quot; he said. Gintarė blinked. &quot;What?&quot; &quot;Your grandmother. The one who raised you. Austėja mentioned her. She was a farmer, right?&quot; &quot;She... yes. She had a small farm near Ukmergė. Potatoes, beets, a few cows.&quot; &quot;Did she ever have a neighbor who was jealous of her?&quot; Gintarė was quiet for a moment. Then, slowly: &quot;There was a woman. She spread rumors that my grandmother&#x27;s butter was watered down. That she was cheating customers. My grandmother never said a word against her. She just kept making her butter. Kept selling it. Kept being kind.&quot; &quot;What happened?&quot; &quot;The woman&#x27;s own daughter started buying from my grandmother. Then the woman&#x27;s husband. Then the woman herself, pretending not to remember what she&#x27;d said.&quot; Gintarė looked up. &quot;How did you know that?&quot; &quot;Because that&#x27;s how it always works,&quot; Tonas said. &quot;The envious ones try to reduce you. The answer is never to argue. The answer is to keep building. Build so well, so consistently, that eventually there&#x27;s nothing left for the reducing to do.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He reached into his pocket and pulled out a small, smooth stone – not his, a new one he&#x27;d picked up from the river that morning. &quot;My great-great-grandfather ran with a stone on his tongue. Not because it was traditional. Because it worked. It kept him calm when his lungs were burning and his legs were screaming. He passed it down. Now I&#x27;m passing this to you.&quot; He placed the stone in her hand. &quot;This is not magic. It&#x27;s a tool. When you hear the wisdom, hold it. Feel its weight. Breathe. In four, hold four, out six. Do it five times. That&#x27;s one minute. Then get back on the court.&quot; Gintarė closed her fingers around the stone. Her hand was shaking. &quot;I don&#x27;t know if I can,&quot; she admitted. Austėja put her arm around the young woman&#x27;s shoulders. &quot;You don&#x27;t have to know. You just have to try.&quot;</p></div><div class="cmp-cell r"><p>He reached into his pocket and pulled out a small, smooth stone – not his, a new one he&#x27;d picked up from the river that morning. &quot;My great-great-grandfather ran with a stone on his tongue. Not because it was traditional. Because it worked. It kept him calm when his lungs were burning and his legs were screaming. He passed it down. Now I&#x27;m passing this to you.&quot; He placed the stone in her hand. &quot;This is not magic. It&#x27;s a tool. When you hear the wisdom, hold it. Feel its weight. Breathe. In four, hold four, out six. Do it five times. That&#x27;s one minute. Then get back on the court.&quot; Gintarė closed her fingers around the stone. Her hand was shaking. &quot;I don&#x27;t know if I can,&quot; she admitted. Austėja put her arm around the young woman&#x27;s shoulders. &quot;You don&#x27;t have to know. You just have to try.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Japanese Tool – Naikan</p></div><div class="cmp-cell r"><p>The Japanese Tool – Naikan</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Later, after Gintarė had gone to rest, Tonas and Austėja sat in the empty gym. The morning light was beginning to filter through the high windows. &quot;There&#x27;s more to it than the stone,&quot; Tonas said. &quot;The envy she&#x27;s feeling – it&#x27;s not just from the others. It&#x27;s inside her too. She&#x27;s internalized their voices. That&#x27;s the real battle.&quot; Austėja nodded. &quot;What do we do?&quot; &quot;In Japan, they have a practice called Naikan. Three questions. But not the ones you think.&quot; He pulled out his journal and wrote: What have I received from the people who envy me? What have I given to them? What troubles have I caused them? Austėja read the list. &quot;No question about what they&#x27;ve done to her?&quot; &quot;That&#x27;s the point. Naikan breaks the victim mindset. It forces you to see the other person as human, not monster. It doesn&#x27;t excuse them. It just stops the self-righteous spiral that envy feeds on.&quot; &quot;You want her to do this? About the women muttering in the stands?&quot; &quot;No. That&#x27;s not her job. Her job is to keep playing. But you could do it. About the women. And maybe... about yourself.&quot; Austėja looked at him. &quot;What do you mean?&quot; &quot;You&#x27;ve been carrying something too. The weight of staying when everyone left. The weight of being the one who records the songs because no one else will. The weight of watching your mother die of grief because she had no tools.&quot; She didn&#x27;t speak. &quot;You don&#x27;t have to answer now,&quot; he said. &quot;Just hold the questions. Let them work.&quot;</p></div><div class="cmp-cell r"><p>Later, after Gintarė had gone to rest, Tonas and Austėja sat in the empty gym. The morning light was beginning to filter through the high windows. &quot;There&#x27;s more to it than the stone,&quot; Tonas said. &quot;The envy she&#x27;s feeling – it&#x27;s not just from the others. It&#x27;s inside her too. She&#x27;s internalized their voices. That&#x27;s the real battle.&quot; Austėja nodded. &quot;What do we do?&quot; &quot;In Japan, they have a practice called Naikan. Three questions. But not the ones you think.&quot; He pulled out his journal and wrote: What have I received from the people who envy me? What have I given to them? What troubles have I caused them? Austėja read the list. &quot;No question about what they&#x27;ve done to her?&quot; &quot;That&#x27;s the point. Naikan breaks the victim mindset. It forces you to see the other person as human, not monster. It doesn&#x27;t excuse them. It just stops the self-righteous spiral that envy feeds on.&quot; &quot;You want her to do this? About the women muttering in the stands?&quot; &quot;No. That&#x27;s not her job. Her job is to keep playing. But you could do it. About the women. And maybe... about yourself.&quot; Austėja looked at him. &quot;What do you mean?&quot; &quot;You&#x27;ve been carrying something too. The weight of staying when everyone left. The weight of being the one who records the songs because no one else will. The weight of watching your mother die of grief because she had no tools.&quot; She didn&#x27;t speak. &quot;You don&#x27;t have to answer now,&quot; he said. &quot;Just hold the questions. Let them work.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Lithuanian Tool – The Rye Field</p></div><div class="cmp-cell r"><p>The Lithuanian Tool – The Rye Field</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>That afternoon, Tonas asked Austėja to take him to a rye field. &quot;A what?&quot; &quot;A rye field. You said the old farmers walked through them at dawn. I want to see it.&quot; She drove him to the edge of the village, where a field of rye stretched toward the forest, golden in the late light. The stalks were tall, straight, each one growing independently but together forming a living wall. Tonas walked into the field. The stalks brushed his arms, his shoulders. He walked slowly, deliberately, until he was deep enough that he could no longer see the road. Austėja followed. &quot;What are you doing?&quot; &quot;The teaching,&quot; he said. &quot;The rye doesn&#x27;t care what grows next to it. It just grows. It doesn&#x27;t look sideways. It doesn&#x27;t lie about the wheat. It reaches for the sun, and that&#x27;s all.&quot; He turned to face her. &quot;Gintarė needs to become the rye. Not by ignoring the talk – by outgrowing them. By becoming so focused on her own path that the noise becomes background noise. She doesn&#x27;t need to fight the limited resource mentality. She just needs to outgrow it.&quot; Austėja was quiet. Then: &quot;That&#x27;s beautiful. But how do you teach someone to do that?&quot; &quot;You don&#x27;t. You show them. You walk beside them. You remind them every day until it becomes bone-deep.&quot;</p></div><div class="cmp-cell r"><p>That afternoon, Tonas asked Austėja to take him to a rye field. &quot;A what?&quot; &quot;A rye field. You said the old farmers walked through them at dawn. I want to see it.&quot; She drove him to the edge of the village, where a field of rye stretched toward the forest, golden in the late light. The stalks were tall, straight, each one growing independently but together forming a living wall. Tonas walked into the field. The stalks brushed his arms, his shoulders. He walked slowly, deliberately, until he was deep enough that he could no longer see the road. Austėja followed. &quot;What are you doing?&quot; &quot;The teaching,&quot; he said. &quot;The rye doesn&#x27;t care what grows next to it. It just grows. It doesn&#x27;t look sideways. It doesn&#x27;t lie about the wheat. It reaches for the sun, and that&#x27;s all.&quot; He turned to face her. &quot;Gintarė needs to become the rye. Not by ignoring the talk – by outgrowing them. By becoming so focused on her own path that the noise becomes background noise. She doesn&#x27;t need to fight the limited resource mentality. She just needs to outgrow it.&quot; Austėja was quiet. Then: &quot;That&#x27;s beautiful. But how do you teach someone to do that?&quot; &quot;You don&#x27;t. You show them. You walk beside them. You remind them every day until it becomes bone-deep.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Third Arrow – A Hard Truth</p></div><div class="cmp-cell r"><p>The Third Arrow – A Hard Truth</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>That evening, the three of them sat in a small conference room at the training center. Gintarė looked better – not fixed, but calmer. The stone was in her hand. &quot;I have to tell you something hard,&quot; Tonas said. &quot;Not to hurt you. To help you.&quot; Gintarė nodded. &quot;In Japan, they teach about the three arrows. The first arrow is what someone does to you – the words that cut, the rumor, the attack. The second arrow is your reaction – the anger, the replaying, the sleepless nights. The third arrow is what you do because of your reaction. Gossip back. Undermine. Quit. Self-destruct.&quot; He leaned forward. &quot;The women in the stands are shooting the first arrow. You can&#x27;t stop that. But you can stop shooting the second and third arrows at yourself. Every time you replay their words, you&#x27;re pulling the second arrow. Every time you doubt your own talent, you&#x27;re pulling the third.&quot; Gintarė&#x27;s eyes filled with tears. &quot;How do I stop?&quot; &quot;You don&#x27;t stop the feelings. You just stop acting on them. You feel the envy, the fear, the shame – and you breathe. You hold the stone. You say: This is not mine to carry. Then you get back on the court.&quot; Austėja reached over and took Gintarė&#x27;s free hand. &quot;You are not what they say. You are what you do. And what you do is play basketball. Beautifully. Ferociously. Like your grandmother made butter – quietly, consistently, without apology.&quot; Gintarė laughed – a wet, broken sound. &quot;She would have liked you.&quot; &quot;She would have liked Tonas more,&quot; Austėja said. &quot;He&#x27;s the one who talks to stones.&quot;</p></div><div class="cmp-cell r"><p>That evening, the three of them sat in a small conference room at the training center. Gintarė looked better – not fixed, but calmer. The stone was in her hand. &quot;I have to tell you something hard,&quot; Tonas said. &quot;Not to hurt you. To help you.&quot; Gintarė nodded. &quot;In Japan, they teach about the three arrows. The first arrow is what someone does to you – the words that cut, the rumor, the attack. The second arrow is your reaction – the anger, the replaying, the sleepless nights. The third arrow is what you do because of your reaction. Gossip back. Undermine. Quit. Self-destruct.&quot; He leaned forward. &quot;The women in the stands are shooting the first arrow. You can&#x27;t stop that. But you can stop shooting the second and third arrows at yourself. Every time you replay their words, you&#x27;re pulling the second arrow. Every time you doubt your own talent, you&#x27;re pulling the third.&quot; Gintarė&#x27;s eyes filled with tears. &quot;How do I stop?&quot; &quot;You don&#x27;t stop the feelings. You just stop acting on them. You feel the envy, the fear, the shame – and you breathe. You hold the stone. You say: This is not mine to carry. Then you get back on the court.&quot; Austėja reached over and took Gintarė&#x27;s free hand. &quot;You are not what they say. You are what you do. And what you do is play basketball. Beautifully. Ferociously. Like your grandmother made butter – quietly, consistently, without apology.&quot; Gintarė laughed – a wet, broken sound. &quot;She would have liked you.&quot; &quot;She would have liked Tonas more,&quot; Austėja said. &quot;He&#x27;s the one who talks to stones.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Tournament – Three Days Later</p></div><div class="cmp-cell r"><p>The Tournament – Three Days Later</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>Tonas watched from the stands <mark class="in">—</mark> not the VIP section <mark class="in">but</mark> the back row, where he could see the whole court and the whole crowd. Gintarė was different. Not fixed, <mark class="in">because</mark> no one gets fixed in three days, but present: her shoulders back, her eyes clear. When the chatter started from a cluster of women behind the bench she didn&#x27;t flinch. She held the stone in her pocket <mark class="in">—</mark> he could see her hand there between plays <mark class="in">—</mark> and she breathed. She missed her first two shots <mark class="in">and</mark> the chatter got louder. Then she hit a three, then a steal, then a fast break layup, then another three, <mark class="in">and</mark> by the fourth quarter the chatter had stopped <mark class="in">—</mark> not because the women had changed, <mark class="in">but</mark> because there was nothing left to chatter about.</p></div><div class="cmp-cell r"><p>Tonas watched from the stands. Not the VIP section <mark class="out">–</mark> the back row, where he could see the whole court and the whole crowd. Gintarė was different. Not fixed <mark class="out">–</mark> no one gets fixed in three days. But present. Her shoulders <mark class="out">were</mark> back. Her eyes <mark class="out">were</mark> clear. When the chatter started from a cluster of women behind the bench, she didn&#x27;t flinch. She held the stone in her pocket <mark class="out">–</mark> he could see her hand there between plays <mark class="out">–</mark> and she breathed. She missed her first two shots. The chatter got louder. Then she hit a three. Then a steal. Then a fast break layup. Then another three. By the fourth quarter, the chatter had stopped. Not because the women had changed <mark class="out">–</mark> because there was nothing left to chatter about.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>After the game, Gintarė found him in the hallway. She was still in her uniform, sweat on her face, a towel around her neck. &quot;Twenty-three points,&quot; she said. &quot;Season high.&quot; &quot;I know.&quot; She held out her hand. The stone was still there, warm from her pocket. &quot;Keep it,&quot; he said. &quot;Pass it on someday.&quot; She closed her fingers around it. &quot;Thank you. For the stories. For the questions. For not telling me to just &#x27;be positive.&#x27;&quot; He smiled. &quot;That&#x27;s not how any of this works.&quot; &quot;I know that now.&quot;</p></div><div class="cmp-cell r"><p>After the game, Gintarė found him in the hallway. She was still in her uniform, sweat on her face, a towel around her neck. &quot;Twenty-three points,&quot; she said. &quot;Season high.&quot; &quot;I know.&quot; She held out her hand. The stone was still there, warm from her pocket. &quot;Keep it,&quot; he said. &quot;Pass it on someday.&quot; She closed her fingers around it. &quot;Thank you. For the stories. For the questions. For not telling me to just &#x27;be positive.&#x27;&quot; He smiled. &quot;That&#x27;s not how any of this works.&quot; &quot;I know that now.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The Porch – That Night</p></div><div class="cmp-cell r"><p>The Porch – That Night</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas sat on the guesthouse porch. The river moved. Austėja appeared with two cups of tea. She sat beside him. &quot;You&#x27;re good at that,&quot; she said. &quot;At what?&quot; &quot;At seeing people. At knowing what they need before they say it.&quot; He looked at the river. &quot;That&#x27;s just survival. You learn it when you grow up in a world that doesn&#x27;t always want you to succeed.&quot; She was quiet for a moment. Then: &quot;The Naikan questions. You asked me to hold them.&quot; &quot;I did.&quot; &quot;I&#x27;ve been holding them. About my mother. About the women who left the village. About... you.&quot; He waited. &quot;What have I received from you? A stone. A story. A way of breathing when the world gets loud. What have I given you? Not enough. What troubles have I caused you? Too many to count.&quot; He turned to look at her. &quot;That&#x27;s not how it works. You don&#x27;t count the troubles. You just keep showing up.&quot; She leaned her head against his shoulder. &quot;I&#x27;m scared,&quot; she said. &quot;Of what?&quot; &quot;Of needing you. Of losing you. Of becoming my mother.&quot; He took her hand. &quot;You won&#x27;t. Because you have tools. And you have a village. And you have me – not because I&#x27;m going to save you, but because I&#x27;m going to stand beside you while you save yourself.&quot; She didn&#x27;t speak. She didn&#x27;t need to. The river moved. The stars came out. For the first time in a long time, neither of them was in a hurry.</p></div><div class="cmp-cell r"><p>Tonas sat on the guesthouse porch. The river moved. Austėja appeared with two cups of tea. She sat beside him. &quot;You&#x27;re good at that,&quot; she said. &quot;At what?&quot; &quot;At seeing people. At knowing what they need before they say it.&quot; He looked at the river. &quot;That&#x27;s just survival. You learn it when you grow up in a world that doesn&#x27;t always want you to succeed.&quot; She was quiet for a moment. Then: &quot;The Naikan questions. You asked me to hold them.&quot; &quot;I did.&quot; &quot;I&#x27;ve been holding them. About my mother. About the women who left the village. About... you.&quot; He waited. &quot;What have I received from you? A stone. A story. A way of breathing when the world gets loud. What have I given you? Not enough. What troubles have I caused you? Too many to count.&quot; He turned to look at her. &quot;That&#x27;s not how it works. You don&#x27;t count the troubles. You just keep showing up.&quot; She leaned her head against his shoulder. &quot;I&#x27;m scared,&quot; she said. &quot;Of what?&quot; &quot;Of needing you. Of losing you. Of becoming my mother.&quot; He took her hand. &quot;You won&#x27;t. Because you have tools. And you have a village. And you have me – not because I&#x27;m going to save you, but because I&#x27;m going to stand beside you while you save yourself.&quot; She didn&#x27;t speak. She didn&#x27;t need to. The river moved. The stars came out. For the first time in a long time, neither of them was in a hurry.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>The Wednesday night games became a ritual, <mark class="in">and</mark> not just for Tonas and Austėja <mark class="in">but</mark> for the whole village <mark class="in">—</mark> Old Jonas brought a folding chair and commentary, Rytis kept a running bet on who would win, <mark class="in">and</mark> Ugnė kept score in her notebook, her stats growing more elaborate each week.</p></div><div class="cmp-cell r"><p>The Wednesday night games became a ritual. Not just for Tonas and Austėja <mark class="out">–</mark> for the whole village. Old Jonas brought a folding chair and commentary. Rytis kept a running bet on who would win. Ugnė kept score in her notebook, her stats growing more elaborate each week.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;She&#x27;s shooting thirty percent from the free-throw line,&quot; Ugnė announced one evening.</p></div><div class="cmp-cell r"><p>&quot;She&#x27;s shooting thirty percent from the free-throw line,&quot; Ugnė announced one evening.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I&#x27;m shooting thirty percent because the rim is bent,&quot; Tonas said.</p></div><div class="cmp-cell r"><p>&quot;I&#x27;m shooting thirty percent because the rim is bent,&quot; Tonas said.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Excuses are for losers.&quot;</p></div><div class="cmp-cell r"><p>&quot;Excuses are for losers.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja laughed. &quot;She&#x27;s right.&quot;</p></div><div class="cmp-cell r"><p>Austėja laughed. &quot;She&#x27;s right.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You&#x27;re both impossible.&quot;</p></div><div class="cmp-cell r"><p>&quot;You&#x27;re both impossible.&quot;</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>They played <mark class="in">and</mark> he lost again, <mark class="in">and</mark> he was starting to think she let him win sometimes, just to keep him coming back. But he never asked. Some things were better left uncertain.</p></div><div class="cmp-cell r"><p>They played. He lost again. He was starting to think she let him win sometimes, just to keep him coming back. But he never asked. Some things were better left uncertain.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>One night, after a particularly brutal loss, Tonas sat on the asphalt, catching his breath. Austėja sat down beside him.</p></div><div class="cmp-cell r"><p>One night, after a particularly brutal loss, Tonas sat on the asphalt, catching his breath. Austėja sat down beside him.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You&#x27;re getting better,&quot; she said.</p></div><div class="cmp-cell r"><p>&quot;You&#x27;re getting better,&quot; she said.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You&#x27;re getting worse at lying.&quot;</p></div><div class="cmp-cell r"><p>&quot;You&#x27;re getting worse at lying.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I&#x27;m not lying. You&#x27;re learning to read my hips. That&#x27;s not nothing.&quot;</p></div><div class="cmp-cell r"><p>&quot;I&#x27;m not lying. You&#x27;re learning to read my hips. That&#x27;s not nothing.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He looked at her. &quot;Why do you keep playing me? You could be doing anything else.&quot;</p></div><div class="cmp-cell r"><p>He looked at her. &quot;Why do you keep playing me? You could be doing anything else.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She was quiet for a moment. Then: &quot;Because you don&#x27;t quit. Even when you&#x27;re losing. Even when you&#x27;re tired. Even when Ugnė is making fun of your free throws.&quot;</p></div><div class="cmp-cell r"><p>She was quiet for a moment. Then: &quot;Because you don&#x27;t quit. Even when you&#x27;re losing. Even when you&#x27;re tired. Even when Ugnė is making fun of your free throws.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;That&#x27;s not a reason.&quot;</p></div><div class="cmp-cell r"><p>&quot;That&#x27;s not a reason.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;It&#x27;s the only reason that matters.&quot;</p></div><div class="cmp-cell r"><p>&quot;It&#x27;s the only reason that matters.&quot;</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>She stood up, brushed off her shorts, and held out her hand, <mark class="in">and</mark> he took it, <mark class="in">and</mark> she pulled him to his feet.</p></div><div class="cmp-cell r"><p>She stood up, brushed off her shorts, and held out her hand. He took it. She pulled him to his feet.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Same time next week,&quot; she said.</p></div><div class="cmp-cell r"><p>&quot;Same time next week,&quot; she said.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Same time next week.&quot;</p></div><div class="cmp-cell r"><p>&quot;Same time next week.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ugnė closed her notebook. &quot;I&#x27;m putting twenty euros on Mama.&quot;</p></div><div class="cmp-cell r"><p>Ugnė closed her notebook. &quot;I&#x27;m putting twenty euros on Mama.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You don&#x27;t have twenty euros.&quot;</p></div><div class="cmp-cell r"><p>&quot;You don&#x27;t have twenty euros.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I&#x27;ll owe you.&quot;</p></div><div class="cmp-cell r"><p>&quot;I&#x27;ll owe you.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;That&#x27;s not how betting works.&quot;</p></div><div class="cmp-cell r"><p>&quot;That&#x27;s not how betting works.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;It&#x27;s how it works when you&#x27;re eleven.&quot;</p></div><div class="cmp-cell r"><p>&quot;It&#x27;s how it works when you&#x27;re eleven.&quot;</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>Tonas laughed, Austėja shook her head, <mark class="in">and</mark> they walked home together, the three of them, the river moving beside them <mark class="in">and</mark> the stars already coming out.</p></div><div class="cmp-cell r"><p>Tonas laughed. Austėja shook her head. They walked home together, the three of them, the river moving beside them, the stars already coming out.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">── ONA ──</div></div><div class="cmp-cell r"><div class="cmp-hh">── ONA ──</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>So they have turned on you. You did well. Instead of joy you found cold faces. And you have been lying awake asking what you did wrong.</p></div><div class="cmp-cell r"><p>So they have turned on you. You did well. Instead of joy you found cold faces. And you have been lying awake asking what you did wrong.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>You did nothing wrong. You succeeded. That is what they cannot forgive. Hear me. I know this one in my bones.</p></div><div class="cmp-cell r"><p>You did nothing wrong. You succeeded. That is what they cannot forgive. Hear me. I know this one in my bones.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>In my country they forbade us our own language. The press. The alphabet. The right to read our mothers&#x27; words. Not because we had committed a crime. Because a people who remember themselves cannot be ruled. They were punishing our existence. The way they punish yours now. In smaller ways. In a hundred rooms.</p></div><div class="cmp-cell r"><p>In my country they forbade us our own language. The press. The alphabet. The right to read our mothers&#x27; words. Not because we had committed a crime. Because a people who remember themselves cannot be ruled. They were punishing our existence. The way they punish yours now. In smaller ways. In a hundred rooms.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>We did not stop singing. We could not imagine a free country. We sang anyway. That is the whole secret. What they try to erase, you sing louder.</p></div><div class="cmp-cell r"><p>We did not stop singing. We could not imagine a free country. We sang anyway. That is the whole secret. What they try to erase, you sing louder.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>So do not shrink to make them comfortable. Do not dim your light so their eyes stop hurting. The shrinking buys you no peace. It only teaches them that the price of their comfort is your silence. They will charge it again and again. You are not too much. You were never too much. Sing louder.</p></div><div class="cmp-cell r"><p>So do not shrink to make them comfortable. Do not dim your light so their eyes stop hurting. The shrinking buys you no peace. It only teaches them that the price of their comfort is your silence. They will charge it again and again. You are not too much. You were never too much. Sing louder.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">── THE WARRIOR-SAMURAI ──</div></div><div class="cmp-cell r"><div class="cmp-hh">── THE WARRIOR-SAMURAI ──</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Now. What you do with your hands.</p></div><div class="cmp-cell r"><p>Now. What you do with your hands.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The first arrow strikes. The slight. The cold word. The credit stolen. That wound you did not choose. But there is always a second arrow. And a third. Those you fire into yourself. The replaying. The argument in your head. The long speech where you finally make them understand. Do not send the third arrow.</p></div><div class="cmp-cell r"><p>The first arrow strikes. The slight. The cold word. The credit stolen. That wound you did not choose. But there is always a second arrow. And a third. Those you fire into yourself. The replaying. The argument in your head. The long speech where you finally make them understand. Do not send the third arrow.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The fight they want drags you down to where they already stand. On that ground they cannot lose. Losing your peace was the whole aim.</p></div><div class="cmp-cell r"><p>The fight they want drags you down to where they already stand. On that ground they cannot lose. Losing your peace was the whole aim.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The sword stays sheathed. Not from weakness. From discernment. Your strength is there to shield what you are building. Not to win an argument with someone who is injured. Ask only this. Is this a battle worth fighting? Or is it my pride asking to win? Almost always, it is not worth the sword.</p></div><div class="cmp-cell r"><p>The sword stays sheathed. Not from weakness. From discernment. Your strength is there to shield what you are building. Not to win an argument with someone who is injured. Ask only this. Is this a battle worth fighting? Or is it my pride asking to win? Almost always, it is not worth the sword.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>So you answer the way the strong have always answered. You do not explain. You do not retaliate. You return to the work. You build so well, so steadily, that in time there is nothing left for the reducing to do. Keep the sword sheathed. Keep building. The longer way — the heart and the hands — is at the back of this book.</p></div><div class="cmp-cell r"><p>So you answer the way the strong have always answered. You do not explain. You do not retaliate. You return to the work. You build so well, so steadily, that in time there is nothing left for the reducing to do. Keep the sword sheathed. Keep building. The longer way — the heart and the hands — is at the back of this book.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Stone Breath</p></div><div class="cmp-cell r"><p>Stone Breath</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Book One of The Ancestral Watch Series</p></div><div class="cmp-cell r"><p>Book One of The Ancestral Watch Series</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Stone Breath</p></div><div class="cmp-cell r"><p>Stone Breath</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">✵ ✵ ✵</div></div><div class="cmp-cell r"><div class="cmp-hh">✵ ✵ ✵</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>A Story of Remembering —
+and What the Ancestors Left Us</p></div><div class="cmp-cell r"><p>A Story of Remembering —
+and What the Ancestors Left Us</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tony Skrelūnas</p></div><div class="cmp-cell r"><p>Tony Skrelūnas</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Chapter 14: The Injury And The Herb Walk</p></div><div class="cmp-cell r"><p>Chapter 14: The Injury And The Herb Walk</p></div></div>
+  <p class="muted" style="margin-top:var(--space-4);font-size:var(--step--1);max-width:60ch">
+  Gold marks what the edited version added or changed; gray marks the words it replaced.
+  The right column is the text on Payhip and Barnes &amp; Noble today. Nothing here is published.</p>
+</div></section>
+</main>
+<footer class="site-footer">
+    <div class="wrap wrap--wide">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">AncestralWatch</p>
+          <p class="footer__tag">Instructions, carried.</p>
+          <p style="margin-top: var(--space-2); max-width: 34ch;">The home of The Ancestral Watch Series by Tony Skrelūnas.</p>
+        </div>
+        <div>
+          <h4>The Series</h4>
+          <ul>
+            <li><a href="/series/stone-breath/">Stone Breath</a></li>
+            <li><a href="/series/the-council-fire/">The Council Fire</a></li>
+            <li><a href="/series/">All four books</a></li>
+            <li><a href="/tools/">The free Tools</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/far-messengers/">The Far Messengers (brand)</a></li>
+            <li><a href="/author/">The Author</a></li>
+            <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+            <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/lt/" hreflang="lt" lang="lt">Lietuvių</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>© 2026 Ancestral Watch · Tony Skrelūnas. All rights reserved.</span>
+        <span>Instructions, carried.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/js/main.js?v=11" defer></script>
+<script src="/js/vendor/gsap.min.js"></script>
+<script src="/js/vendor/ScrollTrigger.min.js"></script>
+<script src="/js/vendor/lenis.min.js"></script>
+<script src="/js/aw-world.js?v=20261105"></script>
+<script>
+(function(){var b=document.body;
+ function set(m){b.classList.remove('only-l','only-r');
+  if(m==='l')b.classList.add('only-l');if(m==='r')b.classList.add('only-r');
+  document.querySelectorAll('[data-m]').forEach(function(x){x.classList.toggle('on',x.dataset.m===m)});
+  try{localStorage.setItem('sbcmp-m',m)}catch(e){}}
+ function diffs(on){b.classList.toggle('diffs',on);
+  var t=document.getElementById('dbtn');if(t)t.classList.toggle('on',on);
+  try{localStorage.setItem('sbcmp-d',on?'1':'')}catch(e){}}
+ document.querySelectorAll('[data-m]').forEach(function(x){x.onclick=function(){set(x.dataset.m)}});
+ var d=document.getElementById('dbtn');
+ if(d)d.onclick=function(){diffs(!b.classList.contains('diffs'))};
+ var m='b',dd=false;
+ try{m=localStorage.getItem('sbcmp-m')||'b';dd=!!localStorage.getItem('sbcmp-d')}catch(e){}
+ set(m);diffs(dd);})();
+</script>
+</body></html>

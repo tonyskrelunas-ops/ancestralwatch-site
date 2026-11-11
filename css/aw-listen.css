@@ -1,0 +1,43 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   ANCESTRAL WATCH — the Listen player on the free readings (11/10/2026)
+   One card near the top of each free reading: "Listen · 9 min", play/pause,
+   a progress bar you can tap or drag. Cream, gold and ink, like the voice
+   cards on the book pages. No blend modes, no backdrop filters (iPhone).
+   ═══════════════════════════════════════════════════════════════════════ */
+.aw-listen{--al-ink:#3B3020;--al-soft:#6E5E48;--al-gold:#B98D3E;--al-deep:#91691F;--al-paper:#FFFCF4;
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:.95rem 1.05rem;align-items:center;
+  width:100%;max-width:34rem;margin:1.6rem 0 0;padding:.95rem 1.15rem .95rem .95rem;box-sizing:border-box;
+  background:var(--al-paper);border:1px solid rgba(59,48,32,.16);border-radius:18px;color:var(--al-ink);
+  box-shadow:0 18px 40px -30px rgba(59,48,32,.55),0 2px 6px -4px rgba(59,48,32,.18);
+  font-family:var(--font-body,var(--body,"Inter",system-ui,-apple-system,"Segoe UI",sans-serif));text-align:left}
+.aw-listen--center{margin-left:auto;margin-right:auto}
+.aw-listen .aw-listen__btn{width:58px;height:58px;border-radius:50%;border:0;padding:0;margin:0;cursor:pointer;flex:none;
+  display:grid;place-items:center;background:var(--al-gold);color:#2A2114;
+  box-shadow:0 10px 22px -12px rgba(59,48,32,.6);transition:background .2s ease,color .2s ease,transform .2s ease;
+  -webkit-tap-highlight-color:transparent}
+.aw-listen .aw-listen__btn:hover{background:var(--al-deep);color:#FFFCF4}
+.aw-listen .aw-listen__btn:active{transform:scale(.96)}
+.aw-listen .aw-listen__btn:focus-visible{outline:2px solid var(--al-deep);outline-offset:3px}
+.aw-listen .aw-listen__btn svg{width:24px;height:24px;fill:currentColor;display:block}
+.aw-listen .aw-listen__btn .ic-play{margin-left:3px}
+.aw-listen .aw-listen__btn .ic-pause,.aw-listen.is-playing .aw-listen__btn .ic-play{display:none}
+.aw-listen.is-playing .aw-listen__btn .ic-pause{display:block}
+.aw-listen.is-waiting .aw-listen__btn{animation:aw-listen-wait 1.2s ease-in-out infinite}
+@keyframes aw-listen-wait{50%{box-shadow:0 0 0 7px rgba(185,141,62,.22)}}
+.aw-listen .aw-listen__body{min-width:0}
+.aw-listen .aw-listen__top{display:flex;align-items:baseline;justify-content:space-between;gap:.8rem;margin:0 0 .55rem}
+.aw-listen .aw-listen__k{margin:0;font-size:.78rem;line-height:1.2;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--al-deep)}
+.aw-listen .aw-listen__t{margin:0;font-size:.8rem;line-height:1.2;color:var(--al-soft);font-variant-numeric:tabular-nums;white-space:nowrap}
+.aw-listen .aw-listen__bar{position:relative;height:22px;cursor:pointer;touch-action:none;-webkit-tap-highlight-color:transparent;outline:0}
+.aw-listen .aw-listen__bar::before{content:"";position:absolute;left:0;right:0;top:9px;height:4px;border-radius:4px;background:rgba(59,48,32,.14)}
+.aw-listen .aw-listen__fill{position:absolute;left:0;top:9px;height:4px;width:100%;border-radius:4px;background:var(--al-gold);
+  transform-origin:left center;transform:scaleX(0)}
+.aw-listen .aw-listen__knob{position:absolute;top:5px;left:0;width:12px;height:12px;margin-left:-6px;border-radius:50%;
+  background:var(--al-deep);box-shadow:0 1px 4px rgba(59,48,32,.35);opacity:0;transition:opacity .2s ease}
+.aw-listen.is-started .aw-listen__knob,.aw-listen .aw-listen__bar:hover .aw-listen__knob,.aw-listen .aw-listen__bar:focus-visible .aw-listen__knob{opacity:1}
+.aw-listen .aw-listen__bar:focus-visible::before{box-shadow:0 0 0 2px rgba(145,105,31,.45)}
+@media (max-width:520px){
+  .aw-listen{gap:.8rem .85rem;padding:.85rem .95rem .85rem .85rem;border-radius:16px}
+  .aw-listen .aw-listen__btn{width:52px;height:52px}
+}
+@media (prefers-reduced-motion:reduce){.aw-listen.is-waiting .aw-listen__btn{animation:none}}

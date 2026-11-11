@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Stone Breath — Nine · The First Date — side by side</title>
+<meta name="description" content="Chapter 9 of Stone Breath, the edited version beside the published one.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/style.css?v=5">
+<link rel="stylesheet" href="/assets/daylight.css?v=8">
+<link rel="stylesheet" href="/css/aw-world.css?v=20261105">
+<style>
+.cmp{--in:color-mix(in srgb,var(--amber) 15%,transparent);
+     --out:color-mix(in srgb,var(--ink) 6%,transparent)}
+.cmp-bar{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 92%,transparent);
+ backdrop-filter:blur(9px);border-bottom:1px solid var(--rule);padding:.6rem 0;margin-bottom:var(--space-2)}
+.cmp-bar__in{display:flex;gap:.45rem;flex-wrap:wrap;align-items:center}
+.cmp-btn{font:500 .8rem/1 Inter,system-ui,sans-serif;letter-spacing:.03em;padding:.52rem .9rem;
+ border:1px solid var(--rule);border-radius:999px;background:var(--bg-panel);color:var(--ink);
+ cursor:pointer;text-decoration:none;display:inline-block;transition:.18s}
+.cmp-btn:hover{border-color:var(--amber)}
+.cmp-btn.on{background:var(--amber);border-color:var(--amber);color:#fff}
+.cmp-sp{flex:1 1 auto}
+.cmp-heads{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);margin:var(--space-3) 0 .2rem}
+.cmp-hd{font:500 .68rem/1.3 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+ color:var(--ink-soft);padding-bottom:.45rem;border-bottom:1px solid var(--rule)}
+.cmp-hd b{color:var(--amber);font-weight:500}
+.cmp-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);align-items:start;margin-bottom:.15rem}
+.cmp-cell{padding:.55rem .85rem;border-radius:var(--radius)}
+.cmp-row.chg .cmp-cell.l{background:var(--in);box-shadow:inset 3px 0 0 var(--amber)}
+.cmp-row.chg .cmp-cell.r{background:var(--out);box-shadow:inset 3px 0 0 var(--rule)}
+.cmp-cell p{margin:0;font-size:var(--step-0);line-height:1.68}
+.cmp-cell.gone{opacity:.42;font-style:italic;color:var(--ink-soft)}
+.cmp-cell.gone:after{content:"— not in this version";font-size:var(--step--1)}
+.cmp-hh{font:500 .72rem/1.4 Inter,system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+ color:var(--amber);text-align:center;margin:1.2em 0 .5em}
+.cmp-orn{text-align:center;color:var(--amber);letter-spacing:.55em;margin:1em 0}
+mark{background:none;color:inherit;padding:0}
+.cmp-row.chg mark.in{background:color-mix(in srgb,var(--amber) 34%,transparent);border-radius:3px;padding:0 .14em}
+.cmp-row.chg mark.out{background:color-mix(in srgb,var(--ink) 11%,transparent);border-radius:3px;padding:0 .14em}
+body.only-l .cmp-cell.r,body.only-l .cmp-hd.r{display:none}
+body.only-l .cmp-row,body.only-l .cmp-heads{grid-template-columns:1fr}
+body.only-r .cmp-cell.l,body.only-r .cmp-hd.l{display:none}
+body.only-r .cmp-row,body.only-r .cmp-heads{grid-template-columns:1fr}
+body.diffs .cmp-row.same{display:none}
+.cmp-hero{position:relative;min-height:clamp(230px,40vh,420px);display:flex;align-items:flex-end;
+ overflow:hidden;background:var(--bg)}
+.cmp-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cmp-hero__scrim{position:absolute;inset:0;background:
+ linear-gradient(100deg,color-mix(in srgb,var(--bg) 97%,transparent) 0%,
+ color-mix(in srgb,var(--bg) 90%,transparent) 36%,
+ color-mix(in srgb,var(--bg) 42%,transparent) 66%,
+ color-mix(in srgb,var(--bg) 6%,transparent) 100%)}
+.cmp-hero__in{position:relative;padding-block:var(--space-5) var(--space-4)}
+.cmp-hero__in>*{max-width:34ch}
+.cmp-hero__in .eyebrow{color:var(--amber)}
+.cmp-hero h1{margin:.08em 0 .2em;font-size:var(--step-4);color:var(--ink)}
+.cmp-hero__meta{font:400 .85rem/1.5 Inter,system-ui,sans-serif;color:var(--ink-soft)}
+.cmp-hero__cap{position:absolute;right:var(--space-3);bottom:.5rem;font:400 .66rem/1.3 Inter,sans-serif;
+ letter-spacing:.07em;color:color-mix(in srgb,var(--ink) 52%,transparent);text-align:right}
+.cmp-list{list-style:none;margin:var(--space-3) 0 0;padding:0;display:grid;gap:.6rem}
+.cmp-list a{display:grid;grid-template-columns:84px 1fr;gap:var(--space-2);align-items:center;
+ text-decoration:none;background:var(--bg-panel);border:1px solid var(--rule);
+ border-radius:var(--radius-lg);padding:.6rem;transition:.18s}
+.cmp-list a:hover{border-color:var(--amber);transform:translateY(-1px)}
+.cmp-list img{width:84px;height:62px;object-fit:cover;border-radius:calc(var(--radius) - 2px)}
+.cmp-list b{font-family:var(--font-display);font-weight:500;font-size:var(--step-1);color:var(--ink)}
+.cmp-list span{display:block;font:400 .78rem/1.45 Inter,sans-serif;color:var(--ink-soft);margin-top:.12rem}
+.vrow{background:var(--bg-panel);border:1px solid var(--rule);border-radius:var(--radius-lg);
+ padding:.8rem 1rem;margin-bottom:.55rem}
+.vrow b{font-family:var(--font-display);font-weight:500;font-size:var(--step-1)}
+.vrow i{display:block;font-style:normal;font:400 .8rem/1.4 Inter,sans-serif;color:var(--ink-soft);margin:.1rem 0 .5rem}
+.vrow audio{width:100%;height:36px}
+@media (max-width:860px){
+ .cmp-row,.cmp-heads{gap:.55rem}
+ .cmp-cell{padding:.45rem .55rem}
+ .cmp-cell p{font-size:.86rem;line-height:1.56}
+ .cmp-list a{grid-template-columns:62px 1fr}
+ .cmp-list img{width:62px;height:50px}}
+</style></head>
+<body class="cmp" data-sound-src="/assets/audio/wc/bed-stone-breath-creek.mp3" data-sound-name="the creek">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <nav class="nav wrap wrap--wide" aria-label="Primary">
+      <a class="brand" href="/"><img class="brand__logo" src="/assets/img/author-logo.png?v=2" alt="AncestralWatch logo" width="716" height="676"><span class="brand__wm">Ancestral<span class="brand__mark">Watch</span></span></a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">☰</button>
+      <ul class="nav__links" id="primary-nav" data-open="false">
+        <li><a href="/">Home</a></li>
+        <li class="has-menu">
+          <button aria-expanded="false" aria-haspopup="true">The Series</button>
+          <ul class="menu">
+            <li><a href="/series/"><span class="menu__num">All</span> The Series</a></li>
+            <li><a href="/series/stone-breath/" aria-current="page"><span class="menu__num">I</span> Stone Breath</a></li>
+            <li><a href="/series/by-lamplight/"><span class="menu__num">II</span> The Amber and the Stone</a></li>
+            <li><a href="/series/the-council-fire/"><span class="menu__num">III</span> The Council Fire</a></li>
+            <li><a href="/series/the-far-messengers/"><span class="menu__num">IV</span> The Far Messengers</a></li>
+            <li><a href="/reader/"><span class="menu__num">&mdash;</span> The Reader</a></li>
+          <li><a href="/start-here/">Start Here</a></li><li><a href="/read/stone-breath/">Read Free</a></li></ul>
+        </li>
+        <li><a href="/tools/">The Tools</a></li><li><a href="https://tribeawaken.com/" target="_blank" rel="noopener">TribeAwaken ↗</a></li>
+        <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+        <li><a href="/author/">The Author</a></li>
+        <li><a class="lang-toggle" href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a class="lang-toggle" href="/lt/" hreflang="lt" lang="lt" style="border-left:0;padding-left:0;">Lietuvių</a></li>
+        <li class="nav__cta"><a class="btn btn--primary" href="https://payhip.com/b/AhH6r" target="_blank" rel="noopener">Get the Book</a></li>
+      </ul>
+    </nav>
+
+  <div class="aw-langbar" aria-label="Languages">
+    <div class="wrap wrap--wide aw-langbar__in">
+      <p class="aw-langbar__lbl">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15 0 18M12 3c-2.6 2.6-2.6 15 0 18"/>
+        </svg><span>Read in</span>
+      </p>
+      <a href="/" data-lang="en" hreflang="en">English</a>
+      <a href="/ja/" data-lang="/ja/" hreflang="ja" lang="ja">日本語</a>
+      <a href="/lt/" data-lang="/lt/" hreflang="lt" lang="lt">Lietuvių</a>
+      <a class="aw-langbar__mail" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+  </header>
+<main id="main">
+
+<section class="cmp-hero">
+  <img src="/assets/img/wc/bench-talk.jpg" alt="Two people, talking" fetchpriority="high">
+  <div class="cmp-hero__scrim"></div>
+  <div class="wrap wrap--wide cmp-hero__in">
+    <p class="eyebrow">Stone Breath · side by side · chapter 9</p>
+    <h1><em>The First Date</em></h1>
+    <p class="cmp-hero__meta">21 paragraphs differ · 172 identical</p>
+  </div>
+  <p class="cmp-hero__cap">photograph by Tony Skrelūnas</p>
+</section>
+
+<div class="cmp-bar"><div class="wrap wrap--wide cmp-bar__in">
+  <button class="cmp-btn" data-m="b">Both</button>
+  <button class="cmp-btn" data-m="l">Edited</button>
+  <button class="cmp-btn" data-m="r">Current</button>
+  <button class="cmp-btn" id="dbtn">Changes only</button>
+  <span class="cmp-sp"></span>
+  <a class="cmp-btn" href="../">All chapters</a><a class="cmp-btn" href="../ch08/">← Eight</a><a class="cmp-btn" href="../ch10/">Ten →</a>
+</div></div>
+
+<section class="section section--tight"><div class="wrap wrap--wide">
+  <div class="cmp-heads"><div class="cmp-hd l"><b>Edited</b> — the new one</div>
+  <div class="cmp-hd r">Published — Draft2Digital, September 7 2026</div></div>
+  <div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">CHAPTER 9</div></div><div class="cmp-cell r"><div class="cmp-hh">CHAPTER 9</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">THE FIRST DATE</div></div><div class="cmp-cell r"><div class="cmp-hh">THE FIRST DATE</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">✵   ✵   ✵</div></div><div class="cmp-cell r"><div class="cmp-hh">✵   ✵   ✵</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Gintaras neša saulę tamsioj kišenėj.&quot; – Amber carries the sun in a dark pocket. Baltic folk wisdom</p></div><div class="cmp-cell r"><p>&quot;Gintaras neša saulę tamsioj kišenėj.&quot; – Amber carries the sun in a dark pocket. Baltic folk wisdom</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Ichi-go ichi-e.&quot; – One meeting, one lifetime. It will not come again. Japanese tea ceremony saying</p></div><div class="cmp-cell r"><p>&quot;Ichi-go ichi-e.&quot; – One meeting, one lifetime. It will not come again. Japanese tea ceremony saying</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I planned everything. The spot by the river. The food. The perfect words. What I didn’t plan was tripping over a root and landing face-first in the ferns. She said it was the most romantic thing anyone had ever done for me. I’m still not sure if she was joking.&quot; — Tonas Yazzie</p></div><div class="cmp-cell r"><p>&quot;I planned everything. The spot by the river. The food. The perfect words. What I didn’t plan was tripping over a root and landing face-first in the ferns. She said it was the most romantic thing anyone had ever done for me. I’m still not sure if she was joking.&quot; — Tonas Yazzie</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Two days after their return from Vilnius, Tonas asked Austėja on a proper date.</p></div><div class="cmp-cell r"><p>Two days after their return from Vilnius, Tonas asked Austėja on a proper date.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She raised an eyebrow. “A date.”</p></div><div class="cmp-cell r"><p>She raised an eyebrow. “A date.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She laughed. “All right. But not tomorrow.”</p></div><div class="cmp-cell r"><p>She laughed. “All right. But not tomorrow.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Why not tomorrow?”</p></div><div class="cmp-cell r"><p>“Why not tomorrow?”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Because tomorrow we are cooking for twelve people who spent the week under the mill. Jurgita asked. I said yes.” She paused. “I said yes for both of us.”</p></div><div class="cmp-cell r"><p>“Because tomorrow we are cooking for twelve people who spent the week under the mill. Jurgita asked. I said yes.” She paused. “I said yes for both of us.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“You volunteered me.”</p></div><div class="cmp-cell r"><p>“You volunteered me.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“I did.”</p></div><div class="cmp-cell r"><p>“I did.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Without asking.”</p></div><div class="cmp-cell r"><p>“Without asking.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“You said you cook,” she said, already walking. “Thursday, then. Wear something you don’t mind getting grass stains on.”</p></div><div class="cmp-cell r"><p>“You said you cook,” she said, already walking. “Thursday, then. Wear something you don’t mind getting grass stains on.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>So before the date, there was the cooking.</p></div><div class="cmp-cell r"><p>So before the date, there was the cooking.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>Jurgita had asked for help with a community dinner — a dozen hungry volunteers after a long day of repairing the mill&#x27;s foundation. Tonas showed up early, <mark class="in">and</mark> Austėja was already there, sleeves rolled up, hands buried in dough.</p></div><div class="cmp-cell r"><p>Jurgita had asked for help with a community dinner — a dozen hungry volunteers after a long day of repairing the mill&#x27;s foundation. Tonas showed up early. Austėja was already there, sleeves rolled up, hands buried in dough.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You cook?&quot; she asked.</p></div><div class="cmp-cell r"><p>&quot;You cook?&quot; she asked.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Masan taught me. Frybread, stew, whatever the land gave.&quot;</p></div><div class="cmp-cell r"><p>&quot;Masan taught me. Frybread, stew, whatever the land gave.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She tossed him an apron. &quot;Then get in here.&quot;</p></div><div class="cmp-cell r"><p>She tossed him an apron. &quot;Then get in here.&quot;</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>They cooked for three hours, <mark class="in">and</mark> she showed him how to make <mark class="in">the</mark> cold beet soup, the šaltibarščiai that Ona had made for fifty years <mark class="in">— kefir and grated beet and dill, a cold hard-boiled egg, and</mark> the <mark class="in">hot potato served beside it in its own dish, never in</mark> the <mark class="in">bowl.</mark></p></div><div class="cmp-cell r"><p>They cooked for three hours. She showed him how to make cold beet soup, the šaltibarščiai that Ona had made for fifty years. <mark class="out">He showed her how to work with blue corn, how to let</mark> the <mark class="out">ash unlock</mark> the <mark class="out">niacin. Their hands brushed at the counter. Neither stepped back.</mark></p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>&quot;Why not in the bowl?&quot; he asked.</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>&quot;Because then it is not cold soup. It is warm soup.&quot; She did not look up. &quot;Ona would know. She would not say anything about it, which is worse.&quot;</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>He showed her how to work with blue corn, how to let the juniper ash unlock the niacin — how people had known to do that for a thousand years before anyone had a word for niacin. Their hands brushed at the counter. Neither stepped back.
+šaltibarščiai
+ that Ona had made for fifty years. He showed her how to work with blue corn, how to let the ash unlock the niacin. Their hands brushed at the counter. Neither stepped back.</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You&#x27;re not terrible,&quot; she said.</p></div><div class="cmp-cell r"><p>&quot;You&#x27;re not terrible,&quot; she said.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You&#x27;re not either.&quot;</p></div><div class="cmp-cell r"><p>&quot;You&#x27;re not either.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>When the volunteers ate, one of the old women pulled Austėja aside. &quot;That one,&quot; she said, nodding at Tonas. &quot;He knows his hands. Keep him.&quot;</p></div><div class="cmp-cell r"><p>When the volunteers ate, one of the old women pulled Austėja aside. &quot;That one,&quot; she said, nodding at Tonas. &quot;He knows his hands. Keep him.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja pretended not to hear. Tonas pretended not to notice. But they both left the kitchen smiling.</p></div><div class="cmp-cell r"><p>Austėja pretended not to hear. Tonas pretended not to notice. But they both left the kitchen smiling.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Walking back along the river, he said, “Masan fed people constantly. Anyone who came. She was not a wealthy woman and there was always a plate.”</p></div><div class="cmp-cell r"><p>Walking back along the river, he said, “Masan fed people constantly. Anyone who came. She was not a wealthy woman and there was always a plate.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Why.”</p></div><div class="cmp-cell r"><p>“Why.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“She said a person who eats at your table twice will tell you the truth.” He thought about it. “She also said food is the first medicine, and that everything after it is repair work.”</p></div><div class="cmp-cell r"><p>“She said a person who eats at your table twice will tell you the truth.” He thought about it. “She also said food is the first medicine, and that everything after it is repair work.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja walked a while without answering.</p></div><div class="cmp-cell r"><p>Austėja walked a while without answering.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“My grandmother says the same thing in nine words,” she said. “
+Nobody leaves this house hungry.
+ That is the whole philosophy. She has never explained it once.”</p></div><div class="cmp-cell r"><p>“My grandmother says the same thing in nine words,” she said. “
+Nobody leaves this house hungry.
+ That is the whole philosophy. She has never explained it once.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He said something about it later, at Ona’s table, half-joking — that the soup was not exactly a health regimen.</p></div><div class="cmp-cell r"><p>He said something about it later, at Ona’s table, half-joking — that the soup was not exactly a health regimen.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Ona put down her spoon.</p></div><div class="cmp-cell r"><p>Ona put down her spoon.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“You are thinking about the food,” she said. “The food is the smallest part.”</p></div><div class="cmp-cell r"><p>“You are thinking about the food,” she said. “The food is the smallest part.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“It’s the only part I can see.”</p></div><div class="cmp-cell r"><p>“It’s the only part I can see.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Then look longer.” She counted it off on her fingers, unhurried. “Somebody says something before anyone eats. Somebody makes it, with their hands, for people who did not pay. Everyone sits down at the same time. Nobody stands up early. There is wine, or there is not, it does not matter. Somebody laughs so hard they have to put the glass down.”</p></div><div class="cmp-cell r"><p>“Then look longer.” She counted it off on her fingers, unhurried. “Somebody says something before anyone eats. Somebody makes it, with their hands, for people who did not pay. Everyone sits down at the same time. Nobody stands up early. There is wine, or there is not, it does not matter. Somebody laughs so hard they have to put the glass down.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She picked the spoon back up.</p></div><div class="cmp-cell r"><p>She picked the spoon back up.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Do that three times a week, with butter and salt and bread, and you will outlive a man who eats correctly by himself.”</p></div><div class="cmp-cell r"><p>“Do that three times a week, with butter and salt and bread, and you will outlive a man who eats correctly by himself.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“That can’t be true.”</p></div><div class="cmp-cell r"><p>“That can’t be true.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“It is true,” Ona said. “Your doctors are only now writing it down. My grandmother did not need it written down. She needed a bigger table.”</p></div><div class="cmp-cell r"><p>“It is true,” Ona said. “Your doctors are only now writing it down. My grandmother did not need it written down. She needed a bigger table.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">✵   ✵   ✵</div></div><div class="cmp-cell r"><div class="cmp-hh">✵   ✵   ✵</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The next evening, Austėja found him in the guesthouse kitchen. &quot;You promised to teach me frybread.&quot;</p></div><div class="cmp-cell r"><p>The next evening, Austėja found him in the guesthouse kitchen. &quot;You promised to teach me frybread.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I promised to teach you blue corn frybread. There&#x27;s a difference.&quot;</p></div><div class="cmp-cell r"><p>&quot;I promised to teach you blue corn frybread. There&#x27;s a difference.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Then teach me.&quot;</p></div><div class="cmp-cell r"><p>&quot;Then teach me.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He pulled out the blue cornmeal, the bag of juniper ash, the salt, the boiling water. &quot;First rule: you don&#x27;t rush. The dough has to rest. The oil has to be ready. The cook has to be patient.&quot;</p></div><div class="cmp-cell r"><p>He pulled out the blue cornmeal, the bag of juniper ash, the salt, the boiling water. &quot;First rule: you don&#x27;t rush. The dough has to rest. The oil has to be ready. The cook has to be patient.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I&#x27;m patient.&quot;</p></div><div class="cmp-cell r"><p>&quot;I&#x27;m patient.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He raised an eyebrow. &quot;You ran a sub-17 5k. You&#x27;re not patient. You&#x27;re fast.&quot;</p></div><div class="cmp-cell r"><p>He raised an eyebrow. &quot;You ran a sub-17 5k. You&#x27;re not patient. You&#x27;re fast.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She almost smiled. &quot;Fine. I&#x27;ll pretend.&quot;</p></div><div class="cmp-cell r"><p>She almost smiled. &quot;Fine. I&#x27;ll pretend.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He measured the cornmeal into a bowl, added the ash, the salt, a pinch of something she didn&#x27;t recognize.</p></div><div class="cmp-cell r"><p>He measured the cornmeal into a bowl, added the ash, the salt, a pinch of something she didn&#x27;t recognize.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;What&#x27;s that?&quot;</p></div><div class="cmp-cell r"><p>&quot;What&#x27;s that?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Corn pollen. Masan put it in everything.&quot;</p></div><div class="cmp-cell r"><p>&quot;Corn pollen. Masan put it in everything.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Does it do anything?&quot;</p></div><div class="cmp-cell r"><p>&quot;Does it do anything?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;The frybread tastes better. The rest is between you and the corn.&quot;</p></div><div class="cmp-cell r"><p>&quot;The frybread tastes better. The rest is between you and the corn.&quot;</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>She laughed. He poured in the water <mark class="in">and</mark> told her to mix, <mark class="in">and</mark> her hands were strong, practiced — chef&#x27;s hands — but the dough was stubborn, different from wheat, <mark class="in">and</mark> it crumbled.</p></div><div class="cmp-cell r"><p>She laughed. He poured in the water, told her to mix. Her hands were strong, practiced — chef&#x27;s hands — but the dough was stubborn, different from wheat. It crumbled.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You&#x27;re pressing too hard,&quot; he said. &quot;You&#x27;re fighting it. Frybread dough wants to be soft. It wants to breathe.&quot;</p></div><div class="cmp-cell r"><p>&quot;You&#x27;re pressing too hard,&quot; he said. &quot;You&#x27;re fighting it. Frybread dough wants to be soft. It wants to breathe.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;It&#x27;s dough. It doesn&#x27;t want anything.&quot;</p></div><div class="cmp-cell r"><p>&quot;It&#x27;s dough. It doesn&#x27;t want anything.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;That&#x27;s what I said. Then Masan made me knead it until my arms ached, and I figured out she was right.&quot;</p></div><div class="cmp-cell r"><p>&quot;That&#x27;s what I said. Then Masan made me knead it until my arms ached, and I figured out she was right.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He stepped behind her, put his hands over hers, guided her fingers. &quot;Like this. Gentle. The ash makes it tender. You don&#x27;t need to force it.&quot;</p></div><div class="cmp-cell r"><p>He stepped behind her, put his hands over hers, guided her fingers. &quot;Like this. Gentle. The ash makes it tender. You don&#x27;t need to force it.&quot;</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>She let him guide her. His hands were warm, calloused from years of work, <mark class="in">and</mark> they moved together — his breath at her ear, her hands learning the rhythm.</p></div><div class="cmp-cell r"><p>She let him guide her. His hands were warm, calloused from years of work. They moved together — his breath at her ear, her hands learning the rhythm.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You&#x27;re not terrible at this,&quot; she said.</p></div><div class="cmp-cell r"><p>&quot;You&#x27;re not terrible at this,&quot; she said.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I had a good teacher.&quot;</p></div><div class="cmp-cell r"><p>&quot;I had a good teacher.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She turned her head, just enough to see his face. &quot;Masan?&quot;</p></div><div class="cmp-cell r"><p>She turned her head, just enough to see his face. &quot;Masan?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Masan.&quot; He didn&#x27;t step back. &quot;She used to say that the first frybread you make by yourself is the one that tells you who you are. Until then, you&#x27;re just practicing.&quot;</p></div><div class="cmp-cell r"><p>&quot;Masan.&quot; He didn&#x27;t step back. &quot;She used to say that the first frybread you make by yourself is the one that tells you who you are. Until then, you&#x27;re just practicing.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;What did yours tell you?&quot;</p></div><div class="cmp-cell r"><p>&quot;What did yours tell you?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He smiled. &quot;That I needed more practice.&quot;</p></div><div class="cmp-cell r"><p>He smiled. &quot;That I needed more practice.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She laughed. The dough came together — soft, pliable, warm.</p></div><div class="cmp-cell r"><p>She laughed. The dough came together — soft, pliable, warm.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The first round came out lopsided. She held it up. &quot;This is ugly.&quot;</p></div><div class="cmp-cell r"><p>The first round came out lopsided. She held it up. &quot;This is ugly.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;That&#x27;s the best one,&quot; he said. &quot;The ugly ones always taste the best.&quot;</p></div><div class="cmp-cell r"><p>&quot;That&#x27;s the best one,&quot; he said. &quot;The ugly ones always taste the best.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She bit into it. The crust cracked. The inside was soft, slightly sweet, tasting of corn and ash and juniper.</p></div><div class="cmp-cell r"><p>She bit into it. The crust cracked. The inside was soft, slightly sweet, tasting of corn and ash and juniper.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;It&#x27;s good,&quot; she said, surprised.</p></div><div class="cmp-cell r"><p>&quot;It&#x27;s good,&quot; she said, surprised.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;It&#x27;s frybread. It&#x27;s always good.&quot;</p></div><div class="cmp-cell r"><p>&quot;It&#x27;s frybread. It&#x27;s always good.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Thank you,&quot; she said. &quot;For teaching me. For not making it weird.&quot;</p></div><div class="cmp-cell r"><p>&quot;Thank you,&quot; she said. &quot;For teaching me. For not making it weird.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;The night is young,&quot; he said. &quot;The weird part comes later.&quot;</p></div><div class="cmp-cell r"><p>&quot;The night is young,&quot; he said. &quot;The weird part comes later.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She threw the remaining dough at him. It hit his chest with a soft thump.</p></div><div class="cmp-cell r"><p>She threw the remaining dough at him. It hit his chest with a soft thump.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You wasted frybread,&quot; he said, pretending to be horrified.</p></div><div class="cmp-cell r"><p>&quot;You wasted frybread,&quot; he said, pretending to be horrified.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;There&#x27;s more.&quot;</p></div><div class="cmp-cell r"><p>&quot;There&#x27;s more.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He scooped the dough off his shirt and shaped it into a round. &quot;This one is yours. You have to eat it. All of it. No sharing.&quot;</p></div><div class="cmp-cell r"><p>He scooped the dough off his shirt and shaped it into a round. &quot;This one is yours. You have to eat it. All of it. No sharing.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;That&#x27;s a lot of frybread.&quot;</p></div><div class="cmp-cell r"><p>&quot;That&#x27;s a lot of frybread.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;That&#x27;s the price of throwing dough at your teacher.&quot;</p></div><div class="cmp-cell r"><p>&quot;That&#x27;s the price of throwing dough at your teacher.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She ate it. Every bite. He watched her, smiling, and when she finished, her fingers were greasy and her face was flushed and she was laughing.</p></div><div class="cmp-cell r"><p>She ate it. Every bite. He watched her, smiling, and when she finished, her fingers were greasy and her face was flushed and she was laughing.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She went inside. He stayed on the porch, the stone warm in his pocket, the taste of blue corn on his tongue.</p></div><div class="cmp-cell r"><p>She went inside. He stayed on the porch, the stone warm in his pocket, the taste of blue corn on his tongue.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He was still smiling when he finally went to bed.</p></div><div class="cmp-cell r"><p>He was still smiling when he finally went to bed.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">✵   ✵   ✵</div></div><div class="cmp-cell r"><div class="cmp-hh">✵   ✵   ✵</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Thursday, then.</p></div><div class="cmp-cell r"><p>Thursday, then.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He spent the next twenty-four hours overthinking everything — and cooking.</p></div><div class="cmp-cell r"><p>He spent the next twenty-four hours overthinking everything — and cooking.</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>That morning, he walked to the village market and found a small piece of lamb — enough for a stew.</p></div><div class="cmp-cell r"><p>That morning, he walked to the village market and found a small piece of lamb — enough for a stew. <mark class="out">He bought onions, carrots, and potatoes from the baker&#x27;s wife, and a handful of dried juniper berries from Rytis. Back at the guesthouse kitchen, he started the stew. The lamb browned in a cast-iron pot. Then the vegetables, the juniper berries, a splash of red wine, and water. He let it simmer low and slow for hours. By late afternoon, the meat was tender, the broth rich and dark.</mark></p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p><mark class="in">&quot;Is it grass-fed?&quot;</mark> he <mark class="in">asked.</mark></p></div><div class="cmp-cell r"><p>He <mark class="out">made the frybread dough: flour, baking powder, salt, water. He kneaded it until it was soft, then fried the rounds in hot oil until they were golden and puffy. He wrapped them in a cloth to keep warm.</mark></p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>The butcher stopped wrapping and looked at him. Then he looked past him, out the open door, at the hill behind the market where somebody&#x27;s sheep were doing the only thing there was to do up there.</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>&quot;Everything out here is grass fed, my boy.&quot;</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>He went back to his wrapping. Tonas paid and asked no further questions about the lamb.</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>Then he bought onions, carrots, and potatoes from the baker&#x27;s wife, and a handful of dried juniper berries from Rytis. Back at the guesthouse kitchen he started the stew: the lamb browned in a cast-iron pot, then the vegetables, the juniper berries, a splash of red wine, and water, and he let it simmer low and slow for hours. By late afternoon, the meat was tender, the broth rich and dark.</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>He made the frybread dough — flour, baking powder, salt, water — and then he stopped, because his hands had remembered something before he did. Masan used to say it and so did Ada, and neither of them ever once explained it: let it sit for a while. So he covered the bowl with a towel and left it alone. He went and checked the stew, which did not need checking. He came back twenty minutes later to dough gone soft and slack and easy, the way it never went when he was in a hurry. He kneaded it until it was smooth, then fried the rounds in hot oil until they were golden and puffy, and wrapped them in a cloth to keep warm.</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>Standing over the oil, it occurred to him that neither of them had only been talking about dough.</p></div><div class="cmp-cell r gone"></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He packed everything into a basket — the stew in a thermos, the frybread in the cloth, plates, spoons, a corkscrew, and a bottle of red wine.</p></div><div class="cmp-cell r"><p>He packed everything into a basket — the stew in a thermos, the frybread in the cloth, plates, spoons, a corkscrew, and a bottle of red wine.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>At six o&#x27;clock, he knocked on her door.</p></div><div class="cmp-cell r"><p>At six o&#x27;clock, he knocked on her door.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She opened it wearing jeans and a simple linen shirt, her hair loose, no makeup. She looked like she&#x27;d just walked out of the forest.</p></div><div class="cmp-cell r"><p>She opened it wearing jeans and a simple linen shirt, her hair loose, no makeup. She looked like she&#x27;d just walked out of the forest.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You&#x27;re early,&quot; he said.</p></div><div class="cmp-cell r"><p>&quot;You&#x27;re early,&quot; he said.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I&#x27;m nervous.&quot;</p></div><div class="cmp-cell r"><p>&quot;I&#x27;m nervous.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She tilted her head. &quot;You? Nervous?&quot;</p></div><div class="cmp-cell r"><p>She tilted her head. &quot;You? Nervous?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;First time for everything.&quot;</p></div><div class="cmp-cell r"><p>&quot;First time for everything.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She almost smiled. &quot;Let me get my shoes.&quot;</p></div><div class="cmp-cell r"><p>She almost smiled. &quot;Let me get my shoes.&quot;</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>They walked to a clearing by the river, upstream from the mill, where the bank opened into a small space, <mark class="in">and</mark> he spread a blanket <mark class="in">and</mark> she sat down, watching him unpack.</p></div><div class="cmp-cell r"><p>They walked to a clearing by the river, upstream from the mill, where the bank opened into a small space. He spread a blanket. She sat down, watching him unpack.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You really cooked,&quot; she said.</p></div><div class="cmp-cell r"><p>&quot;You really cooked,&quot; she said.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Masan taught me. She said a man who can&#x27;t feed himself isn&#x27;t a man. He&#x27;s a burden.&quot;</p></div><div class="cmp-cell r"><p>&quot;Masan taught me. She said a man who can&#x27;t feed himself isn&#x27;t a man. He&#x27;s a burden.&quot;</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>He pulled out the frybread, still warm, <mark class="in">and</mark> the stew steamed when he opened the thermos, <mark class="in">and</mark> he ladled it into bowls — lamb so tender it fell apart, juniper and herbs, the broth dark and rich.</p></div><div class="cmp-cell r"><p>He pulled out the frybread, still warm. The stew steamed when he opened the thermos. He ladled it into bowls — lamb so tender it fell apart, juniper and herbs, the broth dark and rich.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;This is the secret,&quot; he said, holding up a piece of frybread. &quot;When my people were marched to Bosque Redondo — the Long Walk — they were given rations. Coffee, beans, flour, lard. Out of that, they made frybread.&quot;</p></div><div class="cmp-cell r"><p>&quot;This is the secret,&quot; he said, holding up a piece of frybread. &quot;When my people were marched to Bosque Redondo — the Long Walk — they were given rations. Coffee, beans, flour, lard. Out of that, they made frybread.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She took a bite. Her eyes widened.</p></div><div class="cmp-cell r"><p>She took a bite. Her eyes widened.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;But frybread alone is survival food,&quot; he continued. &quot;It&#x27;s heavy. Hard on the body. Masan added blue corn — treated with juniper ash. The ash unlocks the niacin. Makes it healthy. Makes it medicine.&quot;</p></div><div class="cmp-cell r"><p>&quot;But frybread alone is survival food,&quot; he continued. &quot;It&#x27;s heavy. Hard on the body. Masan added blue corn — treated with juniper ash. The ash unlocks the niacin. Makes it healthy. Makes it medicine.&quot;</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>He told her the whole story — not the short version, not the one he told at conferences, <mark class="in">but</mark> the real one, the one Masan told him sitting by the fire, her voice low and steady. The march. The dead. The return.</p></div><div class="cmp-cell r"><p>He told her the whole story — not the short version, not the one he told at conferences. The real one. The one Masan told him, sitting by the fire, her voice low and steady. The march. The dead. The return.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“So it is traditional,” she said.</p></div><div class="cmp-cell r"><p>“So it is traditional,” she said.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“It kept our people fed.” He said it plainly. “At Fort Sumner there was flour and lard and salt and not much else, and people took that and made something warm, and it went around, and it kept everyone alive long enough to walk home. That is what it is. It has soul in it for that reason and no other.”</p></div><div class="cmp-cell r"><p>“It kept our people fed.” He said it plainly. “At Fort Sumner there was flour and lard and salt and not much else, and people took that and made something warm, and it went around, and it kept everyone alive long enough to walk home. That is what it is. It has soul in it for that reason and no other.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja was quiet.</p></div><div class="cmp-cell r"><p>Austėja was quiet.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“It was comfort,” he said. “In the worst years my people ever had. You do not throw that away because a nutritionist has opinions.”</p></div><div class="cmp-cell r"><p>“It was comfort,” he said. “In the worst years my people ever had. You do not throw that away because a nutritionist has opinions.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“But it is not the old food.”</p></div><div class="cmp-cell r"><p>“But it is not the old food.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“No. The old food is corn, squash, beans, wild greens, mutton, piñon. Thousands of years of it. Frybread is about a hundred and sixty.” He turned a piece of it over in his fingers. “Both things are true. The ancient food is the ancient food. And this one carried us.”</p></div><div class="cmp-cell r"><p>“No. The old food is corn, squash, beans, wild greens, mutton, piñon. Thousands of years of it. Frybread is about a hundred and sixty.” He turned a piece of it over in his fingers. “Both things are true. The ancient food is the ancient food. And this one carried us.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“And you make it.”</p></div><div class="cmp-cell r"><p>“And you make it.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Constantly.”</p></div><div class="cmp-cell r"><p>“Constantly.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Why.”</p></div><div class="cmp-cell r"><p>“Why.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Because it is delicious, and because my great-grandmother’s hands made it, and I am not made of stone.”</p></div><div class="cmp-cell r"><p>“Because it is delicious, and because my great-grandmother’s hands made it, and I am not made of stone.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja laughed.</p></div><div class="cmp-cell r"><p>Austėja laughed.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“In moderation,” he said. “And with people. Masan ate frybread her whole life. She also walked eleven miles a day and never once ate it alone.”</p></div><div class="cmp-cell r"><p>“In moderation,” he said. “And with people. Masan ate frybread her whole life. She also walked eleven miles a day and never once ate it alone.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“That is the trick.”</p></div><div class="cmp-cell r"><p>“That is the trick.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“That is the whole trick.”</p></div><div class="cmp-cell r"><p>“That is the whole trick.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Later, over coffee, he said, “Here is one I think about.”</p></div><div class="cmp-cell r"><p>Later, over coffee, he said, “Here is one I think about.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“Go on.”</p></div><div class="cmp-cell r"><p>“Go on.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“We had sheep and we had goats, which means we had milk, for centuries. We had fire. And we had people who would spend an entire winter getting one thing exactly right — the batter, the stone, the heat, the timing.” He tipped his cup slightly. “Somebody up there was making a cappuccino four hundred years before Milan and calling it Tuesday.”</p></div><div class="cmp-cell r"><p>“We had sheep and we had goats, which means we had milk, for centuries. We had fire. And we had people who would spend an entire winter getting one thing exactly right — the batter, the stone, the heat, the timing.” He tipped his cup slightly. “Somebody up there was making a cappuccino four hundred years before Milan and calling it Tuesday.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“That is not documented.”</p></div><div class="cmp-cell r"><p>“That is not documented.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“It is not documented,” he agreed. “It is also completely true.”</p></div><div class="cmp-cell r"><p>“It is not documented,” he agreed. “It is also completely true.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja drank her coffee. “You know this is how the Snow Monster Mountain thing started.”</p></div><div class="cmp-cell r"><p>Austėja drank her coffee. “You know this is how the Snow Monster Mountain thing started.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>“I am aware of my pattern.”</p></div><div class="cmp-cell r"><p>“I am aware of my pattern.”</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She listened. When he finished, she ate a spoonful of stew and said nothing for a while.</p></div><div class="cmp-cell r"><p>She listened. When he finished, she ate a spoonful of stew and said nothing for a while.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I used to make this in Japan,&quot; he said. &quot;My classmates said it took them back to the earth. Most soulful food they&#x27;d ever eaten.&quot;</p></div><div class="cmp-cell r"><p>&quot;I used to make this in Japan,&quot; he said. &quot;My classmates said it took them back to the earth. Most soulful food they&#x27;d ever eaten.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>They ate in silence. The river moved. The sun dropped behind the trees, painting the birch trunks gold.</p></div><div class="cmp-cell r"><p>They ate in silence. The river moved. The sun dropped behind the trees, painting the birch trunks gold.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas set down his fork. &quot;I had a college sweetheart once. Smart woman. Kind. We split when our careers went different directions.&quot;</p></div><div class="cmp-cell r"><p>Tonas set down his fork. &quot;I had a college sweetheart once. Smart woman. Kind. We split when our careers went different directions.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja waited.</p></div><div class="cmp-cell r"><p>Austėja waited.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I told myself it was mutual. But the truth is, I was driven. Too driven. I couldn&#x27;t find anyone who matched my energy — who could run beside me, not behind.&quot;</p></div><div class="cmp-cell r"><p>&quot;I told myself it was mutual. But the truth is, I was driven. Too driven. I couldn&#x27;t find anyone who matched my energy — who could run beside me, not behind.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He looked at her.</p></div><div class="cmp-cell r"><p>He looked at her.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Masan used to say you need to feel the other person&#x27;s frequency. Not just their words. Their whole family, their values, their goals. If the frequencies don&#x27;t align, no amount of love will save it.&quot;</p></div><div class="cmp-cell r"><p>&quot;Masan used to say you need to feel the other person&#x27;s frequency. Not just their words. Their whole family, their values, their goals. If the frequencies don&#x27;t align, no amount of love will save it.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;What did she call that teaching?&quot;</p></div><div class="cmp-cell r"><p>&quot;What did she call that teaching?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;She didn&#x27;t name it. She just said, &#x27;Listen with your whole body. The heart knows before the head catches up.&#x27;&quot; He turned the spoon over in his hand. &quot;She had three questions she&#x27;d ask about anybody. Do they finish what they start. Do they feed people. Can they be happy for someone else&#x27;s good news.&quot; He shrugged. &quot;That was the whole evaluation. She never needed a fourth.&quot;</p></div><div class="cmp-cell r"><p>&quot;She didn&#x27;t name it. She just said, &#x27;Listen with your whole body. The heart knows before the head catches up.&#x27;&quot; He turned the spoon over in his hand. &quot;She had three questions she&#x27;d ask about anybody. Do they finish what they start. Do they feed people. Can they be happy for someone else&#x27;s good news.&quot; He shrugged. &quot;That was the whole evaluation. She never needed a fourth.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja nodded slowly. &quot;In Lithuania, we say the same thing. 
+Širdis žino kelią
+ — the heart knows the way.&quot;</p></div><div class="cmp-cell r"><p>Austėja nodded slowly. &quot;In Lithuania, we say the same thing. 
+Širdis žino kelią
+ — the heart knows the way.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Same thing,&quot; Tonas said.</p></div><div class="cmp-cell r"><p>&quot;Same thing,&quot; Tonas said.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Different words,&quot; she agreed.</p></div><div class="cmp-cell r"><p>&quot;Different words,&quot; she agreed.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He smiled. &quot;I think my heart&#x27;s been quiet for a long time. It&#x27;s only started speaking again since I got here.&quot;</p></div><div class="cmp-cell r"><p>He smiled. &quot;I think my heart&#x27;s been quiet for a long time. It&#x27;s only started speaking again since I got here.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She didn&#x27;t answer. She just reached across the blanket and touched his hand.</p></div><div class="cmp-cell r"><p>She didn&#x27;t answer. She just reached across the blanket and touched his hand.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">✵   ✵   ✵</div></div><div class="cmp-cell r"><div class="cmp-hh">✵   ✵   ✵</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Tonas reached into his pocket and pulled out something small, round, silver — a vintage stopwatch.</p></div><div class="cmp-cell r"><p>Tonas reached into his pocket and pulled out something small, round, silver — a vintage stopwatch.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;My grandfather&#x27;s,&quot; he said. &quot;He used it to time his races. After he died, Ada sent it to me.&quot;</p></div><div class="cmp-cell r"><p>&quot;My grandfather&#x27;s,&quot; he said. &quot;He used it to time his races. After he died, Ada sent it to me.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Austėja held it. The glass was scratched. The button on the side was worn smooth. &quot;What does it measure?&quot;</p></div><div class="cmp-cell r"><p>Austėja held it. The glass was scratched. The button on the side was worn smooth. &quot;What does it measure?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Not time,&quot; he said. &quot;Courage. He wrote me a letter before he passed. He said: 
+When I was afraid, I would start the stopwatch. I would listen to the tick. It reminded me that time does not wait for courage. You must move before you are ready.
+&quot;</p></div><div class="cmp-cell r"><p>&quot;Not time,&quot; he said. &quot;Courage. He wrote me a letter before he passed. He said: 
+When I was afraid, I would start the stopwatch. I would listen to the tick. It reminded me that time does not wait for courage. You must move before you are ready.
+&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She handed it back. &quot;Do you still use it?&quot;</p></div><div class="cmp-cell r"><p>She handed it back. &quot;Do you still use it?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Every day.&quot;</p></div><div class="cmp-cell r"><p>&quot;Every day.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">✵   ✵   ✵</div></div><div class="cmp-cell r"><div class="cmp-hh">✵   ✵   ✵</div></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>After dinner, he pulled out his phone and queued a playlist — old jazz, Coltrane, Billie Holiday <mark class="in">— and</mark> the music drifted through the clearing, soft and warm.</p></div><div class="cmp-cell r"><p>After dinner, he pulled out his phone and queued a playlist — old jazz. Coltrane. Billie Holiday. The music drifted through the clearing, soft and warm.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Dance with me,&quot; he said.</p></div><div class="cmp-cell r"><p>&quot;Dance with me,&quot; he said.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;There&#x27;s no music.&quot;</p></div><div class="cmp-cell r"><p>&quot;There&#x27;s no music.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;There&#x27;s music.&quot;</p></div><div class="cmp-cell r"><p>&quot;There&#x27;s music.&quot;</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>She stood, he took her hand, <mark class="in">and</mark> they danced — nothing formal, just moving together, stepping in the grass, laughing when they got it wrong.</p></div><div class="cmp-cell r"><p>She stood. He took her hand. They danced — nothing formal, just moving together, stepping in the grass, laughing when they got it wrong.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Then she pulled back. &quot;My turn.&quot;</p></div><div class="cmp-cell r"><p>Then she pulled back. &quot;My turn.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She found a Japanese tune — a slow, haunting melody, something she had learned in Kyoto.</p></div><div class="cmp-cell r"><p>She found a Japanese tune — a slow, haunting melody, something she had learned in Kyoto.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;What is this?&quot; he asked.</p></div><div class="cmp-cell r"><p>&quot;What is this?&quot; he asked.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;
+Sakura.
+ An old folk song. My daughter&#x27;s father taught it to me.&quot;</p></div><div class="cmp-cell r"><p>&quot;
+Sakura.
+ An old folk song. My daughter&#x27;s father taught it to me.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>They danced again. Different rhythm, different history. But the same presence.</p></div><div class="cmp-cell r"><p>They danced again. Different rhythm, different history. But the same presence.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;You&#x27;re not terrible at this,&quot; she said.</p></div><div class="cmp-cell r"><p>&quot;You&#x27;re not terrible at this,&quot; she said.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I had a good teacher.&quot;</p></div><div class="cmp-cell r"><p>&quot;I had a good teacher.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The song ended. They stood there, still holding hands.</p></div><div class="cmp-cell r"><p>The song ended. They stood there, still holding hands.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Thank you,&quot; she said. &quot;For the food. The story. The dance.&quot;</p></div><div class="cmp-cell r"><p>&quot;Thank you,&quot; she said. &quot;For the food. The story. The dance.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;We&#x27;re not done yet.&quot;</p></div><div class="cmp-cell r"><p>&quot;We&#x27;re not done yet.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He stepped back to the blanket — and tripped over a root.</p></div><div class="cmp-cell r"><p>He stepped back to the blanket — and tripped over a root.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>The root that had been waiting for a hundred years.</p></div><div class="cmp-cell r"><p>The root that had been waiting for a hundred years.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He went down hard. The wine bottle flew. He landed face-first in a patch of ferns.</p></div><div class="cmp-cell r"><p>He went down hard. The wine bottle flew. He landed face-first in a patch of ferns.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Silence.</p></div><div class="cmp-cell r"><p>Silence.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Then Austėja&#x27;s laugh — not polite, not sympathetic. A full, body-shaking laugh that echoed off the trees.</p></div><div class="cmp-cell r"><p>Then Austėja&#x27;s laugh — not polite, not sympathetic. A full, body-shaking laugh that echoed off the trees.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He lay there, face in the ferns, and started laughing too.</p></div><div class="cmp-cell r"><p>He lay there, face in the ferns, and started laughing too.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Oh my god,&quot; she gasped. &quot;Are you okay?&quot;</p></div><div class="cmp-cell r"><p>&quot;Oh my god,&quot; she gasped. &quot;Are you okay?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;I&#x27;m fine,&quot; he said into the dirt. &quot;This is exactly how I planned it.&quot;</p></div><div class="cmp-cell r"><p>&quot;I&#x27;m fine,&quot; he said into the dirt. &quot;This is exactly how I planned it.&quot;</p></div></div>
+<div class="cmp-row chg"><div class="cmp-cell l"><p>She helped him up, still laughing. He was covered in dirt and fern fronds, <mark class="in">and</mark> the wine was gone, soaking into the ground.</p></div><div class="cmp-cell r"><p>She helped him up, still laughing. He was covered in dirt and fern fronds. The wine was gone, soaking into the ground.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;This,&quot; she said, wiping her eyes, &quot;is the most romantic thing anyone has ever done for me.&quot;</p></div><div class="cmp-cell r"><p>&quot;This,&quot; she said, wiping her eyes, &quot;is the most romantic thing anyone has ever done for me.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><div class="cmp-hh">✵   ✵   ✵</div></div><div class="cmp-cell r"><div class="cmp-hh">✵   ✵   ✵</div></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>They walked back to her house in the dark. The river moved beside them. The stars were bright.</p></div><div class="cmp-cell r"><p>They walked back to her house in the dark. The river moved beside them. The stars were bright.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>At her door, she stopped. &quot;Thank you for tonight. Even the falling part.&quot;</p></div><div class="cmp-cell r"><p>At her door, she stopped. &quot;Thank you for tonight. Even the falling part.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Especially the falling part?&quot;</p></div><div class="cmp-cell r"><p>&quot;Especially the falling part?&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Especially that.&quot;</p></div><div class="cmp-cell r"><p>&quot;Especially that.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He stood there, suddenly unsure what to do with his hands. She solved it for him. She leaned forward and kissed his cheek — quickly, softly.</p></div><div class="cmp-cell r"><p>He stood there, suddenly unsure what to do with his hands. She solved it for him. She leaned forward and kissed his cheek — quickly, softly.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Goodnight, Tonas.&quot;</p></div><div class="cmp-cell r"><p>&quot;Goodnight, Tonas.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>&quot;Goodnight.&quot;</p></div><div class="cmp-cell r"><p>&quot;Goodnight.&quot;</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>She disappeared inside.</p></div><div class="cmp-cell r"><p>She disappeared inside.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>He stood on her porch for a full minute, grinning like an idiot. Then he sat down on the steps. The river moved. The stars turned.</p></div><div class="cmp-cell r"><p>He stood on her porch for a full minute, grinning like an idiot. Then he sat down on the steps. The river moved. The stars turned.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Later, he would call that night the moment everything shifted. Not because of the wine or the sunset or even the kiss on his cheek.</p></div><div class="cmp-cell r"><p>Later, he would call that night the moment everything shifted. Not because of the wine or the sunset or even the kiss on his cheek.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>Because he fell on his face — and she laughed with him instead of at him.</p></div><div class="cmp-cell r"><p>Because he fell on his face — and she laughed with him instead of at him.</p></div></div>
+<div class="cmp-row same"><div class="cmp-cell l"><p>That&#x27;s when he knew.</p></div><div class="cmp-cell r"><p>That&#x27;s when he knew.</p></div></div>
+  <p class="muted" style="margin-top:var(--space-4);font-size:var(--step--1);max-width:60ch">
+  Gold marks what the edited version added or changed; gray marks the words it replaced.
+  The right column is the text on Payhip and Barnes &amp; Noble today. Nothing here is published.</p>
+</div></section>
+</main>
+<footer class="site-footer">
+    <div class="wrap wrap--wide">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">AncestralWatch</p>
+          <p class="footer__tag">Instructions, carried.</p>
+          <p style="margin-top: var(--space-2); max-width: 34ch;">The home of The Ancestral Watch Series by Tony Skrelūnas.</p>
+        </div>
+        <div>
+          <h4>The Series</h4>
+          <ul>
+            <li><a href="/series/stone-breath/">Stone Breath</a></li>
+            <li><a href="/series/the-council-fire/">The Council Fire</a></li>
+            <li><a href="/series/">All four books</a></li>
+            <li><a href="/tools/">The free Tools</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/far-messengers/">The Far Messengers (brand)</a></li>
+            <li><a href="/author/">The Author</a></li>
+            <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+            <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/lt/" hreflang="lt" lang="lt">Lietuvių</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>© 2026 Ancestral Watch · Tony Skrelūnas. All rights reserved.</span>
+        <span>Instructions, carried.</span>
+      </div>
+    </div>
+  </footer>
+<script src="/js/main.js?v=11" defer></script>
+<script src="/js/vendor/gsap.min.js"></script>
+<script src="/js/vendor/ScrollTrigger.min.js"></script>
+<script src="/js/vendor/lenis.min.js"></script>
+<script src="/js/aw-world.js?v=20261105"></script>
+<script>
+(function(){var b=document.body;
+ function set(m){b.classList.remove('only-l','only-r');
+  if(m==='l')b.classList.add('only-l');if(m==='r')b.classList.add('only-r');
+  document.querySelectorAll('[data-m]').forEach(function(x){x.classList.toggle('on',x.dataset.m===m)});
+  try{localStorage.setItem('sbcmp-m',m)}catch(e){}}
+ function diffs(on){b.classList.toggle('diffs',on);
+  var t=document.getElementById('dbtn');if(t)t.classList.toggle('on',on);
+  try{localStorage.setItem('sbcmp-d',on?'1':'')}catch(e){}}
+ document.querySelectorAll('[data-m]').forEach(function(x){x.onclick=function(){set(x.dataset.m)}});
+ var d=document.getElementById('dbtn');
+ if(d)d.onclick=function(){diffs(!b.classList.contains('diffs'))};
+ var m='b',dd=false;
+ try{m=localStorage.getItem('sbcmp-m')||'b';dd=!!localStorage.getItem('sbcmp-d')}catch(e){}
+ set(m);diffs(dd);})();
+</script>
+</body></html>
