@@ -5,3 +5,4 @@ stone-breath-chapter-two.md  - Stone Breath, Chapter 2 "The Box He Carried", fro
 council-fire-first-voice-and-the-runners.md - The Council Fire: "first voice" and "Prologue I · The Runners".
 far-messengers-before.md     - The Far Messengers: "Before" (Rasa's and Nalu's chapter ones), from book v23.
 Never edit the words.
+stone-breath-chapter-one.md  - Stone Breath, Chapter 1 "The Canyon Within", from the final 11/11 book (checked word for word).
