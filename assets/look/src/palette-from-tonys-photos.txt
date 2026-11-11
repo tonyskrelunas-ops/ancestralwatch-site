@@ -1,0 +1,13 @@
+Dominant colours of Tony's own photographs (k-means, most common first):
+#282b1f  13.9%
+#3d4231  13.6%
+#535a45  13.4%
+#717155  11.2%
+#12140d  8.9%
+#84827a  8.8%
+#a2a19f  7.8%
+#cbc3b1  7.1%
+#acaf62  5.8%
+#3979b7  4.9%
+#f0ede1  2.8%
+#1b406e  1.7%
