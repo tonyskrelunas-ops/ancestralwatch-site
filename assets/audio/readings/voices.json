@@ -17,7 +17,10 @@
   "the-arched-bridge",
   "the-calm-you-already-stored",
   "the-sound-of-water",
-  "torii-in-the-desert"
+  "torii-in-the-desert",
+  "stone-breath-chapter-two",
+  "council-fire-opening",
+  "far-messengers-before"
  ],
  "duration": {
   "blood-and-amber": {
@@ -75,6 +78,18 @@
   "torii-in-the-desert": {
    "masculine": 409.7,
    "feminine": 359.5
+  },
+  "stone-breath-chapter-two": {
+   "masculine": 1347.1,
+   "feminine": 1257.0
+  },
+  "council-fire-opening": {
+   "masculine": 1128.9,
+   "feminine": 982.8
+  },
+  "far-messengers-before": {
+   "masculine": 1567.3,
+   "feminine": 1387.2
   }
  }
 }

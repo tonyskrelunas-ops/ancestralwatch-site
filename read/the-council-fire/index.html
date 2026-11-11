@@ -11,26 +11,19 @@
   <link rel="canonical" href="https://ancestralwatch.com/read/the-council-fire/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/tokens.css" />
   <link rel="stylesheet" href="/css/style.css?v=5" />
   <style>
-    .ch { font-family:var(--font-display,'Fraunces'),serif; font-size:var(--step-1); line-height:1.75; }
-    .ch p { margin:0 0 1.15em; }
-    .ch__series { font-family:var(--font-body,'Inter'),sans-serif; font-size:var(--step--1); letter-spacing:.14em; text-transform:uppercase; opacity:.7; margin:0 0 .5em; }
-    .ch__title { font-size:var(--step-3); line-height:1.15; margin:0 0 1.2em; }
-    .ch__h { font-size:var(--step-2); line-height:1.2; margin:2.2em 0 1em; }
-    .ch__epi { border-left:3px solid var(--amber); margin:0 0 1.4em; padding:.15em 0 .15em var(--space-3); font-style:italic; opacity:.92; }
-    .ch__epi p { margin:0; }
-    .ch__deck, .ch__from { font-style:italic; opacity:.85; }
-    .ch__break { text-align:center; letter-spacing:.6em; opacity:.55; margin:2.2em 0; }
-    .ch__end { margin:var(--space-5) 0 var(--space-3); text-align:center; }
-    .ch__end a { text-decoration:none; border-bottom:1px solid rgba(128,128,128,.35); }
-    .ch__get { text-align:center; margin:0 0 var(--space-4); }
+    .excerpt { border-left:3px solid var(--amber); padding:var(--space-3) var(--space-4); margin:var(--space-4) 0; font-family:var(--font-display,'Fraunces'),serif; font-size:var(--step-1); line-height:1.7; font-style:italic; opacity:.92; }
+    .fade { position:relative; }
+    .fade::after { content:""; position:absolute; left:0; right:0; bottom:0; height:5rem; background:linear-gradient(to bottom, transparent, var(--bg, #fff)); }
+    .cap-panel { border:1px solid var(--amber); border-radius:16px; padding:var(--space-4); background:rgba(201,138,58,.07); text-align:center; }
   </style>
 <link rel="stylesheet" href="/assets/daylight.css?v=8">
-<link rel="stylesheet" href="/css/aw-listen.css?v=1">
+<link rel="stylesheet" href="/css/aw-listen.css?v=2">
 <link rel="stylesheet" href="/css/aw-readalong.css?v=1">
+<link rel="stylesheet" href="/assets/aw-editorial.css?v=1">
+<link rel="stylesheet" href="/css/aw-chapter.css?v=3">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -68,6 +61,7 @@
   <main id="main">
     <section class="page-hero article-hero">
       <div class="wrap wrap--narrow">
+        <img class="chapter-cover" src="/assets/img/council-fire-cover.jpg" width="820" height="1230" alt="Cover of The Council Fire by Tony Skrelūnas" fetchpriority="high">
         <p class="eyebrow">Book Three · The Council Fire</p>
         <h1>Read the opening free.</h1>
         <p class="article-meta">There is a path through. It has been walked before. The first voice, and Prologue I · The Runners — the whole opening, no purchase required.</p>
@@ -87,10 +81,10 @@
 
     <section class="section section--tight">
       <div class="wrap wrap--narrow">
-        <article class="ch" data-aw-readalong="council-fire-opening">
-          <p class="ch__series">The Council Fire</p>
-          <h2 class="ch__title">first voice</h2>
-          <p class="ch__deck">A braid of twelve names from twelve corners of the world. They came down to me hand to hand.</p>
+        <div class="excerpt chapter" data-aw-readalong="council-fire-opening">
+          <p class="chapter__series">The Council Fire</p>
+          <h2>first voice</h2>
+          <p class="chapter__deck">A braid of twelve names from twelve corners of the world. They came down to me hand to hand.</p>
           <p>My grandmother told me a person should always say who they are before they tell a story, so the ancestors know who is speaking.</p>
           <p>So. My name is a braid of twelve names from twelve corners of the world, and I will tell you them at the end, when you have earned them. I am seven generations down from the people in this book. I am holding, as I write this, a lump of coal, an amber bead, a carved stone llama, a smooth river stone worn by many thumbs, a black go stone, a stone cross, a mala of bodhi seeds, a pounamu, a lump of spinifex resin, a beaded bracelet, a granite clan stone, and a rice seed—the tokens they carried, that came down to me. I live in a world they made out of the broken one. It is hard here, and it is good.</p>
           <p>They left this record so we would know it had been done before. So that if it ever broke again, we would not be afraid, because we would have the map. They wrote it as a warning, for their own time, and as a map, for mine.</p>
@@ -99,13 +93,13 @@
           <p>None of them had a word for it. That is the part to carry into this book. Every language they owned described something that comes and passes—a storm, a drought, a flood—and there was no word anywhere for a thing that came and stayed and kept coming. So they used the old words, and the old words made it small, and you cannot organize a people around a rough patch.</p>
           <p>That is what the twelve broke. Not the heat. The silence. They found each other, and they made the words, and once there were words there could be a council.</p>
           <p>This is what they did.</p>
-          <h2 class="ch__h">Prologue I · The Runners</h2>
-          <p class="ch__deck">The runners crossed the killing ground, and carried what the people needed.</p>
+          <h2 class="chapter__part"><span class="chapter__num">Prologue I</span>The Runners</h2>
+          <p class="chapter__deck">The runners crossed the killing ground, and carried what the people needed.</p>
           <p>Our oldest grandfather has no name anymore. The name wore off the way a stone wears smooth in the bed of a river, handed down through so many mouths that only the shape of it is left. But we kept his run.</p>
           <p>And here is the thing to understand before he speaks, the thing this whole book turns on: he is not the grandfather of one people. He is the grandfather of all of them. The run you are about to follow happened in the high desert — but it happened, in the same shape, on every continent that ever held a people. Different skies. Different stones in different hands. The same run, and the same cargo.</p>
           <p>Before there was a herder or a navigator or a song keeper or a crofter — before any of the twelve you will meet in these pages — there was this one figure, everywhere at once: the one who watched the world for longer than a single life, read the land like a face, carried what they saw to the people who needed it, and wrote it where it would outlast them. He carried no trade goods. He carried what he had seen, and that turned out to be the most valuable cargo there has ever been. He is the root. The twelve are his branches. And so are you.</p>
           <p>This is the first instruction. He tells it better than I could, so I will step back and let him.</p>
-          <p class="ch__break" aria-hidden="true">* * *</p>
+          <p class="chapter__break" aria-hidden="true">* * *</p>
           <p>I run with a stone in my hand.</p>
           <p>A small smooth one, river-worn, the size of a bird's egg. You learn it young: you close your fist around it and you picture it resting on your tongue, and the picturing alone brings the water back to a dry mouth, so the thirst does not own you; it keeps the breath even and slow; it holds the panic down when the legs are gone and the sun is high. My grandmother closed my fingers around my first one when I was small, and taught me the picturing. She called it a covenant: I carry it, and it carries me. The stone is older than me. It will be older than my grandchildren. I am carrying it seventy miles today, and I will carry it home.</p>
           <p>I am not carrying anything else. No corn, no hides, no salt. People who do not understand us think a runner must carry something, or why run at all. But I am carrying the most important thing there is. I am carrying what I have seen.</p>
@@ -133,7 +127,7 @@
           <p>They are there, the ones who went ahead, kneeling in soil darker than ours, and deep. They put in the corn and the beans and the squash to ask the ground a question, and the ground has answered while I ran: the seedlings are up, green and certain, in earth that has never grown our food before. They take me to the wash and we clear a forearm of dry sand from the low side—the way the walls upcountry taught us both, though we learned it a hundred miles apart—and the sand goes dark, and then wet, and then our hands are in water. In the dry moon. With no cloud in the sky.</p>
           <p>I tell them what I have seen. Four summers of clouds going to the mountain. The wind off the far water, and the mountain combing it. They listen the way you listen to someone who has carried a thing a long way to put it in your hands. And we know, all of us, kneeling there with our hands wet, that this is the place—that when our old home lies down to rest, the people will come here, and the children not yet born will believe they have always lived here. Until one of them learns to read the walls, and finds out how they came.</p>
           <p>Before I run home, we add to the rock. We peck the blue mountain, and the line of the wind, and the wavy water-line under the flat ground-line: water, below, always. We lay our hands flat against the stone and blow red earth over them so the prints will stay. For the ones who come after. For the great-grandchildren, whoever they turn out to be.</p>
-          <p class="ch__break" aria-hidden="true">* * *</p>
+          <p class="chapter__break" aria-hidden="true">* * *</p>
           <p>That is our oldest grandfather. Yours and mine both — whoever you are, wherever you are reading this. Go back far enough up anyone’s line and you arrive at him, and everyone in the pages after him is running his race: the woman keeping the dark water down, the girl who would not let the sun be stolen twice, the monk coming down the failing snows, the navigator, the herder, the rice mother. All of them laying a hand in the worn print and finding out they are not the first, and will not be the last.</p>
           <p>That is the first instruction, and it is the same as the last one, and the same as all the ones between, in this whole book. Watch the world for longer than your own life. Carry what you see to the people who need it. Write it where it will outlast you. And run.</p>
           <p>And he was not alone on the earth that morning. As he came down off the pass in the first light, a runner of the high Andes was moving along a stone road above the clouds, a cord of knotted wool in his fist, carrying the harvest count between valleys. In the far north, a herder was out ahead of the reindeer on the crusted snow, reading the ice the way the runner read the clouds, deciding whether the whole people would move. On a red desert older than memory, a walker was singing the water-holes in their right order, carrying the map in her breath. On a warm sea, a navigator was reading the stars' road home with no instrument but the memory of her teachers. None of them knew the others existed. All of them were making the same run.</p>
@@ -142,9 +136,9 @@
           <p>Every people that raised crossers also produced, without fail, the other kind — the young man who has decided that the training is superstition and the old way is slow and he personally will simply go faster. Every single people. It is apparently a fixed feature of human beings, like the spine.</p>
           <p>The records of those peoples are unsentimental about this fellow. He is in the songs of half a dozen nations and he is never the hero; he is the cautionary verse, usually short, usually placed where the children are still awake. And the joke is always the same joke, in every language, which is its own kind of evidence: he did not fail because the desert was cruel. He failed because he was in a hurry, and the desert does not care how urgent your errand is.</p>
           <p>Now let me tell you how it broke—and how we put it back together with gold.</p>
-        </article>
-        <p class="ch__end"><a href="/series/the-council-fire/">About the book →</a></p>
-        <p class="ch__get"><a class="btn btn--primary btn--lg" href="https://payhip.com/b/GB2eg" target="_blank" rel="noopener">Get the book →</a></p>
+        </div>
+        <p class="chapter__end"><a href="/series/the-council-fire/">About the book →</a></p>
+        <p class="chapter__get"><a class="btn btn--primary btn--lg" href="https://payhip.com/b/GB2eg" target="_blank" rel="noopener">Get the book →</a></p>
       </div>
     </section>
   
@@ -203,8 +197,8 @@
   });
 })();
 </script>
-<script src="/js/aw-listen.js?v=1" defer></script>
-<script src="/js/aw-readalong.js?v=1" defer></script>
+<script src="/js/aw-listen.js?v=2" defer></script>
+<script src="/js/aw-readalong.js?v=2" defer></script>
 <script src="/js/aw-gate.js?v=1" defer></script>
 </body>
 </html>
