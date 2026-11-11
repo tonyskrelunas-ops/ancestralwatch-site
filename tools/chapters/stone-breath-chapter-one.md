@@ -6,9 +6,7 @@
 
 > “My grandfather said the ancestors watch over us. My grandmother said they’re probably just waiting to see what mess we make next.” — *Tonas Yazzie*
 
-Every one of them had built a life that looked right from the outside.
-
-That was the thing the circle had in common — nine executives and two who were not, gathered from wherever in the world they had made their names. A woman who ran a fund in London. A founder from São Paulo. A man from a Tokyo trading house who was used to a car and a driver and a floor of people who moved when he moved. A software chief out of Lagos. And sitting among them as equals, a schoolteacher who had emptied a modest savings account to be there, and a young man barely out of his twenties, barely out of harder places than that, who had paid nothing at all.
+Every one of them had built a life that looked right from the outside. That was the thing the circle had in common — nine executives and two who were not, gathered from wherever in the world they had made their names. A woman who ran a fund in London. A founder from São Paulo. A man from a Tokyo trading house who was used to a car and a driver and a floor of people who moved when he moved. A software chief out of Lagos. And sitting among them as equals, a schoolteacher who had emptied a modest savings account to be there, and a young man barely out of his twenties, barely out of harder places than that, who had paid nothing at all.
 
 Tonas ran the program himself, once a year. It was an international leadership retreat he had built inside his own company, and it was the truest work he did. Most of the seats went to people who could pay a great deal for them. But he always held a couple open for people the room would otherwise never include, and he asked nothing for those seats but readiness. The code belonged to everyone, he figured, or it belonged to no one.
 
