@@ -14,6 +14,12 @@
   var WAIT = 60000, KEY = 'aw.joined', FIRST = 'aw.first';
   var W3F = 'https://api.web3forms.com/submit', W3F_KEY = '057975c1-1a1a-465e-9b5e-3fb6692b2106';
   var LIST = 'https://tribeawaken-capture.netlify.app/';
+  // 11/12: the one members list (ancestralpeaks-members, Netlify Blobs) behind First Light and the letters.
+  // A plain-text POST, so the browser sends it without asking first; it never holds up the sign-up.
+  var JOIN = 'https://ancestralpeaks-members.netlify.app/api/join';
+  function joinList(name, email, source) {
+    try { fetch(JOIN, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=UTF-8' }, body: JSON.stringify({ email: email, first: name || '', source: source, page: location.pathname }), keepalive: true }).catch(function () {}); } catch (e) {}
+  }
   var html = document.documentElement, q = location.search;
 
   function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
@@ -28,6 +34,7 @@
     var em = f.querySelector('input[type=email],input[name=email]'); if (!em || !validEmail(em.value)) return;
     var bot = f.querySelector('input[name=botcheck]'); if (bot && bot.checked) return;
     var nm = f.querySelector('input[name=name],input[name=first_name],input[name="fields[name]"]');
+    if (!f.querySelector('[name=message]')) joinList(nm ? nm.value : '', em.value.trim(), 'aw-form' + location.pathname.replace(/\/$/, '').replace(/\//g, '-'));   // a sign-up, not a question
     if (!joined()) markJoined(nm ? nm.value : '', { via: 'form' });
   }, true);
 
@@ -100,6 +107,7 @@
 
   function send(name, email) {
     var source = 'aw-signup-wall' + location.pathname.replace(/\/$/, '').replace(/\//g, '-');
+    joinList(name, email, source);
     try {
       var lb = new URLSearchParams({ 'form-name': 'tribe-capture', email: email, name: name, source: source, edition: L, page: 'ancestralwatch.com' + location.pathname });
       fetch(LIST, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: lb.toString(), keepalive: true }).catch(function () {});
