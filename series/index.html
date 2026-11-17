@@ -297,9 +297,16 @@ a.shelf__l:focus-visible{outline:3px solid var(--gold);outline-offset:4px;border
     </div>
 
     <div class="chars rv">
-      <figure class="frame frame--portrait">
-        <img src="/assets/img/austeja.jpg" alt="Austėja, the mountain runner at the centre of Stone Breath" loading="lazy">
-      </figure>
+      <div class="chars__pair" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(.8rem,.5rem + 1vw,1.4rem);align-self:start">
+        <figure class="frame frame--portrait" style="margin:0">
+          <img src="/assets/img/austeja.jpg" alt="Austėja, the mountain runner at the centre of Stone Breath" loading="lazy">
+          <figcaption class="muted" style="margin-top:.5rem;font-size:.85rem">Austėja</figcaption>
+        </figure>
+        <figure class="frame frame--portrait" style="margin:0">
+          <img src="/assets/img/tonas.jpg" srcset="/assets/img/tonas.jpg 700w, /assets/img/tonas@2x.jpg 1400w" sizes="(max-width:900px) 46vw, 20vw" alt="Tonas Yazzie — a Diné and Lithuanian runner, hair tied back under a headband, smiling on a mountain ridge at sunrise, a smooth stone in his hand and a turquoise cord at his wrist" loading="lazy">
+          <figcaption class="muted" style="margin-top:.5rem;font-size:.85rem">Tonas Yazzie</figcaption>
+        </figure>
+      </div>
       <div>
         <p class="eyebrow">The two at the centre</p>
         <h3 style="font-size:clamp(1.6rem,1.3rem + 1.4vw,2.3rem);margin-bottom:.6rem">Austėja</h3>
