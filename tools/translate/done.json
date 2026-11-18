@@ -12,5 +12,19 @@
   "path": "lt/toris-aukstikalnes-dykumoje",
   "title": "Toris aukštikalnės dykumoje",
   "date": "2026-11-17"
+ },
+ {
+  "source": "lt/blood-and-amber",
+  "lang": "ja",
+  "path": "ja/blood-and-amber-ja",
+  "title": "血と琥珀——バルトが守り抜いたもの、そしてそれが再びあなたのものである理由",
+  "date": "2026-11-18"
+ },
+ {
+  "source": "lt/blood-and-amber",
+  "lang": "lt",
+  "path": "lt/kraujas-ir-gintaras",
+  "title": "Kraujas ir gintaras: ką išsaugojo Baltijos kraštas – ir kodėl tai vėl tavo",
+  "date": "2026-11-18"
  }
 ]
