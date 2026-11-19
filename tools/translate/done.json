@@ -26,5 +26,19 @@
   "path": "lt/kraujas-ir-gintaras",
   "title": "Kraujas ir gintaras: ką išsaugojo Baltijos kraštas – ir kodėl tai vėl tavo",
   "date": "2026-11-18"
+ },
+ {
+  "source": "stories/the-calm-you-already-stored",
+  "lang": "ja",
+  "path": "ja/the-calm-you-already-stored-ja",
+  "title": "平静は、その場でつくるものではない",
+  "date": "2026-11-19"
+ },
+ {
+  "source": "stories/the-calm-you-already-stored",
+  "lang": "lt",
+  "path": "lt/ramybes-ten-nesukursi",
+  "title": "Ramybės ten nesukursi",
+  "date": "2026-11-19"
  }
 ]
