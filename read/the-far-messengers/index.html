@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="/css/aw-readalong.css?v=1">
 <link rel="stylesheet" href="/assets/aw-editorial.css?v=1">
 <link rel="stylesheet" href="/css/aw-chapter.css?v=3">
-<link rel="stylesheet" href="/css/aw-story.css?v=1">
+<link rel="stylesheet" href="/css/aw-story.css?v=2">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -69,6 +69,7 @@
         <div class="aw-story__text">
           <p class="eyebrow">Book Four · The Far Messengers</p>
           <h1 id="story-title">The story of The Far Messengers</h1>
+          <p class="aw-story__listen"><button type="button" class="aw-story__play" data-play="far-messengers-before"><span aria-hidden="true">▶</span> Listen to the opening · 26 min</button><a href="#read">Read it ↓</a></p>
           <p class="aw-story__dek">Seven days in a Swiss valley where the ice used to be, and the song keeper and the navigator who met there.</p>
           <p class="aw-story__by">Told by Tony Skrelūnas</p>
           <div class="aw-story__body">
@@ -276,5 +277,7 @@
 <script src="/js/aw-listen.js?v=2" defer></script>
 <script src="/js/aw-readalong.js?v=2" defer></script>
 <script src="/js/aw-gate.js?v=1" defer></script>
+<script>/* the Listen button at the top: go to the reading and start it (11/19/2026, Tony: "where is the audio option?") */
+document.querySelectorAll('.aw-story__play').forEach(function(b){b.addEventListener('click',function(){var el=document.querySelector('.aw-listen[data-id="'+b.getAttribute('data-play')+'"]');if(!el)return;el.scrollIntoView({behavior:'smooth',block:'center'});var x=el.querySelector('.aw-listen__btn');if(x&&!el.classList.contains('is-playing'))x.click();});});</script>
 </body>
 </html>

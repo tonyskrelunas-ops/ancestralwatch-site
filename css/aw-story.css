@@ -55,3 +55,11 @@
   border-top:1px solid var(--ed-hair)}
 .article-hero--after-story h2{font-size:clamp(2rem,1.3rem + 2.6vw,3.5rem);letter-spacing:-.04em;line-height:1;
   max-width:16ch;margin:0 auto 1rem}
+
+/* the Listen button at the top of each free chapter (11/19/2026) */
+.aw-story__listen{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem 1.4rem;margin:1.2rem 0 1.6rem}
+.aw-story__play{display:inline-flex;align-items:center;gap:.6rem;background:#111;color:#fff;border:0;border-radius:999px;
+  padding:.85rem 1.4rem;font-family:var(--ed-sans);font-size:1rem;font-weight:700;letter-spacing:.02em;cursor:pointer;line-height:1}
+.aw-story__play span{font-size:.85em}
+.aw-story__play:hover,.aw-story__play:focus-visible{background:var(--story,#333)}
+.aw-story__listen a{color:var(--ed-ink);text-decoration:none;border-bottom:2px solid var(--story);padding-bottom:2px;font-family:var(--ed-sans);font-weight:600}
