@@ -1,0 +1,32 @@
+/* Japanese chapter pages (20 Nov 2026): the same book page as /read/, set for Japanese.
+   A mincho face, no italics on Japanese, no drop cap, one-character indent, a little more air between lines. */
+html[lang="ja"] .excerpt.chapter{font-family:"Shippori Mincho","Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  font-size:clamp(1.02rem,.96rem + .32vw,1.16rem);line-height:2.02;letter-spacing:.02em;font-feature-settings:"palt" 0}
+html[lang="ja"] .excerpt.chapter p{text-indent:1em}
+html[lang="ja"] .excerpt.chapter h2,html[lang="ja"] .excerpt.chapter h3,html[lang="ja"] .excerpt.chapter .chapter__epi{font-style:normal !important;font-family:"Shippori Mincho","Noto Serif JP",serif}
+html[lang="ja"] .excerpt.chapter h2{font-weight:600;letter-spacing:.06em}
+html[lang="ja"] .excerpt.chapter h3{font-weight:600}
+html[lang="ja"] .excerpt.chapter .chapter__epi{text-indent:0;color:#4a4a4a}
+html[lang="ja"] .excerpt.chapter p::first-letter{float:none !important;font-size:inherit !important;line-height:inherit !important;padding:0 !important;font-family:inherit !important}
+html[lang="ja"] .excerpt.chapter em:lang(ja){font-style:normal}
+html[lang="ja"] .excerpt.chapter .chapter__break{text-indent:0;text-align:center}
+/* the reading list and the film */
+.jr-film{max-width:960px;margin:0 auto}
+.jr-film video{display:block;width:100%;height:auto;border-radius:4px;background:#120c06;box-shadow:0 30px 60px -36px rgba(0,0,0,.55)}
+.jr-film figcaption{text-align:center;font-size:.92rem;margin-top:.8rem;opacity:.8}
+.jr-list{display:grid;gap:1.1rem;max-width:860px;margin:0 auto;padding:0;list-style:none}
+.jr-item{display:grid;grid-template-columns:84px 1fr;gap:1.1rem;align-items:center;padding:1.1rem;border:1px solid rgba(0,0,0,.08);border-radius:6px;background:#fbfaf7;text-decoration:none;color:inherit}
+.jr-item img{width:84px;height:auto;border-radius:2px;box-shadow:0 10px 18px -10px rgba(0,0,0,.35)}
+.jr-item .k{font-size:.82rem;letter-spacing:.08em;opacity:.7;margin:0}
+.jr-item h3{margin:.2rem 0 .35rem;font-family:"Shippori Mincho","Noto Serif JP",serif;font-weight:600;font-size:1.22rem;line-height:1.5}
+.jr-item p{margin:0;line-height:1.75;font-size:.98rem}
+.jr-item .go{display:inline-block;margin-top:.5rem;font-weight:600}
+.jr-note{max-width:860px;margin:1.6rem auto 0;font-size:.92rem;opacity:.8;text-align:center;line-height:1.8}
+.jr-nav{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;max-width:37em;margin:2.4rem auto 0;font-weight:600}
+.jr-nav a{text-decoration:none;border-bottom:1px solid rgba(0,0,0,.3);padding-bottom:2px}
+.jr-get{max-width:37em;margin:2.6rem auto 0;text-align:center;line-height:1.9}
+@media (max-width:560px){.jr-item{grid-template-columns:64px 1fr;gap:.9rem}.jr-item img{width:64px}}
+.jr-item p,.jr-item h3{color:#1d1a16 !important}
+.jr-item .k{color:#6E5E48 !important}
+.jr-item .go{color:#91691F !important}
+.jr-h1 span{display:inline-block}
