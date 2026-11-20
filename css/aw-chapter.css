@@ -52,3 +52,5 @@
 .excerpt.chapter .chapter__series::first-letter{float:none;font-size:inherit;line-height:inherit;padding:0;margin:0;font-weight:inherit;font-family:inherit;color:inherit}
 .excerpt.chapter p + .chapter__from{margin-top:3.2rem !important}
 .excerpt.chapter p + .chapter__from::before{content:"";display:block;width:2.2rem;height:1px;background:rgba(0,0,0,.25);margin:0 auto 1.4rem}
+/* headings in ink: daylight.css gives every .excerpt h2 a cream color meant for the dark band (11/19/2026) */
+.excerpt.chapter h2,.excerpt.chapter h3{color:#171717 !important}
