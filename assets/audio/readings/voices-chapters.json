@@ -3,7 +3,8 @@
  "slugs": [
   "stone-breath-chapter-two",
   "council-fire-opening",
-  "far-messengers-before"
+  "far-messengers-before",
+  "council-fire-the-cascade"
  ],
  "readings": {
   "stone-breath-chapter-two": {
@@ -63,6 +64,26 @@
      "audio": "/assets/audio/readings/far-messengers-before.f.m4a",
      "timeline": "/assets/audio/readings/far-messengers-before.f.timeline.json",
      "dur": 1387.2
+    }
+   }
+  },
+  "council-fire-the-cascade": {
+   "page": "/read/the-council-fire/the-cascade/",
+   "title": "The Council Fire · The Cascade",
+   "book": "The Council Fire",
+   "voices": {
+    "m": {
+     "voice": "am_michael",
+     "audio": "/assets/audio/readings/council-fire-the-cascade.m4a",
+     "timeline": "/assets/audio/readings/council-fire-the-cascade.timeline.json",
+     "dur": 1452.1
+    },
+    "f": {
+     "label": "Gentle british",
+     "voice": "bf_emma",
+     "audio": "/assets/audio/readings/council-fire-the-cascade.f.m4a",
+     "timeline": "/assets/audio/readings/council-fire-the-cascade.f.timeline.json",
+     "dur": 1273.6
     }
    }
   }
