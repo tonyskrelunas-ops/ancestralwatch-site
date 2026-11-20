@@ -40,5 +40,19 @@
   "path": "lt/ramybes-ten-nesukursi",
   "title": "Ramybės ten nesukursi",
   "date": "2026-11-19"
+ },
+ {
+  "source": "stories/carry-without-stealing",
+  "lang": "ja",
+  "path": "ja/carry-without-stealing-ja",
+  "title": "伝統を、盗まずに運ぶには",
+  "date": "2026-11-20"
+ },
+ {
+  "source": "stories/carry-without-stealing",
+  "lang": "lt",
+  "path": "lt/kaip-nesti-tradicija-jos-nepavagiant",
+  "title": "Kaip nešti tradiciją jos nepavagiant",
+  "date": "2026-11-20"
  }
 ]
