@@ -54,5 +54,19 @@
   "path": "lt/kaip-nesti-tradicija-jos-nepavagiant",
   "title": "Kaip nešti tradiciją jos nepavagiant",
   "date": "2026-11-20"
+ },
+ {
+  "source": "stories/never-only-men",
+  "lang": "ja",
+  "path": "ja/never-only-men-ja",
+  "title": "ファー・メッセンジャー（遠くへ運ぶ使者）は、男だけであったことは一度もない",
+  "date": "2026-11-21"
+ },
+ {
+  "source": "stories/never-only-men",
+  "lang": "lt",
+  "path": "lt/tolimieji-pasiuntiniai-niekada-nebuvo-vien-vyrai",
+  "title": "Tolimieji pasiuntiniai niekada nebuvo vien vyrai",
+  "date": "2026-11-21"
  }
 ]
