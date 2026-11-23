@@ -127,6 +127,30 @@
   </div>
 </section>
 
+<!-- ================= THE SHELF: every book together (11/22) ================= -->
+<section class="sec shelf" aria-labelledby="shelf-h">
+  <div class="wrap">
+    <h2 id="shelf-h" class="shelf__h">The books</h2>
+    <ul class="shelf__row" role="list">
+      <li><a href="/series/stone-breath/"><img src="/assets/img/stone-breath-cover.jpg" width="900" height="1350" alt="Cover of Stone Breath"><span class="shelf__t">Stone Breath</span><span class="shelf__d">A man who has everything, and a woman already whole.</span></a></li>
+      <li><a href="/series/the-council-fire/"><img src="/assets/img/council-fire-cover.jpg?v=20261111" alt="Cover of The Council Fire"><span class="shelf__t">The Council Fire</span><span class="shelf__d">Twelve keepers, and a pact for those who come after.</span></a></li>
+      <li><a href="/series/the-far-messengers/"><img src="/assets/img/far-messengers-cover.jpg" width="820" height="1230" alt="Cover of The Far Messengers"><span class="shelf__t">The Far Messengers</span><span class="shelf__d">Seven days, one stage, the oldest human knowledge.</span></a></li>
+      <li><a href="#the-reader"><img src="/assets/img/living-as-a-far-messenger-cover.jpg" width="1000" height="1491" alt="Cover of Living as a Far Messenger"><span class="shelf__t">Living as a Far Messenger</span><span class="shelf__d">The practice, distilled for leaders.</span></a></li>
+    </ul>
+  </div>
+</section>
+<style>
+.shelf{padding-block:clamp(2.5rem,1.6rem + 3vw,5rem)}
+.shelf__h{font-size:clamp(1.8rem,1.3rem + 2vw,3rem);margin-bottom:clamp(1.2rem,1rem + 1vw,2rem)}
+.shelf__row{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1rem,.6rem + 1.6vw,2.2rem)}
+.shelf__row a{display:block;text-decoration:none;color:var(--forest)}
+.shelf__row img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:3px;box-shadow:0 10px 28px rgba(40,43,31,.22);transition:transform .4s var(--ease)}
+.shelf__row a:hover img{transform:translateY(-4px)}
+.shelf__t{display:block;margin-top:.9rem;font-family:var(--display);font-weight:800;font-size:1.08rem;line-height:1.15;color:var(--juniper);letter-spacing:-.01em}
+.shelf__d{display:block;margin-top:.35rem;font-size:.94rem;line-height:1.45;color:var(--olive)}
+@media(max-width:760px){.shelf__row{grid-template-columns:repeat(2,1fr)}.shelf__t{font-size:1rem}.shelf__d{font-size:.88rem}}
+</style>
+
 <!-- ================= THE WORLD OF THE BOOKS (Tony, 11/11) ================= -->
 <section class="sec worldband" aria-labelledby="worldband-h">
   <div class="wrap">
