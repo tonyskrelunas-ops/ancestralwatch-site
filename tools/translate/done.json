@@ -82,5 +82,19 @@
   "path": "lt/kodel-sodas-yra-dvasine-praktika",
   "title": "Kodėl sodas yra dvasinė praktika",
   "date": "2026-11-22"
+ },
+ {
+  "source": "ja/koi-and-the-dragon-gate",
+  "lang": "ja",
+  "path": "ja/koi-and-the-dragon-gate-ja",
+  "title": "鯉と竜門",
+  "date": "2026-11-23"
+ },
+ {
+  "source": "ja/koi-and-the-dragon-gate",
+  "lang": "lt",
+  "path": "lt/koi-karpis-ir-drakono-vartai",
+  "title": "Koi karpis ir Drakono vartai",
+  "date": "2026-11-23"
  }
 ]
