@@ -110,5 +110,19 @@
   "path": "lt/arkinis-tiltas",
   "title": "Arkinis tiltas",
   "date": "2026-11-24"
+ },
+ {
+  "source": "ja/the-sound-of-water",
+  "lang": "ja",
+  "path": "ja/the-sound-of-water-ja",
+  "title": "水の音",
+  "date": "2026-11-25"
+ },
+ {
+  "source": "ja/the-sound-of-water",
+  "lang": "lt",
+  "path": "lt/vandens-garsas",
+  "title": "Vandens garsas",
+  "date": "2026-11-25"
  }
 ]
