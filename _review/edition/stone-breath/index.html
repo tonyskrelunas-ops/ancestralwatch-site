@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta name="robots" content="noindex,nofollow">
+  <title>Stone Breath, the Immersive Edition (preview) | Ancestral Watch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/css/tokens.css" />
+  <link rel="stylesheet" href="/css/style.css?v=5" />
+  <link rel="stylesheet" href="/assets/daylight.css?v=8">
+  <link rel="stylesheet" href="/assets/aw-editorial.css?v=1">
+<style>
+/* page-local: the Immersive Edition preview */
+.ie{--g:#0E0E0E;--gd:#555;--ik:#0E0E0E;--soft:#555;--p2:#fff;--p3:#F4F4F2;--line:rgba(0,0,0,.12);--blue:#1E4E8C}
+.ie section{padding-block:clamp(2.75rem,2rem + 4vw,5rem)}
+.ie .wrap{max-width:62rem}
+.ie-k{font:600 .72rem/1.3 var(--ed-sans);letter-spacing:.18em;text-transform:uppercase;color:var(--gd);margin:0 0 .9rem}
+.ie h2{font-size:clamp(1.9rem,1.4rem + 2.4vw,3.2rem);line-height:1.05;margin:0 0 1rem;max-width:22ch}
+.ie p{max-width:60ch}
+.ie-orn{text-align:center;color:var(--g);letter-spacing:.9em;font-size:.7rem;margin:0;padding-left:.9em}
+/* opening */
+.ie-hero{background:#0B0B0B;color:#fff;position:relative;overflow:hidden}
+.ie-hero .wrap{position:relative;display:grid;gap:2rem;align-items:center}
+.ie-hero .ie-k{color:rgba(255,255,255,.72)}
+.ie-hero h1{font-size:clamp(3rem,2rem + 5.5vw,5.6rem);line-height:.95;margin:0;color:#fff}
+.ie-hero h1 span{display:block;font-family:var(--ed-serif);font-weight:400;letter-spacing:0;font-style:italic;font-size:.46em;line-height:1.2;color:rgba(255,255,255,.72);margin-top:.5rem}
+.ie-hero__lead{font-size:clamp(1.05rem,1rem + .5vw,1.3rem);line-height:1.55;color:rgba(255,255,255,.78);margin:1.2rem 0 1.6rem}
+.ie-hero__cover{justify-self:center;width:min(64vw,300px)}
+.ie-hero__cover img{display:block;width:100%;height:auto;border-radius:3px;box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 1px rgba(237,230,213,.12)}
+.ie-hero__btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.ie-hero .btn.btn--primary,.ie-breath .btn.btn--primary{background:#fff !important;color:#0E0E0E !important}
+.ie-hero .btn.btn--primary:hover,.ie-breath .btn.btn--primary:hover{background:#dfe8f5 !important}
+.ie-hero .btn.btn--ghost{color:#fff !important;border-bottom-color:#fff !important;background:transparent !important}
+.ie-hero__btns{align-items:center;gap:1rem 1.6rem !important}
+.ie-tag{display:inline-block;font:600 .68rem/1 var(--ed-sans);letter-spacing:.14em;text-transform:uppercase;border:1px solid rgba(255,255,255,.5);color:rgba(255,255,255,.72);padding:.4rem .6rem;border-radius:99px;margin-bottom:1.1rem}
+/* what's inside */
+.ie-inside{list-style:none;margin:1.5rem 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.ie-inside li{padding:1.05rem 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:2.2rem 1fr;gap:.25rem .5rem}
+.ie-inside b{font-family:var(--ed-sans);font-weight:700;letter-spacing:-.01em;font-size:1.2rem;color:var(--ik)}
+.ie-inside span{grid-column:2;color:var(--soft);line-height:1.5}
+.ie-inside i{font:600 .75rem/1.9 var(--ed-sans);color:var(--gd);font-style:normal;letter-spacing:.08em}
+/* Austėja */
+.ie-aus{background:var(--p3)}
+.ie-aus .wrap{display:grid;gap:1.75rem;align-items:center}
+.ie-aus img{width:100%;max-width:340px;height:auto;aspect-ratio:700/790;object-fit:cover;object-position:50% 0;border-radius:3px;display:block;box-shadow:0 14px 34px rgba(0,0,0,.22)}
+.ie-aus blockquote{margin:0;font-family:var(--ed-serif);font-style:italic;font-size:clamp(1.35rem,1.1rem + 1.4vw,2.1rem);line-height:1.3;color:var(--ik);max-width:24ch}
+.ie-aus cite{display:block;font:600 .7rem/1.4 var(--ed-sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gd);font-style:normal;margin-top:1rem}
+/* the path */
+.ie-path{list-style:none;margin:2rem 0 0;padding:0 0 0 1.75rem;position:relative}
+.ie-path::before{content:"";position:absolute;left:.42rem;top:.6rem;bottom:.6rem;width:2px;background:linear-gradient(var(--g),rgba(0,0,0,.18))}
+.ie-part{font:600 .7rem/1.3 var(--ed-sans);letter-spacing:.18em;text-transform:uppercase;color:var(--gd);padding:1.6rem 0 .5rem}
+.ie-day{position:relative;padding:.85rem 0;border-bottom:1px solid rgba(0,0,0,.08)}
+.ie-dot{position:absolute;left:-1.75rem;top:1.25rem;width:.95rem;height:.95rem;border-radius:50%;background:var(--p2);border:2px solid var(--g)}
+.ie-day__k{font:600 .72rem/1.4 var(--ed-sans);letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin:0 0 .2rem;display:flex;flex-wrap:wrap;gap:.3rem .7rem;align-items:center}
+.ie-day__k i{font-style:normal;color:var(--gd);letter-spacing:.08em;opacity:.85}
+.ie-day__k b{background:var(--blue);color:#fff !important;padding:.22rem .55rem;border-radius:99px;letter-spacing:.08em}
+.ie-day h3{letter-spacing:-.01em;font-size:clamp(1.15rem,1.05rem + .5vw,1.4rem);margin:0;line-height:1.25;color:var(--ik)}
+.ie-day__tool{margin:.2rem 0 0;color:var(--soft);font-size:.95rem}
+.ie-day--open{background:var(--p2);border:1px solid var(--line);border-left:3px solid var(--g);border-radius:2px;padding:1.25rem 1.1rem 1.35rem;margin-left:-.2rem;box-shadow:0 10px 28px rgba(0,0,0,.08)}
+.ie-day--open .ie-dot{background:var(--g);left:-1.6rem}
+.ie-day--open h3{font-size:clamp(1.5rem,1.2rem + 1.2vw,2rem)}
+.ie-day__more{margin:.7rem 0 1rem;color:var(--soft);line-height:1.55}
+/* the breath */
+.ie-breath{background:#0B0B0B;color:#fff;text-align:center}
+.ie-breath .ie-k{color:rgba(255,255,255,.72)}
+.ie-breath h2{color:#fff;margin-inline:auto}
+.ie-breath p{margin-inline:auto;color:rgba(255,255,255,.78)}
+.ie-ring{position:relative;width:min(70vw,290px);aspect-ratio:1;margin:2.2rem auto 1.4rem;display:grid;place-items:center}
+.ie-ring__c{position:absolute;inset:0;border-radius:50%;border:2px solid rgba(255,255,255,.72);background:radial-gradient(circle,rgba(255,255,255,.16),rgba(255,255,255,.03) 70%);transform:scale(.56);transition:transform 4s cubic-bezier(.37,0,.63,1)}
+.ie-ring__s{width:27%;aspect-ratio:1.25;border-radius:52% 48% 50% 50%/56% 54% 46% 44%;background:radial-gradient(circle at 36% 30%,#C9BEAD,#8f8372 60%,#6b6052);position:absolute;box-shadow:0 6px 18px rgba(0,0,0,.4)}
+.ie-ring__t{position:absolute;bottom:-.3rem;left:0;right:0;transform:translateY(100%);margin:0;max-width:none;font-family:var(--ed-sans);font-weight:700;font-size:1.5rem;color:#fff}
+.ie-ring__t small{display:block;font:600 .7rem/1.6 var(--ed-sans);letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72);min-height:1.2em}
+.ie-breath__go{margin-top:4.6rem}
+/* the price */
+.ie-price__card{background:var(--p2);border:1px solid var(--line);border-top:4px solid var(--g);border-radius:2px;padding:clamp(1.5rem,1rem + 3vw,3rem);max-width:40rem;margin-inline:auto;box-shadow:0 18px 44px rgba(0,0,0,.1)}
+.ie-price__n{font-family:var(--ed-sans);font-weight:800;letter-spacing:-.04em;font-size:clamp(3.2rem,2.5rem + 4vw,5rem);line-height:1;color:var(--ik);margin:0}
+.ie-price__n small{display:block;font-family:var(--ed-serif);font-weight:400;letter-spacing:0;font-size:.3em;font-style:italic;color:var(--gd);margin-top:.5rem;line-height:1.3}
+.ie-price ul{list-style:none;margin:1.5rem 0;padding:0}
+.ie-price li{padding:.6rem 0 .6rem 1.6rem;border-bottom:1px solid rgba(0,0,0,.1);position:relative;line-height:1.45;color:var(--ik)}
+.ie-price li::before{content:"\25C6";position:absolute;left:0;top:.85rem;font-size:.6rem;color:var(--g)}
+.ie-price li strong{color:var(--ik);font-weight:800}
+.ie-price .btn{width:100%;text-align:center;justify-content:center}
+.ie-note{font-size:.85rem;color:var(--soft);margin:.8rem 0 0;text-align:center;max-width:none!important}
+.ie-note b{font:600 .66rem/1 var(--ed-sans);letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--g);color:var(--gd);padding:.25rem .45rem;border-radius:99px;margin-right:.4rem}
+@media (min-width:860px){
+  .ie-hero .wrap{grid-template-columns:1.25fr .75fr;gap:4rem}
+  .ie-hero__cover{width:100%;max-width:360px;justify-self:end}
+  .ie-inside{grid-template-columns:1fr 1fr;column-gap:3rem}
+  .ie-aus .wrap{grid-template-columns:340px 1fr;gap:4rem}
+  .ie-path{max-width:44rem}
+}
+@media (prefers-reduced-motion:reduce){.ie-ring__c{transition:none!important}}
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav wrap wrap--wide" aria-label="Primary">
+      <a class="brand" href="/"><img class="brand__logo" src="/assets/img/author-logo.png?v=2" alt="AncestralWatch logo" width="716" height="676"><span class="brand__wm">Ancestral<span class="brand__mark">Watch</span></span></a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">☰</button>
+      <ul class="nav__links" id="primary-nav" data-open="false">
+        <li><a href="/">Home</a></li>
+        <li><a href="/lamplight/">Reading Room</a></li>
+        <li class="has-menu">
+          <button aria-expanded="false" aria-haspopup="true">The Series</button>
+          <ul class="menu">
+            <li><a href="/series/"><span class="menu__num">All</span> The Series</a></li>
+            <li><a href="/series/stone-breath/"><span class="menu__num">I</span> Stone Breath</a></li>
+            <li><a href="/series/the-council-fire/"><span class="menu__num">III</span> The Council Fire</a></li>
+            <li><a href="/series/the-far-messengers/"><span class="menu__num">IV</span> The Far Messengers</a></li>
+            <li><a href="/reader/"><span class="menu__num">&mdash;</span> The Reader</a></li>
+          <li><a href="/start-here/">Start Here</a></li><li><a href="/read/stone-breath/">Read Free</a></li></ul>
+        </li>
+        <li><a href="/tools/">The Tools</a></li><li><a href="https://tribeawaken.com/" target="_blank" rel="noopener">TribeAwaken ↗</a></li>
+        <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+        <li><a href="/author/">The Author</a></li>
+        <li><a class="lang-toggle" href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a class="lang-toggle" href="/lt/" hreflang="lt" lang="lt" style="border-left:0;padding-left:0;">Lietuvių</a></li>
+        <li class="nav__cta"><a class="btn btn--primary" href="https://payhip.com/b/AhH6r" target="_blank" rel="noopener">Get the Book</a></li>
+      </ul>
+    </nav>
+
+  <div class="aw-langbar" aria-label="Languages">
+    <div class="wrap wrap--wide aw-langbar__in">
+      <p class="aw-langbar__lbl">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 2.6 15 0 18M12 3c-2.6 2.6-2.6 15 0 18"/>
+        </svg><span>Read in</span>
+      </p>
+      <a href="/" data-lang="en" hreflang="en">English</a>
+      <a href="/ja/" data-lang="/ja/" hreflang="ja" lang="ja">日本語</a>
+      <a href="/lt/" data-lang="/lt/" hreflang="lt" lang="lt">Lietuvių</a>
+      <a class="aw-langbar__mail" href="mailto:wisdom@ancestralwatch.com">wisdom@ancestralwatch.com</a>
+    </div>
+  </div>
+  </header>
+
+  <main id="main" class="ie">
+
+    <section class="ie-hero">
+      <div class="wrap">
+        <div>
+          <span class="ie-tag">Preview</span>
+          <p class="ie-k">Book One &middot; The Ancestral Watch</p>
+          <h1>Stone Breath <span>the Immersive Edition</span></h1>
+          <p class="ie-hero__lead">The whole book, read to you, with the words lighting as they are read and the pictures moving with the story. Twenty-two days. One tool each day. A stone in your hand the whole way.</p>
+          <div class="ie-hero__btns">
+            <a class="btn btn--primary btn--lg" href="https://ancestralpeaks.com/_review/days/stone-breath/day-01/" target="_blank" rel="noopener">Walk Day 1, free</a>
+            <a class="btn btn--ghost btn--lg" href="#price">The edition, $29</a>
+          </div>
+        </div>
+        <div class="ie-hero__cover">
+          <img src="/assets/img/stone-breath-cover.jpg" width="900" height="1350" fetchpriority="high"
+               alt="Cover of Stone Breath by Tony Skrel&#363;nas: before dawn in the Swiss Alps, five headlamps move together down a mountain trail with a few more lights above them, snow peaks and a glacier behind under the stars" />
+        </div>
+      </div>
+    </section>
+
+    <section id="inside">
+      <div class="wrap">
+        <p class="ie-k">What is inside</p>
+        <h2>A book you walk through, not only read.</h2>
+        <ul class="ie-inside">
+          <li><i>I</i><b>The book, alive</b><span>Every chapter read in the voice, the words lighting up as they are read, with moving pictures for each chapter.</span></li>
+          <li><i>II</i><b>The tools</b><span>Each chapter&rsquo;s tool as a practice you can do right there: the card, the guided audio, the breath.</span></li>
+          <li><i>III</i><b>The coaching</b><span>One question to carry from each chapter, and one line to write. A quiet thread through the whole book.</span></li>
+          <li><i>IV</i><b>The world of the book</b><span>The map of the book&rsquo;s places, and its people.</span></li>
+          <li><i>V</i><b>Yours to keep</b><span>The e-book and the full audiobook.</span></li>
+          <li><i>VI</i><b>And then</b><span>Three months of Ancestral Peaks, so you keep practising after the last page.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="ie-aus">
+      <div class="wrap">
+        <img src="/assets/img/austeja.jpg" alt="Aust&#279;ja" loading="lazy" width="700" height="866">
+        <div>
+          <p class="ie-k">Before we begin</p>
+          <blockquote>&ldquo;She was on the ridge before the sun.&rdquo;
+            <cite>Aust&#279;ja opens the book, and the walk</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="walk">
+      <div class="wrap">
+        <p class="ie-k">The Walk Home</p>
+        <h2>Twenty-one chapters, walked as twenty-two days.</h2>
+        <p>One chapter a day, in the book&rsquo;s own order, each with its tool. The last chapter is the longest, so it is walked over two days. Day 1 is open to everyone.</p>
+        <ol class="ie-path">
+<li class="ie-day ie-day--open"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 1 &middot; Chapter 1 <b>Open to everyone</b></p>
+<h3>The Canyon Within</h3>
+<p class="ie-day__tool">The tool: The Stone Breath</p>
+<p class="ie-day__more">The whole chapter read aloud, 27 minutes, with the words lighting as they are read and the pictures moving with the story. Then the day&rsquo;s challenge, the study, and one line to write.</p>
+<a class="btn btn--primary" href="https://ancestralpeaks.com/_review/days/stone-breath/day-01/" target="_blank" rel="noopener">Walk Day 1</a></li>
+<li class="ie-part">Part One &middot; The Arrival</li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 2 &middot; Chapter 2 <i>In the edition</i></p>
+<h3>The Box He Carried</h3>
+<p class="ie-day__tool">The tool: The Stone Breath, the whole practice</p></li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 3 &middot; Chapter 3 <i>In the edition</i></p>
+<h3>Fifty Years of Weather</h3>
+<p class="ie-day__tool">The tool: The Three Questions</p></li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 4 &middot; Chapter 4 <i>In the edition</i></p>
+<h3>That Is Not What I Asked</h3>
+<p class="ie-day__tool">The tool: The Daina Practice</p></li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 5 &middot; Chapter 5 <i>In the edition</i></p>
+<h3>An Oak Dies Standing</h3>
+<p class="ie-day__tool">The tool: The Fierce Witness</p></li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 6 &middot; Chapter 6 <i>In the edition</i></p>
+<h3>Morning Has Gold in Its Mouth</h3>
+<p class="ie-day__tool">The tool: The Three-Breath Reset and the Dawn Alignment</p></li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 7 &middot; Chapter 7 <i>In the edition</i></p>
+<h3>The Talka</h3>
+<p class="ie-day__tool">The tool: The Talka Protocol</p></li>
+<li class="ie-part">Part Two &middot; The Staying</li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 8 &middot; Chapter 8 <i>In the edition</i></p>
+<h3>Two Weeks</h3>
+<p class="ie-day__tool">The tool: The Ancestral Council</p></li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 9 &middot; Chapter 9 <i>In the edition</i></p>
+<h3>Face-First in the Ferns</h3>
+<p class="ie-day__tool">The tool: The Engine Builder</p></li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 10 &middot; Chapter 10 <i>In the edition</i></p>
+<h3>The Third Arrow</h3>
+<p class="ie-day__tool">The tool: The Envy Protocol</p></li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 11 &middot; Chapter 11 <i>In the edition</i></p>
+<h3>A Meeting Without Food</h3>
+<p class="ie-day__tool">The tool: The Community Kitchen Model</p></li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 12 &middot; Chapter 12 <i>In the edition</i></p>
+<h3>She Asked for the Stone</h3>
+<p class="ie-day__tool">The tool: The Honorable Harvest</p></li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 13 &middot; Chapter 13 <i>In the edition</i></p>
+<h3>The Broken Bowl</h3>
+<p class="ie-day__tool">The tool: Ichigo Ichie</p></li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 14 &middot; Chapter 14 <i>In the edition</i></p>
+<h3>The Wound and the Medicine</h3>
+<p class="ie-day__tool">The tool: The Centering</p></li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 15 &middot; Chapter 15 <i>In the edition</i></p>
+<h3>Where Two Lands Meet</h3>
+<p class="ie-day__tool">The tool: The Land Covenant</p></li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 16 &middot; Chapter 16 <i>In the edition</i></p>
+<h3>The Four Days</h3>
+<p class="ie-day__tool">The tool: The Honorable Recognition</p></li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 17 &middot; Chapter 17 <i>In the edition</i></p>
+<h3>Not a Price, a Covenant</h3>
+<p class="ie-day__tool">The tool: The Compatibility Lens</p></li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 18 &middot; Chapter 18 <i>In the edition</i></p>
+<h3>Eleven Meters of Hallway</h3>
+<p class="ie-day__tool">The tool: The Mountain Compass, with the Mantra Anchor</p></li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 19 &middot; Chapter 19 <i>In the edition</i></p>
+<h3>The Stillness Before the Storm</h3>
+<p class="ie-day__tool">The tool: The Museum of Proof and Seijaku</p></li>
+<li class="ie-part">Part Three &middot; The Building</li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 20 &middot; Chapter 20 <i>In the edition</i></p>
+<h3>The Oak at Dusk</h3>
+<p class="ie-day__tool">The tool: The Passing</p></li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 21 &middot; Chapter 21 <i>In the edition</i></p>
+<h3>The Headlamp in the Dark, to mile 77</h3>
+<p class="ie-day__tool">The tool: The Mountain Within</p></li>
+<li class="ie-day"><span class="ie-dot" aria-hidden="true"></span>
+<p class="ie-day__k">Day 22 &middot; Chapter 21 <i>In the edition</i></p>
+<h3>The Headlamp in the Dark, to the finish, and What Aust&#279;ja Knew</h3>
+<p class="ie-day__tool">The tool: The Headlamp Circle</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="ie-breath" id="breath">
+      <div class="wrap">
+        <p class="ie-k">The Stone Breath</p>
+        <h2>Try it here. One minute.</h2>
+        <p>Find a small smooth stone and hold it. In four. Hold four. Out six. Hold four. Three rounds.</p>
+        <div class="ie-ring" aria-hidden="true">
+          <span class="ie-ring__c" id="ie-c"></span><span class="ie-ring__s"></span>
+          <p class="ie-ring__t"><span id="ie-w">Ready</span><small id="ie-r">&nbsp;</small></p>
+        </div>
+        <p class="ie-breath__go"><button type="button" class="btn btn--primary btn--lg" id="ie-go">Begin</button></p>
+        <p id="ie-live" class="visually-hidden" aria-live="polite" style="position:absolute;left:-9999px"></p>
+      </div>
+    </section>
+
+    <section class="ie-price" id="price">
+      <div class="wrap">
+        <p class="ie-orn" aria-hidden="true">&#9670;&#9670;&#9670;</p>
+        <div class="ie-price__card" style="margin-top:2rem">
+          <p class="ie-k">Stone Breath</p>
+          <p class="ie-price__n">$29 <small>the Immersive Edition, one time</small></p>
+          <ul>
+            <li>All 22 days: every chapter read in the voice, with lit words and moving pictures</li>
+            <li>Each chapter&rsquo;s tool as a practice, with its guided audio</li>
+            <li>One question to carry and one line to write, each day</li>
+            <li>The world of the book: its places and its people</li>
+            <li>The e-book and the full audiobook, to keep</li>
+            <li><strong>Three months of Ancestral Peaks</strong></li>
+          </ul>
+          <a class="btn btn--primary btn--lg" href="#" id="ie-buy" aria-describedby="ie-buynote">Read it immersive, $29</a>
+          <p class="ie-note" id="ie-buynote"><b>Preview</b>This button does not open a checkout yet.</p>
+          <p class="ie-note">The e-book alone is $16.99.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap wrap--wide">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">AncestralWatch</p>
+          <p class="footer__tag">Instructions, carried.</p>
+          <p style="margin-top: var(--space-2); max-width: 34ch;">The home of The Ancestral Watch Series by Tony Skrelūnas.</p>
+        </div>
+        <div>
+          <h4>The Series</h4>
+          <ul>
+            <li><a href="/series/stone-breath/">Stone Breath</a></li>
+            <li><a href="/series/the-council-fire/">The Council Fire</a></li>
+            <li><a href="/series/">All four books</a></li>
+            <li><a href="/tools/">The free Tools</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/far-messengers/">The Far Messengers (brand)</a></li>
+            <li><a href="/author/">The Author</a></li>
+            <li><a href="/stories/">Stories</a></li><li><a href="/research/">Research</a></li>
+            <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="/lt/" hreflang="lt" lang="lt">Lietuvių</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__legal">
+        <span>© 2026 Ancestral Watch · Tony Skrelūnas. All rights reserved.</span>
+        <span>Instructions, carried.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js?v=11" defer></script>
+<script>
+(function(){
+  var c=document.getElementById('ie-c'),w=document.getElementById('ie-w'),r=document.getElementById('ie-r'),
+      go=document.getElementById('ie-go'),live=document.getElementById('ie-live'),timer=null,
+      steps=[['In',4,1],['Hold',4,1],['Out',6,.56],['Hold',4,.56]],ROUNDS=3;
+  function stop(msg){clearTimeout(timer);timer=null;c.style.transitionDuration='1.2s';c.style.transform='scale(.56)';w.textContent=msg;r.innerHTML='&nbsp;';go.textContent=msg==='Ready'?'Begin':'Once more';}
+  function run(round,i){
+    if(round>=ROUNDS){stop('The stone stays in the hand.');live.textContent='Three rounds done.';return;}
+    var s=steps[i],n=s[1],left=n;
+    c.style.transitionDuration=n+'s';c.style.transform='scale('+s[2]+')';
+    r.textContent='Round '+(round+1)+' of '+ROUNDS;live.textContent=s[0]+' '+n;
+    (function tick(){w.textContent=s[0]+' \u00b7 '+left;left--;
+      timer=setTimeout(left>0?tick:function(){i<3?run(round,i+1):run(round+1,0);},1000);})();
+  }
+  go.addEventListener('click',function(){if(timer){stop('Ready');return;}go.textContent='Stop';run(0,0);});
+  document.getElementById('ie-buy').addEventListener('click',function(e){e.preventDefault();});
+})();
+</script>
+</body>
+</html>
